@@ -38,9 +38,9 @@ print('E/10^-9 fuer rund, einseitige Einspannung ist', (m*9.81)/(2*I*a)*1e-9)
 plt.plot(xwerte, D, 'rx', label='Messwerte')
 plt.plot(xwerte, f(xwerte, *params), 'b-', label='fit')
 plt.legend()
-plt.xlabel('$(Lx^3-x^3/3)$/mm')
-plt.ylabel('$D(x)$/mm')
-plt.savefig('rundeinseitig.pdf')
+plt.xlabel(r'$(Lx^2-\frac{x^3}{3})/$mm³')
+plt.ylabel(r'$D(x)/$m')
+plt.savefig('build/rundeinseitig.pdf')
 # Ende einseitige Einspannung und runder Querschnitt
 
 
@@ -54,7 +54,7 @@ m = 2.3682  # in kg
 L = 0.54  # in m
 x1 *= 1e-2  # x1 jetzt in m
 a = 8.0  # Seitenlaenge a in mm
-a *= 1e-3  # d jetzt in m
+a *= 1e-3  # a jetzt in m
 I = (a**4)/12  # Flaechentraegheitsmoment für einen quadratischen Querschnitt in m^4
 D = D2-D1  # Die Ausgleichsrechnung, um die Biegung in Nullage zu beachten
 xwerte = L*(x1**2)-(x1**3)/3  # Die Gleichung für einseitige Einspannung
@@ -74,9 +74,9 @@ print('E/10^-9 fuer eckig, einseitige Einspannung ist', (m*9.81)/(2*I*a)*1e-9)
 plt.plot(xwerte, D, 'rx', label='Messwerte')
 plt.plot(xwerte, f(xwerte, *params), 'b-', label='fit')
 plt.legend()
-plt.xlabel('$(Lx^3-x^3/3)$/mm')
-plt.ylabel('$D(x)$/mm')
-plt.savefig('quadratischeinseitig.pdf')
+plt.xlabel(r'$(Lx^2-\frac{x^3}{3})/$mm³')
+plt.ylabel(r'$D(x)/$m')
+plt.savefig('build/quadratischeinseitig.pdf')
 # Ende einseitige Einspannung und quadratischer Querschnitt
 
 
@@ -110,6 +110,6 @@ print('E/10^-9 fuer eckig, zweiseitige Einspannung ist', (m*9.81)/(48*I*a)*1e-9)
 plt.plot(xwerte, D, 'rx', label='Messwerte')
 plt.plot(xwerte, f(xwerte, *params), 'b-', label='fit')
 plt.legend()
-plt.xlabel('$(3L^2x-4x^2)$/mm')
-plt.ylabel('$D(x)$/mm')
-plt.savefig('quadratischzweiseitig.pdf')
+plt.xlabel(r'$(3L^2x-4x^3)/$mm³')
+plt.ylabel(r'$D(x)/$m')
+plt.savefig('build/quadratischzweiseitig.pdf')
