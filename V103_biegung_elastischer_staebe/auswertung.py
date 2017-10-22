@@ -33,6 +33,8 @@ print('b =', params[1], '+-', errors[1])
 
 a = ufloat(params[0], errors[0])
 
+print(xwerte, D)
+
 print('E/10^-9 fuer rund, einseitige Einspannung ist', (m*9.81)/(2*I*a)*1e-9)
 
 plt.plot(xwerte, D, 'rx', label='Messwerte')
