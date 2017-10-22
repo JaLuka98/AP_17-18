@@ -33,15 +33,15 @@ print('b =', params[1], '+-', errors[1])
 
 a = ufloat(params[0], errors[0])
 
-print(xwerte, D)
-
 print('E/10^-9 fuer rund, einseitige Einspannung ist', (m*9.81)/(2*I*a)*1e-9)
 
 plt.plot(xwerte, D, 'rx', label='Messwerte')
 plt.plot(xwerte, f(xwerte, *params), 'b-', label='fit')
+plt.title('Runder Stab, einseitige Einspannung')
 plt.legend()
+plt.grid()
 plt.xlabel(r'$(Lx^2-\frac{x^3}{3})/$mm³')
-plt.ylabel(r'$D(x)/$m')
+plt.ylabel(r'$D(x)/$mm')
 plt.savefig('build/rundeinseitig.pdf')
 # Ende einseitige Einspannung und runder Querschnitt
 
@@ -75,9 +75,11 @@ print('E/10^-9 fuer eckig, einseitige Einspannung ist', (m*9.81)/(2*I*a)*1e-9)
 
 plt.plot(xwerte, D, 'rx', label='Messwerte')
 plt.plot(xwerte, f(xwerte, *params), 'b-', label='fit')
+plt.title('Eckiger Stab, einseitige Einspannung')
 plt.legend()
+plt.grid()
 plt.xlabel(r'$(Lx^2-\frac{x^3}{3})/$mm³')
-plt.ylabel(r'$D(x)/$m')
+plt.ylabel(r'$D(x)/$mm')
 plt.savefig('build/quadratischeinseitig.pdf')
 # Ende einseitige Einspannung und quadratischer Querschnitt
 
@@ -106,12 +108,15 @@ print('a =', params[0], '+-', errors[0])
 print('b =', params[1], '+-', errors[1])
 
 a = ufloat(params[0], errors[0])
+print(D, xwerte)
 
 print('E/10^-9 fuer eckig, zweiseitige Einspannung ist', (m*9.81)/(48*I*a)*1e-9)
 
 plt.plot(xwerte, D, 'rx', label='Messwerte')
 plt.plot(xwerte, f(xwerte, *params), 'b-', label='fit')
 plt.legend()
+plt.grid()
+plt.title('Eckiger Stab, beidseitige Einspannung')
 plt.xlabel(r'$(3L^2x-4x^3)/$mm³')
-plt.ylabel(r'$D(x)/$m')
+plt.ylabel(r'$D(x)/$mm')
 plt.savefig('build/quadratischzweiseitig.pdf')
