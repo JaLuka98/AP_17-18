@@ -11,3 +11,55 @@ $\symbf{F}=\dfrac{\mathrm{d}\symbf{p}}{\mathrm{d}t}=m\symbf{a}$ gilt.}.
 Diese Rolle spielt bei Rotationsbewegungen der Trägheitstensor, der sich in
 einfacher Betrachtung bei Drehung um eine fest vorgegebene Achse auf das skalare
 Trägheitsmoment $\symbf{I}$ reduziert.
+
+Das Trägheitsmoment $\symbf{I}$ errechnet sich hierbei durch
+\begin{equation}
+  \symbf{I}=\int r^2 dm  ,
+  \label{eqn:traegheitallg}
+\end{equation}
+wenn die Drehachse durch den Schwerpunkt des Körpers geht. Das Inegral ist hierbei
+als Volumenintegral über den Körper zu verstehen. Verläuft die Drehachse nicht
+durch den Schwerpunkt des Körpers, so muss nach dem Satz von Steiner noch ein
+Summand hinzu addiert werden:
+\begin{equation}
+  \symbf{I}=\symbf{I_s}+ma^2\;.
+  \label{eqn:steiner}
+\end{equation}
+Dabei ist $m$ die Masse des Körpers, $\symbf{I_s}$ das Trägheitsmoment bezüglich
+der Drehachse durch den Schwerpunkt des Körpers und $a$ der Abstand der realen
+Drehachse zu dieser.
+
+Wirkt auf den drehbaren Körper eine Kraft $\symbf{F}$ im Abstand $\symbf{r}$ und somit ein
+äußeres Drehmoment der Größe $\symbf{M}=\symbf{F}\times\symbf{r}$, so wird er um
+einen Winkel $\phi$ ausgelenkt, bis sich ein Gleichgewicht zwischen innerem Drehmoment,
+das durch die Spiralfeder erzeugt wird, und äußerem Drehmoment einstellt. Für das innere
+Drehmoment ergibt sich der Zusammenhang
+\begin{equation}
+  \symbf{M}=\symbf{D}\phi\;.
+  \label{eqn:drehmoment_innen}
+\end{equation}
+Dabei ist $\phi$ der Winkel der Auslenkung und $\symbf{D}$ die Winkelrichtgröße.
+Diese stellt ein Analogon zur Federkonstante bei translatorischen Bewegungen dar.
+Zeigt die wirkende Kraft $\symbf{F}$ in Richtung des Einheitsvektors $\symbf{e_{phi}}$
+in Polarkoordinaten und steht somit senkrecht zum Hebelarm $\symbf{r}$, so lässt sich
+die Winkelrichtgröße zu
+\begin{equation}
+  \symbf{D}=\frac{\symbf{F}\symbf{r}}{\phi}\;.
+  \label{eqn:winkelrg}
+\end{equation}
+
+Wird der Körper nun losgelassen, verschwindet das äußere Drehmoment. Das innere
+rücktreibende Drehmoment sorgt nun dafür, dass der Körper harmonisch schwingt.
+Für die Schwingungsdauer $T$ ergibt sich
+\begin{equation}
+  T=2\pi\sqrt{\frac{\symbf{I}}{\symbf{D}}}\;,
+  \label{eqn:schwingung}
+\end{equation}
+wobei I das gesamte Trägheitsmoment darstellt. Teilt man das gesamte Trägheitsmoment
+$\symbf{I}$ nun in die einzelnen Trägheitsmomente $\symbf{I_D}$ der Drillachse und
+$\symbf{I_K}$ des Körpers auf und stellt nach $\symbf{I_K}$ um, so ergibt sich für
+das Trägheitsmoment des Körpers
+\begin{equation}
+  \symbf{I_K}=\frac{T^2 \symbf{D}}{4\pi^2}-\symbf{I_D}\;.
+  \label{eqn:traegheitschwingung}
+\end{equation}
