@@ -14,7 +14,7 @@ Trägheitsmoment $\symbf{I}$ reduziert.
 
 Das Trägheitsmoment $\symbf{I}$ errechnet sich hierbei durch
 \begin{equation}
-  \symbf{I}=\int r^2 dm\quad,
+  \symbf{I}=\int \symbf{r}^2 dm\quad,
   \label{eqn:traegheitallg}
 \end{equation}
 wenn die Drehachse durch den Schwerpunkt des Körpers geht. Das Integral ist hierbei
@@ -40,7 +40,7 @@ Drehmoment ergibt sich der Zusammenhang
 \end{equation}
 Dabei ist $\phi$ der Winkel der Auslenkung und $\symbf{D}$ die Winkelrichtgröße.
 Diese stellt ein Analogon zur Federkonstante bei translatorischen Bewegungen dar.\cite{wiki:winkelrichtgröße}
-Zeigt die wirkende Kraft $\symbf{F}$ in Richtung des Einheitsvektors $\symbf{e_{phi}}$
+Zeigt die wirkende Kraft $\symbf{F}$ in Richtung des Einheitsvektors $\symbf{e_{\phi}}$
 in Polarkoordinaten und steht somit senkrecht zum Hebelarm $\symbf{r}$, so lässt sich
 die Winkelrichtgröße zu
 \begin{equation}
@@ -63,3 +63,28 @@ das Trägheitsmoment des Körpers
   \symbf{I_K}=\frac{T^2 \symbf{D}}{4\pi^2}-\symbf{I_D}\quad.
   \label{eqn:traegheitschwingung}
 \end{equation}
+
+Für die im Versuch zu bestimmenden Körper ergeben sich aus \eqref{eqn:traegheitallg}
+und \eqref{eqn:steiner} folgende Formeln:
+\begin{gather}
+  \symbf{I_{Kugel}}=\frac{2}{5}mr^2
+  \label{eqn:traegheitkugel} \\
+  \symbf{I_{Zylinder}}=\frac{1}{2}mr^2
+  \label{eqn:traegheitzylinder} \\
+  \begin{split}
+    \symbf{I_{Puppe1}}=\symbf{I_{Kopf}}+\symbf{I_{Rumpf}}
+    +2\Bigl(\symbf{I_{Arm}}+(R_{Rumpf}+R_{Arm})^2\Bigr) \\
+    +2\Biggl(\symbf{I_{Bein}}+\biggl(\frac{h_{Bein}}{2}\biggr)^2\Biggr)
+    \label{eqn:traegheitpuppe1}
+  \end{split}
+  \\
+  \begin{split}
+    \symbf{I_{P2}}=\symbf{I_{K}}+\symbf{I_{R}}
+    +2\Biggl(\symbf{I_{A}}+\biggl(R_{R}+\frac{h_{A}}{2}\biggr)^2\Biggr)
+    +2\Biggl(\symbf{I_{B}}+\biggl(\frac{h_{B}}{2}\biggr)^2\Biggr)
+    \label{eqn:traegheitpuppe2}
+  \end{split}
+\end{gather}
+Dabei ist zu beachten, dass $\symbf{I_{Arm}}$ in \eqref{eqn:traegheitpuppe1} und
+\eqref{eqn:traegheitpuppe2} unterschiedliche Werte annimmt, da die Arme um verschiedene
+Achsen gedreht werden.
