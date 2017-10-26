@@ -1,0 +1,23 @@
+\section{Fehlerrechnung}
+Der Mittelwert einer Stichprobe von $N$ Werten wird durch
+\begin{equation}
+  \overline{x} = \sum\limits_{i = 1}^N x_i
+\end{equation}
+berechnet.
+Die empirische Standardabweichung dieser Stichprobe ist gegeben durch
+\begin{equation}
+  \sigma_x = \sqrt{\frac{1}{n-1}
+    \sum\limits_{i = 1}^N
+    (x_i-\overline{x})^2}
+.
+\end{equation}
+
+\begin{equation}
+  \sigma_f = \sqrt{
+    \sum\limits_{i = 1}^N
+      \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
+  }
+\end{equation}
+
+
+\label{sec:Fehlerrechnung}
