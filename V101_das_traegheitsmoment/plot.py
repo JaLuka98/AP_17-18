@@ -26,7 +26,7 @@ print('Die winkelrichtgroesse bei der statischen Methode berechnet sich zu', D)
 r, zweiT = np.genfromtxt('data/drillachse.txt', unpack=True)
 # a in cm, 2T ins
 r *= 1e-2  # r in m
-r += 0.0298  # weil die "Punktmassen" Zylinder sind, hzyl = 2.98cm
+r += 0.0298/2  # weil die "Punktmassen" Zylinder sind, hzyl = 2.98cm
 T = zweiT/2
 m1 = 0.2324
 m2 = 0.2225
@@ -44,19 +44,25 @@ b = ufloat(params[1], errors[1])
 
 plt.plot(r**2, T**2, 'rx', label='Messwerte')
 plt.plot(r**2, f(r**2, *params), 'k-', label='fit')
-plt.xlabel('$a²$/cm²')
+plt.xlabel('$r²$/cm²')
 plt.ylabel('$T²$/s²')
+plt.legend()
+plt.grid()
 
 plt.savefig('build/drillachse.pdf')
 
+# Erstellen einer Tabelle für die latex-Datei
+np.savetxt('data/tabelledrillachse.txt', np.transpose([r*1e2, T, (r*1e2)**2, T**2]), fmt='%1.2f')
+
 I_D = (b*8*(np.pi)**2*m/a)/(4*(np.pi)**2)
-print('Das Eigentraegheitsmoment I_D der Drillachse berechnet sich zu', I_D)
+print('Das Eigentraegheitsmoment I_D der Drillachse berechnet sich zu', I_D*1e3)
 
 dreiT = np.genfromtxt('data/zylinder.txt', unpack=True)
 
 T = dreiT/3
+print('Die Periodendauern sind', T)
 T = ufloat(np.sum(T)/len(T), np.std(T))
-I_zylinder = (T**2*D)/(4*(np.pi)**2)
+I_zylinder = (T**2*D)/(4*(np.pi)**2)*1e3
 print('Der experimentelle Wert fuer das Traegheitsmoment des Zylinders ist', I_zylinder)
 
 m_z = 2.3959
