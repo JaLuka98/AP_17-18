@@ -60,7 +60,6 @@ print('Das Eigentraegheitsmoment I_D der Drillachse berechnet sich zu', I_D)
 dreiT = np.genfromtxt('data/zylinder.txt', unpack=True)
 
 T = dreiT/3
-print('Die Periodendauern sind', T)
 T = ufloat(np.sum(T)/len(T), np.std(T))
 I_zylinder = (T**2*D)/(4*(np.pi)**2)*1e3
 print('Der experimentelle Wert fuer das Traegheitsmoment des Zylinders ist', I_zylinder-I_D)
@@ -74,7 +73,7 @@ dreiT = np.genfromtxt('data/kugel.txt', unpack=True)
 T = dreiT/3
 T = ufloat(np.sum(T)/len(T), np.std(T))
 I_Kugel = (T**2*D)/(4*(np.pi)**2)*1e3
-print('Der experimentelle Wert fuer das Traegheitsmoment der Kugel ist', I_Kugel)
+print('Der experimentelle Wert fuer das Traegheitsmoment der Kugel ist', I_Kugel - I_D)
 
 m_k = 0.8125
 d_kugel = np.array([0.1374, 0.1372, 0.1373, 0.1373, 0.1370])
@@ -104,3 +103,21 @@ I_B=4.407e-5
 
 I_Puppe1=13.193e-3
 I_Puppe2=27.463e-3
+
+dreiT = np.genfromtxt('data/puppe1.txt', unpack=True)
+
+T = dreiT/3
+T = ufloat(np.sum(T)/len(T), np.std(T))
+print(T)
+I_Puppe1exp = (T**2*D)/(4*(np.pi)**2)*1e3
+print('Der experimentelle Wert fuer das Traegheitsmoment der Puppe in der ersten Haltung ist', I_Puppe1exp - I_D)
+print('Der theoretische Wert fuer das Traegheitsmoment der Puppe in der ersten Haltung ist', I_Puppe1*1e3)
+
+dreiT = np.genfromtxt('data/puppe2.txt', unpack=True)
+
+T = dreiT/3
+T = ufloat(np.sum(T)/len(T), np.std(T))
+print(T)
+I_Puppe2exp = (T**2*D)/(4*(np.pi)**2)*1e3
+print('Der experimentelle Wert fuer das Traegheitsmoment der Puppe in der zweiten Haltung ist', I_Puppe2exp - I_D)
+print('Der theoretische Wert fuer das Traegheitsmoment der Puppe in der zweiten Haltung ist', I_Puppe2*1e3)

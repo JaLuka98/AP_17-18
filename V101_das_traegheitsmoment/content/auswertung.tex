@@ -6,15 +6,16 @@ Eigenträgheitsmoment $I_{\symup{D}}$ der Drillachse aus den aufgenommenen
 Messwerten berechnet.
 \subsubsection{Bestimmung der Winkelrichtgröße}
 Die Messwerte, die zur Bestimmung der Winkelgrichtgröße $D$ herangezogen werden,
-sind in \ref{tab:winkelrichtgroesse} zusammengefasst. Bei der Messung wurde die
-Federwaage in dem konstanten Abstand $r=\SI{9.1}{cm}$.
+sind in Tabelle \ref{tab:winkelrichtgroesse} zusammengefasst. Bei der Messung wurde die
+Federwaage in dem konstanten Abstand $r=\SI{9.1}{cm}$ angesetzt.
+
 \begin{table}
 \centering
 \caption{Messdaten zur Bestimmung der Winkelrichtgröße}
 \label{tab:winkelrichtgroesse}
-\begin{tabular}{c c c}
+\begin{tabular}{c c}
 \toprule
-$\varphi/$grad & $r/$cm & $F/$N \\
+$\varphi/$grad & $F/$N \\
 \midrule
  60	& 0.19 \\
  60	& 0.19 \\
@@ -39,6 +40,7 @@ $\varphi/$grad & $r/$cm & $F/$N \\
 \bottomrule
 \end{tabular}
 \end{table}
+
 Gemäß \eqref{eqn:winkelrg} kann die Winkelrichtgröße nun bestimmt werden, indem
 die aufgenommenen Messwerte nach \eqref{eqn:mean} gemittelt werden und die
 Abweichung gemäß \eqref{eqn:std} berechnet wird. Dies ergibt den Wert
@@ -50,10 +52,10 @@ wobei die relative Unsicherheit 11,6\% ist.
 Zuerst werden aus der Periodendauer $T$ der Schwingung der Massen und ihrem
 Abstand $r$ von der Drehachse ihre Quadrate gebildet, um eine lineare Regression
 von $T^2$ gegen $r^2$ zu bilden. Das ist möglich, da nach der Schwingungsgleichung
-\eqref{eqn:schwingung} und $I=I_D+2\overline{m}r^2$ durch Anwendung des
+\eqref{eqn:schwingung} und $I=I_{\symup{D}}+2\overline{m}r^2$ durch Anwendung des
 Steiner'schen Satzes \eqref{eqn:steiner}
 \begin{equation}
-  T^2 = \frac{4\pi^2}{D}(I_D+\overline{m}r^2)\propto r^2
+  T^2 = \frac{4\pi^2}{D}(I_{\symup{D}}+\overline{m}r^2)\propto r^2
   \label{eqn:drillachsengleichung}
 \end{equation}
 gilt. Hierbei ist
@@ -65,15 +67,15 @@ kompakt geschrieben werden kann. $r$ ist der Abstand bis zum Schwerpunktes der
 als Punktmassen angenommenen Zylinder, der sich nach
 \begin{equation}
   r = r_{\symup{bis Zylinder}}
-      +\frac{h_{zylinder}}{2}
+      +\frac{h_{\symup{zylinder}}}{2}
 \end{equation}
 mit $h_{\symup{zylinder}} = \SI{2.98}{cm}$ berechnet.
-Die lineare Regression der Werte aus \ref{tab:drillachse} ist in
-\ref{fig:drillachse} zu sehen.
+Die lineare Regression der Werte aus Tabelle \ref{tab:drillachse} ist in
+Abbildung \ref{fig:drillachse} zu sehen.
 
 \begin{table}
 \centering
-\caption{Messdaten zur Bestimmung Eigenträgheitsmoments der Drillachse}
+\caption{Messdaten zur Bestimmung des Eigenträgheitsmoments der Drillachse}
 \label{tab:drillachse}
 \begin{tabular}{c c c c}
 \toprule
@@ -92,26 +94,28 @@ $r/$cm & $T/$s & $r^2/$cm² & $T^2$/s² \\
 \bottomrule
 \end{tabular}
 \end{table}
+
 \begin{figure}
   \centering
   \includegraphics{build/Drillachse.pdf}
   \caption{Graph von $T^2$ gegen $r^2$ und Fit}
   \label{fig:drillachse}
 \end{figure}
+
 Die Regressionsgerade folgt der allgemeinen Geradengleichung
 \begin{equation}
   T^2(r^2) = ar^2+b\,.
   \label{eqn:gerade}
 \end{equation}
-Die Regressionsparamter $a$ und $b$ ergeben sich hierbei zu
+Die Regressionsparameter $a$ und $b$ ergeben sich hierbei zu
 \begin{align}
   a &= \SI{757.48(797)}{\second\squared/\meter\squared}\,,\\
   b &= \SI{4.70(019)}{\second\squared}\,.
 \end{align}
 Durch Kombination von \eqref{eqn:gerade} mit \eqref{eqn:drillachsengleichung},
-folgt für das Eigenträgheitsmoment $I_D$ der Drillachse
+folgt für das Eigenträgheitsmoment $I_{\symup{D}}$ der Drillachse
 \begin{equation}
-  I_D = \frac{2b\overline{m}}{a} = \SI{2.82(012)e-3}{\kilogram\meter\squared}
+  I_{\symup{D}} = \frac{2b\overline{m}}{a} = \SI{2.82(012)e-3}{\kilogram\meter\squared}
 \end{equation}
 mit einer relativen Unsicherheit von 4,3\%.
 \subsection{Bestimmung der Trägheitsmomente zweier Körper}
@@ -120,7 +124,7 @@ Die Abmessungen des untersuchten Zylinders sind $h_{\symup{z}}=\SI{13.99}{\cm}$ 
 $d_{\symup{z}}=\SI{10}{\cm}$, seine Masse $m_{\symup{z}}=\SI{2.3959}{\kilogram}$.
 Die gemessenen Periodendauern sind in \ref{tab:zylinder} zusammengefasst.
 
-\begin{table}
+\begin{table}[!h]
 \centering
 \caption{Periodendauern der Rotation des Zylinders}
 \label{tab:zylinder}
@@ -137,9 +141,10 @@ $3T$/s & $T/$s \\
 \end{tabular}
 \end{table}
 
-Durch ihre Mittelung und \eqref{eqn:traegheitschwingung} lässt sich
+Durch ihre Mittelung auf $\overline{T_{\text{z}}}=\SI{2.25(001)}{\second}$ und
+\eqref{eqn:traegheitschwingung} lässt sich
 \begin{equation}
-  I_{\symup{z,exp}} = \frac{DT^2}{4\pi^2}-I_D = \SI{-0.18(033)e-3}{\kilogram\meter\squared}
+  I_{\symup{z,exp}} = \frac{D\overline{T_{\text{z}}}^2}{4\pi^2}-I_{\symup{D}} = \SI{-0.18(033)e-3}{\kilogram\meter\squared}
 \end{equation}
 berechnen. Der theoretisch berechnete Wert für das Trägheitsmoment eines Zylinders
 bei Rotation um die Symmetrieachse ist nach \eqref{eqn:traegheitzylinder}
@@ -149,13 +154,14 @@ bei Rotation um die Symmetrieachse ist nach \eqref{eqn:traegheitzylinder}
 Es ist auffällig, dass eine Berechnung nach \eqref{eqn:schwingung} zu einem
 konsistenteren Wert von \SI{2.64(033)e-3}{\kilogram\meter\squared} mit einem
 relativen Fehler zum Theoriewert von 11.7\% führt. Diese alternative Berechnung
-bedeutet anschaulich eine Vernachlässigung des Eigenträgheitsmoments $I_D$
+bedeutet anschaulich eine Vernachlässigung des Eigenträgheitsmoments $I_{\symup{D}}$
+der Drillachse.
 
 \subsubsection{Bestimmung des Trägheitsmoments einer Kugel}
 Der Durchmesser der untersuchten Kugel beträgt $d_{\symup{k}}=\SI{13.724(0014)}{\cm}$,
 ist also nur minimal fehlerbehaftet. Die Masse der Kugel wurde bestimmt zu
 $m_{\symup{k}}=\SI{812.5}{\gram}$. Die Messwerte der Periodendauern finden sich
-in \ref{tab:kugel}.
+in \ref{tab:kugel}, ihr Mittelwert ist $\overline{T_{\text{k}}}=\SI{1.69(002)}{\second}$.
 
 \begin{table}
 \centering
@@ -181,14 +187,104 @@ $3T$/s & $T/$s \\
 
 Wird erneut \eqref{eqn:traegheitschwingung} verwendet, ergibt sich
 \begin{equation}
-  I_{\symup{k,exp}} = \frac{DT^2}{4\pi^2}-I_D = \SI{-1.32(021)e-3}{\kilogram\meter\squared}\,.
+  I_{\symup{k,exp}} = \frac{D\overline{T_{\text{k}}}^2}{4\pi^2}-I_D = \SI{-1.32(021)e-3}{\kilogram\meter\squared}\,.
 \end{equation}
 Für das Trägheitsmoment der Kugel gemäß \eqref{eqn:traegheitkugel} folgt
 \begin{equation}
-  I_{\symup{z,theo}} = \SI{1.530(0003)e-3}{\kilogram\meter\squared}\,.
+  I_{\symup{k,theo}} = \SI{1.530(0003)e-3}{\kilogram\meter\squared}\,.
 \end{equation}
 Wird stattdessen der experimentelle Wert mit \eqref{eqn:schwingung} berechnet,
 ergibt er sich zu \SI{1.50(018)e-3}{\kilogram\meter\squared} mit einem relativen
 Fehler von 1,96\%.
 
 \subsection{Bestimmung des Trägheitsmoments einer Modellpuppe}
+Zuletzt ist das Trägheitsmoment einer Modellpuppe in zwei verschiedenen
+Körperhaltungen experimentell zu bestimmen und mit theoretischen Berechnungen zu
+vergleichen. Die Körperhaltungen sind dabei in \ref{sec:Durchführung} beschrieben.
+Die Maße der Körperteile, die zur theoretischen Berechnung der Trägheitsmomente
+herangezogen wurden, sind im Anhang zu finden. Um Massen berechnen zu können,
+wurde für das Holz eine Dichte von $\rho=\SI{650}{\kilogram\per\meter\cubed}$
+angenommen.
+\subsubsection{Bestimmung des Trägheitsmoments der Puppe in der ersten Stellung}
+\begin{table}
+Die Messreihe findet sich in \ref{tab:puppe1}.
+
+\centering
+\caption{Periodendauern der Rotation der Puppe in erster Haltung}
+\label{tab:puppe1}
+\begin{tabular}{c c}
+\toprule
+$3T$/s & $T/$s \\
+\midrule
+2.30 & 0.77 \\
+2.36 & 0.79 \\
+2.38 & 0.79 \\
+2.40 & 0.80 \\
+2.29 & 0.76 \\
+2.30 & 0.77 \\
+2.40 & 0.80 \\
+2.38 & 0.79 \\
+2.33 & 0.78 \\
+2.32 & 0.77 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Daraus ergibt sich nach Mittelung der Periodendauern
+$\overline{T_{\text{p1}}}=\SI{0.78(001)}{\second}$. Setzt man diesen Wert in
+\eqref{eqn:traegheitschwingung} ein, erhält man für das Trägheitsmoment
+\begin{equation}
+  I_{\symup{p1,exp}} = \frac{D\overline{T_{\text{p1}}}^2}{4\pi^2}-I_D = \SI{-2.50(012)e-3}{\kilogram\meter\squared}\,.
+\end{equation}
+**************************************
+HIER NOCH VERGLEICH MIT THEORIEWERT EINFÜGEN
+**************************************
+In Kapitel \ref{sec:Theorie} wurde bereits in \eqref{eqn:traegheitpuppe1} die
+Formel für den theoretischen Wert des Trägheitsmoments angegeben.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Bestimmung des Trägheitsmoments der Puppe in der zweiten Stellung}
+\begin{table}
+Die gemittelte Periodendauer der Rotation der zweiten Puppe lässt sich aus
+\ref{tab:puppe2} errechnen zu $\overline{T_{\text{p2}}}=\SI{0.96(001)}{\second}$.
+
+\centering
+\caption{Periodendauern der Rotation der Puppe in zweiter Haltung}
+\label{tab:puppe2}
+\begin{tabular}{c c}
+\toprule
+$3T$/s & $T/$s \\
+\midrule
+2.93 & 0.98 \\
+2.83 & 0.94 \\
+2.86 & 0.95 \\
+2.90 & 0.97 \\
+2.86 & 0.95 \\
+2.87 & 0.96 \\
+2.90 & 0.97 \\
+2.83 & 0.94 \\
+2.84 & 0.95 \\
+2.83 & 0.94 \\
+\bottomrule
+\end{tabular}
+\end{table}
+Schlussendlich folgt für das Trägheitsmoment in der zweiten Haltung nach Einsetzen
+der gemittelten Periodendauer in \eqref{eqn:traegheitschwingung}
+\begin{equation}
+  I_{\symup{p2,exp}} = \frac{D\overline{T_{\text{p2}}}^2}{4\pi^2}-I_D = \SI{-2.35(001)e-3}{\kilogram\meter\squared}\,.
+\end{equation}
+***********************************
+HIER NOCH VERGLEICH MIT THEORIEWERT EINFÜGEN
+**********************************
