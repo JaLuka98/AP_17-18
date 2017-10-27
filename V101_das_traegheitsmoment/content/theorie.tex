@@ -14,7 +14,7 @@ Trägheitsmoment $I$ reduziert.
 
 Das Trägheitsmoment $I$ errechnet sich hierbei durch
 \begin{equation}
-  I=\int r_{\perp}^2 dm\quad,
+  I=\int r_{\perp}^2 \,\symup{d}m\,,
   \label{eqn:traegheitallg}
 \end{equation}
 wenn die Drehachse durch den Schwerpunkt des Körpers geht. Das Integral ist hierbei
@@ -22,10 +22,10 @@ als Volumenintegral über den Körper zu verstehen. Verläuft die Drehachse nich
 durch den Schwerpunkt des Körpers, so muss nach dem Satz von Steiner noch ein
 Summand hinzu addiert werden:
 \begin{equation}
-  I=I_s+m\symbf{a}^2\quad.
+  I=I_{\symup{s}}+m\symbf{a}^2\,.
   \label{eqn:steiner}
 \end{equation}
-Dabei ist $m$ die Masse des Körpers, $I_s$ das Trägheitsmoment bezüglich
+Dabei ist $m$ die Masse des Körpers, $I_{\symup{s}}$ das Trägheitsmoment bezüglich
 der Drehachse durch den Schwerpunkt des Körpers und $a$ der Abstand der realen
 Drehachse zu dieser. Mithilfe dieses Satzes lassen sich die Trägheitsmomente
 komplexer Körper einfach berechnen, indem der Körper in mehrere einfacher zu berechnende
@@ -38,7 +38,7 @@ einen Winkel $\phi$ ausgelenkt, bis sich ein Gleichgewicht zwischen innerem Dreh
 das durch die Spiralfeder erzeugt wird, und äußerem Drehmoment einstellt. Für das innere
 Drehmoment ergibt sich der Zusammenhang
 \begin{equation}
-  \symbf{M}=\symbf{D}\phi\quad.
+  \symbf{M}=\symbf{D}\phi\,.
   \label{eqn:drehmoment_innen}
 \end{equation}
 Dabei ist $\phi$ der Winkel der Auslenkung und $\symbf{D}$ die Winkelrichtgröße.
@@ -47,7 +47,7 @@ Zeigt die wirkende Kraft $\symbf{F}$ in Richtung des Einheitsvektors $\symbf{e}_
 in Polarkoordinaten und steht somit senkrecht zum Hebelarm $\symbf{r}$, so lässt sich
 die Winkelrichtgröße zu
 \begin{equation}
-  \symbf{D}=\frac{\symbf{F}\symbf{r}}{\phi}\quad.
+  {D}=\frac{Fr}{\phi}\,.
   \label{eqn:winkelrg}
 \end{equation}
 
@@ -55,45 +55,45 @@ Wird der Körper nun losgelassen, verschwindet das äußere Drehmoment. Das inne
 rücktreibende Drehmoment sorgt nun dafür, dass der Körper harmonisch schwingt.
 Für die Schwingungsdauer $T$ ergibt sich
 \begin{equation}
-  T=2\pi\sqrt{\frac{I}{\symbf{D}}}\quad,
+  T=2\pi\sqrt{\frac{I}{D}}\,,
   \label{eqn:schwingung}
 \end{equation}
 wobei $I$ das gesamte Trägheitsmoment darstellt. Teilt man das gesamte Trägheitsmoment
-$I$ nun in die einzelnen Trägheitsmomente $I_D$ der Drillachse und
-$I_K$ des Körpers auf und stellt nach $I_K$ um, so ergibt sich für
+$I$ nun in die einzelnen Trägheitsmomente $I_{\symup{D}}$ der Drillachse und
+$I_{\symup{K}}$ des Körpers auf und stellt nach $I_{\symup{K}}$ um, so ergibt sich für
 das Trägheitsmoment des Körpers
 \begin{equation}
-  I_K=\frac{T^2 \symbf{D}}{4\pi^2}-I_D\quad.
+  I_{\symup{K}}=\frac{T^2D}{4\pi^2}-I_{\symup{D}}\,.
   \label{eqn:traegheitschwingung}
 \end{equation}
 
 Für die im Versuch zu bestimmenden Körper ergeben sich aus \eqref{eqn:traegheitallg}
 und \eqref{eqn:steiner} folgende Formeln:
 \begin{gather}
-  I_{Kugel}=\frac{2}{5}mr^2
+  I_{\symup{Kugel}}=\frac{2}{5}mr^2
   \label{eqn:traegheitkugel} \\
-  I_{Zylinder}=\frac{1}{2}mr^2
+  I_{\symup{Zylinder}}=\frac{1}{2}mr^2
   \label{eqn:traegheitzylinder} \\
   \begin{split}
-    I_{Puppe1}=I_{K}+I_{R}
-    +2\Bigl(I_{A}+(R_{R}+R_{A})^2\Bigr)
-    +2\Biggl(I_{B}+\biggl(\frac{h_{B}}{2}\biggr)^2\Biggr)
+    I_{\symup{Puppe1}}=I_{\symup{K}}+I_{\symup{R}}
+    +2\Bigl(I_{\symup{A}}+(R_{\symup{R}}+R_{\symup{A}})^2\Bigr)
+    +2\Biggl(I_{\symup{B}}+\biggl(\frac{h_{\symup{B}}}{2}\biggr)^2\Biggr)
     \label{eqn:traegheitpuppe1}
   \end{split}
   \\
   \begin{split}
-    I_{Puppe2}=I_{K}+I_{R}
-    +2\Biggl(I_{A}+\biggl(R_{R}+\frac{h_{A}}{2}\biggr)^2\Biggr)
-    +2\Biggl(I_{B}+\biggl(\frac{h_{B}}{2}\biggr)^2\Biggr)
+    I_{\symup{Puppe2}}=I_{\symup{K}}+I_{\symup{R}}
+    +2\Biggl(I_{\symup{A}}+\biggl(R_{\symup{R}}+\frac{h_{\symup{A}}}{2}\biggr)^2\Biggr)
+    +2\Biggl(I_{\symup{B}}+\biggl(\frac{h_{\symup{B}}}{2}\biggr)^2\Biggr)
     \label{eqn:traegheitpuppe2}
   \end{split}
 \end{gather}
-Dabei ist $I_{Puppe1}$ das gesamte Trägheitsmoment der Puppe in der ersten
-Haltung und $I_{Puppe2}$ das gesamte Trägheitsmoment der Puppe in der
-zweiten Körperhaltung. $I_{K}$ ist das Trägheitsmoment des Kopfes, $I_{R}$
-das Trägheitsmoment des Rumpfes, $I_{A}$ das Trägheitsmoment eines Armes und
-$I_{B}$ das Trägheitsmoment eines Beines. $R_R$ und $R_A$ sind die zugehörigen
-Radien und $h_A$ und $h_B$ die zugehörigen Höhen. Die quadrierten Faktoren folgen
-aus den geometrischen Abmessungen der Puppe. Zudem ist zu beachten, dass $I_{Arm}$
+Dabei ist $I_{\symup{Puppe1}}$ das gesamte Trägheitsmoment der Puppe in der ersten
+Haltung und $I_{\symup{Puppe2}}$ das gesamte Trägheitsmoment der Puppe in der
+zweiten Körperhaltung. $I_{\symup{K}}$ ist das Trägheitsmoment des Kopfes, $I_{\symup{R}}$
+das Trägheitsmoment des Rumpfes, $I_{\symup{A}}$ das Trägheitsmoment eines Armes und
+$I_{\symup{B}}$ das Trägheitsmoment eines Beines. $R_{\symup{R}}$ und $R_{\symup{A}}$ sind die zugehörigen
+Radien und $h_{\symup{A}}$ und $h_{\symup{B}}$ die zugehörigen Höhen. Die quadrierten Faktoren folgen
+aus den geometrischen Abmessungen der Puppe. Zudem ist zu beachten, dass $I_{\symup{Arm}}$
 in \eqref{eqn:traegheitpuppe1} und \eqref{eqn:traegheitpuppe2} unterschiedliche Werte
 annimmt, da die Arme um verschiedene Achsen gedreht werden.
