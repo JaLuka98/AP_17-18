@@ -94,6 +94,13 @@ h_rumpf = 9.76  # in cm
 h_bein = 15.38  # in cm
 d_bein = 1.68  # in cm
 
-# rho_holz bitte nachschlagen
+rho_ahorn=650
 
-# Die Berechnung der Trägheitsmomente kannst du gerne hier in Python machen
+I_K=9.744e-7
+I_R=1.046e-5
+I_A1=3.736e-7
+I_A2=2.406e-5
+I_B=4.407e-5
+
+I_Puppe1=13.193e-3
+I_Puppe2=27.463e-3
