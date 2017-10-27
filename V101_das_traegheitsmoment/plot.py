@@ -80,3 +80,20 @@ m_k = 0.8125
 d_kugel = np.array([0.1374, 0.1372, 0.1373, 0.1373, 0.1370])
 d_kugel = ufloat(np.sum(d_kugel)/len(d_kugel), np.std(d_kugel))
 print('Der theoretische Wert fuer das Traegheitsmoment der Kugel ist', (0.4*m_k*(d_kugel/2)**2)*1e3)
+
+# Berechnung der Puppe
+# 1. Körperhaltung war angelegte Arme und Spagat (zur Seite)
+# 2 Körperhaltung war zur Seite abgespreizte Arme und ein Spagat nach vorne und hinten
+
+# Maße der Puppe
+d_kopf = 3.1  # in cm
+h_arm = 14  # in cm
+d_arm = 1.43  # in cm
+d_rumpf = 3.60  # in cm
+h_rumpf = 9.76  # in cm
+h_bein = 15.38  # in cm
+d_bein = 1.68  # in cm
+
+# rho_holz bitte nachschlagen
+
+# Die Berechnung der Trägheitsmomente kannst du gerne hier in Python machen
