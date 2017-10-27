@@ -1,5 +1,9 @@
 \section{Auswertung}
+\label{sec:Auswertung}
 \subsection{Bestimmung der Apparatekonstanten}
+Im Folgenden werden die Winkelrichtgröße $D$ der Spiralfeder und das
+Eigenträgheitsmoment $I_{\symup{D}}$ der Drillachse aus den aufgenommenen
+Messwerten berechnet.
 \subsubsection{Bestimmung der Winkelrichtgröße}
 Die Messwerte, die zur Bestimmung der Winkelgrichtgröße $D$ herangezogen werden,
 sind in \ref{tab:winkelrichtgroesse} zusammengefasst. Bei der Messung wurde die
@@ -144,7 +148,8 @@ bei Rotation um die Symmetrieachse ist nach \eqref{eqn:traegheitzylinder}
 \end{equation}
 Es ist auffällig, dass eine Berechnung nach \eqref{eqn:schwingung} zu einem
 konsistenteren Wert von \SI{2.64(033)e-3}{\kilogram\meter\squared} mit einem
-relativen Fehler zum Theoriewert von 11.7\% führt.
+relativen Fehler zum Theoriewert von 11.7\% führt. Diese alternative Berechnung
+bedeutet anschaulich eine Vernachlässigung des Eigenträgheitsmoments $I_D$
 
 \subsubsection{Bestimmung des Trägheitsmoments einer Kugel}
 Der Durchmesser der untersuchten Kugel beträgt $d_{\symup{k}}=\SI{13.724(0014)}{\cm}$,
@@ -180,7 +185,10 @@ Wird erneut \eqref{eqn:traegheitschwingung} verwendet, ergibt sich
 \end{equation}
 Für das Trägheitsmoment der Kugel gemäß \eqref{eqn:traegheitkugel} folgt
 \begin{equation}
-  I_{\symup{z,theo}} = \SI{2.99e-3}{\kilogram\meter\squared}.
+  I_{\symup{z,theo}} = \SI{1.530(0003)e-3}{\kilogram\meter\squared}.
 \end{equation}
+Wird stattdessen der experimentelle Wert mit \eqref{eqn:schwingung} berechnet,
+ergibt er sich zu \SI{1.50(018)e-3}{\kilogram\meter\squared} mit einem relativen
+Fehler von 1,96\%.
 
-\label{sec:Auswertung}
+\subsection{Bestimmung des Trägheitsmoments einer Modellpuppe}

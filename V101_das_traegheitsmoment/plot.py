@@ -74,7 +74,7 @@ dreiT = np.genfromtxt('data/kugel.txt', unpack=True)
 T = dreiT/3
 T = ufloat(np.sum(T)/len(T), np.std(T))
 I_Kugel = (T**2*D)/(4*(np.pi)**2)*1e3
-print('Der experimentelle Wert fuer das Traegheitsmoment der Kugel ist', I_Kugel-I_D)
+print('Der experimentelle Wert fuer das Traegheitsmoment der Kugel ist', I_Kugel)
 
 m_k = 0.8125
 d_kugel = np.array([0.1374, 0.1372, 0.1373, 0.1373, 0.1370])
