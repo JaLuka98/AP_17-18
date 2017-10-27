@@ -36,7 +36,7 @@ $\varphi/$grad & $r/$cm & $F/$N \\
 \end{tabular}
 \end{table}
 Gemäß \eqref{eqn:winkelrg} kann die Winkelrichtgröße nun bestimmt werden, indem
-die aufgenommenen Messwerte nach \eqref{eqn:mean} gemmittelt werden und die
+die aufgenommenen Messwerte nach \eqref{eqn:mean} gemittelt werden und die
 Abweichung gemäß \eqref{eqn:std} berechnet wird. Dies ergibt den Wert
 \begin{equation}
   D = \SI{0.0207(0024)}{\newton\meter},
@@ -45,18 +45,18 @@ wobei die relative Unsicherheit 11,6\% ist.
 \subsubsection{Bestimmung des Eigenträgheitsmoments der Drillachse}
 Zuerst werden aus der Periodendauer $T$ der Schwingung der Massen und ihrem
 Abstand $r$ von der Drehachse ihre Quadrate gebildet, um eine lineare Regression
-von $T^2$ gegen $r^2$ zu bilden. Das ist möglich, da nach der Schwingungs
+von $T^2$ gegen $r^2$ zu bilden. Das ist möglich, da nach der Schwingungsgleichung
 \eqref{eqn:schwingung} und $I=I_D+2\overline{m}r^2$ durch Anwendung des
 Steiner'schen Satzes \eqref{eqn:steiner}
 \begin{equation}
   T^2 = \frac{4\pi^2}{D}(I_D+\overline{m}r^2)\propto r^2
-  \label{eqn:schwingungkonkret}
+  \label{eqn:drillachsengleichung}
 \end{equation}
 gilt. Hierbei ist
 \begin{equation}
   \overline{m} = \frac{m_1+m_2}{s} =\SI{227.45}{\gram}
 \end{equation}
-der Mittelwert der angehängten Massen, sodass \eqref{eqn:schwingungkonkret}
+der Mittelwert der angehängten Massen, sodass \eqref{eqn:drillachsengleichung}
 kompakt geschrieben werden kann. $r$ ist der Abstand bis zum Schwerpunktes der
 als Punktmassen angenommenen Zylinder, der sich nach
 \begin{equation}
@@ -104,17 +104,17 @@ Die Regressionsparamter $a$ und $b$ ergeben sich hierbei zu
   a &= \SI{757.48(797)}{\second\squared/\meter\squared}\\
   b &= \SI{4.70(019)}{\second\squared}.
 \end{align}
-Kombiniert man \eqref{eqn:gerade} mit \eqref{eqn:schwingungkonkret}, so erhält man für
-das Eigenträgheitsmoment $I_D$ der Drillachse
+Durch Kombination von \eqref{eqn:gerade} mit \eqref{eqn:drillachsengleichung},
+folgt für das Eigenträgheitsmoment $I_D$ der Drillachse
 \begin{equation}
   I_D = \frac{2b\overline{m}}{a} = \SI{2.82(012)e-3}{\kilogram\meter\squared}
 \end{equation}
 mit einer relativen Unsicherheit von 4,3\%.
 \subsection{Bestimmung der Trägheitsmomente zweier Körper}
 \subsubsection{Bestimmung des Trägheitsmoments eines Zylinders}
-Die Abmessungen des untersuchten Zylinders sind $h=\SI{13.99}{\cm}$ und
-$d=\SI{10}{\cm}$, seine Masse $m=\SI{2.3959}{\kilogram}$. Die gemessenen
-Periodendauern sind in \ref{tab:zylinder} zusammengefasst.
+Die Abmessungen des untersuchten Zylinders sind $h_{\symup{z}}=\SI{13.99}{\cm}$ und
+$d_{\symup{z}}=\SI{10}{\cm}$, seine Masse $m_{\symup{z}}=\SI{2.3959}{\kilogram}$.
+Die gemessenen Periodendauern sind in \ref{tab:zylinder} zusammengefasst.
 
 \begin{table}
 \centering
@@ -124,19 +124,63 @@ Periodendauern sind in \ref{tab:zylinder} zusammengefasst.
 \toprule
 $3T$/s & $T/$s \\
 \midrule
-6.73 & 2.24
-6.72 & 2.24
-6.80 & 2.27
-6.73 & 2.24
-6.73 & 2.24
+6.73 & 2.24 \\
+6.72 & 2.24 \\
+6.80 & 2.27 \\
+6.73 & 2.24 \\
+6.73 & 2.24 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Durch ihre Mittelung und \label{eqn:schwingung} lässt sich
+Durch ihre Mittelung und \eqref{eqn:traegheitschwingung} lässt sich
 \begin{equation}
-  I_z = frac{DT^2}{4\pi^2} = \SI{2.64(0.31)}{\kilogram\meter\squared}
+  I_{\symup{z,exp}} = \frac{DT^2}{4\pi^2}-I_D = \SI{-0.18(033)e-3}{\kilogram\meter\squared}
 \end{equation}
-mit einer relativen Unsicherheit von 
+berechnen. Der theoretisch berechnete Wert für das Trägheitsmoment eines Zylinders
+bei Rotation um die Symmetrieachse ist nach \eqref{eqn:traegheitzylinder}
+\begin{equation}
+  I_{\symup{z,theo}} = \SI{2.99e-3}{\kilogram\meter\squared}.
+\end{equation}
+Es ist auffällig, dass eine Berechnung nach \eqref{eqn:schwingung} zu einem
+konsistenteren Wert von \SI{2.64(033)e-3}{\kilogram\meter\squared} mit einem
+relativen Fehler zum Theoriewert von 11.7\% führt.
+
+\subsubsection{Bestimmung des Trägheitsmoments einer Kugel}
+Der Durchmesser der untersuchten Kugel beträgt $d_{\symup{k}}=\SI{13.724(0014)}{\cm}$,
+ist also nur minimal fehlerbehaftet. Die Masse der Kugel wurde bestimmt zu
+$m_{\symup{k}}=\SI{812.5}{\gram}$. Die Messwerte der Periodendauern finden sich
+in \ref{tab:kugel}.
+
+\begin{table}
+\centering
+\caption{Periodendauern der Rotation der Kugel}
+\label{tab:kugel}
+\begin{tabular}{c c}
+\toprule
+$3T$/s & $T/$s \\
+\midrule
+5.03 & 1.68 \\
+5.06 & 1.69 \\
+5.09 & 1.70 \\
+5.09 & 1.70 \\
+5.24 & 1.75 \\
+5.01 & 1.67 \\
+5.12 & 1.71 \\
+5.13 & 1.71 \\
+4.96 & 1.65 \\
+5.07 & 1.69 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Wird erneut \eqref{eqn:traegheitschwingung} verwendet, ergibt sich
+\begin{equation}
+  I_{\symup{k,exp}} = \frac{DT^2}{4\pi^2}-I_D = \SI{-1.32(021)e-3}{\kilogram\meter\squared}.
+\end{equation}
+Für das Trägheitsmoment der Kugel gemäß \eqref{eqn:traegheitkugel} folgt
+\begin{equation}
+  I_{\symup{z,theo}} = \SI{2.99e-3}{\kilogram\meter\squared}.
+\end{equation}
 
 \label{sec:Auswertung}

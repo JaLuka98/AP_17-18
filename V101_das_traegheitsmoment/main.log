@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.9.6)  25 OCT 2017 16:46
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.9.6)  27 OCT 2017 10:05
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.219 seconds
+luaotfload | main : initialization completed in 0.477 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex (c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/04/13 v3.23 KOMA-Script document class (article)
@@ -845,7 +845,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 30.
+(typearea)              on input line 31.
  (c:/texlive/2017/texmf-dist/tex/latex/polyglossia/polyglossia.sty
 Package: polyglossia 2015/03/25 v1.42.4 Alternative to Babel for XeLaTeX and Lua
 LaTeX
@@ -1046,15 +1046,15 @@ odernMath:mode=base;script=math;language=DFLT;+ssty=0;"<-8>"LatinModernMath:mode
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 50.
+(Font)              `operators' in the math version `normal' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/LatinModernMath(0)/m/n on input line 
-50.
+51.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 50.
+(Font)              `operators' in the math version `bold' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/LatinModernMath(0)/bx/n on input lin
-e 50.
+e 51.
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1100,15 +1100,15 @@ e=10.95-},{Size=8-10.95,Font=Latin
 . =179404.75sp\relax 
 .................................................
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 50.
+(Font)              `symbols' in the math version `normal' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/LatinModernMath(1)/m/n on input line
- 50.
+ 51.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 50.
+(Font)              `symbols' in the math version `bold' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/LatinModernMath(1)/bx/n on input lin
-e 50.
+e 51.
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1143,16 +1143,16 @@ e=10.95-},{Size=8-10.95,Font=Latin
 . \fontdimen 12\font =430571.4sp\relax \fontdimen 13\font =0pt\relax 
 .................................................
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 50
+(Font)              `largesymbols' in the math version `normal' on input line 51
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/LatinModernMath(2)/m/n on input line
- 50.
+ 51.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 50.
+(Font)              `largesymbols' in the math version `bold' on input line 51.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/LatinModernMath(2)/bx/n on input lin
-e 50.
+e 51.
 (load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/xits-math.lu
 c)
 \g__fontspec_family_XITSMath_int=\count271
@@ -1186,10 +1186,10 @@ guage=DFLT;+ssty=1;"
 \sym__um_fam1=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/XITSMath(0)/m/n --> TU/XITSMath(0)/m/n on input line 
-54.
+55.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/XITSMath(0)/m/n --> TU/XITSMath(0)/bx/n on input line
- 54.
+ 55.
 luaotfload | aux : font no 28 (nil) does not define feature smcp for script math
  with language dflt
 luaotfload | aux : no font with id 28
@@ -1219,10 +1219,10 @@ ipt=math;language=DFLT;+ss01;+ssty=1;"
 \sym__um_fam2=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/XITSMath(1)/m/n --> TU/XITSMath(1)/m/n on input line 
-55.
+56.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/XITSMath(1)/m/n --> TU/XITSMath(1)/bx/n on input line
- 55.
+ 56.
  (c:/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2017/08/02 v2.7j A comprehensive (SI) units package
 
@@ -1629,7 +1629,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box56
 )
-Package scrhack Info: loading float hack on input line 79.
+Package scrhack Info: loading float hack on input line 80.
 
 (c:/texlive/2017/texmf-dist/tex/latex/koma-script/float.hak
 File: float.hak 2017/04/13 v3.23 KOMA-Script package (hacking package float)
@@ -1938,7 +1938,7 @@ File: biblatex.cfg
 ))
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 127.
+(scrhack)             need that hack, on input line 128.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
@@ -2278,49 +2278,284 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 [][]|\TU/lmr/m/n/10 Auf-bau der Ap-pa-ra-tur, hier mit ein-ge-spann-ter Ku-gel
  []
 
-[4]) (./content/auswertung.tex [5<./Aufbau.png>]) (./content/diskussion.tex)
+[4]) (./content/fehlerrechnung.tex [5<./Aufbau.png>]
+Overfull \hbox (7.68364pt too wide) in paragraph at lines 30--33
+[]\TU/lmr/m/n/10.95 HIER NOCH FOR-MELN FÜR GE-RA-DEN-FITS EIN-FÜ-GEN!!!!!!!!!
+!!!!!!!!!!! 111111 111111 
+ []
+
+) (./content/auswertung.tex
+
+LaTeX Warning: Reference `tab:winkelrichtgroesse' on page 6 undefined on input l
+ine 5.
+
+
+LaTeX Warning: Reference `eqn:mean' on page 6 undefined on input line 39.
+
+
+LaTeX Warning: Reference `eqn:std' on page 6 undefined on input line 40.
+
 [6]
 
-LaTeX Warning: Empty bibliography on input line 25.
+LaTeX Warning: Reference `eqn:schwingungkonkret' on page 7 undefined on input li
+ne 59.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
-(./main.aux
-Language ngerman already loaded; id is 8)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
+[7]
+
+LaTeX Warning: Reference `tab:drillachse' on page 8 undefined on input line 67.
 
 
-Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
+LaTeX Warning: Reference `fig:drillachse' on page 8 undefined on input line 68.
 
-Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: CA6957F7284D43E5C53E11EEE39CA625;4546
-(rerunfilecheck)             After:  F7AC438C726D632716B9511C12997FED;4439.
-Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: B4094C39AF42CB7DD88176CEACADA31E;484.
+<build/Drillachse.pdf, id=95, pagebox=cropbox, 417.7206pt x 258.0039pt>
+File: build/Drillachse.pdf Graphic file (type pdf)
+<use build/Drillachse.pdf>
+Package luatex.def Info: build/Drillachse.pdf  used on input line 93. on input l
+ine 93.
+Package luatex.def Info: Requested size: 417.71957pt x 258.00327pt on input line
+ 93.
+(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-reg
+ular.luc)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Reference `eqn:gerade' on page 8 undefined on input line 107.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
+LaTeX Warning: Reference `eqn:schwingungkonkret' on page 8 undefined on input li
+ne 107.
 
-Package logreq Info: Writing requests to 'main.run.xml'.
 
-\openout1 = main.run.xml
-)
+LaTeX Warning: Reference `tab:zylinder' on page 8 undefined on input line 117.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+             
+l.128 6.72 &
+           2.24
+? 
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+             
+l.130 6.73 &
+           2.24
+? 
+! Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.132 \bottomrule
+               
+? 
+! Missing } inserted.
+<inserted text> 
+}
+l.133 \end
+        {tabular}
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+\endgroup 
+l.133 \end
+        {tabular}
+? 
+! Missing } inserted.
+<inserted text> 
+}
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Missing } inserted.
+<inserted text> 
+}
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? 
+! Missing \cr inserted.
+<inserted text> 
+\cr 
+l.133 \end
+        {tabular}
+? 
+! Misplaced \cr.
+<inserted text> \cr 
+    
+l.133 \end
+        {tabular}
+? exit
+You want to edit file ./content/auswertung.tex at line 133
 
 Here is how much of LuaTeX's memory you used:
- 40588 strings out of 494472
+ 40617 strings out of 494472
  100000,1648299 words of node,token memory allocated
- 627 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 1 kern, 19 attribute, 74 glue_spec, 19 attr
-ibute_list, 1 write nodes
-   avail lists: 2:625,3:86,4:28,5:272,6:2555,7:567,8:61,9:337,10:13,11:336
- 43507 multiletter control sequences out of 65536+600000
- 119 fonts using 30311979 bytes
- 61i,18n,104p,8833b,2916s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 20448 words of node memory still in use:
+   257 hlist, 14 vlist, 47 rule, 134 disc, 18 local_par, 4 dir, 79 math, 597 glu
+e, 103 kern, 86 penalty, 10 unset, 10 margin_kern, 1335 glyph, 2 align_record, 4
+28 attribute, 91 glue_spec, 428 attribute_list, 10 temp, 1 align_stack, 2 if_sta
+ck, 9 write, 10 pdf_dest nodes
+   avail lists: 3:16,4:20,5:135,6:1184,7:11,8:28,9:64,10:12,11:202
+ 43529 multiletter control sequences out of 65536+600000
+ 121 fonts using 30496575 bytes
+ 61i,19n,104p,8833b,2914s stack positions out of 5000i,500n,10000p,200000b,100000s
 <c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texl
 ive/2017/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf><c:/texlive/20
 17/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf><c:/texlive/2017/tex
@@ -2331,10 +2566,10 @@ fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2017/texmf-dist/fonts
 /opentype/public/lm/lmroman12-regular.otf><c:/texlive/2017/texmf-dist/fonts/open
 type/public/lm/lmsans10-bold.otf><c:/texlive/2017/texmf-dist/fonts/opentype/publ
 ic/lm/lmroman12-bold.otf>
-Output written on main.pdf (6 pages, 222904 bytes).
+Output written on main.pdf (7 pages, 231856 bytes).
 
-PDF statistics: 158 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 163 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -54,8 +54,8 @@ plt.savefig('build/drillachse.pdf')
 # Erstellen einer Tabelle für die latex-Datei
 np.savetxt('data/tabelledrillachse.txt', np.transpose([r*1e2, T, (r*1e2)**2, T**2]), fmt='%1.2f')
 
-I_D = (b*8*(np.pi)**2*m/a)/(4*(np.pi)**2)
-print('Das Eigentraegheitsmoment I_D der Drillachse berechnet sich zu', I_D*1e3)
+I_D = (b*8*(np.pi)**2*m/a)/(4*(np.pi)**2)*1e3
+print('Das Eigentraegheitsmoment I_D der Drillachse berechnet sich zu', I_D)
 
 dreiT = np.genfromtxt('data/zylinder.txt', unpack=True)
 
@@ -63,20 +63,20 @@ T = dreiT/3
 print('Die Periodendauern sind', T)
 T = ufloat(np.sum(T)/len(T), np.std(T))
 I_zylinder = (T**2*D)/(4*(np.pi)**2)*1e3
-print('Der experimentelle Wert fuer das Traegheitsmoment des Zylinders ist', I_zylinder)
+print('Der experimentelle Wert fuer das Traegheitsmoment des Zylinders ist', I_zylinder-I_D)
 
 m_z = 2.3959
 r_z = 0.05
-print('Der theoretische Wert fuer das Traegheitsmoment des Zylinders ist', m_z*r_z**2/2)
+print('Der theoretische Wert fuer das Traegheitsmoment des Zylinders ist', (m_z*r_z**2/2)*1e3)
 
 dreiT = np.genfromtxt('data/kugel.txt', unpack=True)
 
 T = dreiT/3
 T = ufloat(np.sum(T)/len(T), np.std(T))
-I_Kugel = (T**2*D)/(4*(np.pi)**2)
-print('Der experimentelle Wert fuer das Traegheitsmoment der Kugel ist', I_Kugel)
+I_Kugel = (T**2*D)/(4*(np.pi)**2)*1e3
+print('Der experimentelle Wert fuer das Traegheitsmoment der Kugel ist', I_Kugel-I_D)
 
 m_k = 0.8125
 d_kugel = np.array([0.1374, 0.1372, 0.1373, 0.1373, 0.1370])
 d_kugel = ufloat(np.sum(d_kugel)/len(d_kugel), np.std(d_kugel))
-print('Der theoretische Wert fuer das Traegheitsmoment der Kugel ist', 0.4*m_k*(d_kugel/2)**2)
+print('Der theoretische Wert fuer das Traegheitsmoment der Kugel ist', (0.4*m_k*(d_kugel/2)**2)*1e3)
