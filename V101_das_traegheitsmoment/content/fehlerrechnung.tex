@@ -3,16 +3,18 @@
 Der Mittelwert einer Stichprobe von $N$ Werten wird durch
 \begin{equation}
   \overline{x} = \sum\limits_{i = 1}^N x_i
+  \label{eqn:mean}
 \end{equation}
-\label{eqn:mean}
+
 berechnet.
 Die empirische Standardabweichung dieser Stichprobe ist durch
 \begin{equation}
   \sigma_x = \sqrt{\frac{1}{N-1}
     \sum\limits_{i = 1}^N
     (x_i-\overline{x})^2}
+    \label{eqn:std}
 \end{equation}
-\label{eqn:std}
+
 gegeben.
 Ist $f$ eine Funktion, die von unsicheren Variablen $x_i$ mit
 Standardabweichungen $\sigma_i$ abhängt, so ist die Unsicherheit von f
@@ -21,8 +23,9 @@ Standardabweichungen $\sigma_i$ abhängt, so ist die Unsicherheit von f
     \sum\limits_{i = 1}^N
       \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
   }\,.
+  \label{eqn:gaussfehler}
 \end{equation}
-\label{eqn:gaussfehler}
+
 Diese Formel bezeichnet man als "Gauß'sches Fehlerfortpflanzungsgesetz".
 Wenn im Folgenden Mittelwerte, Standardabweichungen und Fehler von
 Funktionen unsicherer Größen berechnet werden, so werden stets die obigen
