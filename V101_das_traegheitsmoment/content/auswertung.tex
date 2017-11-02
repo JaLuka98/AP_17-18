@@ -171,7 +171,7 @@ in Tabelle \ref{tab:kugel}, ihr Mittelwert ist $T_{\text{k}}=\SI{1.69(002)}{\sec
 \label{tab:kugel}
 \begin{tabular}{c c}
 \toprule
-$3T$/s & $T/$s \\
+$3T_{\text{k}}$/s & $T_{\text{k}}/$s \\
 \midrule
 5.03 & 1.68 \\
 5.06 & 1.69 \\
@@ -225,14 +225,14 @@ $h_{\text{R}}$/cm & $h_{\text{B}}$/cm & $d_{\text{B}}$/cm \\
 \end{tabular}
 \end{table}
 \subsubsection{Bestimmung des Trägheitsmoments der Puppe in der ersten Stellung}
-Die Messreihe findet sich in \ref{tab:puppe1}.
+Die Messreihe findet sich in Tabelle \ref{tab:puppe1}.
 \begin{table}
 \centering
 \caption{Periodendauern der Rotation der Puppe in erster Haltung}
 \label{tab:puppe1}
 \begin{tabular}{c c}
 \toprule
-$3T$/s & $T/$s \\
+$3T_{\text{p1}}$/s & $T_{\text{p1}}/$s \\
 \midrule
 2.30 & 0.77 \\
 2.36 & 0.79 \\
@@ -254,11 +254,13 @@ $T_{\text{p1}}=\SI{0.78(001)}{\second}$. Wird dieser Wert in
 \begin{equation}
   I_{\text{p1,exp}} = \frac{DT_{\text{p1}}^2}{4\pi^2}-I_D = \SI{-2.50(012)e-3}{\kilogram\meter\squared}\,.
 \end{equation}
-**************************************
-HIER NOCH VERGLEICH MIT THEORIEWERT EINFÜGEN
-**************************************
 In Kapitel \ref{sec:Theorie} wurde bereits in \eqref{eqn:traegheitpuppe1} die
-Formel für den theoretischen Wert des Trägheitsmoments angegeben.
+Formel für den theoretischen Wert des Trägheitsmoments angegeben. Werden nun die
+in Tabelle \ref{tab:maßepuppe} angegebenen Werte eingesetzt, erhält man für das
+modellierte Trägheitsmoment der Puppe in der ersten Haltung
+\begin{equation}
+  I_{\text{p1,theo}} = \SI{13.19e-3}{\kilogram\meter\squared}\,.
+\end{equation}
 \subsubsection{Bestimmung des Trägheitsmoments der Puppe in der zweiten Stellung}
 Die gemittelte Periodendauer der Rotation der zweiten Puppe lässt sich aus Tabelle
 \ref{tab:puppe2} errechnen zu $T_{\text{p2}}=\SI{0.96(001)}{\second}$.
@@ -268,7 +270,7 @@ Die gemittelte Periodendauer der Rotation der zweiten Puppe lässt sich aus Tabe
 \label{tab:puppe2}
 \begin{tabular}{c c}
 \toprule
-$3T$/s & $T/$s \\
+$3T_{\text{p2}}$/s & $T_{\text{p2}}/$s \\
 \midrule
 2.93 & 0.98 \\
 2.83 & 0.94 \\
@@ -288,6 +290,8 @@ der gemittelten Periodendauer in \eqref{eqn:traegheitschwingung}
 \begin{equation}
   I_{\text{p2,exp}} = \frac{DT_{\text{p2}}^2}{4\pi^2}-I_D = \SI{-2.35(001)e-3}{\kilogram\meter\squared}\,.
 \end{equation}
-***********************************
-HIER NOCH VERGLEICH MIT THEORIEWERT EINFÜGEN
-**********************************
+Der theoretische Wert ergibt sich dann nach Einsetzen in
+ref\eqref{eqn:traegheitpuppe1} für den theoretischen Wert
+\begin{equation}
+  I_{\text{p1,theo}} = \SI{27.463e-3}{\kilogram\meter\squared}\,.
+\end{equation}

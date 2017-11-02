@@ -110,7 +110,7 @@ T = dreiT/3
 T = ufloat(np.sum(T)/len(T), np.std(T))
 print(T)
 I_Puppe1exp = (T**2*D)/(4*(np.pi)**2)*1e3
-print('Der experimentelle Wert fuer das Traegheitsmoment der Puppe in der ersten Haltung ist', I_Puppe1exp - I_D)
+print('Der experimentelle Wert fuer das Traegheitsmoment der Puppe in der ersten Haltung ist', I_Puppe1exp)
 print('Der theoretische Wert fuer das Traegheitsmoment der Puppe in der ersten Haltung ist', I_Puppe1*1e3)
 
 dreiT = np.genfromtxt('data/puppe2.txt', unpack=True)
@@ -119,5 +119,5 @@ T = dreiT/3
 T = ufloat(np.sum(T)/len(T), np.std(T))
 print(T)
 I_Puppe2exp = (T**2*D)/(4*(np.pi)**2)*1e3
-print('Der experimentelle Wert fuer das Traegheitsmoment der Puppe in der zweiten Haltung ist', I_Puppe2exp - I_D)
+print('Der experimentelle Wert fuer das Traegheitsmoment der Puppe in der zweiten Haltung ist', I_Puppe2exp)
 print('Der theoretische Wert fuer das Traegheitsmoment der Puppe in der zweiten Haltung ist', I_Puppe2*1e3)
