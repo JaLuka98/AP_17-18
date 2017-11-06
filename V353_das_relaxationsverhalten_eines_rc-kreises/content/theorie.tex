@@ -1,2 +1,39 @@
 \section{Theorie}
+In diesem Versuch werden Relaxationsvorgänge betrachtet. Bei einer Relaxation kehrt
+ein zuvor gestörtes System nicht-oszillatorisch in seinen Gleichgewichtszustand
+zurück. Das System verfügt über eine charakteristische Größe $A$. Ist es linear,
+so folgt die Änderungsgeschwindigkeit zum Zeitpunkt $t$ der Gleichung
+\begin{equation}
+  \frac{\symup{d}A}{\symup{d}t}(t) = c[A(t)-A(t \to \infty)]\,.
+  \label{eqn:linearrelax}
+\end{equation}
+Dabei ist A(t \to \infty) der nur asymptotisch erreichbare Wert der Größe $A$ im
+Gleichgewichtszustand, $c$ ist eine Konstante größer Null, sodass A beschränkt
+bleibt.
+Wird \eqref{eqn:linearrelax} nach der Zeit integriert, ergibt sich für $A$ die
+exponentielle Zuordnung
+\begin{equation}
+  A(t) = A(t \to \infty) + [A(0) - A(t \to \infty)] \exp(ct)\,.
+\end{equation}
+Die in diesem Versuch untersuchten Relaxationsvorgänge sind der Auf- und Entladevorgang
+eines Kondensators über einen Widerstand. Der Schaltplan hierzu ist in ... zu sehen.
+Stets liegt auf den Kondensatorplatten zum Zeitpunkt $t$ eine Ladung $Q(t)$. Für
+die am Kondensator anliegende Spannung $U_{\text{C}}$ gilt dann
+\begin{equation}
+  U_{\text{C}} = Q / C\,,
+\end{equation}
+wobei $C$ die Kapazität des Kondensators ist. Da der Kondensator mit dem Widerstand
+in Reihe geschaltet ist, bewirkt die am Kondensator abfallende Spannung $U_{\text{C}}$
+gemäß dem Ohmschen Gesetz den Strom
+\begin{equation}
+  I = U_{\text{C}} / R\,.
+\end{equation}
+Zusammen mit der Beziehung $\dot{Q} = -I$ lässt sich eine zu \eqref{eqn:linearrelax}
+analoge Differentialgleichung für $Q(t)$ mit der asymptotischen Randbedingung
+$Q(t \to \infty) = 0$, da es sich um einen Entladevorgang handelt, aufstellen. Die
+Lösung dieser ist
+\begin{equation}
+  Q(t) = Q(0) \exp(-t/\tau)
+\end{equation}
+mit der Zeitkonstanten $\tau \coloneqq RC$ des RC-Glieds.
 \label{sec:Theorie}
