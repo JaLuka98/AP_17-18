@@ -101,8 +101,8 @@ I_A1=3.736e-7
 I_A2=2.406e-5
 I_B=4.407e-5
 
-I_Puppe1=13.193e-3
-I_Puppe2=27.463e-3
+I_Puppe1=0.5888e-3
+I_Puppe2=0.6364e-3
 
 dreiT = np.genfromtxt('data/puppe1.txt', unpack=True)
 

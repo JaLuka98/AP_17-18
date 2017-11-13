@@ -79,15 +79,15 @@ und \eqref{eqn:steiner} folgende Formeln für das Trägheitsmoment:
   \label{eqn:traegheitzylinder} \\
   \begin{split}
     I_{\symup{Puppe1}}=I_{\symup{K}}+I_{\symup{R}}
-    +2\Bigl(I_{\symup{A}}+(R_{\symup{R}}+R_{\symup{A}})^2\Bigr)
-    +2\Biggl(I_{\symup{B}}+\biggl(\frac{h_{\symup{B}}}{2}\biggr)^2\Biggr)
+    +2\Bigl(I_{\symup{A}}+m_{\symup{A}}(R_{\symup{R}}+R_{\symup{A}})^2\Bigr)
+    +2\Biggl(I_{\symup{B}}+m_{\symup{B}}\biggl(\frac{h_{\symup{B}}}{2}\biggr)^2\Biggr)
     \label{eqn:traegheitpuppe1}
   \end{split}
   \\
   \begin{split}
     I_{\symup{Puppe2}}=I_{\symup{K}}+I_{\symup{R}}
-    +2\Biggl(I_{\symup{A}}+\biggl(R_{\symup{R}}+\frac{h_{\symup{A}}}{2}\biggr)^2\Biggr)
-    +2\Biggl(I_{\symup{B}}+\biggl(\frac{h_{\symup{B}}}{2}\biggr)^2\Biggr)
+    +2\Biggl(I_{\symup{A}}+m_{\symup{A}}\biggl(R_{\symup{R}}+\frac{h_{\symup{A}}}{2}\biggr)^2\Biggr)
+    +2\Biggl(I_{\symup{B}}+m_{\symup{B}}\biggl(\frac{h_{\symup{B}}}{2}\biggr)^2\Biggr)
     \label{eqn:traegheitpuppe2}
   \end{split}
 \end{gather}
@@ -96,7 +96,8 @@ Haltung und $I_{\symup{Puppe2}}$ das gesamte Trägheitsmoment der Puppe in der
 zweiten Körperhaltung. $I_{\symup{K}}$ ist das Trägheitsmoment des Kopfes, $I_{\symup{R}}$
 das Trägheitsmoment des Rumpfes, $I_{\symup{A}}$ das Trägheitsmoment eines Armes und
 $I_{\symup{B}}$ das Trägheitsmoment eines Beines. $R_{\symup{R}}$ und $R_{\symup{A}}$ sind die zugehörigen
-Radien und $h_{\symup{A}}$ und $h_{\symup{B}}$ die zugehörigen Höhen. Die quadrierten Summanden,
+Radien, $h_{\symup{A}}$ und $h_{\symup{B}}$ die zugehörigen Höhen und $m_{\symup{A}}$ und $m_{\symup{B}}$
+die zugehörigen Massen. Die quadrierten Summanden
 folgen aus der Geometrie der Puppe. Zudem ist zu beachten, dass $I_{\symup{Arm}}$
 in \eqref{eqn:traegheitpuppe1} und \eqref{eqn:traegheitpuppe2} unterschiedliche Werte
 annimmt, da die Arme um verschiedene Achsen gedreht werden. Die Masse $m$ des jeweiligen
