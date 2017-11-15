@@ -36,4 +36,29 @@ Lösung dieser ist
   Q(t) = Q(0) \exp(-t/\tau)
 \end{equation}
 mit der Zeitkonstanten $\tau \coloneqq RC$ des RC-Glieds.
+
+
+Wird an den das RC-Glied eine Spannung $U_{\text{G}}=U_{\text{0}}cos(\omega t)$ angelegt, deren
+Frequenz klein gegen $\frac{1}{RC}$ ist, so folgt der Spannungsverlauf am Kondensator
+dem der Quelle. Wird die Frequenz jedoch erhöht, so stellt sich eine Phasenverschiebung
+zwischen Generatorspannung $U_{\text{G}}$ und der Spannung $U_{\text{C}}$ am Kondensator
+ein, bei der die Generatorspannung der Spannung am Kondensator vorausläuft.
+Zudem nimmt die Amplitude der Spannung am Kondensator ab, da der Kondensator in einer
+Periodendauer nicht mehr vollständig geladen werden kann.
+Um eine Lösung für die Phasenverschiebung zu erhalten, wird der Ansatz
+\begin{equation}
+  U_{\text{C}}(t)=A(\omega)cos(\omega t + \phi(\omega))
+\end{equation}
+gewählt. Dieser lässt sich mithilfe der Kirchhoff'schen Regeln und der Beziehung
+\begin{equation}
+  I(t)=\frac{dQ}{dt}=C\frac{dU_{\text{C}}}{dt}
+\end{equation}
+zur Formel für die Frequenzabhängigkeit der Phase $\phi$ umformen. Es ergibt sich die
+Beziehung
+\begin{equation}
+  \phi(\omega)=arctan(-\omega R C) \,.
+\end{equation}
+Der Wert der Phasenverschiebung geht als0 für kleine Frequenzen gegen $0$ und für
+große Frequenzen gegen $\frac{\pi}{2}$.
+
 \label{sec:Theorie}
