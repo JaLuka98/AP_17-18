@@ -56,8 +56,8 @@ die Kondensatorspannung der Zuordnung
 folgen.
 
 
-Wird an den das RC-Glied eine Spannung $U_{\text{G}}=U_{\text{0}}cos(\omega t)$ angelegt, deren
-Frequenz klein gegen $\frac{1}{RC}$ ist, so folgt der Spannungsverlauf am Kondensator
+Wird an den das RC-Glied eine Spannung $U_{\text{G}}=U_{\text{0}}\cos(\omega t)$ angelegt, deren
+Frequenz klein gegen $1/RC$ ist, so folgt der Spannungsverlauf am Kondensator
 dem der Quelle. Wird die Frequenz jedoch erhöht, so stellt sich eine Phasenverschiebung
 zwischen Generatorspannung $U_{\text{G}}$ und der Spannung $U_{\text{C}}$ am Kondensator
 ein, bei der die Generatorspannung der Spannung am Kondensator vorausläuft.
@@ -75,11 +75,11 @@ sich in \ref{fig:Aufbau_2}.
 
 Um eine Lösung für die Phasenverschiebung zu erhalten, wird der Ansatz
 \begin{equation}
-  U_{\text{C}}(t)=A(\omega)cos(\omega t + \phi(\omega))
+  U_{\text{C}}(t)=A(\omega)\cos(\omega t + \phi(\omega))
 \end{equation}
 gewählt. Dieser lässt sich mithilfe der Kirchhoff'schen Regeln und der Beziehung
 \begin{equation}
-  I(t)=\frac{dQ}{dt}=C\frac{dU_{\text{C}}}{dt}
+  I(t)=\frac{\symup{d}Q}{\symup{d}t}=C\frac{\symup{d}U_{\text{C}}}{d\symup{t}}
 \end{equation}
 zur Formel für die Frequenzabhängigkeit der Phase $\phi$ umformen. Es ergibt sich die
 Beziehung
@@ -87,8 +87,8 @@ Beziehung
   \phi(\omega)=arctan(-\omega R C) \,.
 \end{equation}
 Der Wert der Phasenverschiebung geht also für kleine Frequenzen gegen $0$ und für
-große Frequenzen gegen $\frac{\pi}{2}$. Für $\omega=\frac{1}{RC}$ nimmt sie den Wert
-$\frac{\pi}{4}$ an.
+große Frequenzen gegen $\pi/2$. Für $\omega=1/RC$ nimmt sie den Wert
+$\pi/4$ an.
 Durch einige weitere Überlegungen lässt ergibt sich hieraus
 \begin{equation}
   A(\omega)=\frac{U_{\text{0}}}{\sqrt{1+\omega^2 R^2 C^2}} \,,
@@ -96,7 +96,7 @@ Durch einige weitere Überlegungen lässt ergibt sich hieraus
 wobei $U_{\text{0}}$ die Amplitude der Generatorspannung $U_{\text{G}}$ und $A$ die
 Amplitude der Spannung $U_{\text{C}}$ am Kondensator ist.
 Man kann erkennen, dass die Amplitude am Kondensator für kleine $\omega$ gegen $U_{\text{0}}$ geht
-und mit steigendem $\omega$ sinkt. Für $\omega=\frac{1}{RC}$ nimmt sie den Wert
+und mit steigendem $\omega$ sinkt. Für $\omega=1/RC$ nimmt sie den Wert
 $\frac{U_{\text{0}}}{\sqrt{2}}$ an.
 
 Werden an das RC-Glied Wechselspannungen mit sehr hoher Frequenz angelegt, so kann
