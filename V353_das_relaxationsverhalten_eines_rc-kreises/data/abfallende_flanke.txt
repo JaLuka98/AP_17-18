@@ -1,7 +1,4 @@
-#lege Nullpunkt in obere rechte Ecke das Kästchens unten links
-
-#U/mV	t/ms
-1088	0
+﻿1088	0
 560	0.5
 304	1
 152	1.5
@@ -9,6 +6,5 @@
 36	2.5
 8	3
 4	3.5
-0	4
-
+2	4
 
