@@ -12,7 +12,7 @@ def linfit(x, a, b):
 
 
 def amplitudefit(x, RC):
-    return 1/(np.sqrt(1+4*x*(np.pi)**2*(RC)**2))
+    return 1/(np.sqrt(1+(4*x*(np.pi))**2*(RC)**2))
 
 
 def arctanfit(x, d):
