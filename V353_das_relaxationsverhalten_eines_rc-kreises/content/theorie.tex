@@ -58,7 +58,28 @@ Beziehung
 \begin{equation}
   \phi(\omega)=arctan(-\omega R C) \,.
 \end{equation}
-Der Wert der Phasenverschiebung geht als0 für kleine Frequenzen gegen $0$ und für
-große Frequenzen gegen $\frac{\pi}{2}$.
+Der Wert der Phasenverschiebung geht also für kleine Frequenzen gegen $0$ und für
+große Frequenzen gegen $\frac{\pi}{2}$. Für $\omega=\frac{1}{RC}$ nimmt sie den Wert
+$\frac{\pi}{4}$ an.
+Durch einige weitere Überlegungen lässt ergibt sich hieraus
+\begin{equation}
+  A(\omega)=\frac{U_{\text{0}}}{\sqrt{1+\omega^2 R^2 C^2}} \,,
+\end{equation}
+wobei $U_{\text{0}}$ die Amplitude der Generatorspannung $U_{\text{G}}$ ist.
+Man kann erkennen, dass die Amplitude für kleine $\omega$ gegen $U_{\text{0}}$ geht
+und mit steigendem $\omega$ sinkt. Für $\omega=\frac{1}{RC}$ nimmt sie den Wert
+$\frac{U_{\text{0}}}{\sqrt{2}}$ an.
+
+Werden an das RC-Glied Wechselspannungen mit sehr hoher Frequenz angelegt, so kann
+am Kondensator eine zu $\int U(t)\,\symup{d}t$ proportionale Spannung beobachtet werden.
+Bei hohen Frequenzen gilt $\lvert U_{\text{C}} \rvert << \lvert U_{\text{R}} \rvert$
+und $\lvert U_{\text{C}} \rvert << \lvert U \rvert$. Somit ergibt sich näherungsweise
+aus den Kirchhoff'schen Gesetzen mit einigen Umformungen
+\begin{gather}
+  U(t)= R C \frac{\symup{d}U_{\text{C}}}{\symup{d}t} \\
+  U_{\text{C}}(t)=\frac{1}{RC}\int_0^t U(t')\, dt'
+\end{gather}
+
+
 
 \label{sec:Theorie}
