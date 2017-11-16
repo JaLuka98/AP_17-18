@@ -16,7 +16,16 @@ exponentielle Zuordnung
   A(t) = A(t \to \infty) + [A(0) - A(t \to \infty)] \exp(ct)\,.
 \end{equation}
 Die in diesem Versuch untersuchten Relaxationsvorgänge sind der Auf- und Entladevorgang
-eines Kondensators über einen Widerstand. Der Schaltplan hierzu ist in ... zu sehen.
+eines Kondensators über einen Widerstand. Der Schaltplan hierzu ist in \ref{fig:Aufbau_1} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=260pt]{aufbau_1.png}
+  \caption{Beispielhafte Schaltung zur Auf- und Entladung eines Kondensators über einen
+  Widerstand unter Verwendung von Gleichspannung \cite{Versuchsanleitung}}
+  \label{fig:Aufbau_1}
+\end{figure}
+
+
 Stets liegt auf den Kondensatorplatten zum Zeitpunkt $t$ eine Ladung $Q(t)$. Für
 die am Kondensator anliegende Spannung $U_{\text{C}}$ gilt dann
 \begin{equation}
@@ -44,7 +53,17 @@ dem der Quelle. Wird die Frequenz jedoch erhöht, so stellt sich eine Phasenvers
 zwischen Generatorspannung $U_{\text{G}}$ und der Spannung $U_{\text{C}}$ am Kondensator
 ein, bei der die Generatorspannung der Spannung am Kondensator vorausläuft.
 Zudem nimmt die Amplitude der Spannung am Kondensator ab, da der Kondensator in einer
-Periodendauer nicht mehr vollständig geladen werden kann.
+Periodendauer nicht mehr vollständig geladen werden kann. Ein Schaltplan hierzu findet
+sich in \ref{fig:Aufbau_2}.
+\begin{figure}
+  \centering
+  \includegraphics[width=250pt]{aufbau_2.png}
+  \caption{Beispielhafte Schaltung zur Auf- und Entladung eines Kondensators über
+  einen Widerstand unter Verwendung von Wechselspannung \cite{Versuchsanleitung}}
+  \label{fig:Aufbau_2}
+\end{figure}
+
+
 Um eine Lösung für die Phasenverschiebung zu erhalten, wird der Ansatz
 \begin{equation}
   U_{\text{C}}(t)=A(\omega)cos(\omega t + \phi(\omega))
@@ -65,8 +84,9 @@ Durch einige weitere Überlegungen lässt ergibt sich hieraus
 \begin{equation}
   A(\omega)=\frac{U_{\text{0}}}{\sqrt{1+\omega^2 R^2 C^2}} \,,
 \end{equation}
-wobei $U_{\text{0}}$ die Amplitude der Generatorspannung $U_{\text{G}}$ ist.
-Man kann erkennen, dass die Amplitude für kleine $\omega$ gegen $U_{\text{0}}$ geht
+wobei $U_{\text{0}}$ die Amplitude der Generatorspannung $U_{\text{G}}$ und $A$ die
+Amplitude der Spannung $U_{\text{C}}$ am Kondensator ist.
+Man kann erkennen, dass die Amplitude am Kondensator für kleine $\omega$ gegen $U_{\text{0}}$ geht
 und mit steigendem $\omega$ sinkt. Für $\omega=\frac{1}{RC}$ nimmt sie den Wert
 $\frac{U_{\text{0}}}{\sqrt{2}}$ an.
 
