@@ -1,2 +1,31 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung der Zeitkonstante durch die Entladung eines Kondensators}
+Die aus der mit dem Oszilloskop aufgenommenen Entladekurve des Kondensators
+entnommenen Wertepaare sind in Tabelle \ref{tab:entladung} zu finden.
+
+\begin{table}
+\centering
+\caption{Messdaten zur Entladung des Kondensators über den Widerstand}
+\label{tab:entladung}
+\begin{tabular}{c c}
+\toprule
+$U_\text{C}(t)/$mV & $t/$ms \\
+\midrule
+1088 &  0   \\
+ 560 &  0.5 \\
+ 304 &  1   \\
+ 152 &  1.5 \\
+ 80  &  2   \\
+ 36  &  2.5 \\
+  8  &  3   \\
+  4  &  3.5 \\
+  2  &  4   \\
+\bottomrule
+\end{tabular}
+\end{table}
+Nach Teilen durch $U_\text{C}(0)$ Logarithmieren von \eqref{eqn:kondensatorurelax} folgt
+\begin{equation}
+  \ln{\left(\frac{U_\mathrm{C}(t)}{U_0}\right)} = -t/\tau\,.
+\end{equation}
+Die Ausgleichsgerade folgt allgemein \eqref{eqn:gerade}, sodass 

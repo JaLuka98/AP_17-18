@@ -43,8 +43,17 @@ $Q(t \to \infty) = 0$, da es sich um einen Entladevorgang handelt, aufstellen. D
 Lösung dieser ist
 \begin{equation}
   Q(t) = Q(0) \exp(-t/\tau)
+  \label{eqn:kondensatorqrelax}
 \end{equation}
 mit der Zeitkonstanten $\tau \coloneqq RC$ des RC-Glieds.
+Da bei einem Kondensator die Spannung $U_\text{C}(t)$ proportional zur Ladung
+$Q(t)$ auf den Kondensatorplatten ist, wird analog zu \eqref{eqn:kondensatorqrelax}
+die Kondensatorspannung der Zuordnung
+\begin{equation}
+  U_\text{C}(t) = U_\text{C}(0) \exp(-t/\tau)
+  \label{eqn:kondensatorurelax}
+\end{equation}
+folgen.
 
 
 Wird an den das RC-Glied eine Spannung $U_{\text{G}}=U_{\text{0}}cos(\omega t)$ angelegt, deren
