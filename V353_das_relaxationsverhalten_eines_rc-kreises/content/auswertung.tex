@@ -24,8 +24,28 @@ $U_\text{C}(t)/$mV & $t/$ms \\
 \bottomrule
 \end{tabular}
 \end{table}
-Nach Teilen durch $U_\text{C}(0)$ Logarithmieren von \eqref{eqn:kondensatorurelax} folgt
+Nach Teilen durch $U_\text{C}(0)$ und Logarithmieren von \eqref{eqn:kondensatorurelax} folgt
 \begin{equation}
-  \ln{\left(\frac{U_\mathrm{C}(t)}{U_0}\right)} = -t/\tau\,.
+  \ln{\left(\frac{U_\mathrm{C}(t)}{U_0}\right)} = -\frac{t}{\tau}\,.
 \end{equation}
-Die Ausgleichsgerade folgt allgemein \eqref{eqn:gerade}, sodass 
+Die graphische Darstellung der Messwerte und die Ausgleichsgerade ist in Abbildung \ref{fig:entladung}
+zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics{build/uc.pdf}
+  \caption{Graph von $U_\text{C}$ gegen $t$ und Ausgleichsfunktion}
+  \label{fig:entladung}
+\end{figure}
+Die Ausgleichsgerade folgt allgemein \eqref{eqn:gerade}, sodass die Steigung der
+Ausgleichsgerade $a$ mit der Zeitkonstanten $\tau$ des RC-Gliedes in dem Zusammenhang
+$a = -\frac{1}{\tau}$ steht. Hier lässt sich $a$ zu
+\begin{align}
+  %a = \SI{-1.62(007){\per\milli\second}}
+  \SI{2.82(012)e-3}{\kilogram\meter\squared}
+\end{align}
+berechnen und für $\tau$ folgt dann
+\begin{align}
+%  \tau = RC = \SI{0.616(0027)e-3{\second}}\,.
+\end{align}
+...
+\subsection{Bestimmung der Zeitkonstante durch Analyse der Frequenzabhängigkeit der Kondensatorspannung}

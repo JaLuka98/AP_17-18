@@ -33,7 +33,7 @@ print('b =', params[1], '+-', errors[1])
 a = ufloat(params[0], errors[0])
 b = ufloat(params[1], errors[1])
 
-print('RC =', (-1/a)*1e-3)
+print('RC =', (-1/a))
 
 plt.plot(t, np.log(Uc/U0), 'rx', label='Messwerte')
 plt.plot(t, linfit(t, *params), 'k-', label='Ausgleichsfunktion')
