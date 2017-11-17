@@ -49,3 +49,52 @@ berechnen und für $\tau$ folgt dann
 \end{align}
 ...
 \subsection{Bestimmung der Zeitkonstante durch Analyse der Frequenzabhängigkeit der Kondensatorspannung}
+
+\subsection{Der RC-Kreis als Integrator}
+
+Für hohe angelegte Frequenzen sollte der RC-Kreis die angelegte Spannung integrieren.
+Das bedeutet, dass der Graph der am Kondensator gemessenen Spannung dem Graphen der
+Stammfunktion der angelegten Generatorspannung entsprechen sollte. In diesem Versuchsteil
+wurde für alle angelegten Spannungen die Frequenz $f=191.8$ kHz gewählt.
+Die erste an den RC-Kreis angelegte Spannung ist eine Reckteckspannung. Die Stammfunktion
+zu dieser sollte gleichmäßig ansteigende Flanken dort haben, wo die Recheckspannung
+positiv ist und gleichmäßig abfallende Flanken dort, wo die Rechteckspannung
+negativ ist. Genau dieses Verhalten ist in \ref{fig:rechteck} zu sehen. Der blaue Graph beschreibt
+dabei die an das RC-Glied angelegte Spannung und der gelbe Graph die am Kondensator
+abgegriffene Spannung.
+\begin{figure}
+  \centering
+  \includegraphics{data/integration_rechteck.PNG}
+  \caption{Graphen der Generatorspannung und der Spannung am Kondensator bei anglegter
+  Rechteckspannung}
+  \label{fig:rechteck}
+\end{figure}
+Wird an das RC-Glied eine Sägezahnspannung angelegt, so sollte die am Kondensator
+abgegriffene Spannung eine sich periodisch wiederholende Funktion beschreiben, die
+Extrema an den Nullstellen sowie Wendepunkten an den Extrema des Graphen der
+Generatorspannung besitzt. Die Graphen der Messung \ref{fig:saegezahn} bestätigen diesen Zusammenhang.
+Der blaue Graph beschreibt erneut den Verlauf der angelegten Generatorspannung und
+der gelbe Graph den Verlauf der am Kondensator abgegriffenen Spannung.
+\begin{figure}
+  \centering
+  \includegraphics{data/integration_saegezahn.PNG}
+  \caption{Graphen der Generatorspannung und der Spannung am Kondensator bei anglegter
+  Sägezahnspannung}
+  \label{fig:saegezahn}
+\end{figure}
+Wird an den RC-Kreis eine sinusförmige Spannung angelegt, so sollte sich nach bei der
+Integration gemäß
+\begin{equation}
+  \int \sin(t) \, \symup{d}t=-\cos(t)
+\end{equation}
+eine Spannung ergeben, die dem Graphen von $-\cos(t)$ entspricht. Der Verlauf der
+im Versuch aufgenommenen Graphen \ref{fig:sinus} folgt dieser Beziehung. Hier beschreibt der blaue Graph
+wieder den Verlauf der angelegten Generatorspannung und der gelbe Graph den Verlauf der
+am Kondensator abgegriffenen Spannung.
+\begin{figure}
+  \centering
+  \includegraphics{data/integration_sinus.PNG}
+  \caption{Graphen der Generatorspannung und der Spannung am Kondensator bei anglegter
+  Sinusspannung}
+  \label{fig:sinus}
+\end{figure}
