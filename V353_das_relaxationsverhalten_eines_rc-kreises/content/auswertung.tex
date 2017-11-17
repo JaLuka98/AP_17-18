@@ -59,33 +59,63 @@ wurde für alle angelegten Spannungen die Frequenz $f=191.8$ kHz gewählt.
 Die erste an den RC-Kreis angelegte Spannung ist eine Reckteckspannung. Die Stammfunktion
 zu dieser sollte gleichmäßig ansteigende Flanken dort haben, wo die Recheckspannung
 positiv ist und gleichmäßig abfallende Flanken dort, wo die Rechteckspannung
-negativ ist. Genau dieses Verhalten ist in \ref{fig:rechteck} zu sehen. Der blaue Graph beschreibt
+negativ ist. Es gilt der Zusammenhang
+\begin{align}
+  f(x)&=
+  \begin{cases}
+    c & 0<x\leq a\\
+    -c & a<x\leq 2a
+  \end{cases}
+  & F(x)&=
+  \begin{cases}
+    c x & 0<x\leq a\\
+    -c x & a<x\leq 2a
+  \end{cases}
+\end{align}
+Genau dieses Verhalten ist in \ref{fig:rechteck} zu sehen. Der blaue Graph beschreibt
 dabei die an das RC-Glied angelegte Spannung und der gelbe Graph die am Kondensator
 abgegriffene Spannung.
 \begin{figure}
   \centering
-  \includegraphics{data/integration_rechteck.PNG}
+  \includegraphics[width=250pt]{data/integration_rechteck.PNG}
   \caption{Graphen der Generatorspannung und der Spannung am Kondensator bei anglegter
   Rechteckspannung}
   \label{fig:rechteck}
 \end{figure}
+
+
 Wird an das RC-Glied eine Sägezahnspannung angelegt, so sollte die am Kondensator
 abgegriffene Spannung eine sich periodisch wiederholende Funktion beschreiben, die
 Extrema an den Nullstellen sowie Wendepunkten an den Extrema des Graphen der
-Generatorspannung besitzt. Die Graphen der Messung \ref{fig:saegezahn} bestätigen diesen Zusammenhang.
+Generatorspannung besitzt. Es gilt
+\begin{align}
+  f(x)&=
+  \begin{cases}
+    c x & -a<x\leq a\\
+    -c x & a<x\leq 3a
+  \end{cases}
+  & F(x)&=
+  \begin{cases}
+    \frac{c}{2} x^2 & -a<x\leq a\\
+    -\frac{c}{2} x^2 & a<x\leq 3a
+  \end{cases}
+\end{align}
+Die Graphen der Messung \ref{fig:saegezahn} erfüllen diesen Zusammenhang.
 Der blaue Graph beschreibt erneut den Verlauf der angelegten Generatorspannung und
 der gelbe Graph den Verlauf der am Kondensator abgegriffenen Spannung.
 \begin{figure}
   \centering
-  \includegraphics{data/integration_saegezahn.PNG}
+  \includegraphics[width=250pt]{data/integration_saegezahn.PNG}
   \caption{Graphen der Generatorspannung und der Spannung am Kondensator bei anglegter
   Sägezahnspannung}
   \label{fig:saegezahn}
 \end{figure}
+
+
 Wird an den RC-Kreis eine sinusförmige Spannung angelegt, so sollte sich nach bei der
 Integration gemäß
 \begin{equation}
-  \int \sin(t) \, \symup{d}t=-\cos(t)
+  \int c\sin(t) \, \symup{d}t=-c\cos(t)
 \end{equation}
 eine Spannung ergeben, die dem Graphen von $-\cos(t)$ entspricht. Der Verlauf der
 im Versuch aufgenommenen Graphen \ref{fig:sinus} folgt dieser Beziehung. Hier beschreibt der blaue Graph
@@ -93,7 +123,7 @@ wieder den Verlauf der angelegten Generatorspannung und der gelbe Graph den Verl
 am Kondensator abgegriffenen Spannung.
 \begin{figure}
   \centering
-  \includegraphics{data/integration_sinus.PNG}
+  \includegraphics[width=250pt]{data/integration_sinus.PNG}
   \caption{Graphen der Generatorspannung und der Spannung am Kondensator bei anglegter
   Sinusspannung}
   \label{fig:sinus}
