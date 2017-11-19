@@ -150,16 +150,24 @@ Zeitkonstante gemäß des dritten Verfahrens ergibt sich hier zu
 \end{align}
 mit einer relativen Unsicherheit von 1,22\%.
 
+Außerdem kann umgestellt werden zu zu
+\begin{align}
+  frac{\sin(\phi)}{\cos(\phi)} = -ω\tau\,.
+\end{align}
+Wird dieses Ergebnis in  eingesetzt, so ergibt sich für die Abhängigkeit der normierten
+Amplitude $A(\phi)/U_0$ von der Phasenverschiebung $\phi$ der Zusammenhang
+\begin{align}
+  \frac{A(\phi}{U_0} = \cos(\phi)\,.
+\end{align}
+Dieser wird hier für die vorliegenden Messwerte in Abbildung \ref{tab:polarplot} in einem
+Polarkoordinatensystem veranschaulicht. Die Theoriekurve ist ebenso eingezeichnet.
 
-DAS HIER IST NUR TEMPORÄR ES WIRD NOCH SCHÖN
-\begin{align*}
-  A(\omega) &= -\dfrac{\sin(\arctan(-\omega RC))}{\omega RC}\\
-  &= \dfrac{\sin(\arctan(\omega RC))}{\omega RC} \\
-  &= \dfrac{\omega RC}{\sqrt{1 + (\omega RC)^{2}} \omega RC} \\
-  &= \dfrac{1}{\sqrt{1 + (\omega RC)^{2}}} \\
-  &= \cos(\arctan(-\omega RC))\\
-  &= \cos(\varphi(\omega))
-\end{align*}
+\begin{figure}
+  \centering
+  \includegraphics{build/polar.pdf}
+  \caption{Veranschaulichung der Abhängigkeit der normierten Amplitude $A(\phi/U_0$ von der gemessenen Phasenverschiebung}
+  \label{fig:polarplot}
+\end{figure}
 
 \subsection{Der RC-Kreis als Integrator}
 
