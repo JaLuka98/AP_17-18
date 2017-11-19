@@ -49,10 +49,11 @@ $a = -\frac{1}{\tau}$ steht. Hier lässt sich $a$ zu
 \begin{align}
   a = \SI{-1.62(007)}{\per\milli\second}
 \end{align}
-berechnen und für $\tau$ folgt dann
+berechnen und für die nach dem ersten Messverfahren ermittelte Zeitkonstante folgt dann
 \begin{align}
-\tau = RC = \SI{0.616(0027)e-3}{\second}\,.
+\tau_1 = \SI{0.616(0027)}{\milli\second}\,,
 \end{align}
+dabei beträgt die relative Unsicherheit 4.38\%.
 \subsection{Bestimmung der Zeitkonstante durch Beachtung von Frequenzabhängigkeiten}
 
 Die Messdaten für die eingestellte Frequenz $f$, die Kondensatorspannung
@@ -101,12 +102,13 @@ $f/Hz$ & $U_\text{C}(f)/$mV & $a/$ms & $\phi/$grad\\
 Nach \eqref{eqn:kondensatorfrequenz} ist die Amplitude der Kondensatorspannung
 $A(f) = U_\text{C}(f)$ frequenzabhängig. Es wird eine nicht lineare Ausgleichsrechnung
 einer normierten Amplitude $A(f)/U_0$ mit der frequenzunabhängigen Generatorspannung $U_0$
-durchgeführt. Dabei gilt für die Ausgleichsfunktion
+durchgeführt. Stets ist für die Kreisfrequenz $\omega = 2πf$ zu beachten.
+Dabei gilt für die Ausgleichsfunktion
 \begin{align}
   \frac{A(f)}{U_0} = \frac{1}{\sqrt{1+(2πdf)^2}}\,,
 \end{align}
-wobei für den Parameter $d = RC$ gilt.
-Die Auftragung der Messwerte und der Graph der Ausgleichsfunktion ist in Abbildung \ref{fig:amplitude}
+wobei für den Parameter $d = \tau$ gilt.
+Die Auftragung der Messwerte aus Tabelle \ref{tab:frequenzen} und der Graph der Ausgleichsfunktion ist in Abbildung \ref{fig:amplitude}
 zu sehen. Die f-Achse ist logarithmisch skaliert.
 
 \begin{figure}
@@ -116,7 +118,48 @@ zu sehen. Die f-Achse ist logarithmisch skaliert.
   \label{fig:amplitude}
 \end{figure}
 
+Für die konkrete zu den Messwerten gehörige Ausgleichsfunktion ergibt sich für den Wert der Zeitkonstanten mit dem zweiten Verfahren
+\begin{align}
+  d = \tau_2 = \SI{0.829(0006)}{\milli\second}\,
+\end{align}
+mit einer relativen Unsicherheit von 0.72\%.
 
+\subsubsection{Analyse der Frequenzabhängigkeit der Phasenverschiebung}
+
+Auch die Phasenverschiebung zwischen Kondensatorspannung und Generatorspannung $phi$
+ist frequenzabhängig, wie an \eqref{eqn:phasenfrequenz} ersichtlich ist.
+Erneut wird eine Ausgleichsrechnung für die Messwerte aus \ref{tab:frequenzen}
+durchgeführt. Die Ausgleichsfunktion ist hierbei
+\begin{align}
+  \phi(f) = \arctan(2πef)\,.
+\end{align}
+Dabei ist der Parameter $e = \tau$. Die Messwerte und der Graph der Ausgleichsfunktion finden sich
+in \ref{fig:phiplot}.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/phi.pdf}
+  \caption{Graph von $\phi(f)$ gegen $f$ und Ausgleichsfunktion}
+  \label{fig:phiplot}
+\end{figure}
+
+Der Parameter der Ausgleichsfunktion und damit auch der Wert für die
+Zeitkonstante gemäß des dritten Verfahrens ergibt sich hier zu
+\begin{align}
+  e = \tau_3 = \SI{0.822(0010)}{\milli\second}\,
+\end{align}
+mit einer relativen Unsicherheit von 1,22\%.
+
+
+DAS HIER IST NUR TEMPORÄR ES WIRD NOCH SCHÖN
+\begin{align*}
+  A(\omega) &= -\dfrac{\sin(\arctan(-\omega RC))}{\omega RC}\\
+  &= \dfrac{\sin(\arctan(\omega RC))}{\omega RC} \\
+  &= \dfrac{\omega RC}{\sqrt{1 + (\omega RC)^{2}} \omega RC} \\
+  &= \dfrac{1}{\sqrt{1 + (\omega RC)^{2}}} \\
+  &= \cos(\arctan(-\omega RC))\\
+  &= \cos(\varphi(\omega))
+\end{align*}
 
 \subsection{Der RC-Kreis als Integrator}
 
@@ -183,11 +226,10 @@ der gelbe Graph den Verlauf der am Kondensator abgegriffenen Spannung.
 Wird an den RC-Kreis eine sinusförmige Spannung angelegt, so sollte sich nach bei der
 Integration gemäß
 \begin{equation}
-  \int c\sin(t) \, \symup{d}t=-c\cos(t) + D
+  \int c\sin(t) \, \symup{d}t=-c\cos(t)
 \end{equation}
-eine Spannung ergeben, die dem Graphen von $-\cos(t)$ entspricht. Dabei ist $c$ eine
-beliebige Konstante und $D$ die Integrationskonstante. Der Verlauf der
-im Versuch aufgenommenen Graphen \ref{fig:sinus} folgt dieser Beziehung. Hier beschreibt der blaue Graph
+eine Spannung ergeben, die dem Graphen von $-\cos(t)$ entspricht. Der Verlauf der
+im Versuch aufgenommenen Graphen \ref{fig:sinus} folgt dieser Beziehung mit $D = 0$. Hier beschreibt der blaue Graph
 wieder den Verlauf der angelegten Generatorspannung und der gelbe Graph den Verlauf der
 am Kondensator abgegriffenen Spannung.
 \begin{figure}
