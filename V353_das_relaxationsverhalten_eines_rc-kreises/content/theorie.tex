@@ -90,7 +90,13 @@ Beziehung
 Der Wert der Phasenverschiebung entspricht dem Betrag dieses Ausdrucks. Sie geht
 also für kleine Frequenzen gegen $0$ und für große Frequenzen gegen $\pi/2$.
 Für $\omega=1/RC$ nimmt sie den Wert $\pi/4$ an.
-Durch einige weitere Überlegungen lässt ergibt sich hieraus
+Durch einige weitere Überlegungen lässt sich
+\begin{equation}
+  A(\omega)=-\frac{\sin(\phi)}{\omega R C}U_{\text{0}}
+  \label{eqn:amplitude}
+\end{equation}
+herleiten. Hieraus ergibt sich dann durch weitere Umformung für die Amplitude in
+Abhängigkeit von der Frequenz
 \begin{equation}
   A(\omega)=\frac{U_{\text{0}}}{\sqrt{1+\omega^2 R^2 C^2}} \,,
   \label{eqn:kondensatorfrequenz}
