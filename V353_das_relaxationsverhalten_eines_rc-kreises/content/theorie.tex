@@ -19,7 +19,7 @@ Die in diesem Versuch untersuchten Relaxationsvorgänge sind der Auf- und Entlad
 eines Kondensators über einen Widerstand. Der Schaltplan hierzu ist in \ref{fig:Aufbau_1} zu sehen.
 \begin{figure}
   \centering
-  \includegraphics[width=260pt]{aufbau_1.png}
+  \includegraphics[width=260pt]{data/aufbau_1.png}
   \caption{Beispielhafte Schaltung zur Auf- und Entladung eines Kondensators über einen
   Widerstand unter Verwendung von Gleichspannung \cite{Versuchsanleitung}}
   \label{fig:Aufbau_1}
@@ -56,7 +56,7 @@ die Kondensatorspannung der Zuordnung
 folgen.
 
 
-Wird an den das RC-Glied eine Spannung $U_{\text{G}}=U_{\text{0}}\cos(\omega t)$ angelegt, deren
+Wird an das RC-Glied eine Spannung $U_{\text{G}}=U_{\text{0}}\cos(\omega t)$ angelegt, deren
 Frequenz klein gegen $1/RC$ ist, so folgt der Spannungsverlauf am Kondensator
 dem der Quelle. Wird die Frequenz jedoch erhöht, so stellt sich eine Phasenverschiebung
 zwischen Generatorspannung $U_{\text{G}}$ und der Spannung $U_{\text{C}}$ am Kondensator
@@ -66,7 +66,7 @@ Periodendauer nicht mehr vollständig geladen werden kann. Ein Schaltplan hierzu
 sich in \ref{fig:Aufbau_2}.
 \begin{figure}
   \centering
-  \includegraphics[width=250pt]{aufbau_2.png}
+  \includegraphics[width=250pt]{data/aufbau_2.png}
   \caption{Beispielhafte Schaltung zur Auf- und Entladung eines Kondensators über
   einen Widerstand unter Verwendung von Wechselspannung \cite{Versuchsanleitung}}
   \label{fig:Aufbau_2}
@@ -86,9 +86,9 @@ Beziehung
 \begin{equation}
   \phi(\omega)=arctan(-\omega R C) \,.
 \end{equation}
-Der Wert der Phasenverschiebung geht also für kleine Frequenzen gegen $0$ und für
-große Frequenzen gegen $\pi/2$. Für $\omega=1/RC$ nimmt sie den Wert
-$\pi/4$ an.
+Der Wert der Phasenverschiebung entspricht dem Betrag dieses Ausdrucks. Sie geht
+also für kleine Frequenzen gegen $0$ und für große Frequenzen gegen $\pi/2$.
+Für $\omega=1/RC$ nimmt sie den Wert $\pi/4$ an.
 Durch einige weitere Überlegungen lässt ergibt sich hieraus
 \begin{equation}
   A(\omega)=\frac{U_{\text{0}}}{\sqrt{1+\omega^2 R^2 C^2}} \,,
