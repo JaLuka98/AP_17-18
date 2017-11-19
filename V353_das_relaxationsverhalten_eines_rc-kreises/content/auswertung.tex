@@ -24,7 +24,14 @@ $U_\text{C}(t)/$mV & $t/$ms \\
 \bottomrule
 \end{tabular}
 \end{table}
-Nach Teilen durch $U_\text{C}(0)$ und Logarithmieren von \eqref{eqn:kondensatorurelax} folgt
+Die anliegende Generatorspannung $U_0$ ist hierbei näherungsweise der Spannungsabfall
+am Kondensator $U_\text{C}(0)$, da der betrachtete Zeitraum hinreichend lang ist, um von einer
+fast vollständigen Entladung auszugehen.
+Nach Teilen durch $U_\text{C}(0)$ und Logarithmieren von \eqref{eqn:kondensatorurelax}
+folgt\footnote{Entgegen der Versuchsanleitung wird eine lineare Ausgleichsrechnug mit bezüglich
+$U_\text{C}(0)$ normierten Spannungswerten durchgeführt, da es nicht möglich ist,
+dimensionsbehaftete Größen zu logarithmieren.}
+
 \begin{equation}
   \ln{\left(\frac{U_\mathrm{C}(t)}{U_0}\right)} = -\frac{t}{\tau}\,.
 \end{equation}
@@ -51,7 +58,7 @@ berechnen und für $\tau$ folgt dann
 Die Messdaten für die eingestellte Frequenz $f$, die Kondensatorspannung
 $U_\text{C}$ und die Differenz $a$ zwischen den Nulldurchgängen von Generatorspannung
 und Kondensatorspannung können Tabelle \ref{tab:frequenzen} entnommen werden. Es wurde auch bereits
-die Phasenverschiebung $\varphi$ aus $a$ und $f$ gemäß XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX berechnet.
+die Phasenverschiebung $\phi$ aus $a$ und $f$ gemäß XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX berechnet.
 
 \begin{table}
 \centering
@@ -59,7 +66,7 @@ die Phasenverschiebung $\varphi$ aus $a$ und $f$ gemäß XXXXXXXXXXXXXXXXXXXXXXX
 \label{tab:frequenzen}
 \begin{tabular}{c c c c}
 \toprule
-$f/Hz$ & $U_\text{C}(f)/$mV & $a/$ms & $\varphi/$grad\\
+$f/Hz$ & $U_\text{C}(f)/$mV & $a/$ms & $\phi/$grad\\
 \midrule
   20	&  492.30  &  1.12  &   8.06 \\
   30	&  490.85  &  1.00  &  10.80 \\
@@ -96,9 +103,19 @@ $A(f) = U_\text{C}(f)$ frequenzabhängig. Es wird eine nicht lineare Ausgleichsr
 einer normierten Amplitude $A(f)/U_0$ mit der frequenzunabhängigen Generatorspannung $U_0$
 durchgeführt. Dabei gilt für die Ausgleichsfunktion
 \begin{align}
-  \frac{A(f)}{U_0} = \frac{1}{\sqrt{1+d(2\pi*f)^2}}
+  \frac{A(f)}{U_0} = \frac{1}{\sqrt{1+(2πdf)^2}}\,,
 \end{align}
- die Auftragung der Messwerte und der Graph der Ausgleichsfunktion ist in
+wobei für den Parameter $d = RC$ gilt.
+Die Auftragung der Messwerte und der Graph der Ausgleichsfunktion ist in Abbildung \ref{fig:amplitude}
+zu sehen. Die f-Achse ist logarithmisch skaliert.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/amplitude.pdf}
+  \caption{Graph von $A(f)/U_0$ gegen $f$ und Ausgleichsfunktion}
+  \label{fig:amplitude}
+\end{figure}
+
 
 
 \subsection{Der RC-Kreis als Integrator}

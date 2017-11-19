@@ -56,7 +56,7 @@ params2, covariance_matrix2 = optimize.curve_fit(amplitudefit, f, U_normiert, p0
 
 errors2 = np.sqrt(np.diag(covariance_matrix2))
 
-print('RC =', params2[0], '+-', errors2[0])
+print('RC =', params2[0]*1e3, '+-', errors2[0]*1e3)
 
 RC = ufloat(params2[0], errors2[0])
 
@@ -66,7 +66,7 @@ plt.plot(f, U_normiert, 'rx', label='Messwerte')
 plt.plot(frequenz, amplitudefit(frequenz, params2[0]), 'k-', label='Ausgleichsfunktion')
 plt.xscale('log')
 plt.xlabel(r'$f/$Hz')
-plt.ylabel(r'$A(f)/U_0/$mV')
+plt.ylabel(r'$A(f)/U_0)$')
 plt.legend()
 plt.grid()
 plt.tight_layout()
@@ -88,7 +88,7 @@ params3, covariance_matrix3 = optimize.curve_fit(arctanfit, f, phi)
 
 errors3 = np.sqrt(np.diag(covariance_matrix3))
 
-print('RC =', params3[0], '+-', errors3[0])
+print('RC =', params3[0]*1e3, '+-', errors3[0]*1e3)
 
 RC = ufloat(params3[0], errors3[0])
 
