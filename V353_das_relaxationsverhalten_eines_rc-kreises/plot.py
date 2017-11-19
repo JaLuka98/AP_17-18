@@ -12,7 +12,7 @@ def linfit(x, a, b):
 
 
 def amplitudefit(x, RC):
-    return 1/(np.sqrt(1+(4*x*(np.pi))**2*(RC)**2))
+    return 1/(np.sqrt(1+(2*x*(np.pi))**2*(RC)**2))
 
 
 def arctanfit(x, d):
@@ -66,7 +66,7 @@ plt.plot(f, U_normiert, 'rx', label='Messwerte')
 plt.plot(frequenz, amplitudefit(frequenz, params2[0]), 'k-', label='Ausgleichsfunktion')
 plt.xscale('log')
 plt.xlabel(r'$f/$Hz')
-plt.ylabel(r'$U_normiert/$mV')
+plt.ylabel(r'$A(f)/U_0/$mV')
 plt.legend()
 plt.grid()
 plt.tight_layout()
@@ -81,6 +81,8 @@ f, a = np.genfromtxt('data/phasenverschiebung.txt', unpack=True)  # f in Hz, a i
 a = a * 1e-3  # a in s
 
 phi = a*f*360
+
+print(phi)
 
 params3, covariance_matrix3 = optimize.curve_fit(arctanfit, f, phi)
 

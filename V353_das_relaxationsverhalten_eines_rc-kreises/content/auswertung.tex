@@ -46,7 +46,60 @@ berechnen und für $\tau$ folgt dann
 \begin{align}
 \tau = RC = \SI{0.616(0027)e-3}{\second}\,.
 \end{align}
-\subsection{Bestimmung der Zeitkonstante durch Analyse der Frequenzabhängigkeit der Kondensatorspannung}
+\subsection{Bestimmung der Zeitkonstante durch Beachtung von Frequenzabhängigkeiten}
+
+Die Messdaten für die eingestellte Frequenz $f$, die Kondensatorspannung
+$U_\text{C}$ und die Differenz $a$ zwischen den Nulldurchgängen von Generatorspannung
+und Kondensatorspannung können Tabelle \ref{tab:frequenzen} entnommen werden. Es wurde auch bereits
+die Phasenverschiebung $\varphi$ aus $a$ und $f$ gemäß XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX berechnet.
+
+\begin{table}
+\centering
+\caption{Messdaten zur Frequenzabhängigkeit der Kondensatorspannung und der Phasenverschiebung}
+\label{tab:frequenzen}
+\begin{tabular}{c c c c}
+\toprule
+$f/Hz$ & $U_\text{C}(f)/$mV & $a/$ms & $\varphi/$grad\\
+\midrule
+  20	&  492.30  &  1.12  &   8.06 \\
+  30	&  490.85  &  1.00  &  10.80 \\
+  40	&  487.05  &  0.92  &  13.25 \\
+  50	&  482.15  &  0.80  &  14.40 \\
+  60	&  475.17  &  0.78  &  16.85 \\
+  70	&  469.05  &  0.78  &  19.56 \\
+  80	&  461.20  &  0.76  &  21.89 \\
+  90	&  452.80  &  0.75  &  24.36 \\
+ 100	&  442.15  &  0.74  &  26.78 \\
+ 150	&  393.80  &  0.68  &  36.72 \\
+ 200	&  347.30  &  0.62  &  44.93 \\
+ 300	&  273.00  &  0.54  &  57.89 \\
+ 400	&  220.20  &  0.46  &  65.66 \\
+ 500	&  183.00  &  0.38  &  68.40 \\
+ 600	&  155.70  &  0.33  &  71.71 \\
+ 700	&  135.60  &  0.3   &  74.59 \\
+ 800	&  119.80  &  0.27  &  77.18 \\
+ 900	&  107.30  &  0.24  &  77.76 \\
+1000	&   97.00  &  0.22  &  79.20 \\
+1500	&   65.50  &  0.15  &  83.16 \\
+2000	&   49.35  &  0.12  &  84.96 \\
+3000	&   33.06  &  0.08  &  86.40 \\
+4000	&   24.88  &  0.06  &  86.40 \\
+5000	&   19.96  &  0.05  &  89.28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Analyse der Frequenzabhängigkeit der Kondensatorspannung}
+
+Nach \eqref{eqn:kondensatorfrequenz} ist die Amplitude der Kondensatorspannung
+$A(f) = U_\text{C}(f)$ frequenzabhängig. Es wird eine nicht lineare Ausgleichsrechnung
+einer normierten Amplitude $A(f)/U_0$ mit der frequenzunabhängigen Generatorspannung $U_0$
+durchgeführt. Dabei gilt für die Ausgleichsfunktion
+\begin{align}
+  \frac{A(f)}{U_0} = \frac{1}{\sqrt{1+d(2\pi*f)^2}}
+\end{align}
+ die Auftragung der Messwerte und der Graph der Ausgleichsfunktion ist in
+
 
 \subsection{Der RC-Kreis als Integrator}
 
@@ -55,7 +108,7 @@ Das bedeutet, dass der Graph der am Kondensator gemessenen Spannung dem Graphen 
 Stammfunktion der angelegten Generatorspannung entsprechen sollte. In diesem Versuchsteil
 wurde für alle angelegten Spannungen die Frequenz $f=191.8$ kHz gewählt.
 Die erste an den RC-Kreis angelegte Spannung ist eine Reckteckspannung. Die Stammfunktion
-zu dieser sollte gleichmäßig ansteigende Flanken dort haben, wo die Recheckspannung
+zu dieser sollte gleichmäßig ansteigende Flanken dort haben, wo die Rechteckspannung
 positiv ist und gleichmäßig abfallende Flanken dort, wo die Rechteckspannung
 negativ ist. Es gilt der Zusammenhang
 \begin{align}
