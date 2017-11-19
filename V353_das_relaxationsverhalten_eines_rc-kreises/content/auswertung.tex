@@ -1,8 +1,16 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bestimmung der Zeitkonstante durch die Entladung eines Kondensators}
-Die aus der mit dem Oszilloskop aufgenommenen Entladekurve des Kondensators
-entnommenen Wertepaare sind in Tabelle \ref{tab:entladung} zu finden.
+Es wurde eine Entladekurve des Kondensators durch das Oszilloskop aufgenommen, die
+in Abbildung \ref{fig:entladekurve} zu sehen ist.
+\begin{figure}
+  \centering
+  \includegraphics[width=250pt]{data/4a_volt.png}
+  \caption{Entladekurve des Kondensators}
+  \label{fig:entladekurve}
+\end{figure}
+
+Die daraus entnommenen Wertepaare sind in Tabelle \ref{tab:entladung} zu finden.
 
 \begin{table}
 \centering
@@ -40,26 +48,30 @@ zu sehen.
 \begin{figure}
   \centering
   \includegraphics{build/uc.pdf}
-  \caption{Graph von $U_\text{C}$ gegen $t$ und Ausgleichsfunktion}
+  \caption{Auftragung von $\ln{\left(\frac{U_\mathrm{C}}{U_0}\right)}$ gegen $t$ und Graph der Ausgleichsfunktion}
   \label{fig:entladung}
 \end{figure}
 Die Ausgleichsgerade folgt allgemein \eqref{eqn:gerade}, sodass die Steigung der
 Ausgleichsgerade $a$ mit der Zeitkonstanten $\tau$ des RC-Gliedes in dem Zusammenhang
-$a = -\frac{1}{\tau}$ steht. Hier lässt sich $a$ zu
+$a = -1/\tau$ steht. Hier lässt sich $a$ zu
 \begin{align}
   a = \SI{-1.62(007)}{\per\milli\second}
 \end{align}
-berechnen und für die nach dem ersten Messverfahren ermittelte Zeitkonstante folgt dann
+berechnen und für die nach dem ersten Messverfahren ermittelte Zeitkonstante
+\footnote{Es gilt hierbei die Konvention, dass in allgemeinen Formeln \tau ohne
+Index notiert wird. Wird die Ausgleichsrechnung durchgeführt und der Parameter
+konkret ermittelt, wird er durchnummeriert.}
+folgt dann
 \begin{align}
-\tau_1 = \SI{0.616(0027)}{\milli\second}\,,
+\tau_1 = \SI{0.616(0027)}{\milli\second}\,.
 \end{align}
-dabei beträgt die relative Unsicherheit 4.38\%.
+Dabei beträgt die relative Unsicherheit 4.38\%.
 \subsection{Bestimmung der Zeitkonstante durch Beachtung von Frequenzabhängigkeiten}
 
 Die Messdaten für die eingestellte Frequenz $f$, die Kondensatorspannung
 $U_\text{C}$ und die Differenz $a$ zwischen den Nulldurchgängen von Generatorspannung
 und Kondensatorspannung können Tabelle \ref{tab:frequenzen} entnommen werden. Es wurde auch bereits
-die Phasenverschiebung $\phi$ aus $a$ und $f$ gemäß XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX berechnet.
+die Phasenverschiebung $\phi$ aus $a$ und $f$ mithilfe von \eqref{eqn:ab2phi} berechnet.
 
 \begin{table}
 \centering
@@ -100,7 +112,7 @@ $f/Hz$ & $U_\text{C}(f)/$mV & $a/$ms & $\phi/$grad\\
 \subsubsection{Analyse der Frequenzabhängigkeit der Kondensatorspannung}
 
 Nach \eqref{eqn:kondensatorfrequenz} ist die Amplitude der Kondensatorspannung
-$A(f) = U_\text{C}(f)$ frequenzabhängig. Es wird eine nicht lineare Ausgleichsrechnung
+$A(f)$ frequenzabhängig. Es wird eine nicht lineare Ausgleichsrechnung
 einer normierten Amplitude $A(f)/U_0$ mit der frequenzunabhängigen Generatorspannung $U_0$
 durchgeführt. Stets ist für die Kreisfrequenz $\omega = 2πf$ zu beachten.
 Dabei gilt für die Ausgleichsfunktion
@@ -114,7 +126,7 @@ zu sehen. Die f-Achse ist logarithmisch skaliert.
 \begin{figure}
   \centering
   \includegraphics{build/amplitude.pdf}
-  \caption{Graph von $A(f)/U_0$ gegen $f$ und Ausgleichsfunktion}
+  \caption{Auftragung von $A(f)/U_0$ gegen $f$ und Graph der Ausgleichsfunktion}
   \label{fig:amplitude}
 \end{figure}
 
@@ -128,18 +140,18 @@ mit einer relativen Unsicherheit von 0.72\%.
 
 Auch die Phasenverschiebung zwischen Kondensatorspannung und Generatorspannung $phi$
 ist frequenzabhängig, wie an \eqref{eqn:phasenfrequenz} ersichtlich ist.
-Erneut wird eine Ausgleichsrechnung für die Messwerte aus \ref{tab:frequenzen}
+Erneut wird eine Ausgleichsrechnung für die Messwerte aus Tabelle \ref{tab:frequenzen}
 durchgeführt. Die Ausgleichsfunktion ist hierbei
 \begin{align}
   \phi(f) = \arctan(2πef)\,.
 \end{align}
 Dabei ist der Parameter $e = \tau$. Die Messwerte und der Graph der Ausgleichsfunktion finden sich
-in \ref{fig:phiplot}.
+in Abbildung \ref{fig:phiplot}.
 
 \begin{figure}
   \centering
   \includegraphics{build/phi.pdf}
-  \caption{Graph von $\phi(f)$ gegen $f$ und Ausgleichsfunktion}
+  \caption{Auftragung von $\phi(f)$ gegen $f$ und Graph der Ausgleichsfunktion}
   \label{fig:phiplot}
 \end{figure}
 
@@ -150,22 +162,23 @@ Zeitkonstante gemäß des dritten Verfahrens ergibt sich hier zu
 \end{align}
 mit einer relativen Unsicherheit von 1,22\%.
 
-Außerdem kann umgestellt werden zu zu
+Nun wird der Zusammenhang zwischen der Amplitude der Kondensatorspannung und der Phasenverschiebung betrachtet.
+Es kann \eqref{eqn:phasenfrequenz} umgestellt werden zu zu
 \begin{align}
-  frac{\sin(\phi)}{\cos(\phi)} = -ω\tau\,.
+  \frac{\sin(\phi)}{\cos(\phi)} = -ω\tau\,.
 \end{align}
-Wird dieses Ergebnis in  eingesetzt, so ergibt sich für die Abhängigkeit der normierten
+Wird dieses Ergebnis in \eqref{eqn:amplitude} eingesetzt, so ergibt sich für die Abhängigkeit der normierten
 Amplitude $A(\phi)/U_0$ von der Phasenverschiebung $\phi$ der Zusammenhang
 \begin{align}
-  \frac{A(\phi}{U_0} = \cos(\phi)\,.
+  \frac{A(\phi)}{U_0} = \cos(\phi)\,.
 \end{align}
-Dieser wird hier für die vorliegenden Messwerte in Abbildung \ref{tab:polarplot} in einem
+Dieser wird hier für die vorliegenden Messwerte in Abbildung \ref{fig:polarplot} in einem
 Polarkoordinatensystem veranschaulicht. Die Theoriekurve ist ebenso eingezeichnet.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{build/polar.pdf}
-  \caption{Veranschaulichung der Abhängigkeit der normierten Amplitude $A(\phi/U_0$ von der gemessenen Phasenverschiebung}
+  \caption{Veranschaulichung der Abhängigkeit der normierten Amplitude $A(\phi)/U_0$ von der gemessenen Phasenverschiebung}
   \label{fig:polarplot}
 \end{figure}
 
