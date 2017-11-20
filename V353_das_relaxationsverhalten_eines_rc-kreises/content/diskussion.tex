@@ -1,7 +1,37 @@
 \section{Diskussion}
 \label{sec:Diskussion}
-DAS HIER IST WEGEN FEHLER MIT Y ACHSENABSCHNITT UND SO
+Zuallererst sei die gute Übereinstimmung der Messwerte mit den Ausgleichsfunktionen
+und der Theoriekurve zu bemerken. Deswegen lassen sich grobe Fehler ausschließen,
+statistische Fehler konnten gering gehalten werden.
+Die ermittelten Werte für die Zeitkonstante sind zusammengefasst in Tabelle
+dargestellt.
 
-wobei der Ordinatenabschnitt
-in der Theorie Null beträgt. Das liegt daran, dass der Kondensator in der Theorie
-als komplett aufgeladen betrachtet
+\begin{table}
+\centering
+\begin{tabular}{ccc}
+\toprule
+$\tau_1 / \si{\milli \second}$ & $\tau_2 / \si{\milli \second}$ & $\tau_3 / \si{\milli \second}$\\
+\midrule
+$0,616 \pm 0,027$ & $0,829 \pm 0,006$ & $0,822 \pm 0,010$\\
+\bottomrule
+\end{tabular}
+\caption{Zusammenfassung der ermittelten Werte für die Zeitkonstante}
+\end{table}
+
+Aufällig ist, dass die letzten beiden Werte konsistent sind und signifikant vom
+ersten Wert abweichen. Desweiteren ist die relative Unsicherheit der ersten Messung mit
+4,38\% deutlich höher als die der zweiten und dritten Messung mit 0,72\% und 1,22\%.
+Dementsprechend lässt sich annehmen, dass die Zeitkonstante des hier untersuchten
+RC-Gliedes nah an \tau_2 und \tau_3 liegt.
+Eine mögliche Erklärung für die große Abweichung bei der direkten Messung liegt
+in der Nichtbeachtung des Innenwiderstands des Generators. Es ist außerdem zu bemerken,
+dass nur recht wenige Messwerte für die direkte Messung verwendet wurden. Die Messwerte
+wurden anhand des Ausdrucks abgelesen und nicht die Cursor-Funktion des Oszilloskops verwendet.
+Dieses Verfahren erscheint aufgrund der nicht unwesentlichen Streuung der Messwerte um die
+Ausgleichsgerade als zu ungenau, es sollten die Messwerte stattdessen direkt bei der
+Versuchsdurchführung mit den Funktionen des Oszilloskops abgelesen werden.
+Außerdem treten Fehler bei der direkten Methode auf, da die Auf- und Entladung nur
+näherungsweise vollständig geschehen kann. Dadurch beträgt der Ordinatenabschnitt nicht,
+wie theoretisch erwartet, null.
+Bei der Verwendung des RC-Gliedes als Integrator wurde das aus der Theorie zu erwartende Ergebnis
+in guter Näherung erzielt.
