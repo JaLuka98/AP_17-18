@@ -1,5 +1,7 @@
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Gedämpfte Schwingungen}
+\label{sec:Gedämpfte_Schwingungen}
 
 Wird einem System, das aus Kondensator und Spule besteht, Energie zugeführt, so kann
 diese Energie im System gespeichert werden, indem sie zwischen der Kapazität $C$
@@ -19,17 +21,67 @@ Regeln ergibt sich dann für diesen Schaltkreis \ref{fig:RLC}
   \caption{Skizze eines RLC Kreises\cite{Versuchsanleitung1}}
   \label{fig:RLC}
 \end{figure}
-
+Dabei ist $U_{\text{R}}$ die Spannung am Widerstand, $U_{\text{C}}$ die Spannung
+am Kondensator und $U_{\text{L}}$ die Spannung an der Induktivität.
 Werden nun die Beziehungen $U_{\text{R}}(t)=R \symbf{I}(t)$,
 $U_{\text{C}}(t)=Q(t)/C$ und $U_{\text{L}}(t)=L (\symup{d} \symbf{I}/\symup{d}t)$
 eingesetzt und wird nach der Zeit abgeleitet, so ergibt sich die Differentialgleichung
 \begin{equation}
   \frac{\symup{d}^2\symbf{I}}{\symup{d}t}+\frac{R}{L}\frac{\symup{d}\symbf{I}}
   {\symup{d}t} + \frac{1}{LC}\symbf{I} = 0
+  \label{eqn:DGL}
 \end{equation}
 für gedämpfte Schwingungen. Zur Lösung kann der Ansatz
 \begin{equation}
   \underline{\symbf{I}}(t)\footnote{Komplexe Zahlen werden im Folgenden mit einem
-  Unterstrich markiert.}=\underline{U} \exp{i\underline{\omega}t}
+  Unterstrich markiert.}=\underline{U} \exp({i\underline{\omega}t})
+  \label{eqn:ansatz}
 \end{equation}
-gewählt werden.
+gewählt werden. Dann ergibt sich nach Einsetzen von \eqref{eqn:ansatz} in \eqref{eqn:DGL}
+der Zusammenhang
+\begin{equation}
+  \underline{\omega}^2-i\frac{R}{L}\underline{\omega}-\frac{1}{LC}=0 \,.
+  \label{eqn:omega}
+\end{equation}
+Daraus lässt sich die Gesamtlösung der Differentialgleichung \eqref{eqn:DGL} zu
+\begin{equation}
+  \underline{\symbf{I}}=\exp\biggl(-\frac{R}{2L}t\biggr)\Biggl(\underline
+  {U_{\text{1}}}\exp\Biggl(i\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}\Biggr)
+  +\underline{U_{\symup{2}}}\exp\Biggl(-i\sqrt{
+  \frac{1}{LC}-\frac{R^2}{4L^2}}\Biggr)\Biggr)
+\end{equation}
+bestimmen, indem aus \eqref{eqn:omega} Lösungen für $\underline{\omega}$ bestimmt
+und die allgemeine Lösung der Differentialgleichung gemäß des Superpositionsprinzips
+gebildet wird. Nun müssen die beiden Fälle
+\begin{align}
+  \frac{1}{LC}>\frac{R^2}{4L^2} & \qquad\qquad\qquad\text{und} & \frac{1}{LC}<\frac{R^2}{4L^2}
+\end{align}
+unterschieden werden. Für ersteren ist die Wurzel reell. Damit ergibt sich die
+reelle Lösungsfunktion $\symbf{I}$ mit einem geeigeneten Ansatz zu
+\begin{equation}
+  \symbf{I}=A_{\text{0}}\exp\biggl(-\frac{R}{2L}t\biggr)\cos\Biggl(
+  \sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}t+\eta\Biggr)\,.
+\end{equation}
+wobei $A_{\text{0}}$ eine beliebige Konstante und $\eta$ eine beliebige Phase ist.
+Dies entspricht der GLeichung einer gedämpften Schwingung, da die Amplitude mit zunehmender
+Zeit $t$ gegen $0$ geht.
+Die für die Abnahmegeschwindigkeit charakteristische Abklingdauer $T_{\text{Ex}}$
+wird definiert als
+\begin{equation}
+  T_{\text{Ex}}\coloneq\frac{2L}{R} \,.
+  \label{eqn:abklingdauer}
+\end{equation}
+Für den zweiten Fall ist die Wurzel imaginär. Dann werden alle Exponentialfunktionen
+reell, sodass keine oszillatorischen Anteile mehr vorliegen. Dieser Fall wird
+Kriechfall genannt. (...)
+
+
+Für den Spezialfall
+\begin{equation}
+  \frac{1}{LC}=\frac{R^2}{4L^2}
+\end{equation}
+tritt der aperiodische Grenzfall ein. Dies ist die stärkste mögliche Dämpfung eines
+Systems.
+
+\subsection{Erzwungene Schwingungen}
+\label{Erzwungene_Schwingungen}
