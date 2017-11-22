@@ -17,23 +17,23 @@ Regeln ergibt sich dann für diesen Schaltkreis \ref{fig:RLC}
 
 \begin{figure}
   \centering
-  \includegraphics[width=300pt]{data/schwingkreis_theorie.png}
+  \includegraphics[width=200pt]{data/schwingkreis_theorie.png}
   \caption{Skizze eines RLC Kreises\cite{Versuchsanleitung1}}
   \label{fig:RLC}
 \end{figure}
 Dabei ist $U_{\text{R}}$ die Spannung am Widerstand, $U_{\text{C}}$ die Spannung
 am Kondensator und $U_{\text{L}}$ die Spannung an der Induktivität.
-Werden nun die Beziehungen $U_{\text{R}}(t)=R \symbf{I}(t)$,
-$U_{\text{C}}(t)=Q(t)/C$ und $U_{\text{L}}(t)=L (\symup{d} \symbf{I}/\symup{d}t)$
+Werden nun die Beziehungen $U_{\text{R}}(t)=R I(t)$,
+$U_{\text{C}}(t)=Q(t)/C$ und $U_{\text{L}}(t)=L (\symup{d} I/\symup{d}t)$
 eingesetzt und wird nach der Zeit abgeleitet, so ergibt sich die Differentialgleichung
 \begin{equation}
-  \frac{\symup{d}^2\symbf{I}}{\symup{d}t}+\frac{R}{L}\frac{\symup{d}\symbf{I}}
-  {\symup{d}t} + \frac{1}{LC}\symbf{I} = 0
+  \frac{\symup{d}^2I}{\symup{d}t}+\frac{R}{L}\frac{\symup{d}I}
+  {\symup{d}t} + \frac{1}{LC}I = 0
   \label{eqn:DGL}
 \end{equation}
 für gedämpfte Schwingungen. Zur Lösung kann der Ansatz
 \begin{equation}
-  \underline{\symbf{I}}(t)\footnote{Komplexe Zahlen werden im Folgenden mit einem
+  \underline{I}(t)\footnote{Komplexe Zahlen werden im Folgenden mit einem
   Unterstrich markiert.}=\underline{U} \exp({i\underline{\omega}t})
   \label{eqn:ansatz}
 \end{equation}
@@ -45,7 +45,7 @@ der Zusammenhang
 \end{equation}
 Daraus lässt sich die Gesamtlösung der Differentialgleichung \eqref{eqn:DGL} zu
 \begin{equation}
-  \underline{\symbf{I}}=\exp\biggl(-\frac{R}{2L}t\biggr)\Biggl(\underline
+  \underline{I}=\exp\biggl(-\frac{R}{2L}t\biggr)\Biggl(\underline
   {U_{\text{1}}}\exp\Biggl(i\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}\Biggr)
   +\underline{U_{\symup{2}}}\exp\Biggl(-i\sqrt{
   \frac{1}{LC}-\frac{R^2}{4L^2}}\Biggr)\Biggr)
@@ -57,9 +57,9 @@ gebildet wird. Nun müssen die beiden Fälle
   \frac{1}{LC}>\frac{R^2}{4L^2} & \qquad\qquad\qquad\text{und} & \frac{1}{LC}<\frac{R^2}{4L^2}
 \end{align}
 unterschieden werden. Für ersteren ist die Wurzel reell. Damit ergibt sich die
-reelle Lösungsfunktion $\symbf{I}$ mit einem geeigeneten Ansatz zu
+reelle Lösungsfunktion $I$ mit einem geeigeneten Ansatz zu
 \begin{equation}
-  \symbf{I}=A_{\text{0}}\exp\biggl(-\frac{R}{2L}t\biggr)\cos\Biggl(
+  I=A_{\text{0}}\exp\biggl(-\frac{R}{2L}t\biggr)\cos\Biggl(
   \sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}t+\eta\Biggr)\,.
 \end{equation}
 wobei $A_{\text{0}}$ eine beliebige Konstante und $\eta$ eine beliebige Phase ist.
@@ -73,9 +73,7 @@ wird definiert als
 \end{equation}
 Für den zweiten Fall ist die Wurzel imaginär. Dann werden alle Exponentialfunktionen
 reell, sodass keine oszillatorischen Anteile mehr vorliegen. Dieser Fall wird
-Kriechfall genannt. (...)
-
-
+Kriechfall genannt. Dann liegt ein einfaches Relaxationsverhalten vor.
 Für den Spezialfall
 \begin{equation}
   \frac{1}{LC}=\frac{R^2}{4L^2}
@@ -94,7 +92,7 @@ hierzu ist in \ref{fig:RLC_sinus} zu finden. Diese hat die Form
 
 \begin{figure}
   \centering
-  \includegraphics[width=300pt]{data/angeregter_schwingkreis_theorie.png}
+  \includegraphics[width=200pt]{data/angeregter_schwingkreis_theorie.png}
   \caption{Skizze eines RLC Kreises mit angelegter sinusförmiger Spannung
   \cite{Versuchsanleitung1}}
   \label{fig:RLC_sinus}
@@ -103,9 +101,9 @@ wodurch die im zuvor diskutierten Fall noch homogene Differentialgleichung zu ei
 inhomogenen Differentialgleichung mit der angelegten sinusförmigen Spannung
 als Inhomogenität wird:
 \begin{equation}
-  LC\frac{\symup{d}^2\underline{\symbf{U}}_{\symup{C}}}{\symup{d}t^2}
-  +RC\frac{\symup{d}\underline{\symbf{U}}_{\symup{C}}}{\symup{d}t}
-  +\underline{\symbf{U}}_{\symup{C}} = U_{\symup{0}}\exp(i\omega t) \,.
+  LC\frac{\symup{d}^2\underline{U}_{\symup{C}}}{\symup{d}t^2}
+  +RC\frac{\symup{d}\underline{U}_{\symup{C}}}{\symup{d}t}
+  +\underline{U}_{\symup{C}} = U_{\symup{0}}\exp(i\omega t) \,.
 \end{equation}
 Eine Lösung für diese Differentialgleichung lässt sich mit einem geeigneten Ansatz
 zu
@@ -116,6 +114,7 @@ bestimmen. Durch Umstellen nach $\underline{U}$ und einige weitere Umformungen e
 sich für die Phasenverschiebung der Zusammenhang
 \begin{equation}
   \phi(\omega)=\arctan\biggl(\frac{-\omega R C}{1-L C \omega^2}\biggr)
+  \label{eqn:phase}
 \end{equation}
 Die Kondensatorspannung $U_{\symup{C}}$ in Abhängigkeit von der Frequenz ergibt sich
 durch weitere Umformung zu
@@ -125,8 +124,8 @@ durch weitere Umformung zu
 Hier ist erkennbar, dass die Spannung am Kondensator für kleine $\omega$ gegen
 die Frequenz der angelegten Spannung und für sehr große $\omega$ gegen $0$ geht.
 Für einen bestimmten Bereich dazwischen, in dem die Frequenz der angelegten Spannung
-ungefähr der Eigenfrequenz des Schwingkreises entspricht, tritt Resonanz auf.In
-diesem Fall kann die Amplitude der Spannung $U_{\symup{C}}$ am Kondensator größer
+ungefähr der Eigenfrequenz des Schwingkreises entspricht, tritt Resonanz auf. In
+diesem Fall kann bei schwacher Dämpfung die Amplitude der Spannung $U_{\symup{C}}$ am Kondensator größer
 als die Amplitude der Generatorspannung $U_{\symup{G}}$ werden. Ist die Dämpfung
 des Schwingkreises dabei zu gering, kann es zu einer Resonanzkatastrophe kommen.
 Dabei geht $U_{\symup{C}}$ für bestimmte Frequenzen gegen $\infty$.
@@ -139,5 +138,21 @@ der Resonanzkurve. Dabei charakterisieren $\omega_{\symup{+}}$ und $\omega_{\sym
 die Frequenzen, bei denen $U_{\symup{C}}$ $1/\sqrt{2}$ des Maximalwertes entspricht.
 Die Breite der Resonanzkurve ist dann
 \begin{equation}
-  \omega_{\symup{+}} - \omega_{\symup{-}}
+  \omega_{\symup{+}} - \omega_{\symup{-}} \approx \frac{R}{L} \,.
+\end{equation}
+Bei stark gedämpften Systemen tritt keine Resonanz auf. Die Spannung $U_{\symup{C}}$
+am Kondensator geht gegen $0$.
+
+Die Phasenverschiebung zwischen der Generatorspannung $U_{\symup{G}}$ und der
+Spannung $U_{\symup{C}}$ am Kondensator wurde in \eqref{eqn:phase} bereits genannt.
+Man kann erkennen, dass die Phasenverschiebung für kleine Kreisfrequenzen gegen
+$0$ und für große Frequenzen gegen $\pi$ geht, wobei $U_{\symup{G}}$ $U_{\symup{G}}$
+vorauseilt. Analog zu $\omega_{\symup{+}}$ und $\omega_{\symup{-}}$ bei der Amplitude
+lassen sich auch für die Phasenverschiebung zwei Kreisfrequenzen $\omega_{\symup{1}}$
+und $\omega_{\symup{2}}$ definieren, die charakteristische Werte aufweisen. Dabei
+ist $\omega_{\symup{1}}$ der Wert, bei dem die Phasenverschiebung $\phi=\pi/2$ beträgt
+und $\omega_{\symup{2}}$ der Wert, bei dem die Phasenverschiebung $\phi=3\pi/2$ beträgt.
+Es ergibt sich der Zusammenhang
+\begin{equation}
+  \omega_{\symup{1}}-\omega_{\symup{2}}=\frac{R}{L}\,.
 \end{equation}
