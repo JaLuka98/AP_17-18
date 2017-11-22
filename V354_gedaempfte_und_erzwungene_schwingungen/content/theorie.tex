@@ -85,3 +85,58 @@ Systems.
 
 \subsection{Erzwungene Schwingungen}
 \label{Erzwungene_Schwingungen}
+
+An den Schwingkreis wird nun sinusförmige Wechselspannung angelegt. Eine Skizze
+hierzu ist in \ref{fig:RLC_sinus} zu finden. Diese hat die Form
+\begin{equation}
+  \underline{U}(t)=U_{\symup{0}}\exp(i\omega t) \,,
+\end{equation}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=300pt]{data/angeregter_schwingkreis_theorie.png}
+  \caption{Skizze eines RLC Kreises mit angelegter sinusförmiger Spannung
+  \cite{Versuchsanleitung1}}
+  \label{fig:RLC_sinus}
+\end{figure}
+wodurch die im zuvor diskutierten Fall noch homogene Differentialgleichung zu einer
+inhomogenen Differentialgleichung mit der angelegten sinusförmigen Spannung
+als Inhomogenität wird:
+\begin{equation}
+  LC\frac{\symup{d}^2\underline{\symbf{U}}_{\symup{C}}}{\symup{d}t^2}
+  +RC\frac{\symup{d}\underline{\symbf{U}}_{\symup{C}}}{\symup{d}t}
+  +\underline{\symbf{U}}_{\symup{C}} = U_{\symup{0}}\exp(i\omega t) \,.
+\end{equation}
+Eine Lösung für diese Differentialgleichung lässt sich mit einem geeigneten Ansatz
+zu
+\begin{equation}
+  -LC\omega^2\underline{U}+i\omega R C\underline{U}+\underline{U}=U_{\symup{0}}
+\end{equation}
+bestimmen. Durch Umstellen nach $\underline{U}$ und einige weitere Umformungen ergibt
+sich für die Phasenverschiebung der Zusammenhang
+\begin{equation}
+  \phi(\omega)=\arctan\biggl(\frac{-\omega R C}{1-L C \omega^2}\biggr)
+\end{equation}
+Die Kondensatorspannung $U_{\symup{C}}$ in Abhängigkeit von der Frequenz ergibt sich
+durch weitere Umformung zu
+\begin{equation}
+  U_{\symup{C}}(\omega)=\frac{U_{\symup{0}}}{\sqrt{\Bigl(1-LC\omega^2\Bigr)^2+\omega^2 R^2 C^2}} \,.
+\end{equation}
+Hier ist erkennbar, dass die Spannung am Kondensator für kleine $\omega$ gegen
+die Frequenz der angelegten Spannung und für sehr große $\omega$ gegen $0$ geht.
+Für einen bestimmten Bereich dazwischen, in dem die Frequenz der angelegten Spannung
+ungefähr der Eigenfrequenz des Schwingkreises entspricht, tritt Resonanz auf.In
+diesem Fall kann die Amplitude der Spannung $U_{\symup{C}}$ am Kondensator größer
+als die Amplitude der Generatorspannung $U_{\symup{G}}$ werden. Ist die Dämpfung
+des Schwingkreises dabei zu gering, kann es zu einer Resonanzkatastrophe kommen.
+Dabei geht $U_{\symup{C}}$ für bestimmte Frequenzen gegen $\infty$.
+Die dafür charakteristische Kreisfrequenz lässt sich zu
+\begin{equation}
+  \omega_{\symup{res}}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
+\end{equation}
+bestimmen. Ein weiterer charakteristischer Wert der Resonanz ist die Breite
+der Resonanzkurve. Dabei charakterisieren $\omega_{\symup{+}}$ und $\omega_{\symup{-}}$
+die Frequenzen, bei denen $U_{\symup{C}}$ $1/\sqrt{2}$ des Maximalwertes entspricht.
+Die Breite der Resonanzkurve ist dann
+\begin{equation}
+  \omega_{\symup{+}} - \omega_{\symup{-}} 
