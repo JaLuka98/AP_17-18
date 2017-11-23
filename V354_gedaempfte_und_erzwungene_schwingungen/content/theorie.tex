@@ -7,7 +7,7 @@ Wird einem System, das aus Kondensator und Spule besteht, Energie zugeführt, so
 diese Energie im System gespeichert werden, indem sie zwischen der Kapazität $C$
 des Kondensators und der Induktivität $L$ der Spule hin und her schwingt. In der
 Theorie kann dies verlustfrei geschehen, sodass sich eine ungedämpfte Schwingung
-ergibt. In der Praxis ist dies allerdings nicht realisierbar, da jeder Leiter einen
+ergibt. In der Praxis ist das allerdings nicht realisierbar, da jeder Leiter einen
 Innenwiderstand besitzt und die Schwingung somit gedämpft wird. Zusätzlich kann auch
 ein separater Widerstand $R$ in den Schwingkreis eingebaut werden. Mithilfe der Kirchhoff'schen
 Regeln ergibt sich dann für diesen Schaltkreis \ref{fig:RLC}
@@ -31,10 +31,12 @@ eingesetzt und wird nach der Zeit abgeleitet, so ergibt sich die Differentialgle
   {\symup{d}t} + \frac{1}{LC}I = 0
   \label{eqn:DGL}
 \end{equation}
-für gedämpfte Schwingungen. Zur Lösung kann der Ansatz
+für gedämpfte Schwingungen. Dabei ist $I$ die Stromstärke, $R$ der Widerstand, $C$
+die Kapazität des Kondensators und $L$ die Induktivität der Spule. Zur Lösung kann
+der Ansatz
 \begin{equation}
   \underline{I}(t)\footnote{Komplexe Zahlen werden im Folgenden mit einem
-  Unterstrich markiert.}=\underline{U} \exp({i\underline{\omega}t})
+  Unterstrich kenntlich gemacht.}=\underline{U} \exp({i\underline{\omega}t})
   \label{eqn:ansatz}
 \end{equation}
 gewählt werden. Dann ergibt sich nach Einsetzen von \eqref{eqn:ansatz} in \eqref{eqn:DGL}
@@ -63,7 +65,7 @@ reelle Lösungsfunktion $I$ mit einem geeigeneten Ansatz zu
   \sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}t+\eta\Biggr)\,.
 \end{equation}
 wobei $A_{\text{0}}$ eine beliebige Konstante und $\eta$ eine beliebige Phase ist.
-Dies entspricht der GLeichung einer gedämpften Schwingung, da die Amplitude mit zunehmender
+Dies entspricht der Gleichung einer gedämpften Schwingung, da die Amplitude mit zunehmender
 Zeit $t$ gegen $0$ geht.
 Die für die Abnahmegeschwindigkeit charakteristische Abklingdauer $T_{\text{Ex}}$
 wird definiert als
@@ -73,8 +75,8 @@ wird definiert als
 \end{equation}
 Für den zweiten Fall ist die Wurzel imaginär. Dann werden alle Exponentialfunktionen
 reell, sodass keine oszillatorischen Anteile mehr vorliegen. Dieser Fall wird
-Kriechfall genannt. Dann liegt ein einfaches Relaxationsverhalten vor.
-Für den Spezialfall
+Kriechfall genannt. Dann liegt nach einiger Zeit ein einfaches Relaxationsverhalten
+vor. Für den Spezialfall
 \begin{equation}
   \frac{1}{LC}=\frac{R^2}{4L^2}
 \end{equation}
@@ -87,7 +89,7 @@ Systems.
 An den Schwingkreis wird nun sinusförmige Wechselspannung angelegt. Eine Skizze
 hierzu ist in \ref{fig:RLC_sinus} zu finden. Diese hat die Form
 \begin{equation}
-  \underline{U}(t)=U_{\symup{0}}\exp(i\omega t) \,,
+  \underline{U}(t)=U_{\symup{0}}\exp(i\omega t) \,.
 \end{equation}
 
 \begin{figure}
@@ -97,9 +99,12 @@ hierzu ist in \ref{fig:RLC_sinus} zu finden. Diese hat die Form
   \cite{Versuchsanleitung1}}
   \label{fig:RLC_sinus}
 \end{figure}
-wodurch die im zuvor diskutierten Fall noch homogene Differentialgleichung zu einer
+Dabei ist $U_{\symup{0}}$ die Amplitude der angelegten Spannung und $\omega$ deren
+Kreisfrequenz.
+
+Dadurch wird die im zuvor diskutierten Fall noch homogene Differentialgleichung zu einer
 inhomogenen Differentialgleichung mit der angelegten sinusförmigen Spannung
-als Inhomogenität wird:
+als Inhomogenität:
 \begin{equation}
   LC\frac{\symup{d}^2\underline{U}_{\symup{C}}}{\symup{d}t^2}
   +RC\frac{\symup{d}\underline{U}_{\symup{C}}}{\symup{d}t}
@@ -128,8 +133,8 @@ ungefähr der Eigenfrequenz des Schwingkreises entspricht, tritt Resonanz auf. I
 diesem Fall kann bei schwacher Dämpfung die Amplitude der Spannung $U_{\symup{C}}$ am Kondensator größer
 als die Amplitude der Generatorspannung $U_{\symup{G}}$ werden. Ist die Dämpfung
 des Schwingkreises dabei zu gering, kann es zu einer Resonanzkatastrophe kommen.
-Dabei geht $U_{\symup{C}}$ für bestimmte Frequenzen gegen $\infty$.
-Die dafür charakteristische Kreisfrequenz lässt sich zu
+Dabei geht $U_{\symup{C}}$ für Frequenzen nahe der Eigenfrequenz des Systems
+gegen $\infty$. Die dafür charakteristische Kreisfrequenz lässt sich zu
 \begin{equation}
   \omega_{\symup{res}}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
 \end{equation}
@@ -141,17 +146,17 @@ Die Breite der Resonanzkurve ist dann
   \omega_{\symup{+}} - \omega_{\symup{-}} \approx \frac{R}{L} \,.
 \end{equation}
 Bei stark gedämpften Systemen tritt keine Resonanz auf. Die Spannung $U_{\symup{C}}$
-am Kondensator geht gegen $0$.
+am Kondensator geht dann gegen $0$.
 
 Die Phasenverschiebung zwischen der Generatorspannung $U_{\symup{G}}$ und der
 Spannung $U_{\symup{C}}$ am Kondensator wurde in \eqref{eqn:phase} bereits genannt.
 Man kann erkennen, dass die Phasenverschiebung für kleine Kreisfrequenzen gegen
-$0$ und für große Frequenzen gegen $\pi$ geht, wobei $U_{\symup{G}}$ $U_{\symup{G}}$
+$0$ und für große Frequenzen gegen $\pi$ geht, wobei $U_{\symup{G}}$ $U_{\symup{C}}$
 vorauseilt. Analog zu $\omega_{\symup{+}}$ und $\omega_{\symup{-}}$ bei der Amplitude
 lassen sich auch für die Phasenverschiebung zwei Kreisfrequenzen $\omega_{\symup{1}}$
 und $\omega_{\symup{2}}$ definieren, die charakteristische Werte aufweisen. Dabei
-ist $\omega_{\symup{1}}$ der Wert, bei dem die Phasenverschiebung $\phi=\pi/2$ beträgt
-und $\omega_{\symup{2}}$ der Wert, bei dem die Phasenverschiebung $\phi=3\pi/2$ beträgt.
+ist $\omega_{\symup{1}}$ der Wert, bei dem die Phasenverschiebung $\phi=\pi/4$ beträgt
+und $\omega_{\symup{2}}$ der Wert, bei dem die Phasenverschiebung $\phi=3\pi/4$ beträgt.
 Es ergibt sich der Zusammenhang
 \begin{equation}
   \omega_{\symup{1}}-\omega_{\symup{2}}=\frac{R}{L}\,.
