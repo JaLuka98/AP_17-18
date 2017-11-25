@@ -43,7 +43,7 @@ print('Dann ist Reff aus dem Experiment ja ', 4*my*np.pi*L)
 print('Tex ist hier dann ', (1/(2*np.pi*my))*1e6, 'in µs')
 
 plt.plot(t*1e6, U, 'rx', label='Messwerte')
-plt.plot(t*1e6, einhuellendenfit(t*1e6, *params), 'k-', label='Ausgleichsfunktion')
+plt.plot(t*1e6, einhuellendenfit(t*1e6, params[0], params[1]*1e-6), 'k-', label='Ausgleichsfunktion')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$U_\mathrm{C}/$V')
 plt.tight_layout()
@@ -61,6 +61,8 @@ Uc = Ucmal10/10
 U = U/10
 f *= 1e-3  # f in khZ
 
+np.savetxt('data/amplitudeucu.txt', Uc/U, delimiter='\t')
+
 plt.plot(f, Uc/U, 'rx', label='Messwerte')
 plt.xlabel(r'$f/$kHz')
 plt.ylabel(r'$\frac{U_\mathrm{C}}{U_0}$')
@@ -70,12 +72,19 @@ plt.legend()
 plt.grid()
 plt.savefig('build/amplitudelog.pdf')
 
+print('Die Güte q ergibt sich theoretisch zu', 1/(R2+50)*unp.sqrt(L/C))  # 50: Berücksichtigung des Innenwiderstandes
+
 plt.xscale('linear')
 plt.axis((10000*1e-3, 46000*1e-3, 1, 4))  # 1e-3 weil f in kHZ ist
+plt.axhline(2.6502, color='k', linestyle=':')
+plt.axvline(28250*1e-3, color='b', linestyle=':', label=r'$f_{+}$ und $f_{-}$')
+plt.axvline(37500*1e-3, color='b', linestyle=':')
+plt.legend()
 plt.savefig('build/amplitudelin.pdf')
 
-plt.clf()
+print('Die Breite der Resonanzkurve ergibt sich theoretisch zu', (R2+50)/(2*np.pi*L))
 
+plt.clf()
 
 f, a = np.genfromtxt('data/phasenverschiebung.txt', unpack=True)  # f in Hz, a in µs
 a *= 1e-6  # a in s

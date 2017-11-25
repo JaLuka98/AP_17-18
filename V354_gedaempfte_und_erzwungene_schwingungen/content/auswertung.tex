@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
+\subsection{Ermittlung der Widerstände $R_\text{eff}$ des Schwingfalls und $R_\text{ap}$ des aperiodischen Grenzfalls}
 Die Werte der Bauteile in der untersuchten Schaltung betragen
 \begin{align*}
   L &= \SI{10.11(003)}{\milli\henry}\,, \\
@@ -21,9 +21,8 @@ bereits die Einhüllende eingezeichnet.
   \label{fig:einhuellende}
 \end{figure}
 
-Alle Spannungen am Oszilloskop wurden mit zehn
-multipliziert dargestellt. Die aus der Kurve entnommenen Messwerte sind in Tabelle
-\ref{tab:einhuellende} eingetragen.
+Alle Spannungen am Oszilloskop wurden mit zehn multipliziert dargestellt. Die
+aus der Kurve entnommenen Messwerte sind in Tabelle \ref{tab:einhuellende} eingetragen.
 
 \begin{table}
 \centering
@@ -72,23 +71,23 @@ der konkreten Ausgleichsfunktion zu sehen.
 \begin{figure}
   \centering
   \includegraphics{build/einhuellende.pdf}
-  \caption{Auftragung von $U_\text{C}$/V gegen $t$/µs und Graph der Ausgleichsfunktion}
+  \caption{Auftragung der Kondensatorspannung gegen die Zeit und Graph der Ausgleichsfunktion}
   \label{fig:einhuellendefit}
 \end{figure}
 
 Die Parameter ergeben sich hier zu
 \begin{align*}
   U_0 &= \SI{13.04(011)}{\volt}\,, \\
-  \mu &= \SI{861(012)}{\micro\second}\,,
+  \mu &= \SI{861(12)}{\micro\second}\,,
 \end{align*}
 sodass für den effektiven Dämpfungswiderstand $R_\text{eff}$ nach \eqref{eqn:mu}
 \begin{equation*}
-  R_\text{eff} = \SI{109.4(0016)}{\ohm}
+  R_\text{eff} = \SI{109.4(16)}{\ohm}
 \end{equation*}
 folgt. Die relative Unsicherheit beträgt 1.46\%. Die charakteristische
 Abklingdauer $T_\text{ex}$ ist mit \eqref{eqn:abklingdauer} und \eqref{eqn:mu} dann
 \begin{equation*}
-  T_\text{ex} = \frac{2L}{R} = frac{1}{2\pi \mu} = \SI{184.8(0026)}{\micro\second}
+  T_\text{ex} = \frac{2L}{R} = \frac{1}{2\pi \mu} = \SI{184.8(26)}{\micro\second}
 \end{equation*}
 mit einer relativen Unsicherheit von 1.41\%.
 
@@ -99,64 +98,141 @@ Dieser wurde zu $\SI{3.550}{\kilo\ohm}$ bestimmt. Wird dieser Widerstand nach
 \eqref{eqn:rap} bestimmt, so ergibt sich für ihn $\SI{4.390(0009)}{\kilo\ohm}$.
 Dabei beträgt die absolute Unsicherheit $\SI{-840(9)}{\kilo\ohm}$.
 
-Wie an \eqref{eqn:Ucfrequenz} ersichtlich ist, hängt die Kondensatorspannung von
-der Frequenz ab. In Tabelle \ref{tab:amplitude} sind die aufgenommenen Messwerte
-angegeben, um diese Abhängigkeit zu untersuchen. Es sei darauf hingewiesen, dass
-ursprünglich Messwerte bereits ab ei
+\subsection{Bestimmung der Güte und der Breite der Resonanzkurve für erzwungene Schwingungen}
 
-500	64.8		65
-600	64.8		64
-700	64.8		64
-800	64.8		64
-900	64.8		64
-1000	66		63.5
-1500	66		64.5
-2000	66		64.5
-3000	66.8		66
-4000	66.8		64
-5000	67.6		64
-6000	67.6		64.5
-7000	68.4		65
-8000	69.2		65
-9000	70.8		65
-10000	72		63.5
-15000	81		64.5
-20000	98		64.5
-21000	103		64.5
-22000	108		64.5
-23000	115		64.5
-24000	121		64.5
-25000	131		63.5
-26000	140		63.5
-27000	151		63.5
-28000	165		63.5
-29000	181		63.5
-30000	197		63.5
-31000	212		63.5
-32000	230		63.5
-33000	238		63.5
-34000	234		63.5
-35000	222		64
-36000	202		64
-37000	180		64
-38000	160		64
-39000	140		64
-40000	128		64
-41000	115		64
-42000	103		64
-43000	93		64
-44000	85		64
-45000	77		64
-46000	72		64
-47000	63.6		64
-48000	59.2		64
-49000	54.8		64
-50000	51.6		64
-60000	30		64
-70000	19.4		64
-80000	13.7		64
-90000	10.4		64
-100000	8.1		64
-150000	2.91		64
-200000	1.4		64
-300000	0.29		64
+Wie an \eqref{eqn:Ucfrequenz} ersichtlich ist, hängt die Kondensatorspannung von
+der Frequenz ab. In den Tabellen \ref{tab:amplitude1} und \ref{tab:amplitude2} sind die aufgenommenen Messwerte
+angegeben, die untersucht werden sollen. Dabei ist $U_\text{C}$ die Kondensatorspannung,
+$U$ ist die durch den frequenzgängigen Tastkopf gemessene Generatorspannung.
+Es sei darauf hingewiesen, dass ursprünglich Messwerte bereits ab einer
+Frequenz von $\SI{10}{\hertz}$ genommen wurden. Diese tragen jedoch keine
+signifikante Information, da für sie durchgängig $U_\text{C}/U \approx 1$ gilt.
+Daher werden sie nicht weiter betrachtet. Die nicht verwendeten Messwerte können
+bei Bedarf im Anhang eingesehen werden.
+
+\begin{table}
+\centering
+\caption{Messdaten zur Frequenzabhängigkeit der Kondensatorspannung}
+\label{tab:amplitude1}
+\begin{tabular}{c c c c c c}
+\toprule
+$f/$kHz & $10U_\mathrm{C}/$V & $U_\mathrm{C}/$V & $10U$/V & $U$/V & $U_\mathrm{C}/U$ \\
+\midrule
+  0,5	&  64.8  &  6.48 & 65   & 6.5 & 0.997 \\
+  0,6	&  64.8  &  6.48 & 64   & 6.4 & 1.012 \\
+  0,7	&  64.8  &  6.48 & 64   & 6.4 & 1.012 \\
+  0,8	&  64.8  &  6.48 & 64   & 6.4 & 1.012 \\
+  0,9	&  64.8  &  6.48 & 64   & 6.4 & 1.012 \\
+  1	  &  66	   &  6.6  & 63.5 & 6.35& 1.039 \\
+  1,5	&  66	   &  6.6  & 64.5 & 6.45& 1.023 \\
+  2	  &  66	   &  6.6  & 64.5 & 6.45& 1.023 \\
+  3	  &  66.8	 &  6.68 & 66   & 6.6 & 1.012 \\
+  4	  &  66.8	 &  6.68 & 64   & 6.4 & 1.044 \\
+  5	  &  67.6	 &  6.76 & 64   & 6.4 & 1.056 \\
+  6	  &  67.6	 &  6.76 & 64.5 & 6.45& 1.048 \\
+  7	  &  68.4	 &  6.84 & 65   & 6.5 & 1.056 \\
+  8	  &  69.2	 &  6.92 & 65   & 6.5 & 1.065 \\
+  9	  &  70.8	 &  7.08 & 65   & 6.5 & 1.089 \\
+ 10	  &  72	   &  7.20 & 63.5 & 6.35& 1.133 \\
+ 15	  &  81	   &  8.1  & 64.5 & 6.45& 1.256 \\
+ 20	  &  98	   &  9.8  & 64.5 & 6.45& 1.519 \\
+ 21	  & 103	   & 10.3  & 64.5 & 6.45& 1.597 \\
+ 22	  & 108	   & 10.8  & 64.5 & 6.45& 1.674 \\
+ 23	  & 115	   & 11.5  & 64.5 & 6.45& 1.783 \\
+ 24	  & 121	   & 12.1  & 64.5 & 6.45& 1.876 \\
+ 25	  & 131	   & 13.1  & 63.5 & 6.35& 2.063 \\
+ 26	  & 140	   & 14.0  & 63.5 & 6.35& 2.205 \\
+ 27	  & 151	   & 15.1  & 63.5 & 6.35& 2.378 \\
+ 28	  & 165	   & 16.5  & 63.5 & 6.35& 2.598 \\
+ 29	  & 181	   & 18.1  & 63.5 & 6.35& 2.850 \\
+ 30	  & 197	   & 19.7  & 63.5 & 6.35& 3.102 \\
+ 31	  & 212	   & 21.2  & 63.5 & 6.35& 3.339 \\
+ 32	  & 230	   & 23    & 63.5 & 6.35& 3.622 \\
+ 33	  & 238	   & 23.8  & 63.5 & 6.35& 3.748 \\
+ 34	  & 234	   & 23.4  & 63.5 & 6.35& 3.685 \\
+ 35	  & 222	   & 22.2  & 64   & 6.4 & 3.469 \\
+ 36	  & 202	   & 20.2  & 64   & 6.4 & 3.156 \\
+ 37	  & 180	   & 18    & 64   & 6.4 & 2.813 \\
+ 38	  & 160	   & 16    & 64   & 6.4 & 2.500 \\
+ 39	  & 140	   & 14    & 64   & 6.4 & 2.188 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\centering
+\caption{Messdaten zur Frequenzabhängigkeit der Kondensatorspannung (Fortsetzung)}
+\label{tab:amplitude2}
+\begin{tabular}{c c c c c c}
+\toprule
+$f/$kHz & $10U_\mathrm{C}/$V & $U_\mathrm{C}/$V & $10U$/V & $U$/V & $U_\mathrm{C}/U$ \\
+\midrule
+ 40	  & 128	   & 12.8  & 64   & 6.4 & 2.000 \\
+ 41	  & 115	   & 11    & 64   & 6.4 & 1.797 \\
+ 42	  & 103	   & 10.3  & 64   & 6.4 & 1.609 \\
+ 43	  &  93	   &  9.3  & 64   & 6.4 & 1.453 \\
+ 44	  &  85	   &  8.5  & 64   & 6.4 & 1.328 \\
+ 45	  &  77	   &  7.7  & 64   & 6.4 & 1.203 \\
+ 46	  &  72	   &  7.2  & 64   & 6.4 & 1.125 \\
+ 47	  &  63.6  &  6.36 & 64   & 6.4 & 0.938 \\
+ 48	  &  59.2  &  5.92 & 64   & 6.4 & 0.925 \\
+ 49	  &  54.8	 &  5.48 & 64   & 6.4 & 0.856 \\
+ 50	  &  51.6	 &  5.16 & 64   & 6.4 & 0.806 \\
+ 60	  &  30	   &  3    & 64   & 6.4 & 0.469 \\
+ 70	  &  19.4	 &  1.94 & 64   & 6.4 & 0.303 \\
+ 80	  &  13.7	 &  1.37 & 64   & 6.4 & 0.214 \\
+ 90	  &  10.4	 &  1.04 & 64   & 6.4 & 0.163 \\
+100 	&   8.1	 &  0.81 & 64   & 6.4 & 0.127 \\
+150	  &   2.91 &	0.29 & 64   & 6.4 & 0.045 \\
+200	  &   1.4	 &  0.14 & 64   & 6.4 & 0.022 \\
+300	  &   0.29 &	0.03 & 64   & 6.4 & 0.005 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In Abbildung \ref{fig:amplitudelog} ist die Kondensatorspannung relativ
+zur Generatorspannung in Abhängigkeit der Frequenz dargestellt. Die Achse, auf der
+die Frequenz aufgetragen ist, ist logarithmisch skaliert.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/amplitudelog.pdf}
+  \caption{Halblogarithmische Auftragung von $U_\text{C}/U$ gegen $f$/kHz}
+  \label{fig:amplitudelog}
+\end{figure}
+
+Aus dem Diagramm und den Messwerten lässt sich die Güte, die die maximale
+Überhöhung der Amplitude angibt, zu ungefähr
+\begin{equation*}
+  q_\text{exp} = 3,748
+\end{equation*}
+bestimmen. Der theoretische Wert ergibt sich durch Berechnung mit \eqref{eqn:guete}
+zu
+\begin{equation*}
+  q_\text{theo} = \SI{3.923(0009)}\,.
+\end{equation*}
+Die relative Messabweichung beträgt dann 4,46\%.
+Der Bereich, wo die Resonanz auftritt, wird in Abbildung \ref{fig:amplitudelin}
+linear dargestellt, um den Bereich der Resonanz besser zu veranschaulichen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/amplitudelin.pdf}
+  \caption{Lineare Auftragung von $U_\text{C}/U$ gegen $f$/kHz}
+  \label{fig:amplitudelin}
+\end{figure}
+
+Die Breite der Resonanzkurve $f_{+} - f_{-}$\footnote{Hier wird die Breite in der
+Frequenz betrachtet statt in der Kreisfrequenz. Dies erscheint sinnvoll, da am
+Generator stets eine Frequenz und nicht die Kreisfrequenz eingestellt wurde.},
+definiert analog zu den Erklärungen zu \eqref{eqn:breite}, ergibt sich experimentell zu
+\begin{equation*}
+  (f_{+} - f_{-})_\text{exp} = (37,5-28,25)\,\text{Hz} = \SI{9.25}{\kilo\hertz}\,.
+\end{equation*}
+Der nach der Theorie zu erwartende Wert beträgt nach der zuvor angegebenen Gleichung
+\begin{equation*}
+  (f_{+} - f_{-})_\text{theo} = \frac{R}{2\pi L} = \SI{8.808(27)}{\kilo\hertz}\,.
+\end{equation*}
+Die relative Abweichung zu diesem Wert ist 4,77\%.
+
+\subsection{Untersuchung der Frequenzabhängigkeit der Phasenverschiebung im angeregten Schwingkreis}

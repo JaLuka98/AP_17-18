@@ -80,7 +80,7 @@ Kriechfall genannt. Dann liegt nach einiger Zeit ein einfaches Relaxationsverhal
 vor. Für den Spezialfall
 \begin{equation}
   \frac{1}{LC}=\frac{R^2}{4L^2}
-  \ref{eqn:rap}
+  \label{eqn:rap}
 \end{equation}
 tritt der aperiodische Grenzfall ein. Dies ist die stärkste mögliche Dämpfung eines
 Systems.
@@ -134,7 +134,14 @@ die Frequenz der angelegten Spannung und für sehr große $\omega$ gegen $0$ geh
 Für einen bestimmten Bereich dazwischen, in dem die Frequenz der angelegten Spannung
 ungefähr der Eigenfrequenz des Schwingkreises entspricht, tritt Resonanz auf. In
 diesem Fall kann bei schwacher Dämpfung die Amplitude der Spannung $U_{\symup{C}}$ am Kondensator größer
-als die Amplitude der Generatorspannung $U_{\symup{G}}$ werden. Ist die Dämpfung
+als die Amplitude der Generatorspannung $U_{\symup{G}}$ werden.
+Am Maximum der Amplitude der Kondensatorspannung ist diese um den Faktor
+\begin{equation}
+  q = \frac{1}{\omega_0 RC}
+  \label{eqn:guete<}
+\end{equation}
+überhöht. Dieser Faktor $q$ wird Güte des Schwingkreises genannt.
+Ist die Dämpfung
 des Schwingkreises dabei zu gering, kann es zu einer Resonanzkatastrophe kommen.
 Dabei geht $U_{\symup{C}}$ für Frequenzen nahe der Eigenfrequenz des Systems
 gegen $\infty$. Die dafür charakteristische Kreisfrequenz lässt sich zu
@@ -143,10 +150,11 @@ gegen $\infty$. Die dafür charakteristische Kreisfrequenz lässt sich zu
 \end{equation}
 bestimmen. Ein weiterer charakteristischer Wert der Resonanz ist die Breite
 der Resonanzkurve. Dabei charakterisieren $\omega_{\symup{+}}$ und $\omega_{\symup{-}}$
-die Frequenzen, bei denen $U_{\symup{C}}$ $1/\sqrt{2}$ des Maximalwertes entspricht.
+die Frequenzen, bei denen $U_{\symup{C}}$ $1/\sqrt{2}$ des Maximalwertes beträgt.
 Die Breite der Resonanzkurve ist dann
 \begin{equation}
   \omega_{\symup{+}} - \omega_{\symup{-}} \approx \frac{R}{L} \,.
+  \label{eqn:breite}
 \end{equation}
 Bei stark gedämpften Systemen tritt keine Resonanz auf. Die Spannung $U_{\symup{C}}$
 am Kondensator geht dann gegen $0$.
