@@ -11,18 +11,39 @@ def einhuellendenfit(t, A0, my):
     return A0*np.exp(-2*np.pi*my*t)
 
 
+# L=(10.11±0.03)*10^-3H
+# C=(2.098±0.006)*10^-9F
+# R_1=(48.1±0.1)Ω
+# R_2=(509.5±0.5)Ω
+
+# 4b)R=3350Ω
+
+L = ufloat(10.11, 0.03)  # in mH
+L *= 1e-3  # in H
+C = ufloat(2.098, 0.006)  # in nF
+C *= 1e-9  # in F
+R1 = ufloat(48.1, 0.1)  # in Ohm
+R2 = ufloat(509.5, 0.5)  # in Ohm
+
 t, Umal10 = np.genfromtxt('data/einhuellende.txt', unpack=True)  # t in µs, Umal10 in V
 U = Umal10/10
+t *= 1e-6  # t in s
 
 params, covariance_matrix = optimize.curve_fit(einhuellendenfit, t, U)
 
 errors = np.sqrt(np.diag(covariance_matrix))
 
+A0 = ufloat(params[0], errors[0])
+my = ufloat(params[1], errors[1])
+
 print('A0 =', params[0], '+-', errors[0])
 print('my =', params[1], '+-', errors[1])
 
-plt.plot(t, U, 'rx', label='Messwerte')
-plt.plot(t, einhuellendenfit(t, *params), 'k-', label='Ausgleichsfunktion')
+print('Dann ist Reff aus dem Experiment ja ', 4*my*np.pi*L)
+print('Tex ist hier dann ', (1/(2*np.pi*my))*1e6, 'in µs')
+
+plt.plot(t*1e6, U, 'rx', label='Messwerte')
+plt.plot(t*1e6, einhuellendenfit(t*1e6, *params), 'k-', label='Ausgleichsfunktion')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$U_\mathrm{C}/$V')
 plt.tight_layout()
@@ -31,6 +52,9 @@ plt.grid()
 plt.savefig('build/einhuellende.pdf')
 
 plt.clf()
+
+print('Rap nach der Theorie ist ', unp.sqrt(4*L/C))
+print('Der absolute Fehler ist', 3550 - unp.sqrt(4*L/C))
 
 f, Ucmal10, U = np.genfromtxt('data/amplitude.txt', unpack=True)  # f in Hz, Ucmal10, U in V
 Uc = Ucmal10/10
@@ -63,7 +87,7 @@ plt.plot(f, phi, 'rx', label='Messwerte')
 plt.xscale('log')
 plt.xlabel(r'$f/$kHz')
 plt.ylabel(r'$\phi/$rad')
-print(f[-3:])  # Slicing: -3 ist drittletztes Element, : bedeutet bis zum Ende
+# Slicing: -3 ist drittletztes Element, : bedeutet bis zum Ende
 plt.plot(f[-3:], phi[-3:], 'ob', markersize=8, markeredgewidth=1, markerfacecolor='None' )  # Sorgt für Markierung dr Außreißer
 
 # Macht die y-Achse schön
@@ -88,13 +112,3 @@ plt.legend()
 plt.savefig('build/philin.pdf')
 
 plt.clf()
-
-
-
-#L=(10.11±0.03)*10^-3H
-#C=(2.098±0.006)*10^-9F
-#R_1=(48.1±0.1)Ω
-#R_2=(509.5±0.5)Ω
-
-
-#4b)R=3350Ω

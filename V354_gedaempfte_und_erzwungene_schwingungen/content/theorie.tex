@@ -62,15 +62,16 @@ unterschieden werden. Für ersteren ist die Wurzel reell. Damit ergibt sich die
 reelle Lösungsfunktion $I$ mit einem geeigeneten Ansatz zu
 \begin{equation}
   I=A_{\text{0}}\exp\biggl(-\frac{R}{2L}t\biggr)\cos\Biggl(
-  \sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}t+\eta\Biggr)\,.
+  \sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}t+\eta\Biggr)\,,
+  \label{eqn:ifunktion}
 \end{equation}
 wobei $A_{\text{0}}$ eine beliebige Konstante und $\eta$ eine beliebige Phase ist.
 Dies entspricht der Gleichung einer gedämpften Schwingung, da die Amplitude mit zunehmender
 Zeit $t$ gegen $0$ geht.
-Die für die Abnahmegeschwindigkeit charakteristische Abklingdauer $T_{\text{Ex}}$
+Die für die Abnahmegeschwindigkeit charakteristische Abklingdauer $T_{\text{ex}}$
 wird definiert als
 \begin{equation}
-  T_{\text{Ex}}\coloneq\frac{2L}{R} \,.
+  T_{\text{ex}}\coloneq\frac{2L}{R} \,.
   \label{eqn:abklingdauer}
 \end{equation}
 Für den zweiten Fall ist die Wurzel imaginär. Dann werden alle Exponentialfunktionen
@@ -79,6 +80,7 @@ Kriechfall genannt. Dann liegt nach einiger Zeit ein einfaches Relaxationsverhal
 vor. Für den Spezialfall
 \begin{equation}
   \frac{1}{LC}=\frac{R^2}{4L^2}
+  \ref{eqn:rap}
 \end{equation}
 tritt der aperiodische Grenzfall ein. Dies ist die stärkste mögliche Dämpfung eines
 Systems.
@@ -125,6 +127,7 @@ Die Kondensatorspannung $U_{\symup{C}}$ in Abhängigkeit von der Frequenz ergibt
 durch weitere Umformung zu
 \begin{equation}
   U_{\symup{C}}(\omega)=\frac{U_{\symup{0}}}{\sqrt{\Bigl(1-LC\omega^2\Bigr)^2+\omega^2 R^2 C^2}} \,.
+  \label{eqn:Ucfrequenz}
 \end{equation}
 Hier ist erkennbar, dass die Spannung am Kondensator für kleine $\omega$ gegen
 die Frequenz der angelegten Spannung und für sehr große $\omega$ gegen $0$ geht.
