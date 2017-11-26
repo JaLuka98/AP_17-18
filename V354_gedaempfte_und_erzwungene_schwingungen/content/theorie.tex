@@ -138,7 +138,7 @@ als die Amplitude der Generatorspannung $U_{\symup{G}}$ werden.
 Am Maximum der Amplitude der Kondensatorspannung ist diese um den Faktor
 \begin{equation}
   q = \frac{1}{\omega_0 RC}
-  \label{eqn:guete<}
+  \label{eqn:guete}
 \end{equation}
 überhöht. Dieser Faktor $q$ wird Güte des Schwingkreises genannt.
 Ist die Dämpfung
@@ -147,6 +147,7 @@ Dabei geht $U_{\symup{C}}$ für Frequenzen nahe der Eigenfrequenz des Systems
 gegen $\infty$. Die dafür charakteristische Kreisfrequenz lässt sich zu
 \begin{equation}
   \omega_{\symup{res}}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
+  \label{eqn:resonanzfrequenz}
 \end{equation}
 bestimmen. Ein weiterer charakteristischer Wert der Resonanz ist die Breite
 der Resonanzkurve. Dabei charakterisieren $\omega_{\symup{+}}$ und $\omega_{\symup{-}}$
@@ -168,7 +169,12 @@ lassen sich auch für die Phasenverschiebung zwei Kreisfrequenzen $\omega_{\symu
 und $\omega_{\symup{2}}$ definieren, die charakteristische Werte aufweisen. Dabei
 ist $\omega_{\symup{1}}$ der Wert, bei dem die Phasenverschiebung $\phi=\pi/4$ beträgt
 und $\omega_{\symup{2}}$ der Wert, bei dem die Phasenverschiebung $\phi=3\pi/4$ beträgt.
-Es ergibt sich der Zusammenhang
+Für diese Größen folgt nach \eqref{eqn:phase} der Zusammenhang
+\begin{equation}
+  \omega_{1,2} = \pm \frac{R}{2L} + \sqrt(R^2/4L^2+1/LC)\,.
+  \label{eqn:omega12}
+\end{equation}
+Außerdem ergibt sich der Zusammenhang
 \begin{equation}
   \omega_{\symup{1}}-\omega_{\symup{2}}=\frac{R}{L}\,.
 \end{equation}

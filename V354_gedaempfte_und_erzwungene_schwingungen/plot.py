@@ -92,6 +92,8 @@ phi = a*f*360
 phi = phi/360*2*np.pi
 f *= 1e-3  # f in khZ
 
+np.savetxt('data/berechnetephi.txt', phi, delimiter='\t', fmt='%1.2f')
+
 plt.plot(f, phi, 'rx', label='Messwerte')
 plt.xscale('log')
 plt.xlabel(r'$f/$kHz')
@@ -121,3 +123,10 @@ plt.legend()
 plt.savefig('build/philin.pdf')
 
 plt.clf()
+
+print('Die theoretisch berechnete Resonanzfrequenz ist',
+      unp.sqrt(1/(L*C)-(R2+50)**2/(2*L**2))/(2*np.pi))
+print('Die theoretisch berechnete Frequenz f_1 ist',
+      ((R2+50)/(2*L)+unp.sqrt(((R2+50)**2)/(4*L**2)+1/(L*C)))/(2*np.pi))
+print('Die theoretisch berechnete Frequenz f_2 ist',
+      (-(R2+50)/(2*L)+unp.sqrt(((R2+50)**2)/(4*L**2)+1/(L*C)))/(2*np.pi))

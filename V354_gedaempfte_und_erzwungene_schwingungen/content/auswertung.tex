@@ -155,6 +155,7 @@ $f/$kHz & $10U_\mathrm{C}/$V & $U_\mathrm{C}/$V & $10U$/V & $U$/V & $U_\mathrm{C
  37	  & 180	   & 18    & 64   & 6.4 & 2.813 \\
  38	  & 160	   & 16    & 64   & 6.4 & 2.500 \\
  39	  & 140	   & 14    & 64   & 6.4 & 2.188 \\
+ 40	  & 128	   & 12.8  & 64   & 6.4 & 2.000 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -167,7 +168,6 @@ $f/$kHz & $10U_\mathrm{C}/$V & $U_\mathrm{C}/$V & $10U$/V & $U$/V & $U_\mathrm{C
 \toprule
 $f/$kHz & $10U_\mathrm{C}/$V & $U_\mathrm{C}/$V & $10U$/V & $U$/V & $U_\mathrm{C}/U$ \\
 \midrule
- 40	  & 128	   & 12.8  & 64   & 6.4 & 2.000 \\
  41	  & 115	   & 11    & 64   & 6.4 & 1.797 \\
  42	  & 103	   & 10.3  & 64   & 6.4 & 1.609 \\
  43	  &  93	   &  9.3  & 64   & 6.4 & 1.453 \\
@@ -197,7 +197,7 @@ die Frequenz aufgetragen ist, ist logarithmisch skaliert.
 \begin{figure}
   \centering
   \includegraphics{build/amplitudelog.pdf}
-  \caption{Halblogarithmische Auftragung von $U_\text{C}/U$ gegen $f$/kHz}
+  \caption{Halblogarithmische Auftragung der normierten Kondensatorspannung gegen die Frequenz}
   \label{fig:amplitudelog}
 \end{figure}
 
@@ -218,7 +218,7 @@ linear dargestellt, um den Bereich der Resonanz besser zu veranschaulichen.
 \begin{figure}
   \centering
   \includegraphics{build/amplitudelin.pdf}
-  \caption{Lineare Auftragung von $U_\text{C}/U$ gegen $f$/kHz}
+  \caption{Lineare Auftragung der normierten Kondensatorspannung gegen die Frequenz um den Resonanzbereich}
   \label{fig:amplitudelin}
 \end{figure}
 
@@ -236,3 +236,127 @@ Der nach der Theorie zu erwartende Wert beträgt nach der zuvor angegebenen Glei
 Die relative Abweichung zu diesem Wert ist 4,77\%.
 
 \subsection{Untersuchung der Frequenzabhängigkeit der Phasenverschiebung im angeregten Schwingkreis}
+
+Der gemessene Abstand $a$ zwischen den Nulldurchgängen der Kondensator- und Generatorspannung
+sowie die daraus ermittelte Phasenverschiebung zwischen ihnen sind bei eingestellter Frequenz
+in den Tabellen \ref{tab:phase1} und \ref{tab:phase2} zu sehen.
+
+\begin{table}
+\centering
+\caption{Messdaten zur Phasenverschiebung zwischen Kondensator- und Generatorspannung}
+\label{tab:phase1}
+\begin{tabular}{c c c}
+\toprule
+$f/$kHz & $a/$µs & $\phi/$rad \\
+\midrule
+ 0.01	 & 9200    & 0.58 \\
+ 0.02	 & 2400    & 0.30 \\
+ 0.03	 & 1080    & 0.20 \\
+ 0.04	 &  540    & 0.14 \\
+ 0.05	 &  500    & 0.16 \\
+ 0.06	 &  360    & 0.14 \\
+ 0.07	 &  260    & 0.11 \\
+ 0.08	 &  208    & 0.10 \\
+ 0.09	 &  160    & 0.09 \\
+ 0.1	 &  148    & 0.09 \\
+ 0.125 &  127    & 0.10 \\
+ 0.15	 &   97    & 0.09 \\
+ 0.175 &   80    & 0.09 \\
+ 0.2	 &   68    & 0.09 \\
+ 0.225 &   57    & 0.08 \\
+ 0.25	 &   48    & 0.08 \\
+ 0.275 &   43    & 0.07 \\
+ 0.3	 &   39    & 0.07 \\
+ 0.4	 &   27    & 0.07 \\
+ 0.5	 &   21.2  & 0.07 \\
+ 0.6	 &   17.6  & 0.07 \\
+ 0.7	 &   15.2  & 0.07 \\
+ 0.8	 &   13.2  & 0.07 \\
+ 0.9	 &   11.2  & 0.06 \\
+ 1	   &   10.8  & 0.07 \\
+ 1	   &    7.2  & 0.07 \\
+ 2	   &    5.5  & 0.07 \\
+ 3	   &    4.1  & 0.08 \\
+ 4	   &    3.4  & 0.09 \\
+ 5	   &    2.8  & 0.09 \\
+ 6	   &    2.64 & 0.10 \\
+ 7	   &    2.44 & 0.11 \\
+ 8	   &    2.24 & 0.11 \\
+ 9	   &    2.16 & 0.12 \\
+10	   &    2.0  & 0.13 \\
+15	   &    1.52 & 0.14 \\
+20	   &    1.84 & 0.23 \\
+25	   &    2.48 & 0.39 \\
+27	   &    3.08 & 0.53 \\
+30	   &    4.16 & 0.78 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\centering
+\caption{Messdaten zur Phasenverschiebung zwischen Kondensator- und Generatorspannung (Fortsetzung)}
+\label{tab:phase2}
+\begin{tabular}{c c c}
+\toprule
+$f/$kHz & $a/$µs & $\phi/$rad \\
+\midrule
+32	& 5.72 & 1.15 \\
+34	& 7.5  & 1.60 \\
+36	& 9.1  & 2.06 \\
+38	& 9.8  & 2.34 \\
+40	& 10   & 2.51 \\
+45	& 9.6  & 2.71 \\
+50	& 8.9  & 2.80 \\
+60	& 7.9  & 2.98 \\
+70	& 6.9  & 3.03 \\
+80	& 6.1  & 3.07 \\
+90	& 5.6  & 3.17 \\
+100 & 5.12 & 3.22 \\
+150 & 3.76 & 3.54 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Die Phasenverschiebung $\phi$ wird in Abbildung \ref{fig:philog} gegen die Frequenz
+$f$ aufgetragen. Die Frequenzachse wird erneut logarithmisch skaliert. Blau markierte
+Punkte sind auf Messfehler zurückzuführende Ausreißer. Die Phasenverschiebung kann
+nicht mehr als $\pi$ betragen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/philog.pdf}
+  \caption{Halblogarithmische Auftragung der Phasenverschiebung gegen die Frequenz}
+  \label{fig:philog}
+\end{figure}
+
+Wie zuvor wird der relevante Bereich erneut in einem linear skalierten Diagramm
+dargestellt. Aus Abbildung \ref{fig:philin} lassen sich dann zuverlässiger die Größen
+$f_1$, $f_\text{res}$ und $f_2$, bei denen die Phasenverschiebung jeweils $\frac{\pi}{4}$,
+$\frac{\pi}{2}$ und $\frac{3\pi}{4}$ beträgt, ablesen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/philin.pdf}
+  \caption{Lineare Auftragung der Phasenverschiebung gegen die Frequenz}
+  \label{fig:philin}
+\end{figure}
+
+Die theoretischen Werte für die charakteristischen Frequenzen lassen sich durch
+\eqref{eqn:omega12}, die Resonanzfrequenz durch \eqref{eqn:resonanzfrequenz} berechnen. In Tabelle \ref{tab:frequenzvergleich} werden experimentelle und theoretische
+Werte aufgelistet und verglichen.
+\begin{table}
+\centering
+\begin{tabular}{cccc}
+\toprule
+& $f_\mathrm{res}/$kHz & $f_1/$kHz & $f_2/$kHz \\
+\midrule
+Experiment & $33,8$ & $38,15$ & $30$\\
+Theorie & $33,99 \pm 0,07 $ & $ 39.24 \pm 0,08$ & $30,43 \pm 0,06$ \\
+\hline
+relative Abweichung & 0,56\% & 2,78\% & 1.41\%\\
+\bottomrule
+\end{tabular}
+\caption{Vergleich der experimentell ermittelten und theoretisch berechneten Werte für die Frequenzen $f_\mathrm{res}$ und $f_{1,2}$}
+\label{tab:frequenzvergleich}
+\end{table}
