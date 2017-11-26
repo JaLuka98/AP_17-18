@@ -1,6 +1,5 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-\subsection{Ermittlung der Widerstände $R_\text{eff}$ des Schwingfalls und $R_\text{ap}$ des aperiodischen Grenzfalls}
 Die Werte der Bauteile in der untersuchten Schaltung betragen
 \begin{align*}
   L &= \SI{10.11(003)}{\milli\henry}\,, \\
@@ -8,7 +7,8 @@ Die Werte der Bauteile in der untersuchten Schaltung betragen
   R_1 &= \SI{48.1(01)}{\ohm}\,, \\
   R_2 &= \SI{509.5(05)}{\ohm}\,. \\
 \end{align*}
-
+\subsection{Ermittlung der Widerstände $R_\text{eff}$ des Schwingfalls und $R_\text{ap}$ des aperiodischen Grenzfalls}
+Für jegliche Messungen und Berechnungen wird ab hier der Widerstand $R_1$ verwendet.
 Die mit dem Oszilloskop aufgenommene Spannung am Kondensator bei der gedämpften
 Schwingung ist in Abbildung \ref{fig:einhuellende} zu sehen. Dort ist auch
 bereits die Einhüllende eingezeichnet.
@@ -91,7 +91,10 @@ Abklingdauer $T_\text{ex}$ ist mit \eqref{eqn:abklingdauer} und \eqref{eqn:mu} d
 \end{equation*}
 mit einer relativen Unsicherheit von 1.41\%.
 
-HIER NOCH INNENWIDERSTAND
+Es ist auffällig, dass der experimentell bestimmte Wert $R_\text{eff}$ vom Wert $R_1$ des verwendeten
+Widerstands um ungefähr $\SI{50}{\ohm}$ abweicht. Dies ist jedoch genau der Innenwiderstand
+des verwendeten Generators. Deswegen wird dieser ab sofort bei allen Berechnungen zu dem
+gegebenen Widerstand addiert.
 
 Für den aperiodischen Grenzfall muss ein Widerstand $R_\text{ap}$ eingestellt werden.
 Dieser wurde zu $\SI{3.550}{\kilo\ohm}$ bestimmt. Wird dieser Widerstand nach
@@ -99,6 +102,8 @@ Dieser wurde zu $\SI{3.550}{\kilo\ohm}$ bestimmt. Wird dieser Widerstand nach
 Dabei beträgt die absolute Unsicherheit $\SI{-840(9)}{\kilo\ohm}$.
 
 \subsection{Bestimmung der Güte und der Breite der Resonanzkurve für erzwungene Schwingungen}
+Bei allen Messungen und Berechnungen wird ab hier der Widerstand $R_2$ verwendet,
+auf diesen wird der Generatorinnenwiderstand von $\SI{50}{\ohm}$ addiert.
 
 Wie an \eqref{eqn:Ucfrequenz} ersichtlich ist, hängt die Kondensatorspannung von
 der Frequenz ab. In den Tabellen \ref{tab:amplitude1} und \ref{tab:amplitude2} sind die aufgenommenen Messwerte
@@ -209,8 +214,9 @@ Aus dem Diagramm und den Messwerten lässt sich die Güte, die die maximale
 bestimmen. Der theoretische Wert ergibt sich durch Berechnung mit \eqref{eqn:guete}
 zu
 \begin{equation*}
-  q_\text{theo} = \SI{3.923(0009)}\,.
+  q_\text{theo} = \SI{3.923(0009)}\,,
 \end{equation*}
+wobei für $R$ der Wert $R_2+\SI{50}{\ohm}$ eingesetzt wird.
 Die relative Messabweichung beträgt dann 4,46\%.
 Der Bereich, wo die Resonanz auftritt, wird in Abbildung \ref{fig:amplitudelin}
 linear dargestellt, um den Bereich der Resonanz besser zu veranschaulichen.
@@ -231,14 +237,14 @@ definiert analog zu den Erklärungen zu \eqref{eqn:breite}, ergibt sich experime
 \end{equation*}
 Der nach der Theorie zu erwartende Wert beträgt nach der zuvor angegebenen Gleichung
 \begin{equation*}
-  (f_{+} - f_{-})_\text{theo} = \frac{R}{2\pi L} = \SI{8.808(27)}{\kilo\hertz}\,.
+  (f_{+} - f_{-})_\text{theo} = \frac{R_2+\SI{50}{\ohm}}{2\pi L} = \SI{8.808(27)}{\kilo\hertz}\,.
 \end{equation*}
 Die relative Abweichung zu diesem Wert ist 4,77\%.
 
 \subsection{Untersuchung der Frequenzabhängigkeit der Phasenverschiebung im angeregten Schwingkreis}
 
 Der gemessene Abstand $a$ zwischen den Nulldurchgängen der Kondensator- und Generatorspannung
-sowie die daraus ermittelte Phasenverschiebung zwischen ihnen sind bei eingestellter Frequenz
+sowie die daraus nach \eqref{eqn:ab2phi} ermittelte Phasenverschiebung bei eingestellter Frequenz zwischen ihnen sind
 in den Tabellen \ref{tab:phase1} und \ref{tab:phase2} zu sehen.
 
 \begin{table}
