@@ -67,7 +67,7 @@ reelle Lösungsfunktion $I$ mit einem geeigeneten Ansatz zu
 \end{equation}
 wobei $A_{\text{0}}$ eine beliebige Konstante und $\eta$ eine beliebige Phase ist.
 Dies entspricht der Gleichung einer gedämpften Schwingung, da die Amplitude mit zunehmender
-Zeit $t$ gegen $0$ geht.
+Zeit $t$ gegen null geht.
 Die für die Abnahmegeschwindigkeit charakteristische Abklingdauer $T_{\text{ex}}$
 wird definiert als
 \begin{equation}
@@ -91,7 +91,7 @@ Systems.
 An den Schwingkreis wird nun sinusförmige Wechselspannung angelegt. Eine Skizze
 hierzu ist in \ref{fig:RLC_sinus} zu finden. Diese hat die Form
 \begin{equation}
-  \underline{U}(t)=U_{\symup{0}}\exp(i\omega t) \,.
+  \underline{U}_{\symup{G}}(t)=U_{\symup{0}}\exp(i\omega t) \,.
 \end{equation}
 
 \begin{figure}
@@ -144,7 +144,7 @@ Am Maximum der Amplitude der Kondensatorspannung ist diese um den Faktor
 Ist die Dämpfung
 des Schwingkreises dabei zu gering, kann es zu einer Resonanzkatastrophe kommen.
 Dabei geht $U_{\symup{C}}$ für Frequenzen nahe der Eigenfrequenz des Systems
-gegen $\infty$. Die dafür charakteristische Kreisfrequenz lässt sich zu
+gegen unendlich. Die dafür charakteristische Kreisfrequenz lässt sich zu
 \begin{equation}
   \omega_{\symup{res}}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
   \label{eqn:resonanzfrequenz}
@@ -158,17 +158,17 @@ Die Breite der Resonanzkurve ist dann
   \label{eqn:breite}
 \end{equation}
 Bei stark gedämpften Systemen tritt keine Resonanz auf. Die Spannung $U_{\symup{C}}$
-am Kondensator geht dann gegen $0$.
+am Kondensator geht dann gegen null.
 
 Die Phasenverschiebung zwischen der Generatorspannung $U_{\symup{G}}$ und der
 Spannung $U_{\symup{C}}$ am Kondensator wurde in \eqref{eqn:phase} bereits genannt.
 Man kann erkennen, dass die Phasenverschiebung für kleine Kreisfrequenzen gegen
-$0$ und für große Frequenzen gegen $\pi$ geht, wobei $U_{\symup{G}}$ $U_{\symup{C}}$
+null und für große Frequenzen gegen $\pi$ geht, wobei $U_{\symup{G}}$ $U_{\symup{C}}$
 vorauseilt. Analog zu $\omega_{\symup{+}}$ und $\omega_{\symup{-}}$ bei der Amplitude
 lassen sich auch für die Phasenverschiebung zwei Kreisfrequenzen $\omega_{\symup{1}}$
 und $\omega_{\symup{2}}$ definieren, die charakteristische Werte aufweisen. Dabei
-ist $\omega_{\symup{1}}$ der Wert, bei dem die Phasenverschiebung $\phi=\pi/4$ beträgt
-und $\omega_{\symup{2}}$ der Wert, bei dem die Phasenverschiebung $\phi=3\pi/4$ beträgt.
+ist $\omega_{\symup{1}}$ der Wert, bei dem die Phasenverschiebung $\phi=\frac{\pi}{4}$ beträgt
+und $\omega_{\symup{2}}$ der Wert, bei dem die Phasenverschiebung $\phi=\frac{3\pi}{4}$ beträgt.
 Für diese Größen folgt nach \eqref{eqn:phase} der Zusammenhang
 \begin{equation}
   \omega_{1,2} = \pm \frac{R}{2L} + \sqrt{(R^2/4L^2+1/LC)}\,.
