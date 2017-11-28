@@ -1,2 +1,232 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+\subsection{Magnetfeld einer kurzen und einer langen Spule}
+
+Für das Magnetfeld einer Spule der Länge $l=\SI{0,16}{m}$ mit $n=300$ Windungen,
+die von einem Strom $I=\SI{1,4}{A}$ durchflossen wird, ergeben sich die in
+\ref{fig:lange_spule} dargestellten Messwerte. Die zugrundeliegenden Daten können
+\ref{tab:lange_spule} entnommen werden. Der Theoriewert wird nach (REFERENZ) berechnet.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/lange_spule.pdf}
+  \caption{Auftragung der Messwerte für die magnetische Feldstärke der langen Spule
+  in Abhängigkeit der Position auf der Achse}
+  \label{fig:lange_spule}
+\end{figure}
+
+Auffällig ist, dass der Theoriewert mit $B=3,30$mT zunächst sehr weit über dem
+gemessenen Wert liegt. Da in der Theorie die magnetische Feldstärke für große Abstände
+gegen Null geht, kann jedoch der Wert, dem sich die Messwerte annähern von dem theoretischen
+Erwartungswert subtrahiert werden, sodass sich für den theoretischen Erwartungswert
+nun $B=2.57$mT ergibt.
+
+
+Für das Magnetfeld einer Spule der Länge $l=\SI{0,055}{m}$ mit $n=100$ Windungen,
+die von einem Strom $I=\SI{1,2}{A}$ durchflossen wird, ergeben sich die in
+\ref{fig:kurze_spule} dargestellten Messwerte. Die zugrundeliegenden Daten können
+\ref{tab:kurze_spule} entnommen werden. Der Theoriewert wird nach (REFERENZ) berechnet.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/kurze_spule.pdf}
+  \caption{Auftragung der Messwerte für die magnetische Feldstärke der kurzen Spule
+  in Abhängigkeit der Position auf der Achse}
+  \label{fig:kurze_spule}
+\end{figure}
+
+\begin{table}
+  \centering
+    \caption{Messdaten zum Magnetfeld der langen Spule}
+    \label{tab:lange_spule}
+    \begin{tabular}{c c}
+      \toprule
+      $r$/cm & $B/$mT \\
+      \midrule
+      -9	&  -0,63\\
+      -8	&  -0,63\\
+      -7	&  -0,62\\
+      -6	&  -0,65\\
+      -5	&  -0,62\\
+      -4	&  -0,57\\
+      -3	&  -0,53\\
+      -2	&  -0,45\\
+      -1	&  -0,24\\
+      0	  &  0,04\\
+      1	  &  0,65\\
+      2	  &  1,50\\
+      3	  &  2,01\\
+      4	  &  2,28\\
+      5	  &  2,37\\
+      6   &  2,40\\
+      7	  &  2,41\\
+      8	  &  2,42\\
+      9	  &  2,41\\
+      10	&  2,40\\
+      11	&  2,38\\
+      12	&  2,35\\
+      13	&  2,29\\
+      14	&  2,20\\
+      15	&  2,05\\
+      16	&  1,69\\
+      17	&  1,02\\
+      19	&  -0,20\\
+      20	&  -0,17\\
+      21	&  -0,32\\
+      22	&  -0,43\\
+      23	&  -0,48\\
+      24	&  -0,52\\
+      25	&  -0,53\\
+      26	&  -0,54\\
+      27	&  -0,55\\
+      28	&  -0,55\\
+      \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}
+  \centering
+  \caption{Messdaten zum Magnetfeld der kurzen Spule}
+    \label{tab:kurze_spule}
+    \begin{tabular}{c c}
+      \toprule
+      $r$/cm & $B/$mT \\
+      \midrule
+      -9  &	  -0.56\\
+      -8  &	  -0.56\\
+      -7	&  -0.56\\
+      -6	&  -0.55\\
+      -5	&  -0.53\\
+      -4	&  -0.51\\
+      -3	&  -0.46\\
+      -2	&  -0.38\\
+      -1	&  -0.24\\
+      0	  &   0.06\\
+      1	  &   0.65\\
+      2	  &   1.28\\
+      3	  &   1.68\\
+      4	  &   1.77\\
+      5	  &   1.59\\
+      6	  &   1.13\\
+      7	  &   0.47\\
+      8	  &  -0.02\\
+      9	  &  -0.31\\
+      10	&  -0.42\\
+      11	&  -0.49\\
+      12	&  -0.51\\
+      13	&  -0.53\\
+      14	&  -0.54\\
+      15	&  -0.55\\
+      16	&  -0.56\\
+      17	&  -0.56\\
+      18	&  -0.57\\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Magnetfeld eines Helmholtzspulenpaares}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/spulenpaar_5.pdf}
+  \caption{Auftragung der Messwerte für die magnetische Feldstärke des Helmholtzspulenpaares
+  in Abhängigkeit der Position auf der Achse}
+  \label{fig:spulenpaar_5}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/spulenpaar_3.pdf}
+  \caption{Auftragung der Messwerte für die magnetische Feldstärke des Helmholtzspulenpaares
+  in Abhängigkeit der Position auf der Achse}
+  \label{fig:spulenpaar_3}
+\end{figure}
+
+
+
+
+
+
+\begin{table}
+  \centering
+  \caption{Messdaten zum Magnetfeld des Helmholtzspulenpaares bei 5A ($B_{\symup{1}}$)
+  und 3A ($B_{\symup{2}}$)}
+  \label{tab:helmholtz}
+  \begin{tabular}{c c c}
+    \toprule
+    $r/$cm & $B_{\symup{1}}/$mT & $B_{\symup{2}}/$mT\\
+    \midrule
+    -0.5	&  7.077 & 4.161\\
+    -0.4	&  7.088 & 4.164\\
+    -0.3	&  7.092 & 4.167\\
+    -0.2	&  7.094 & 4.168\\
+    -0.1	&  7.097 & 4.169\\
+    0	    &  7.097 & 4.170\\
+    0.1	  &  7.099 & 4.171\\
+    0.2	  &  7.099 & 4.171\\
+    0.3	  &  7.099 & 4.171\\
+    0.4	  &  7.093 & 4.168\\
+    0.5	  &  7.078 & 4.154\\
+    6	    &  4.703 & 2.772\\
+    6.5	  &  4.301 & 2.530\\
+    7	    &  3.936 & 2.301\\
+    7.5	  &  3.573 & 2.097\\
+    8	    &  3.222 & 1.897\\
+    8.5	  &  2.896 & 1.714\\
+    9	    &  2.599 & 1.542\\
+    9.5 	&  2.325 & 1.392\\
+    10	  &  2.090 & 1.254\\
+    10.5	&  1.864 & 1.128\\
+    11	  &  1.682 & 1.017\\
+    11.5	&  1.530 & 0.923\\
+    12	  &  1.385 & 0.841\\
+    12.5	&  1.252 & 0.770\\
+    13	  &  1.135 & 0.702\\
+    13.5	&  1.033 & 0.645\\
+    14	  &  0.950 & 0.609\\
+    14.5	&  0.869 & 0.544\\
+    15	  &  0.797 & 0.500\\
+    15.5	&  0.736 & 0.464\\
+    16	  &  0.677 & 0.428\\
+    16.5	&  0.627 & 0.397\\
+    17	  &  0.580 & 0.370\\
+    17.5	&  0.541 & 0.347\\
+    18	  &  0.504 & 0.326\\
+    18.5	&  0.472 & 0.307\\
+    19	  &  0.443 & 0.288\\
+    19.5	&  0.416 & 0.272\\
+    20	  &  0.391 & 0.256\\
+    20.5	&  0.367 & 0.242\\
+    21	  &  0.346 & 0.230\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Messdaten zum Magnetfeld des Helmholtzspulenpaares bei 5A ($B_{\symup{1}}$)
+  und 3A ($B_{\symup{2}}$)(Fortsetzung)}
+  \label{tab:helmholtz}
+  \begin{tabular}{c c c}
+    \toprule
+    $r/$cm & $B_{\symup{1}}/$mT & $B_{\symup{2}}/$mT\\
+    \midrule
+    21.5	&  0.328 & 0.219\\
+    22	  &  0.311 & 0.210\\
+    22.5	&  0.296 & 0.199\\
+    23	  &  0.278 & 0.190\\
+    23.5	&  0.266 & 0.181\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+\subsection{Bestimmung der Hysteresekurve einer Toroidspule mit Eisenkern}
+
+Für die Remanenz $B_{\symup{r}}$ sind die Werte 128,8 mT und -126,1 mT ablesbar.
