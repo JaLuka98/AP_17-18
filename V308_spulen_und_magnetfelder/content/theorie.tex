@@ -1,2 +1,32 @@
 \section{Theorie}
 \label{sec:Theorie}
+
+Magnetische Felder werden von elektrischen Strömen und magnetischen Dipolen erzeugt.
+Die Grundlage der Berechnung einer magnetischen Flussdichte $\symbf{B}$
+am Ort $\symbf{r}$ durch einen stationären elektrischen Strom $I$ ist
+das Biot-Savartsche Gesetz
+\begin{equation}
+  \symbf{B}(\symbf{r}) = \frac{\mu_0}{4 \symup{\pi}}
+    \int_C \frac{I \symup{d} \symbf{s} \times \symbf{r}}{r^3}\,.
+  \label{eqn:biotsavart}
+\end{equation}
+Dies ist ein Kurvenintegral über die stromdurchflossene Kurve $C$ mit ihrem
+Wegelement $\symup{d}\symbf{s}$. Die magnetische Permeabilität des Vakuums $\mu_0$
+hat den definierten Wert $\SI{4\pi e-7}{\henry\per\meter}$.
+Nähert man für eine Spule ihre Länge als deutlich größer gegenüber ihrem Durchmesser,
+so ergibt sich näherungsweise für den Betrag der magnetischen Flussdichte durch Berechnung mit \eqref{eqn:biotsavart}
+im Inneren der Spule
+\begin{equation}
+  B = \mu \frac{n}{l} I\,.
+  \label{langespuleinnen}
+\end{equation}
+Dabei gilt für die Permeabilität $\mu = \mu_0 \mu_r$ mit der materialabhängigen
+relativen Permeabilität $\mu_r$, $n$ ist die Windungszahl der Spule und $l$ ihre Länge.
+Die magnetische Flussdichte innerhalb der langen Spule ist ungefähr konstant, außerhalb
+ist sie näherungsweise null.
+
+Nahezu homogene Magnetfelder lassen sich mithilfe eines Helmholtz-Spulenpaars erzeugen.
+Dieses besteht aus zwei in gleicher Richtung stromdurchflossenen Kreisspulen, die auf
+auf einer gemeinsamen Achse aufgebaut werden. Ihr Abstand $d$ ist genau der gleiche Spulenradius $R$.
+Auf der Symmetrieachse ist das Magnetfeld näherungsweise homogen. Sie lässt sich
+ebenso mit dem Biot-Savartschen Gesetz \eqref{biotsavart} berechnen und ergibt sich zu
