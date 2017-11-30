@@ -14,6 +14,27 @@ Dies ist ein Kurvenintegral über die stromdurchflossene Kurve $C$ mit ihrem
 Wegelement $\symup{d}\symbf{s}$. Die magnetische Permeabilität des Vakuums $\mu_0$
 hat den definierten Wert $\SI{4\pi e-7}{\henry\per\meter}$.
 
+Eine Spule besteht aus einem gewickelten Draht, der auf einer Basis, meist einem Zylinder mit dem Radius $R$,
+aufgebracht ist. Die Windungszahl $n$ drückt die Anzahl der Umläufe des Drahtes aus.
+Eine von einem Strom $I$ durchflossene Spule erzeugt ein zur Stromstärke proportionales Magnetfeld.
+Eine Skizze dazu ist in Abbildung \ref{fig:spule} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=300pt]{data/spule.png}
+  \caption{Skizze einer Spule \cite{Spule}}
+  \label{fig:spule}
+\end{figure}
+
+HIER NOCH DIE ABBILDUNG ERKLÄREN
+
+Der Betrag der magnetischen Flussdichte so einer Spule auf ihrer Symmetrieachse lässt sich durch
+\eqref{eqn:biotsavart} zu
+\begin{equation}
+  B_x(x) = \frac{\mu_0 n I}{2} \left( \frac{x-x_1}{\sqrt{(x-x_1)^2+R^2}} - \frac{x-x_2}{\sqrt{(x-x_2)^2+R^2}} \right)
+\end{equation}
+berechnen. Hierbei wurden abgesehen von einem verschwindenden Querschnitt keinerlei Näherungen vorgenommen.
+
 Nähert man für eine Spule ihre Länge als deutlich größer gegenüber ihrem Durchmesser,
 so ergibt sich näherungsweise für den Betrag der magnetischen Flussdichte durch Berechnung mit \eqref{eqn:biotsavart}
 im Inneren der Spule
@@ -22,7 +43,7 @@ im Inneren der Spule
   \label{langespuleinnen}
 \end{equation}
 Dabei gilt für die Permeabilität $\mu = \mu_0 \mu_r$ mit der materialabhängigen
-relativen Permeabilität $\mu_r$, $n$ ist die Windungszahl der Spule und $l$ ihre Länge.
+relativen Permeabilität $\mu_r$ und $l$ ist die Länge der Spule.
 Die magnetische Flussdichte innerhalb der langen Spule ist ungefähr konstant, außerhalb
 ist sie näherungsweise null.
 
