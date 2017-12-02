@@ -26,6 +26,10 @@ x=np.linspace(-0.09, 0.28)
 plt.plot(r*1e2, B*1e3, 'rx', label='Messwerte')
 plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*n1*I1/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((D/(2))**2)))
 -(x-0.175)/(np.sqrt(((x-0.175)**2)+((D/(2))**2)))), 'b--', label = 'Theoriewert in der Spule')
+
+plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*300*1.4/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((0.0205**2))))
+-(x-0.175)/(np.sqrt(((x-0.175)**2)+((0.0205)**2)))), 'g--', label = 'Theoriewert in der Spule')
+
 #plt.plot(x*1e2, (4*np.pi*1e-7*n1*I1*1e3/l1)+0*x-0.63, 'g--', label = 'Theoriewert mit angepasstem Nullniveau')
 plt.xlabel(r'$r/$cm')
 plt.ylabel(r'$B/$mT')
