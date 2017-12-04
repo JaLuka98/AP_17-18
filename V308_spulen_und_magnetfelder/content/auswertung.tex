@@ -23,7 +23,7 @@ zunächst sehr weit über dem gemessenen Wert liegt. Da in der Theorie die magne
 Feldstärke für große Abstände gegen Null geht, kann jedoch der Wert, dem sich die
 Messwerte annähern, als Nullnievau angenommen und von dem theoretischen Erwartungswert
 subtrahiert werden, sodass sich für den theoretisch zu erwartenden Maximalwert nun
-$B_{\symup{theo}}=2.57$mT ergibt. Dabei entspricht der kleinste genessene Wert für die Feldstärke
+$B_{\symup{theo}}=2,57$mT ergibt. Dabei entspricht der kleinste genessene Wert für die Feldstärke
 in guter Näherung dem Nullniveau.
 
 Es ist erkennbar, dass die Messwerte grundlegend dem theoretisch erwarteten Verlauf folgen.
@@ -36,8 +36,10 @@ wie es theoretisch zu erwarten wäre.
 
 
 Für das Magnetfeld einer kurzen Spule mit $l=\SI{0,055}{m}$ Länge und $n=100$ Windungen,
-die von einem Strom $I=\SI{1,2}{A}$ durchflossen wird, ergeben sich die Messwerte aus
-\ref{fig:kurze_spule}. Die Messwerte können \ref{tab:einzelne_spulen} entnommen werden.
+die von einem Strom $I=\SI{1,2}{A}$ durchflossen wird, ergeben sich die Messwerte, die in
+\ref{fig:kurze_spule} dargestellt sind. Die Messwerte können \ref{tab:einzelne_spulen}
+entnommen werden. Dabei wurden an den Stellen, die mit einem Strich markiert sind keine
+Werte augenommen.
 Der Theoriewert für die kurze Spule wird ebenfalls mit (REFERENZ) berechnet.
 
 \begin{figure}
@@ -52,10 +54,10 @@ Der Theoriewert für die kurze Spule wird ebenfalls mit (REFERENZ) berechnet.
 Auch hier ist der Theoretische Erwartungswert mit $B_{\symup{theo}}=2,33$mT zunächst
 weit über dem Messwert. Nimmt man jedoch den kleinsten gemessenen Wert als Nullniveau
 an und subtrahiert diesen Wert von dem theoretischen Erwartungswert, so ergibt sich
-$B_{\symup{theo}}=1,76$mT, was näher an den gemessenen Werten liegt.
+$B_{\symup{theo}}=1,76$mT, was sehr nah an den gemessenen Werten liegt.
 
 Der Verlauf der Messwerte für die magentische Feldstärke zeigt auch hier grundlegend
-den theoretisch erwarteten Verlauf. Wie bei einer kurzen Spule auch theoretisch
+den theoretisch erwarteten Verlauf, allerdings leicht verschoben. Wie bei einer kurzen Spule auch theoretisch
 zu erwarten ist, ist das Feld auch im Inneren nicht konstant und fällt an den Rändern
 schnell ab. Erneut geht hier die magnetische Feldstärke für große Abstände $r$ nicht
 gegen Null, sondern gegen den konstanten Wert $B=-0,57$mT.
@@ -64,7 +66,7 @@ gegen Null, sondern gegen den konstanten Wert $B=-0,57$mT.
 \begin{table}
   \centering
     \caption{Messdaten zum Magnetfeld der langen Spule $B_{\symup{l}}$ und der
-    kurzen Spule $B_{\symup{l}}$}
+    kurzen Spule $B_{\symup{k}}$}
     \label{tab:einzelne_spulen}
     \begin{tabular}{c c c}
       \toprule
@@ -98,16 +100,16 @@ gegen Null, sondern gegen den konstanten Wert $B=-0,57$mT.
       16	&  1,69  &  -0,56\\
       17	&  1,02  &  -0,56\\
       18  &  0,24  &  -0,57\\
-      19	&  -0,20 \\
-      20	&  -0,17 \\
-      21	&  -0,32 \\
-      22	&  -0,43 \\
-      23	&  -0,48 \\
-      24	&  -0,52 \\
-      25	&  -0,53 \\
-      26	&  -0,54 \\
-      27	&  -0,55 \\
-      28	&  -0,55 \\
+      19	&  -0,20 & -\\
+      20	&  -0,17 & -\\
+      21	&  -0,32 & -\\
+      22	&  -0,43 & -\\
+      23	&  -0,48 & -\\
+      24	&  -0,52 & -\\
+      25	&  -0,53 & -\\
+      26	&  -0,54 & -\\
+      27	&  -0,55 & -\\
+      28	&  -0,55 & -\\
       \bottomrule
     \end{tabular}
 \end{table}
@@ -118,7 +120,8 @@ gegen Null, sondern gegen den konstanten Wert $B=-0,57$mT.
 Nun soll die magnetische Feldstärke eines Helmholtzspulenpaares in Abhängigkeit von
 der Posistion auf der durch die Spulenmittelpunkte verlaufenden Achse bestimmt werden.
 Wird ein Spulenpaar mit je $n=100$ Windungen und einem Durchmesser $D=0,125$m
-von einem Strom $I=5$A durchflossen, so ergeben sich die Messwerte aus \ref{tab:helmholtz}.
+von einem Strom $I=5$A durchflossen, so ergeben sich die Messwerte aus \ref{tab:helmholtz}
+und \ref{tab:helmholtz_f}.
 Dabei entspricht der Abstand der beiden Spulen voneinander ihrem Radius.
 Der Theoriewert ergibt sich gemäß (REFERENZ) zu $B_{\symup{theo}}=7,19$mT. In
 \ref{fig:spulenpaar_5} sind die Messwerte graphisch dargestellt. Der Ursprung wurde
@@ -143,7 +146,7 @@ kann angenommen werden, dass die Theoriekurve das reale Feld auch in diesem Bere
 
 
 Die Messung wird für einen Strom von $I=3$A wiederholt. Die aufgenommenen Messwerte
-befinden sich ebenfalls in \ref{tab:helmholtz}. Der theoretische Erwartungswert
+befinden sich ebenfalls in \ref{tab:helmholtz} und \ref{tab:helmholtz_f}. Der theoretische Erwartungswert
 ergibt sich hier ebenfalls nach (REFERENZ) zu $B_{\symup{theo}}=4,32mT$. Die Messwerte
 sind in \ref{fig:spulenpaar_3} dargestellt. Hier wurde der Ursprung ebenfalls genau
 zwischen die beiden Spulen gelegt.
@@ -221,7 +224,7 @@ große Abstände $r$ gegen null gehen.
   \centering
   \caption{Messdaten zum Magnetfeld des Helmholtzspulenpaares bei 5A ($B_{\symup{1}}$)
   und 3A ($B_{\symup{2}}$)(Fortsetzung)}
-  \label{tab:helmholtz}
+  \label{tab:helmholtz_f}
   \begin{tabular}{c c c}
     \toprule
     $r/$cm & $B_{\symup{1}}/$mT & $B_{\symup{2}}/$mT\\
@@ -242,12 +245,12 @@ große Abstände $r$ gegen null gehen.
 Zur Bestimmung der Hysteresekurve der gegebenen mit einem ferromagnetischen Stoff
 gefüllten Toroidspule wird die magentische Feldstärke $B$ gegen die Stromstärke
 $I$ aufgetragen. Es ergibt sich die Graphik aus \ref{fig:hysterese}. Die gemessenen
-Daten können \ref{tab:hysterese} entnommen werden.
+Daten können \ref{tab:hysterese} und \ref{tab:hysterese_f}  entnommen werden.
 
 \begin{figure}
   \centering
   \includegraphics{build/hysterese.pdf}
-  \caption{Auftragung der Messwerte für die magnetische Feldstärke der Troidspule
+  \caption{Auftragung der Messwerte für die magnetische Feldstärke der Toroidspule
   in Abhängigkeit von der Stromstärke}
   \label{fig:hysterese}
 \end{figure}
@@ -262,7 +265,7 @@ Daten können \ref{tab:hysterese} entnommen werden.
 
 Für die Remanenz sind die Werte $B_{\symup{r}}=128,8$mT und $B_{\symup{r}}=-126,1$mT
 ablesbar. Da im Bereich um $I=0$ ein annähernd linearer Zusammenhang vorliegt, lässt
-sich der Strom, bei dem die Koerzitivfeldstärke zu berechnen, indem aus den vorhandenen
+sich der Strom, bei dem die Koerzitivfeldstärke vorliegt, berechnen, indem aus den vorhandenen
 Messwerten Geradengleichungen der Form
 \begin{equation}
   f(x)=mx+b
@@ -270,13 +273,13 @@ Messwerten Geradengleichungen der Form
 aufgestellt werden. Dabei ist $m$ die Steigung der Geraden und $b$ der y-Achsenabschnitt.
 Es ergeben sich die Geradengleichungen
 \begin{align}
-  I_{\symup{1}}(B)&=193,76x+128.8 & I_{\symup{2}}(B)&=191,1x-126,1\,.
+  I_{\symup{1}}(B)&=193,76x+128,8 & I_{\symup{2}}(B)&=191,1x-126,1\,.
 \end{align}
 Diese sind in \ref{fig:koerzitiv} dargestellt.
 Bestimmt man deren Nullstellen, so ergeben sich daraus für die Stromstärken, bei
 denen die Koerzitivfeldstärke auftritt folgende Werte:
 \begin{align}
-  I_{\symup{1}}&=-0.665\text{A} & I_{\symup{2}}&=0.66\text{A}\,.
+  I_{\symup{1}}&=-0,665\text{A} & I_{\symup{2}}&=0,660\text{A}\,.
 \end{align}
 
 
@@ -293,48 +296,48 @@ hier die Steigung gegen null gehen. Insgesamt fällt die Hysteresekurve sehr sch
     \toprule
     $I/$A & $B/$mT\\
     \midrule
-    1	  &  125.8\\
-    2	  &  292.0\\
-    3	  &  406.8\\
-    4	  &  482.9\\
-    5	  &  538.7\\
-    6	  &  580.6\\
-    7	  &  615.8\\
-    8	  &  647.8\\
-    9	  &  675.9\\
-    10	&  702.1\\
-    9	  &  686.5\\
-    8	  &  668.3\\
-    7	  &  648.6\\
-    6	  &  624.3\\
-    5	  &  595.3\\
-    4	  &  559.7\\
-    3	  &  513.5\\
-    2	  &  447.2\\
-    1	  &  314.5\\
-    0	  &  128.8\\
-    -1	&  -64.96\\
-    -2	&  -240.4\\
-    -3	&  -375.9\\
-    -4	&  -468.5\\
-    -5	&  -530.3\\
-    -6	&  -577.5\\
-    -7	&  -615.7\\
-    -8	&  -648.2\\
-    -9	&  -676.5\\
-    -10	&  -701.4\\
-    -9	&  -686.1\\
-    -8	&  -668.2\\
-    -7	&  -647.8\\
-    -6	&  -624.0\\
-    -5	&  -595.5\\
-    -4	&  -560.0\\
-    -3	&  -513.7\\
-    -2	&  -448.2\\
-    -1	&  -314.5\\
-    0	  &  -126.1\\
-    1	  &  65±0.5\\
-    2	  &  240.3\\
+    1	  &  125,8\\
+    2	  &  292,0\\
+    3	  &  406,8\\
+    4	  &  482,9\\
+    5	  &  538,7\\
+    6	  &  580,6\\
+    7	  &  615,8\\
+    8	  &  647,8\\
+    9	  &  675,9\\
+    10	&  702,1\\
+    9	  &  686,5\\
+    8	  &  668,3\\
+    7	  &  648,6\\
+    6	  &  624,3\\
+    5	  &  595,3\\
+    4	  &  559,7\\
+    3	  &  513,5\\
+    2	  &  447,2\\
+    1	  &  314,5\\
+    0	  &  128,8\\
+    -1	&  -64,96\\
+    -2	&  -240,4\\
+    -3	&  -375,9\\
+    -4	&  -468,5\\
+    -5	&  -530,3\\
+    -6	&  -577,5\\
+    -7	&  -615,7\\
+    -8	&  -648,2\\
+    -9	&  -676,5\\
+    -10	&  -701,4\\
+    -9	&  -686,1\\
+    -8	&  -668,2\\
+    -7	&  -647,8\\
+    -6	&  -624,0\\
+    -5	&  -595,5\\
+    -4	&  -560,0\\
+    -3	&  -513,7\\
+    -2	&  -448,2\\
+    -1	&  -314,5\\
+    0	  &  -126,1\\
+    1	  &  65±0,5\\
+    2	  &  240,3\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -343,19 +346,19 @@ hier die Steigung gegen null gehen. Insgesamt fällt die Hysteresekurve sehr sch
   \centering
   \caption{Messdaten zur magnetischen Feldstärke in der Toroidspule in Abhängigkeit
   vom Strom(Fortsetzung)}
-  \label{tab:hysterese}
+  \label{tab:hysterese_f}
   \begin{tabular}{c c}
     \toprule
     $I/$A & $B/$mT\\
     \midrule
-    3	  &  378.4\\
-    4	  &  469.7\\
-    5	  &  531.4\\
-    6	  &  578.6\\
-    7	  &  616.3\\
-    8	  &  646.9\\
-    9	  &  675.3\\
-    10	&  703.6\\
+    3	  &  378,4\\
+    4	  &  469,7\\
+    5	  &  531,4\\
+    6	  &  578,6\\
+    7	  &  616,3\\
+    8	  &  646,9\\
+    9	  &  675,3\\
+    10	&  703,6\\
     \bottomrule
   \end{tabular}
 \end{table}
