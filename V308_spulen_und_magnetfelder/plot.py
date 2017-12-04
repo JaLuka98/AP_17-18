@@ -144,9 +144,12 @@ print('Erwartungswert für Helmholzspulenpaar mit 5A:', (1e3*(4*np.pi*1e-7*n*I_H
 
 
 I, B = np.genfromtxt('data/hysterese.txt', unpack=True) #I/a, B/mT
+I2, B2 = np.genfromtxt('data/neukurve.txt', unpack=True)
 B*=1e-3 #B/T
+B2*=1e-3
 
 plt.plot(I, B*1e3, 'rx', label='Messwerte')
+plt.plot(I2, B2*1e3, 'bx', label='Messwerte der Neukurve')
 plt.xlabel(r'$I/$A')
 plt.ylabel(r'$B/$mT')
 plt.tight_layout()
