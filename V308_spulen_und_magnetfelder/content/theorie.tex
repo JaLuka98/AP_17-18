@@ -71,6 +71,33 @@ ebenso mit dem Biot-Savartschen Gesetz \eqref{eqn:biotsavart} berechnen und ergi
 \end{equation}
 Dabei ist $i$ der Strom und $\gamma = x/r$ das Verhältnis aus dem Abstand auf der Spulenachse und dem Spulenradius $r$.
 
+Hysterese bezeichnet die Eigenschaft eines Systems, dass sein Zustand von seiner Vergangenheit abhängt.
+Diese Systeme sind nichtlinear und die charakteristischen Größen haben mehr als einen möglichen Wert für
+einen Wert einer unabhängigen Variablen. Ein Beispiel für Systeme mit Hysterese sind
+ferromagnetische Materialien. Eine sog. Hysterese- oder Magnetisierungskurve beschreibt
+die Abhängigkeit der magnetischen Flussdichte $B$ des Stoffes, hervorgerufen durch
+seine Magnetisierung, von dem äußeren magnetischen Feld $H$ und ist in Abbildung \ref{fig:hysteresetheorie}
+skizziert.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=300pt]{data/hysterese.png}
+  \caption{Skizze einer Hysteresekurve \cite{Versuchsanleitung}}
+  \label{fig:hysteresetheorie}
+\end{figure}
+
+Ist ein ferromagnetisches Material zunächst bei abgeschaltetem äußeren Feld unmagnetisiert,
+erhält man bei langsamer Steigerung des äußeren Feldes eine Neukurve, in der Skizze
+mit (1) bezeichnet und grün markiert.
+Diese steigt bis auf den Sättigungswert $B_\text{s}$ an. Beim Verringern von $H$
+sinkt die Magnetisierung (Kurvenverlauf (2)), bis bei vollständig abgeschaltetem Feld die Remanenz übrig
+bleibt. Diese übrig gebliebene magnetische Flussdichte kann durch die Koerzitivkraft
+$H_\text{c}$ vollständig aufgehoben werden, bis der Sättigungswert schlussendlich wieder
+im dritten Quadranten des Koordinatensystems erreicht wird. Die Kurve schließt sich
+im gleichen Verlauf (Kurvenverlauf (3)) wieder bis zur positiven Sättigung und ist somit symmetrisch zum Ursprung.
+Wird ein äußeres Magnetfeld $H$ durch einen Strom $I$ erzeugt, ergibt auch das Auftragen
+von $B$ gegen $I$ eine Hysteresekurve, da das äußere Feld proportional zur Stromstärke ist.
+
 Die Messung magnetischer Felder geschieht in der Regel mithilfe einer Hall-Sonde.
 In ihr befindet sich ein Metallplättchen, das von einem konstanten Strom durchflossen wird.
 Ein äußeres magnetisches Feld übt Kraft auf die bewegten elektrischen Ladungen aus
