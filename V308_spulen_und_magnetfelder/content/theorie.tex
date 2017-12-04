@@ -26,38 +26,55 @@ Eine Skizze dazu ist in Abbildung \ref{fig:spule} zu sehen.
   \label{fig:spule}
 \end{figure}
 
-HIER NOCH DIE ABBILDUNG ERKLÄREN
-
+In der Skizze sind $x_1$ und $x_2$ die Anfangs- und Endpunkte der Wicklungen,
+$\symup{d}x$ ist ein Wegelement zur Integration über die Spule. Durch dieses Wegelement
+fließt ein kleiner Strom der Größe $\symup{d}i = n I \symup{d}x$. Dabei ist $n$
+die Anzahl der Windungen pro Länge.
 Der Betrag der magnetischen Flussdichte so einer Spule auf ihrer Symmetrieachse lässt sich durch
 \eqref{eqn:biotsavart} zu
 \begin{equation}
   B_x(x) = \frac{\mu_0 n I}{2} \left( \frac{x-x_1}{\sqrt{(x-x_1)^2+R^2}} - \frac{x-x_2}{\sqrt{(x-x_2)^2+R^2}} \right)
+  \label{eqn:spuleungenaehert}
 \end{equation}
-berechnen. Hierbei wurden abgesehen von einem verschwindenden Querschnitt keinerlei Näherungen vorgenommen.
+berechnen. Hierbei wurden abgesehen von einem verschwindenden Querschnitt keinerlei Näherungen vorgenommen
+\footnote{Die konkrete Berechnung wird hier nicht durchgeführt und kann in \cite{Spule} nachgelesen werden}.
 
 Nähert man für eine Spule ihre Länge als deutlich größer gegenüber ihrem Durchmesser,
 so ergibt sich näherungsweise für den Betrag der magnetischen Flussdichte durch Berechnung mit \eqref{eqn:biotsavart}
 im Inneren der Spule
 \begin{equation}
   B = \mu \frac{n}{l} I\,.
-  \label{langespuleinnen}
+  \label{eqn:langespuleinnen}
 \end{equation}
 Dabei gilt für die Permeabilität $\mu = \mu_0 \mu_r$ mit der materialabhängigen
 relativen Permeabilität $\mu_r$ und $l$ ist die Länge der Spule.
 Die magnetische Flussdichte innerhalb der langen Spule ist ungefähr konstant, außerhalb
 ist sie näherungsweise null.
 
-Nahezu homogene Magnetfelder lassen sich mithilfe eines Helmholtz-Spulenpaars erzeugen.
-Dieses besteht aus zwei in gleicher Richtung stromdurchflossenen Kreisspulen, die auf
-auf einer gemeinsamen Achse aufgebaut werden. Ihr Abstand $d$ ist genau der gleiche Spulenradius $R$.
-Auf der Symmetrieachse ist das Magnetfeld näherungsweise homogen. Sie lässt sich
-ebenso mit dem Biot-Savartschen Gesetz \eqref{eqn:biotsavart} berechnen und ergibt sich zu
+Nahezu homogene Magnetfelder lassen sich mithilfe eines Helmholtz-Spulenpaars erzeugen, welches
+in Abbildung \ref{fig:helmholtz} skizziert ist.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=150pt]{data/helmholtz.png}
+  \caption{Skizze eines Helmholtzspulenpaars \cite{Versuchsanleitung}}
+  \label{fig:helmholtz}
+\end{figure}
+
+Dieses besteht aus zwei in gleicher Richtung stromdurchflossenen Kreisspulen, die auf
+auf einer gemeinsamen Achse aufgebaut werden. Ihr Abstand $d$ entspricht dem Spulenradius $R$.
+Auf der Symmetrieachse zwischen den Spulen ist das Magnetfeld näherungsweise homogen. Dies lässt sich
+ebenso mit dem Biot-Savartschen Gesetz \eqref{eqn:biotsavart} berechnen und ergibt sich nach \cite{Helmholtz} zu
+\begin{equation}
+  B_x(x) = \frac{\mu_0 i}{2 r} \left( \frac{1}{(\gamma^2+\gamma+5/4)^{3/2}} - \frac{1}{(\gamma^2-\gamma+5/4)^{3/2}} \right) \,.
+  \label{eqn:helmholz}
+\end{equation}
+Dabei ist $i$ der Strom und $\gamma = x/r$ das Verhältnis aus dem Abstand auf der Spulenachse und dem Spulenradius $r$.
 
 Die Messung magnetischer Felder geschieht in der Regel mithilfe einer Hall-Sonde.
 In ihr befindet sich ein Metallplättchen, das von einem konstanten Strom durchflossen wird.
 Ein äußeres magnetisches Feld übt Kraft auf die bewegten elektrischen Ladungen aus
-und trennt sie. Dies erzeugt und eine Spannung und wird auch Hall-Effekt genannt.
+und trennt sie. Dies erzeugt eine Spannung und wird auch Hall-Effekt genannt.
 Diese Spannung ist ein Maß für die Stärke der Flussdichte des äußeren magnetischen Feldes, welche
 dann abgelesen werden kann. Je nach zu untersuchender Geometrie sind longitudinale und transversale Hall-Sonden
 zu verwenden.
