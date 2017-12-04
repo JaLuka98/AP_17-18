@@ -162,8 +162,11 @@ plt.clf()
 x=np.linspace(-3, 3)
 B1=np.linspace(-64.96, 128.8)
 B2=np.linspace(-126.1, 65)
+I2, B3 = np.genfromtxt('data/neukurve.txt', unpack=True)
+B3*=1e-3
 
 plt.plot(I, B*1e3, 'rx', label='Messwerte')
+plt.plot(I2, B3*1e3, 'bx', label='Messwerte Neukurve')
 plt.plot(x, (128.8+64.96)*x+128.8, 'b-', label = 'Gerade1')
 #plt.plot(x1, B1=0,'gx', label = 'B_K1')
 plt.plot(x, (126.1+65)*x-126.1, 'g-', label = 'Gerade2')
