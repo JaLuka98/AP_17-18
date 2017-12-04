@@ -24,11 +24,12 @@ B *= 1e-3 #B/T
 x=np.linspace(-0.09, 0.28)
 
 plt.plot(r*1e2, B*1e3, 'rx', label='Messwerte')
-plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*n1*I1/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((D/(2))**2)))
--(x-0.175)/(np.sqrt(((x-0.175)**2)+((D/(2))**2)))), 'b--', label = 'Theoriewert in der Spule')
-
-plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*300*1.4/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((0.0205**2))))
--(x-0.175)/(np.sqrt(((x-0.175)**2)+((0.0205)**2)))), 'g--', label = 'Theoriewert in der Spule')
+plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*n1/(0.16)*I1/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((D/(2))**2)))
+-(x-0.175)/(np.sqrt(((x-0.175)**2)+((D/(2))**2))))-0.63, 'b--', label = 'Theoriewert')
+plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*n1/(0.16)*I1/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((D/(2))**2)))
+-(x-0.175)/(np.sqrt(((x-0.175)**2)+((D/(2))**2)))), 'g--', label = 'Theoriewert mit angepasstem Nullniveau')
+#plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*300*1.4/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((0.0205**2))))
+#-(x-0.175)/(np.sqrt(((x-0.175)**2)+((0.0205)**2)))), 'g--', label = 'Theoriewert in der Spule')
 
 #plt.plot(x*1e2, (4*np.pi*1e-7*n1*I1*1e3/l1)+0*x-0.63, 'g--', label = 'Theoriewert mit angepasstem Nullniveau')
 plt.xlabel(r'$r/$cm')
@@ -40,8 +41,10 @@ plt.savefig('build/lange_spule.pdf')
 
 plt.clf()
 
-print('Erwartungswert für die lange Spule:', (4*np.pi*1e-7*n1*I1*1e3/l1), 'mT')
-
+print('Erwartungswert für die lange Spule:', 1e3*(4*np.pi*1e-7*n1/(0.16)*I1/(2))*((0.095-0.015)/
+(np.sqrt(((0.095-0.015)**2)+((D/(2))**2)))-(0.095-0.175)/(np.sqrt(((0.095-0.175)**2)+((D/(2))**2)))) , 'mT')
+print('Erwartungswert für die lange Spule mit Korrektur:', 1e3*(4*np.pi*1e-7*n1/(0.16)*I1/(2))*((0.095-0.015)/
+(np.sqrt(((0.095-0.015)**2)+((D/(2))**2)))-(0.095-0.175)/(np.sqrt(((0.095-0.175)**2)+((D/(2))**2))))-0.63 , 'mT')
 r, B = np.genfromtxt('data/kurze_spule.txt', unpack=True) #r/cm B/mT
 r *= 1e-2 #r/m
 B *= 1e-3 #B/T
@@ -49,7 +52,10 @@ B *= 1e-3 #B/T
 x=np.linspace(-0.09, 0.18)
 
 plt.plot(r*1e2, B*1e3, 'rx', label='Messwerte')
-plt.plot(x*1e2, (4*np.pi*1e-7*n2*I2*1e3/(np.sqrt(l2*l2+D*D)))+0*x - 0.57, 'b--', label = 'Theoriewert in der Spule')
+plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*n2/(0.055)*I2/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((D/(2))**2)))
+-(x-0.085)/(np.sqrt(((x-0.085)**2)+((D/(2))**2))))-0.57, 'b--', label = 'Theoriewert')
+plt.plot(x*1e2, 1e3*(4*np.pi*1e-7*n2/(0.055)*I2/(2))*((x-0.015)/(np.sqrt(((x-0.015)**2)+((D/(2))**2)))
+-(x-0.085)/(np.sqrt(((x-0.085)**2)+((D/(2))**2))))-0.57, 'g--', label = 'Theoriewert mit angepasstem Nullniveau')
 plt.xlabel(r'$r/$cm')
 plt.ylabel(r'$B/$mT')
 plt.tight_layout()
@@ -59,7 +65,10 @@ plt.savefig('build/kurze_spule.pdf')
 
 plt.clf()
 
-print('Erwartungswert für die kurze Spule:', 4*np.pi*1e-7*n2*I2*1e3/(np.sqrt(l2*l2+D*D)), 'mT')
+print('Erwartungswert für die kurze Spule:',1e3*(4*np.pi*1e-7*n2/(0.055)*I2/(2))*((0.0425-0.015)/
+(np.sqrt(((0.0425-0.015)**2)+((D/(2))**2)))-(0.0425-0.085)/(np.sqrt(((0.0425-0.085)**2)+((D/(2))**2)))) , 'mT')
+print('Erwartungswert für die kurze Spule mit Korrektur:',1e3*(4*np.pi*1e-7*n2/(0.055)*I2/(2))*((0.0425-0.015)/
+(np.sqrt(((0.0425-0.015)**2)+((D/(2))**2)))-(0.0425-0.085)/(np.sqrt(((0.0425-0.085)**2)+((D/(2))**2))))-0.57 , 'mT')
 
 I_H1=3 #strom durch spulenpaar
 R=0.0625 #spulenradius
@@ -146,3 +155,26 @@ plt.grid()
 plt.savefig('build/hysterese.pdf')
 
 plt.clf()
+
+x=np.linspace(-3, 3)
+B1=np.linspace(-64.96, 128.8)
+B2=np.linspace(-126.1, 65)
+
+plt.plot(I, B*1e3, 'rx', label='Messwerte')
+plt.plot(x, (128.8+64.96)*x+128.8, 'b-', label = 'Gerade1')
+#plt.plot(x1, B1=0,'gx', label = 'B_K1')
+plt.plot(x, (126.1+65)*x-126.1, 'g-', label = 'Gerade2')
+#plt.plot(x2, B2=0 ,'gx', label = 'B_K2')
+plt.xlim(-2, 2)
+plt.ylim(-300,300)
+plt.xlabel(r'$I/$A')
+plt.ylabel(r'$B/$mT')
+plt.tight_layout()
+plt.legend()
+plt.grid()
+plt.savefig('build/koerzitiv.pdf')
+
+plt.clf()
+
+print('Koerzitivstrom1:', (-(128.8/(128.8+64.96))), 'A')
+print('Koerzitivstrom2:', ((126.1/(126.1+65))), 'A')
