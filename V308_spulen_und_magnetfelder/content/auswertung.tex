@@ -7,6 +7,8 @@ Für das Magnetfeld einer Spule der Länge $l=\SI{0,16}{m}$ mit $n=300$ Windunge
 die von einem Strom $I=\SI{1,4}{A}$ durchflossen wird, ergeben sich die in
 \ref{fig:lange_spule} dargestellten Messwerte. Die zugrundeliegenden Daten können
 \ref{tab:einzelne_spulen} entnommen werden. Der Theoriewert wird nach (REFERENZ) berechnet.
+Der Ursprung wurde dabei an den linken Rand der Spule gelegt, wobei berücksichtigt werden
+muss, dass die Windungen erst $1,5$cm weiter begonnen.
 
 \begin{figure}
   \centering
@@ -16,11 +18,13 @@ die von einem Strom $I=\SI{1,4}{A}$ durchflossen wird, ergeben sich die in
   \label{fig:lange_spule}
 \end{figure}
 
-Auffällig ist, dass der Theoriewert mit $B_{\symup{theo}}=3,30$mT zunächst sehr weit über dem
-gemessenen Wert liegt. Da in der Theorie die magnetische Feldstärke für große Abstände
-gegen Null geht, kann jedoch der Wert, dem sich die Messwerte, als Nullnievau angenommen
-und von dem theoretischen Erwartungswert subtrahiert werden, sodass sich für den
-theoretischen Erwartungswert nun $B_{\symup{theo}}=2.57$mT ergibt.
+Auffällig ist, dass der theoretisch zu erwartenede Maximalwert mit $B_{\symup{theo}}=3,20$mT
+zunächst sehr weit über dem gemessenen Wert liegt. Da in der Theorie die magnetische
+Feldstärke für große Abstände gegen Null geht, kann jedoch der Wert, dem sich die
+Messwerte annähern, als Nullnievau angenommen und von dem theoretischen Erwartungswert
+subtrahiert werden, sodass sich für den theoretisch zu erwartenden Maximalwert nun
+$B_{\symup{theo}}=2.57$mT ergibt. Dabei entspricht der kleinste genessene Wert für die Feldstärke
+in guter Näherung dem Nullniveau.
 
 Es ist erkennbar, dass die Messwerte grundlegend dem theoretisch erwarteten Verlauf folgen.
 Im Spuleninneren sind sie annähernd konstant und bleiben nur leicht hinter dem
@@ -34,7 +38,7 @@ wie es theoretisch zu erwarten wäre.
 Für das Magnetfeld einer kurzen Spule mit $l=\SI{0,055}{m}$ Länge und $n=100$ Windungen,
 die von einem Strom $I=\SI{1,2}{A}$ durchflossen wird, ergeben sich die Messwerte aus
 \ref{fig:kurze_spule}. Die Messwerte können \ref{tab:einzelne_spulen} entnommen werden.
-Der Theoriewert für die kurze Spule wird mit (REFERENZ) berechnet.
+Der Theoriewert für die kurze Spule wird ebenfalls mit (REFERENZ) berechnet.
 
 \begin{figure}
   \centering
@@ -45,16 +49,16 @@ Der Theoriewert für die kurze Spule wird mit (REFERENZ) berechnet.
 \end{figure}
 
 
-Auch hier ist der Theoretische Erwartungswert mit $B_{\symup{theo}}=2,20$mT zunächst
+Auch hier ist der Theoretische Erwartungswert mit $B_{\symup{theo}}=2,33$mT zunächst
 weit über dem Messwert. Nimmt man jedoch den kleinsten gemessenen Wert als Nullniveau
 an und subtrahiert diesen Wert von dem theoretischen Erwartungswert, so ergibt sich
-$B_{\symup{theo}}=1,63$mT, was näher an den gemessenen Werten liegt.
+$B_{\symup{theo}}=1,76$mT, was näher an den gemessenen Werten liegt.
 
 Der Verlauf der Messwerte für die magentische Feldstärke zeigt auch hier grundlegend
 den theoretisch erwarteten Verlauf. Wie bei einer kurzen Spule auch theoretisch
 zu erwarten ist, ist das Feld auch im Inneren nicht konstant und fällt an den Rändern
 schnell ab. Erneut geht hier die magnetische Feldstärke für große Abstände $r$ nicht
-gegen Null, sondern gegen den konstanten Wert $B=-0.57$mT.
+gegen Null, sondern gegen den konstanten Wert $B=-0,57$mT.
 
 
 \begin{table}
@@ -113,16 +117,14 @@ gegen Null, sondern gegen den konstanten Wert $B=-0.57$mT.
 
 Nun soll die magnetische Feldstärke eines Helmholtzspulenpaares in Abhängigkeit von
 der Posistion auf der durch die Spulenmittelpunkte verlaufenden Achse bestimmt werden.
-Wird durch ein Spulenpaar mit je $n=100$ Windungen und einem Durchmesser $D=0,125$m
+Wird ein Spulenpaar mit je $n=100$ Windungen und einem Durchmesser $D=0,125$m
 von einem Strom $I=5$A durchflossen, so ergeben sich die Messwerte aus \ref{tab:helmholtz}.
 Dabei entspricht der Abstand der beiden Spulen voneinander ihrem Radius.
 Der Theoriewert ergibt sich gemäß (REFERENZ) zu $B_{\symup{theo}}=7,19$mT. In
 \ref{fig:spulenpaar_5} sind die Messwerte graphisch dargestellt. Der Ursprung wurde
 dabei in das Zentrum zwischen beiden Spulen gelegt. Es sei hierbei darauf
 hingewiesen, dass zwischen beiden Spulen nur in einem sehr kleinen Bereich Messwerte
-aufgenommen werden konnten, da die verwendeten Spulen selbst recht breit waren. Die
-eingezeichnete Theoriekurve sollte jedoch im gesamten Bereich zwischen den Spulen
-gelten.
+aufgenommen werden konnten, da die verwendeten Spulen selbst recht breit waren.
 
 \begin{figure}
   \centering
@@ -132,10 +134,12 @@ gelten.
   \label{fig:spulenpaar_5}
 \end{figure}
 
-Es ist erkennbar, dass die Messwerte nur minimal hinter dem theoretischen erwartungswert
+Es ist erkennbar, dass die Messwerte zwischen den SPulen nur minimal hinter dem theoretischen Erwartungswert
 zurückbleiben. Die Messwerte außerhalb des Spulenpaares fallen exponentiell und gehen
 wie theoretisch zu erwarten ist gegen null. Jedoch lassen sich anhand der Messung keine
-Aussagen über das Verhalten des Feldes in einer der beiden Spulen treffen.
+genauen Aussagen über das Verhalten des Feldes in einer der beiden Spulen treffen.
+Da die Messwerte insgesamt jedoch sehr gut den Verlauf der Theoriekurve widerspiegeln,
+kann angenommen werden, dass die Theoriekurve das reale Feld auch in diesem Bereich gut beschreibt.
 
 
 Die Messung wird für einen Strom von $I=3$A wiederholt. Die aufgenommenen Messwerte
@@ -248,13 +252,36 @@ Daten können \ref{tab:hysterese} entnommen werden.
   \label{fig:hysterese}
 \end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics{build/koerzitiv.pdf}
+  \caption{Geraden, aus denen die Stromstärke für die Koerzitivfeldstärke bestimmt werden}
+  \label{fig:koerzitiv}
+\end{figure}
 
 
 Für die Remanenz sind die Werte $B_{\symup{r}}=128,8$mT und $B_{\symup{r}}=-126,1$mT
 ablesbar. Da im Bereich um $I=0$ ein annähernd linearer Zusammenhang vorliegt, lässt
-sich der Strom, bei dem die Koerzitivfeldstärke zu (........) berechnen.
-Der grundlegende Verlauf stimmt mit dem der Theoriekurve gut überein, jedoch weist
-die gemessene Hysteresekurve nur eine sehr schwache Sättigung auf. Im Idealfall sollte
+sich der Strom, bei dem die Koerzitivfeldstärke zu berechnen, indem aus den vorhandenen
+Messwerten Geradengleichungen der Form
+\begin{equation}
+  f(x)=mx+b
+  \end{equation}
+aufgestellt werden. Dabei ist $m$ die Steigung der Geraden und $b$ der y-Achsenabschnitt.
+Es ergeben sich die Geradengleichungen
+\begin{align}
+  I_{\symup{1}}(B)&=193,76x+128.8 & I_{\symup{2}}(B)&=191,1x-126,1\,.
+\end{align}
+Diese sind in \ref{fig:koerzitiv} dargestellt.
+Bestimmt man deren Nullstellen, so ergeben sich daraus für die Stromstärken, bei
+denen die Koerzitivfeldstärke auftritt folgende Werte:
+\begin{align}
+  I_{\symup{1}}&=-0.665\text{A} & I_{\symup{2}}&=0.66\text{A}\,.
+\end{align}
+
+
+Der grundlegende Verlauf der Hysteresekurve stimmt mit dem der Theoriekurve gut überein, jedoch weist
+die gemessene Hysteresekurve nur eine relativ schwache Sättigung auf. Im Idealfall sollte
 hier die Steigung gegen null gehen. Insgesamt fällt die Hysteresekurve sehr schmal aus.
 
 \begin{table}
