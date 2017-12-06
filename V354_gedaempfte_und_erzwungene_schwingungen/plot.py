@@ -28,6 +28,7 @@ R2 = ufloat(509.5, 0.5)  # in Ohm
 t, Umal10 = np.genfromtxt('data/einhuellende.txt', unpack=True)  # t in µs, Umal10 in V
 U = Umal10/10
 t *= 1e-6  # t in s
+tlinspace = np.linspace(0, 470, 470)
 
 params, covariance_matrix = optimize.curve_fit(einhuellendenfit, t, U)
 
@@ -43,9 +44,10 @@ print('Dann ist Reff aus dem Experiment ja ', 4*my*np.pi*L)
 print('Tex ist hier dann ', (1/(2*np.pi*my))*1e6, 'in µs')
 
 plt.plot(t*1e6, U, 'rx', label='Messwerte')
-plt.plot(t*1e6, einhuellendenfit(t*1e6, params[0], params[1]*1e-6), 'k-', label='Ausgleichsfunktion')
+plt.plot(tlinspace, einhuellendenfit(tlinspace, params[0], params[1]*1e-6), 'k-', label='Ausgleichsfunktion')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$U_\mathrm{C}/$V')
+plt.axis((-10, 470, 0, 14))
 plt.tight_layout()
 plt.legend()
 plt.grid()
@@ -60,12 +62,17 @@ f, Ucmal10, U = np.genfromtxt('data/amplitude.txt', unpack=True)  # f in Hz, Ucm
 Uc = Ucmal10/10
 U = U/10
 f *= 1e-3  # f in khZ
+flinspace = np.linspace(0.4, 600, 2000)
 
 np.savetxt('data/amplitudeucu.txt', Uc/U, delimiter='\t')
 
 plt.plot(f, Uc/U, 'rx', label='Messwerte')
+plt.plot(flinspace, unp.nominal_values(1/(unp.sqrt((1-L*C*(2*np.pi*flinspace*1e3)**2)**2+(2*np.pi*flinspace*1e3)**2*(R2+50)**2*C**2))), 'k-', label='Theoriekurve')
+#errY = unp.std_devs(1/(unp.sqrt((1-L*C*(2*np.pi*flinspace*1e3)**2)**2+(2*np.pi*flinspace*1e3)**2*(R2+50)**2*C**2)))
+#plt.errorbar(flinspace, unp.nominal_values(1/(unp.sqrt((1-L*C*(2*np.pi*flinspace*1e3)**2)**2+(2*np.pi*flinspace*1e3)**2*(R2+50)**2*C**2))) + errY, xerr=0, yerr=errY, fmt='-')
 plt.xlabel(r'$f/$kHz')
 plt.ylabel(r'$\frac{U_\mathrm{C}}{U_0}$')
+plt.axis((0.4, 600, -0.2, 4))  # 1e-3 weil f in kHZ ist
 plt.xscale('log')
 plt.tight_layout()
 plt.legend()
@@ -75,7 +82,7 @@ plt.savefig('build/amplitudelog.pdf')
 print('Die Güte q ergibt sich theoretisch zu', 1/(R2+50)*unp.sqrt(L/C))  # 50: Berücksichtigung des Innenwiderstandes
 
 plt.xscale('linear')
-plt.axis((10000*1e-3, 46000*1e-3, 1, 4))  # 1e-3 weil f in kHZ ist
+plt.axis((7500*1e-3, 46500*1e-3, 1, 4))  # 1e-3 weil f in kHZ ist
 plt.axhline(2.6502, color='k', linestyle=':')
 plt.axvline(28250*1e-3, color='b', linestyle=':', label=r'$f_{+}$ und $f_{-}$')
 plt.axvline(37500*1e-3, color='b', linestyle=':')
@@ -94,10 +101,14 @@ f *= 1e-3  # f in khZ
 
 np.savetxt('data/berechnetephi.txt', phi, delimiter='\t', fmt='%1.2f')
 
+flinspace2 = np.linspace(0.007, 300, 10000)
+
 plt.plot(f, phi, 'rx', label='Messwerte')
+plt.plot(flinspace2, np.pi/2+unp.nominal_values(unp.arctan((-2*np.pi*flinspace2*1e3*(R2+50)*C/(1-L*C*(2*np.pi*flinspace2*1e3)**2))**(-1))), 'k-', label='Theoriekurve')
 plt.xscale('log')
 plt.xlabel(r'$f/$kHz')
 plt.ylabel(r'$\phi/$rad')
+plt.axis((0.007, 300, -0.2, 4))  # 1e-3 weil f in kHZ ist
 # Slicing: -3 ist drittletztes Element, : bedeutet bis zum Ende
 plt.plot(f[-3:], phi[-3:], 'ob', markersize=8, markeredgewidth=1, markerfacecolor='None' )  # Sorgt für Markierung dr Außreißer
 
@@ -115,7 +126,7 @@ plt.tight_layout()
 plt.savefig('build/philog.pdf')
 
 plt.xscale('linear')
-plt.axis((20000*1e-3, 80000*1e-3, 0, np.pi))
+plt.axis((17500*1e-3, 85000*1e-3, 0, np.pi))
 plt.axvline(30000*1e-3, color='k', linestyle=':', label=r'$f_1$ und $f_2$')
 plt.axvline(38150*1e-3, color='k', linestyle=':')
 plt.axvline(33800*1e-3, color='b', linestyle=':', label='Resonanzfrequenz')
