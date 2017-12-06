@@ -10,8 +10,9 @@ in \ref{fig:schema} zu sehen.
 
 \begin{figure}
   \centering
-  \includegraphics{data/schema.png}
-  \caption{Schematische Darstellung der Funktionsweise eines Lock-In Verstärkers}
+  \includegraphics[width=\textwidth]{data/schema.png}
+  \caption{Schematische Darstellung der Funktionsweise eines Lock-In Verstärkers
+  (REFERENZ)}
   \label{fig:schema}
 \end{figure}
 
@@ -20,16 +21,20 @@ Im Folgenden soll die Funktionsweise eines Lock-In Verstärkers kurz erläutert
 werden. Im Bandpass werden zunächst sehr hohe und sehr tiefe Frequenzen der
 Signalspannung $U_{\symup{sig}}$ herausfiltert. In einem Mischer wird die
 Signalspannung $U_{\symup{sig}}$ mit einer Referenzspannung $U_{\symup{ref}}$
-multipliziert (gefaltet?!). Dabei hat die Referenzspannung eine feste Kreisfrequenz
+multipliziert. Dabei hat die Referenzspannung eine feste Kreisfrequenz
 $\omega_0$ und eine durch einen Phasenschieber anpassbare Phase $\phi$. Die Phase
 ist dabei so zu wählen, dass die Referenzspannung $U_{\symup{ref}}$ mit der
 Signalspannung $U_{\symup{sig}}$ synchron verläuft. Das gemischte Signal wird
 daraufhin in einem Tiefpass über mehrer Perioden integriert. Dabei muss darauf
-geachtet werden, dass  die Zeitkonstante $\tao=RC$ des Tiefpasses viel kleiner
+geachtet werden, dass  die Zeitkonstante $\tau=RC$ des Tiefpasses viel kleiner
 ist, als die Frequenz der Spannung. Dabei werden alle Frequenzen, die nicht
 der synchronisierten Referenzfrequenz entsprechen herausgefiltert und es entsteht
 eine Ausgangsspannung $U_{\symup{out}}$, die Proportional zur Signalspannung
-$U_{\symup{sig}}$ ist. Außerdem gilt der Zusammenhang
+$U_{\symup{sig}}$ ist. Außerdem gilt für hinreichend große Integrationszeiten
+der Zusammenhang
 \begin{equation}
   U_{\symup{out}}\propto U_0 \cos(\phi) \,.
 \end{equation}
+An diesem Zusammenhang kann bereits erkannt werden, dass die Ausgangsspannung
+$U_{\symup{out}}$ für eine Phase von $\phi=0$ maximal und für eine Phase von
+$\phi=\frac{\pi}{2}$ null wird.
