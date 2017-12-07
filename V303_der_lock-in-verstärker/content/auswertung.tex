@@ -1,2 +1,85 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+Bei der Untersuchung der Ausgänge am zentralen Gerät stellt sich heraus, dass
+der Reference-Ausgang eine Spannung mit variabler Amplitude liefert. Die Amplitude
+der Spannung des Oscillator-Ausgangs hat die feste Amplitude $\SI{3,32}{\volt}$,
+wie an Abbildung \ref{fig:oscillator_output} ersichtlich ist, und eine fein einstellbare
+Frequenz. Die Frequenz beider Signale kann grob durch einen gemeinsamen Regler verändert
+werden.
+
+Die Messwerte zur Abhängigkeit der Ausgangsspannung von der Phasenverschiebung
+von Messsignal und Referenzsignal sind in Tabelle \ref{tab:phase} dargestellt.
+
+\begin{table}
+\centering
+\caption{Messdaten zur Abhängigkeit der Ausgangsspannung von der Phasenverschiebung}
+\label{tab:phase}
+\begin{tabular}{c c c}
+\toprule
+$\phi/$grad & $U_\mathrm{out,1}(\phi)/$\,V & $U_\mathrm{out,2}(\phi)/$\,V \\
+\midrule
+  0	& 5,1	 & 4,9  \\
+ 30	&	4,75 & 4,8  \\
+ 45	&	3,9	 & 4,0  \\
+ 60	&	2,5	 & 2,4  \\
+ 90	&	0,2	 & 0,3  \\
+120 &	-1,8 & -1,6 \\
+135 &	-3,2 & -3,2 \\
+150 &	-4,4 & -4,4 \\
+180 &	-5   & -5   \\
+270 &	-0,4 & -0,4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Dabei ist $U_\mathrm{out,1}$ die Ausgangsspannung bei Verstärkung des Messsignals
+ohne hinzugefügtes Rauschen, $U_\mathrm{out,2}$ ist die Ausgangsspannung mit dazu geschaltetem
+Rauschen. Die Werte des Messsignals $U_\mathrm{sig}$ sind in Kapitel \ref{sec:Durchführung}
+aufgeführt.
+
+Die Ausgangsspannung ist nach Gleichung \eqref{eqn:U_out_prop} proportional zum Kosinus der
+Phasenverschiebung der gemischten Signale. Daher wird für die Ausgleichsfunktion
+die Zuordnung
+\begin{equation}
+  U_{\mathrm{out,}i}(\phi) = U_{\mathrm{m,}i} \cos(\phi+\delta_i)+ U_{0,i}
+  \label{eqn:fit}
+\end{equation}
+angesetzt. Dies entspricht einer allgemeinen Kosinusfunktion mit der Amplitude
+$U_{\mathrm{m},i}$, dem Phasenparameter $\delta_i$ und der Nullspannung $U_{0,i}$ (Verschiebung
+auf der Ordinate). Der Index $i=1,2$ zählt die beiden verschiedenen Messungen durch.
+
+Eine Auftragung der Messwerte und des Graphen der Ausgleichsfunktion für das nicht
+verrauschte Signal ist in Abbildung \ref{fig:nichtrausch} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/ohnerauschen.pdf}
+  \caption{Messwerte und Graph der Ausgleichsfunktion zur Verstärkung des nicht verrauschten Signals}
+  \label{fig:nichtrausch}
+\end{figure}
+
+Die Parameter der Ausgleichsfunktion ergeben sich dann konkret zu
+\begin{align*}
+  U_\mathrm{m,1} &= \SI{5,05(011)}{\volt} \,\\
+  U_{0,1} &= \SI{0,01(009)}{\volt} \,\\
+  \delta_1 &= \SI{-0,072(0027)}{\radian} \,.
+\end{align*}
+
+Die Ausgleichsrechnung mit \eqref{eqn:fit} wird auch für das verrauschte Signal durchgeführt.
+Der Graph der Ausgleichsfunktion und die Messwerte sind in Abbildung \ref{fig:rausch}
+zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/mitrauschen.pdf}
+  \caption{Messwerte und Graph der Ausgleichsfunktion zur Verstärkung des verrauschten Signals}
+  \label{fig:rausch}
+\end{figure}
+
+Die Parameter der zweiten Ausgleichsrechnung ergeben sich dann zu
+\begin{align*}
+  U_\mathrm{m,2} &= \SI{5,01(014)}{\volt} \,\\
+  U_{0,2} &= \SI{0,002(0124)}{\volt} \,\\
+  \delta_2 &= \SI{-0,09(003)}{\radian} \,.
+\end{align*}
