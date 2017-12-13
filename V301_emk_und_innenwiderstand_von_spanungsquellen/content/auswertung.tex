@@ -1,2 +1,233 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+Die direkte Messung der Leerlaufspannung $U_{\symup{0}}$ über das Voltmeter
+mit einem Innenwiderstand $R_{\symup{i}}\geq10$\,M$\symup{\Omega}$ ergibt
+\begin{equation}
+  U_{\symup{0}}=1,335\,\text{V}\,.
+\end{equation}
+
+
+Nun sollen der Innemwiderstand $R_{\symup{i}}$ und die Leerlaufspannung $U_{\symup{0}}$
+für alle vier Messreihen durch eine lineare Ausgleichsrechnung berechnet werden.
+Dazu wird die Klemmenspannung $U_{\symup{K}}$ gegen die Stromstärke $I$ aufgetragen
+und anschließend gemäß (REFERENZ) eine Ausgleichsgerade ermittelt.
+Die Steigung $a$ der Ausgleichsgeraden entspricht dabei dem Innenwiderstand des
+Gerätes und die Leerlaufspannung dem y-Achsenabschnitt $b$. Für die Monozelle
+ergibt sich der in Abbildung \ref{fig:monozelle} dargestellte Zusammenhang mit den
+Parametern
+\begin{align}
+  R_{\symup{i,mono}}&=-a_{\symup{i,mono}}=(6,446\pm0,257)\,\symup{\Omega} \,, \\
+  U_{\symup{0,mono}}&=b_{\symup{0,mono}}=(1,337\pm0,018)\,\text{V}\,.
+\end{align}
+Die hierfür verwendeten Messdaten finden sich in Tabelle \ref{tab:monozelle}.
+
+\begin{table}
+  \centering
+  \caption{Messdaten zur an der Monozelle gemessennen Klemmenspannung $U_{\symup{K}}$
+  in Abhängigkeit von der durch den Widerstand geregelten Stromstärke $I$}
+  \label{tab:monozelle}
+  \begin{tabular}{c c}
+    \toprule
+    $U_{\symup{K}}/$V & $I/$mA\\
+    \midrule
+    0,25	&  170\\
+    0,73	&  80\\
+    0,87	&  79\\
+    0,975	& 59,5\\
+    1,065	& 46,0\\
+    1,095	& 38,0\\
+    1,131	& 33,0\\
+    1,170	& 26,0\\
+    1,170	& 25,0\\
+    1,185	& 23,0\\
+    1,193	& 21,0\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/monozelle.pdf}
+  \caption{Auftragung der an der Monozelle gemessenen Klemmenspannung $U_{\symup{K}}$
+  gegen die Stromstärke $I$}
+  \label{fig:monozelle}
+\end{figure}
+
+Deutlich erkennbar ist hier eine Sprungstelle. Da diese jedoch nicht mit dem Wechsel
+der Skalen der Messgeräte zusammenhängt, kann der Fit hier nicht besser angepasst
+werden.
+Der Systematische Fehler bei der manuellen Messung der Leerlaufspannung ergibt
+sich damit zu
+\begin{equation}
+  \frac{\Delta U_{\symup{0}}}{U_\symup{K}}=\frac{U_{\symup{0,mono}}-U_{\symup{0,manuell}}}
+  {U_\symup{K}} = 0,20\%
+\end{equation}
+
+Für die Messreihe der Monozelle mit einer angelgeten Gegenspannung ergibt sich
+bei einem analogem Vorgehen der in Abbildung \ref{fig:gegenspannung} Zusammenhang.
+Die zugrundeliegenden Messwerte können Tabelle \ref{tab:gegenspannung} entnommen werden.
+Dabei ist eine starke Sprungstelle beim Skalenwechsel zu verzeichnen, weswegen für
+die Messwerte getrennte Fits erstellt werden. Die Parameter ergeben sich zu
+\begin{align}
+  a_{\symup{i,gegen}}&=(6,138\pm0,213)\,\symup{\Omega}\,,\\
+  b_{\symup{0,gegen}}&=(1,600\pm0,036)\,\text{V}\,,\\
+  a_{\symup{2,i,gegen}}&=(5,852\pm0,239)\,\symup{\Omega}\,,\\
+  b_{\symup{2,0,gegen}}&=(1,281\pm0,014)\text{V}\,.
+\end{align}
+
+\begin{table}
+  \centering
+  \caption{Messdaten zur an der Monozelle gemessennen Klemmenspannung $U_{\symup{K}}$
+  in Abhängigkeit von der durch den Widerstand geregelten Stromstärke $I$ bei angelegter
+  Gegenspannung $U_{\symup{gegen}}$}
+  \label{tab:gegenspannung}
+  \begin{tabular}{c c}
+    \toprule
+    $U_{\symup{K}}/$V & $I/$mA\\
+    \midrule
+    3,19	&  260\\
+    2,30	&  110\\
+    1,95	&  60\\
+    1,82	&  93\\
+    1,70	&  70\\
+    1,65	&  60,5\\
+    1,58	&  51,5\\
+    1,55	&  50\\
+    1,50	&  39\\
+    1,48	&  33\\
+    1,46	&  29,5\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/gegenspannung.pdf}
+  \caption{Auftragung der an der Monozelle gemessenen Klemmenspannung $U_{\symup{K}}$
+  gegen die Stromstärke $I$ bei angelegter Gegenspannung $U_{\symup{gegen}}$ }
+  \label{fig:gegenspannung}
+\end{figure}
+
+Da die Steigungen der Fits annähernd gleich sind, wird als Innenwiderstand $R_{\symup{i}}$
+das Mittel dieser beiden Werte gebildet. Für die Leerlaufspannung wird ebenso verfahren.
+Damit ergeben sich die Werte zu
+\begin{align}
+  R_{\symup{i,gegen}}&= \,,\\
+  U_{\symup{0,gegen}}&= \,.
+\end{align}
+
+Für die Sinus- und die Rechteckspannung wird analog zur Monozelle verfahren. Dabei
+wird als Ausgangsspannung eine Spannung von $U_{\symup{0}}\approx1$\,V verwendet.
+Daraus ergeben sich die in Abbildung \ref{fig:rechteck} und \ref{fig:sinus} dargestellten
+Zusammenhänge. Die zugrundeliegenden Daten können Tabelle \ref{tab:re_sin} entnommen
+werden.
+
+\begin{table}
+  \centering
+  \caption{Messdaten zur Klemmenspannnung $U_{\symup{K}}$ in Abhängigkeit von der
+  Stromstärke $I$ bei einer Rechteck- und bei einer Sinusspnnung.}
+  \label{tab:re_sin}
+  \begin{tabular}{c c c c}
+    %\toprule
+    \hline
+    \multicolumn{2}{c}{Rechteckspannung} & \multicolumn{2}{c}{Sinusspannung} \\
+    \cmidrule(lr){1-2}
+    \cmidrule(lr){3-4}
+    $U_{\symup{K}}/$V & $I/$mA & $U_{\symup{K}}/$V & $I/$mA \\
+    \midrule
+    0,849 &	1,9   & 2,130 	& 0,903 \\
+    0,846	& 1,95  & 2,106	  & 0,903 \\
+    0,834	& 2,17  & 2,076 	& 0,906 \\
+    0,816	& 2,34  & 2,040 	& 0,921 \\
+    0,801	& 2,75  & 1,998	  & 0,942 \\
+    0,780	& 3,15  & 1,947	  & 0,990 \\
+    0,750	& 3,68  & 1,848	  & 1,089 \\
+    0,696	& 4,49  & 1,776	  & 1,173 \\
+    0,633	& 5,50  & 1,635	  & 1,359 \\
+    0,516	& 7,32  & 1,500	  & 1,536 \\
+    0,330	& 9,20  & 1,296	  & 1,830 \\
+    -     & -     & 0,837	  & 2,493 \\
+    -     & -     & 0,756	  & 2,604 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/rechteck.pdf}
+  \caption{Auftragung der Klemmenspannung $U_{\symup{K}}$ gegen die Stromstärke $I$
+  bei einer rechteckförmigen Spannung und linearer Fit}
+  \label{fig:rechteck}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/sinus.pdf}
+  \caption{Auftragung der Klemmenspannung $U_{\symup{K}}$ gegen die Stromstärke $I$
+  bei einer sinusförmigen Spannung und linearer Fit}
+  \label{fig:sinus}
+\end{figure}
+
+Die Ausgleichsrechnung ergibt dabei bei der Rechteckspannug für den Innenwiderstand
+und die Leerlaufspannung die Werte
+\begin{align}
+  R_{\symup{i,rechteck}}&=-a_{\symup{i,rechteck}}=(67,73\pm2,33)\,\symup{\Omega} \,, \\
+  U_{\symup{0,rechteck}}&=b_{\symup{0,rechteck}}=(0,987\pm0,011)\,\text{V}\,.
+\end{align}
+Für die Sinusspannung ergibt sich
+\begin{align}
+  R_{\symup{i,sinus}}&=-a_{\symup{i,sinus}}=(775,49\pm24,27)\,\symup{\Omega} \,, \\
+  U_{\symup{0,sinus}}&=b_{\symup{0,sinus}}=(2,741\pm0,036)\,\text{V}\,.
+\end{align}
+
+
+Nun soll noch die bei der Monozelle im Belastungswiderstand $R_{\symup{a}}$ umgesetzte
+Leistung $N$ in Abhängigkeit vom Belastungswiderstand untersucht werden.
+Der Belastunsgwiderstand ist dabei
+\begin{equation}
+  R_{\symup{a}}=\frac{U_{\symup{K}}}{I}\,.
+\end{equation}
+Die Leistung ergibt sich zu
+\begin{equation}
+  N=U_{\symup{K}}I\,.
+\end{equation}
+Die aus den Messdaten errechneten Daten sind in Tabelle (REFERENZ) zu finden und
+werden in Abbildung (REFERENZ) dargestellt. Zusätzlich ist in (REFERENZ) eine
+Theoriekurve eingezeichnet, die dem Zusammenhang
+\begin{equation}
+  N=I^2 R_{\symup{a}} = \frac{U_{\symup{0}}^2 R_{\symup{a}}}{(R_{\symup{a}}+R_{\symup{i}})^2}
+\end{equation}
+folgt.
+
+\begin{table}
+  \centering
+  \caption{Messdaten zur an der Monozelle gemessennen Klemmenspannung $U_{\symup{K}}$
+  in Abhängigkeit von der durch den Widerstand geregelten Stromstärke $I$}
+  \label{tab:monozelle}
+  \begin{tabular}{c c c c}
+    \toprule
+    $U_{\symup{K}}/$V & $I/$mA & $N$/mW & $R_{\symup{a}}/\symup{\Omega}$\\
+    \midrule
+    0,25	&  170 &   42,50  &  1.5\\
+    0,73	&  80  &   58,40  &  9.1\\
+    0,87	&  79  &   68,73  &  11.0\\
+    0,975	& 59,5 &   58.01  &  16.4\\
+    1,065	& 46,0 &   48,90  &  23.2\\
+    1,095	& 38,0 &   41,61  &  28.8\\
+    1,131	& 33,0 &   37,32  &  34.3\\
+    1,170	& 26,0 &   30,42  &  45.0\\
+    1,170	& 25,0 &   29,25  &  46.8\\
+    1,185	& 23,0 &   27,25  &  51.5\\
+    1,193	& 21,0 &   25,05  &  56.8\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/leistung.pdf}
+  \caption{Auftragung der Leistung $N$ am Belastungswiderstand gegen den Belastungswiderstand
+  $R_{\symup{a}}$}
+  \label{fig:leistung}
+\end{figure}
