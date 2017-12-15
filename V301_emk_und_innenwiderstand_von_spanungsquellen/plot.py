@@ -21,7 +21,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 print('a_mono =', params[0]*1e3, '+-', errors[0]*1e3)
 print('b_mono =', params[1], '+-', errors[1])
-print('Fehler = ', (1.337-U_0G)*100)
+print('Fehler =', params[0]*1e3/(10*1e6)*100, '+-', errors[0]*1e3/(10*1e6)*100)
 
 a = ufloat(params[0], errors[0])
 b = ufloat(params[1], errors[1])
@@ -50,7 +50,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 print('a_gegen =', params[0]*1e3, '+-', errors[0]*1e3)
 print('b_gegen =', params[1], '+-', errors[1])
 
-a = ufloat(params[0], errors[0])
+a = ufloat(params[0]*1e3, errors[0]*1e3)
 b = ufloat(params[1], errors[1])
 
 params2, covariance_matrix2 = optimize.curve_fit(f, I2*1e3, U2)
@@ -60,8 +60,11 @@ errors2 = np.sqrt(np.diag(covariance_matrix2))
 print('a2_gegen =', params2[0]*1e3, '+-', errors2[0]*1e3)
 print('b2_gegen =', params2[1], '+-', errors2[1])
 
-a2 = ufloat(params2[0], errors2[0])
+a2 = ufloat(params2[0]*1e3, errors2[0]*1e3)
 b2 = ufloat(params2[1], errors2[1])
+
+print('R_gegen =',(a+a2)/2)
+print('U_gegen =',(b+b2)/2)
 
 plt.plot(I*1e3, U, 'rx', label='Messwerte')
 plt.plot(I*1e3, f(I*1e3, *params), 'k-', label='fit vor dem Sprung')
@@ -130,7 +133,7 @@ plt.clf()
 U, I = np.genfromtxt('data/monozelle.txt', unpack=True) #U/V , I/mA
 I*=1e-3 #I/A
 
-N=U*I
+P=U*I
 R=U/I
 
 U0=1.337
@@ -138,14 +141,14 @@ Ri=6.446
 
 l=np.linspace(0, 60, 1000)
 
-print('U*I', N*1e3)
+print('U*I', P*1e3) #P in mW
 print('U/I', R)
 
-plt.plot(R, N, 'rx', label='Messwerte')
+plt.plot(R, P, 'rx', label='Messwerte')
 plt.plot(l, (U0**2*l)/((l+Ri)**2), 'b-', label='Theoriekurve')
-plt.xlabel(r'$R_a/$Ohm')
-plt.ylabel(r'$N/$W')
-plt.tight_layout()
+plt.xlabel(r'$R_a/Ohm')
+plt.ylabel(r'$P/$W')
+#plt.tight_layout()
 plt.legend()
 plt.grid()
 plt.savefig('build/leistung.pdf')

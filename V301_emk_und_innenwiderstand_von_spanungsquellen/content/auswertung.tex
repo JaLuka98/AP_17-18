@@ -2,13 +2,13 @@
 \label{sec:Auswertung}
 
 Die direkte Messung der Leerlaufspannung $U_{\symup{0}}$ über das Voltmeter
-mit einem Innenwiderstand $R_{\symup{i}}\geq10$\,M$\symup{\Omega}$ ergibt
+mit einem Eingangswiderstand $R_{\symup{v}}\geq10$\,M$\symup{\Omega}$ ergibt
 \begin{equation}
   U_{\symup{0}}=1,335\,\text{V}\,.
 \end{equation}
 
 
-Nun sollen der Innemwiderstand $R_{\symup{i}}$ und die Leerlaufspannung $U_{\symup{0}}$
+Nun sollen der Innenwiderstand $R_{\symup{i}}$ und die Leerlaufspannung $U_{\symup{0}}$
 für alle vier Messreihen durch eine lineare Ausgleichsrechnung berechnet werden.
 Dazu wird die Klemmenspannung $U_{\symup{K}}$ gegen die Stromstärke $I$ aufgetragen
 und anschließend gemäß (REFERENZ) eine Ausgleichsgerade ermittelt.
@@ -17,8 +17,8 @@ Gerätes und die Leerlaufspannung dem y-Achsenabschnitt $b$. Für die Monozelle
 ergibt sich der in Abbildung \ref{fig:monozelle} dargestellte Zusammenhang mit den
 Parametern
 \begin{align}
-  R_{\symup{i,mono}}&=-a_{\symup{i,mono}}=(6,446\pm0,257)\,\symup{\Omega} \,, \\
-  U_{\symup{0,mono}}&=b_{\symup{0,mono}}=(1,337\pm0,018)\,\text{V}\,.
+  R_{\symup{i,mono}}&=-a_{\symup{mono}}=(6,446\pm0,257)\,\symup{\Omega} \,, \\
+  U_{\symup{0,mono}}&=b_{\symup{mono}}=(1,337\pm0,018)\,\text{V}\,.
 \end{align}
 Die hierfür verwendeten Messdaten finden sich in Tabelle \ref{tab:monozelle}.
 
@@ -57,12 +57,26 @@ Die hierfür verwendeten Messdaten finden sich in Tabelle \ref{tab:monozelle}.
 Deutlich erkennbar ist hier eine Sprungstelle. Da diese jedoch nicht mit dem Wechsel
 der Skalen der Messgeräte zusammenhängt, kann der Fit hier nicht besser angepasst
 werden.
+Nun soll der gemessene Wert für die Leerlaufspannung $U_{\symup{0}}$ mit dem
+berechneten Wert verglichen werden. Da der Widerstand des Voltmeters entgegen
+der theoretischen, idealen Erwartung endlich ist, liegt bei der direkten Messung
+ein systematischer Fehler vor. Der Zusammenhang für die Leerlaufspannung folgt
+nach Gleichung \eqref{eqn:klemmevoni} zu
+\begin{equation}
+  U_{\symup{0}}=U_{\symup{K}}+U_{\symup{K}}\frac{R_{\symup{i}}}{R_{\symup{v}}}
+\end{equation}
+Dabei entspricht $U_{\symup{K}}$ dem gemessenen Wert für die Leerlaufspannung
+und $R_{\symup{v}}$ dem Eingangswiderstand des Voltmeters.
 Der Systematische Fehler bei der manuellen Messung der Leerlaufspannung ergibt
 sich damit zu
 \begin{equation}
-  \frac{\Delta U_{\symup{0}}}{U_\symup{K}}=\frac{U_{\symup{0,mono}}-U_{\symup{0,manuell}}}
-  {U_\symup{K}} = 0,20\%
+  \frac{\Delta U}{U_{\symup{K}}}=\frac{R_{\symup{i}}}{R_{\symup{v}}} \leq (6,45\pm0,26)\cdot10^{-5}\%
 \end{equation}
+
+Auch wenn der das Voltmeter hinter das Amperemeter gelegt wird, entstehen systematische
+Fehler. In diesem Fall enthält die gemessene Spannung $U_{\symup{K}}$ zusätzlich
+zur am Innenwiderstand der Spannungsquelle abfallenden Spannung noch die am Innenwiderstand
+des Amperemeters abfallende Spannung.
 
 Für die Messreihe der Monozelle mit einer angelgeten Gegenspannung ergibt sich
 bei einem analogem Vorgehen der in Abbildung \ref{fig:gegenspannung} Zusammenhang.
@@ -70,10 +84,10 @@ Die zugrundeliegenden Messwerte können Tabelle \ref{tab:gegenspannung} entnomme
 Dabei ist eine starke Sprungstelle beim Skalenwechsel zu verzeichnen, weswegen für
 die Messwerte getrennte Fits erstellt werden. Die Parameter ergeben sich zu
 \begin{align}
-  a_{\symup{i,gegen}}&=(6,138\pm0,213)\,\symup{\Omega}\,,\\
-  b_{\symup{0,gegen}}&=(1,600\pm0,036)\,\text{V}\,,\\
-  a_{\symup{2,i,gegen}}&=(5,852\pm0,239)\,\symup{\Omega}\,,\\
-  b_{\symup{2,0,gegen}}&=(1,281\pm0,014)\text{V}\,.
+  a_{\symup{gegen}}&=(6,138\pm0,213)\,\symup{\Omega}\,,\\
+  b_{\symup{gegen}}&=(1,600\pm0,036)\,\text{V}\,,\\
+  a_{\symup{2,gegen}}&=(5,852\pm0,239)\,\symup{\Omega}\,,\\
+  b_{\symup{2,gegen}}&=(1,281\pm0,014)\text{V}\,.
 \end{align}
 
 \begin{table}
@@ -113,8 +127,8 @@ Da die Steigungen der Fits annähernd gleich sind, wird als Innenwiderstand $R_{
 das Mittel dieser beiden Werte gebildet. Für die Leerlaufspannung wird ebenso verfahren.
 Damit ergeben sich die Werte zu
 \begin{align}
-  R_{\symup{i,gegen}}&= \,,\\
-  U_{\symup{0,gegen}}&= \,.
+  R_{\symup{i,gegen}}&=(6,00\pm0,16)\,\text{mA} \,,\\
+  U_{\symup{0,gegen}}&=(1,44\pm0,02)\,\text{V} \,.
 \end{align}
 
 Für die Sinus- und die Rechteckspannung wird analog zur Monozelle verfahren. Dabei
@@ -172,54 +186,55 @@ werden.
 Die Ausgleichsrechnung ergibt dabei bei der Rechteckspannug für den Innenwiderstand
 und die Leerlaufspannung die Werte
 \begin{align}
-  R_{\symup{i,rechteck}}&=-a_{\symup{i,rechteck}}=(67,73\pm2,33)\,\symup{\Omega} \,, \\
-  U_{\symup{0,rechteck}}&=b_{\symup{0,rechteck}}=(0,987\pm0,011)\,\text{V}\,.
+  R_{\symup{i,rechteck}}&=-a_{\symup{rechteck}}=(67,73\pm2,33)\,\symup{\Omega} \,, \\
+  U_{\symup{0,rechteck}}&=b_{\symup{rechteck}}=(0,987\pm0,011)\,\text{V}\,.
 \end{align}
 Für die Sinusspannung ergibt sich
 \begin{align}
-  R_{\symup{i,sinus}}&=-a_{\symup{i,sinus}}=(775,49\pm24,27)\,\symup{\Omega} \,, \\
-  U_{\symup{0,sinus}}&=b_{\symup{0,sinus}}=(2,741\pm0,036)\,\text{V}\,.
+  R_{\symup{i,sinus}}&=-a_{\symup{sinus}}=(775,49\pm24,27)\,\symup{\Omega} \,, \\
+  U_{\symup{0,sinus}}&=b_{\symup{sinus}}=(2,741\pm0,036)\,\text{V}\,.
 \end{align}
 
 
 Nun soll noch die bei der Monozelle im Belastungswiderstand $R_{\symup{a}}$ umgesetzte
-Leistung $N$ in Abhängigkeit vom Belastungswiderstand untersucht werden.
+Leistung $P$ in Abhängigkeit vom Belastungswiderstand untersucht werden.
 Der Belastunsgwiderstand ist dabei
 \begin{equation}
   R_{\symup{a}}=\frac{U_{\symup{K}}}{I}\,.
 \end{equation}
 Die Leistung ergibt sich zu
 \begin{equation}
-  N=U_{\symup{K}}I\,.
+  P=U_{\symup{K}}I\,.
 \end{equation}
-Die aus den Messdaten errechneten Daten sind in Tabelle (REFERENZ) zu finden und
-werden in Abbildung (REFERENZ) dargestellt. Zusätzlich ist in (REFERENZ) eine
-Theoriekurve eingezeichnet, die dem Zusammenhang
+Die aus den Messdaten errechneten Daten sind in Tabelle \ref{tab:leistung} zu finden und
+werden in Abbildung \ref{fig:leistung} dargestellt. Zusätzlich ist in \ref{fig:leistung} eine
+Theoriekurve eingezeichnet, die gemäß Gleichgun \eqref{eqn:lestung} dem Zusammenhang
 \begin{equation}
-  N=I^2 R_{\symup{a}} = \frac{U_{\symup{0}}^2 R_{\symup{a}}}{(R_{\symup{a}}+R_{\symup{i}})^2}
+  P=I^2 R_{\symup{a}} = \frac{U_{\symup{0}}^2 R_{\symup{a}}}{(R_{\symup{a}}+R_{\symup{i}})^2}
 \end{equation}
 folgt.
 
 \begin{table}
   \centering
   \caption{Messdaten zur an der Monozelle gemessennen Klemmenspannung $U_{\symup{K}}$
-  in Abhängigkeit von der durch den Widerstand geregelten Stromstärke $I$}
-  \label{tab:monozelle}
+  in Abhängigkeit von der Stromstärke $I$ und die daraus errechneten Werte für
+  die Leistung $P$ und den Belastungswiderstand $R_{\symup{a}}$}
+  \label{tab:leistung}
   \begin{tabular}{c c c c}
     \toprule
-    $U_{\symup{K}}/$V & $I/$mA & $N$/mW & $R_{\symup{a}}/\symup{\Omega}$\\
+    $U_{\symup{K}}/$V & $I/$mA & $P$/mW & $R_{\symup{a}}/\symup{\Omega}$\\
     \midrule
-    0,25	&  170 &   42,50  &  1.5\\
-    0,73	&  80  &   58,40  &  9.1\\
-    0,87	&  79  &   68,73  &  11.0\\
-    0,975	& 59,5 &   58.01  &  16.4\\
-    1,065	& 46,0 &   48,90  &  23.2\\
-    1,095	& 38,0 &   41,61  &  28.8\\
-    1,131	& 33,0 &   37,32  &  34.3\\
-    1,170	& 26,0 &   30,42  &  45.0\\
-    1,170	& 25,0 &   29,25  &  46.8\\
-    1,185	& 23,0 &   27,25  &  51.5\\
-    1,193	& 21,0 &   25,05  &  56.8\\
+    0,25	&  170 &   42,50  &  1,5\\
+    0,73	&  80  &   58,40  &  9,1\\
+    0,87	&  79  &   68,73  &  11,0\\
+    0,975	& 59,5 &   58.01  &  16,4\\
+    1,065	& 46,0 &   48,90  &  23,2\\
+    1,095	& 38,0 &   41,61  &  28,8\\
+    1,131	& 33,0 &   37,32  &  34,3\\
+    1,170	& 26,0 &   30,42  &  45,0\\
+    1,170	& 25,0 &   29,25  &  46,8\\
+    1,185	& 23,0 &   27,25  &  51,5\\
+    1,193	& 21,0 &   25,05  &  56,8\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -227,7 +242,16 @@ folgt.
 \begin{figure}
   \centering
   \includegraphics{build/leistung.pdf}
-  \caption{Auftragung der Leistung $N$ am Belastungswiderstand gegen den Belastungswiderstand
+  \caption{Auftragung der Leistung $P$ am Belastungswiderstand gegen den Belastungswiderstand
   $R_{\symup{a}}$}
   \label{fig:leistung}
 \end{figure}
+
+Es ist erkennbar, dass die Messdaten dem Verlauf der Theoriekurve sehr gut folgen.
+Nur ein einziger Wert weicht sehr stark von der Theoriekurve ab. Dies ist genau der
+Wert, bei dem bereits beim linearen Fit zur Monozelle eine Sprungstelle zu verzeichnen
+war, obwohl dort kein Skalenwechsel stattfand. Auffällig ist zudem, dass die anderen
+Messwerte nahe des Maximums etwas über der Theoriekurve liegen.
+Da die Werte im Allgemeinen jedoch gut dem Verlauf der Theoriekurve folgen, lässt
+sich darauf schließen, dass keine besonders großen systematischen Fehler bei der
+Messung vorliegen.
