@@ -146,7 +146,7 @@ print('U/I', R)
 
 plt.plot(R, P, 'rx', label='Messwerte')
 plt.plot(l, (U0**2*l)/((l+Ri)**2), 'b-', label='Theoriekurve')
-plt.xlabel(r'$R_a/Ohm')
+plt.xlabel(r'$R_a/\Omega$')
 plt.ylabel(r'$P/$W')
 #plt.tight_layout()
 plt.legend()
