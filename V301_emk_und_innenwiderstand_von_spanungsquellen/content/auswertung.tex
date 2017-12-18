@@ -5,7 +5,7 @@ Die direkte Messung der Leerlaufspannung $U_{\symup{0}}$ über das Voltmeter
 mit einem Eingangswiderstand $R_{\symup{v}}\geq10$\,M$\symup{\Omega}$ ergibt
 \begin{equation}
   %U_{\symup{0}}=1,335\,\text{V}\,.
-  U_{\symup{0}} = \SI{1.335}{\volt}\,.
+  U_{\symup{0,exp}} = \SI{1.335}{\volt}\,.
 \end{equation}
 
 
@@ -13,7 +13,7 @@ Nun sollen der Innenwiderstand $R_{\symup{i}}$ und die Leerlaufspannung $U_{\sym
 für alle vier Messreihen durch eine lineare Ausgleichsrechnung berechnet werden.
 Dazu wird die Klemmenspannung $U_{\symup{K}}$ gegen die Stromstärke $I$ aufgetragen
 und anschließend eine lineare Ausgleichsrechnung durchgeführt.
-Nach \eqref{eqn:klemmevoni} entspricht der Betrag der Steigung $a$ der Ausgleichsgeraden dabei dem Innenwiderstand des
+Nach Formel \eqref{eqn:klemmevoni} entspricht der Betrag der Steigung $a$ der Ausgleichsgeraden dabei dem Innenwiderstand des
 Gerätes und die Leerlaufspannung dem y-Achsenabschnitt $b$. Für die Monozelle
 ergibt sich der in Abbildung \ref{fig:monozelle} dargestellte Zusammenhang mit den
 Parametern
@@ -58,20 +58,21 @@ Die hierfür verwendeten Messdaten finden sich in Tabelle \ref{tab:monozelle}.
 Deutlich erkennbar ist hier eine Sprungstelle. Da diese jedoch nicht mit dem Wechsel
 der Skalen der Messgeräte zusammenhängt, kann die Ausgleichsrechnung hier nicht besser durchgeführt
 werden.
+
 Nun soll der gemessene Wert für die Leerlaufspannung $U_{\symup{0}}$ mit dem
 berechneten Wert verglichen werden. Da der Widerstand des Voltmeters entgegen
 der theoretischen, idealen Erwartung endlich ist, liegt bei der direkten Messung
 ein systematischer Fehler vor. Der Zusammenhang für die Leerlaufspannung folgt
 nach Gleichung \eqref{eqn:klemmevoni} zu
 \begin{equation}
-  U_{\symup{0}}=U_{\symup{K}}+U_{\symup{K}}\frac{R_{\symup{i}}}{R_{\symup{v}}}
+  U_{\symup{0}}=U_{\symup{K}}+U_{\symup{K}}\frac{R_{\symup{i}}}{R_{\symup{v}}}\,.
 \end{equation}
 Dabei entspricht $U_{\symup{K}}$ dem gemessenen Wert für die Leerlaufspannung
 und $R_{\symup{v}}$ dem Eingangswiderstand des Voltmeters.
 Der Systematische Fehler bei der manuellen Messung der Leerlaufspannung ergibt
 sich damit zu
 \begin{equation}
-  \frac{\Delta U}{U_{\symup{K}}}=\frac{R_{\symup{i}}}{R_{\symup{v}}} \leq \SI{6.45(026)}\cdot10^{-5}\%
+  \frac{\Delta U}{U_{\symup{K}}}=\frac{R_{\symup{i}}}{R_{\symup{v}}} \leq \SI{6.45(026)}\cdot10^{-5}\%\,.
 \end{equation}
 
 Auch wenn das Voltmeter hinter das Amperemeter gelegt wird, entstehen systematische
@@ -80,7 +81,7 @@ zur am Innenwiderstand der Spannungsquelle abfallenden Spannung noch die am Inne
 des Amperemeters abfallende Spannung.
 
 Für die Messreihe der Monozelle mit einer angelgeten Gegenspannung ergibt sich
-bei einem analogem Vorgehen der in Abbildung \ref{fig:gegenspannung} Zusammenhang.
+bei einem analogem Vorgehen der in Abbildung \ref{fig:gegenspannung} gezeigte Zusammenhang.
 Die zugrundeliegenden Messwerte können Tabelle \ref{tab:gegenspannung} entnommen werden.
 Dabei ist eine starke Sprungstelle beim Skalenwechsel zu verzeichnen, weswegen für
 die Messwerte getrennte Ausgleichsrechnungen durchgeführt werden. Die Parameter ergeben sich zu
@@ -89,8 +90,8 @@ die Messwerte getrennte Ausgleichsrechnungen durchgeführt werden. Die Parameter
 %  b_{\symup{gegen}}&=(1,600\pm0,036)\,\text{V}\,,\\
 %  a_{\symup{2,gegen}}&=(5,852\pm0,239)\,\symup{\Omega}\,,\\
 %  b_{\symup{2,gegen}}&=(1,281\pm0,014)\text{V}\,.
-  a_{\symup{gegen}} &= \SI{6.14(021)}{\ohm}\,,\\
-  b_{\symup{gegen}} &= \SI{1.60(004)}{\volt}\,,\\
+  a_{\symup{1,gegen}} &= \SI{6.14(021)}{\ohm}\,,\\
+  b_{\symup{1,gegen}} &= \SI{1.60(004)}{\volt}\,,\\
   a_{\symup{2,gegen}} &= \SI{5.85(024)}{\ohm}\,,\\
   b_{\symup{2,gegen}} &= \SI{1.281(0014)}{\volt}\,.
 \end{align}
@@ -134,7 +135,7 @@ Damit ergeben sich die Werte zu
 \begin{align}
   %R_{\symup{i,gegen}}&=(6,00\pm0,16)\,\text{mA} \,,\\
   %U_{\symup{0,gegen}}&=(1,44\pm0,02)\,\text{V} \,.
-  R_{\symup{i,gegen}} &= \SI{6.00(016)}{\milli\ampere} \,,\\
+  R_{\symup{i,gegen}} &= \SI{6.00(016)}{\ohm} \,,\\
   U_{\symup{0,gegen}} &= \SI{1.440(0019)}{\volt} \,.
 \end{align}
 
@@ -260,7 +261,7 @@ folgt.
 
 Es ist erkennbar, dass die Messdaten dem Verlauf der Theoriekurve folgen.
 Nur ein einziger Wert weicht sehr stark von der Theoriekurve ab. Dies ist genau der
-Wert, bei dem bereits bei der linearen Ausgleichsrechnung zur Monozelle eine Sprungstelle zu verzeichnen
+Wert, bei dem bereits bei den Messwerten zur Monozelle eine Sprungstelle zu verzeichnen
 war, obwohl dort kein Skalenwechsel stattfand. Auffällig ist zudem, dass die anderen
 Messwerte nahe des Maximums etwas über der Theoriekurve liegen.
 Da die Werte jedoch insgesamt gut dem Verlauf der Theoriekurve folgen, lässt
