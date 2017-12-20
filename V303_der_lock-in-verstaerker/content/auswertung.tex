@@ -10,6 +10,26 @@ werden. Die ersten beiden Abbildungen im Anhang sind Bilder dieser Signale.
 
 Die Messwerte zur Abhängigkeit der Ausgangsspannung von der Phasenverschiebung
 von Messsignal und Referenzsignal sind in Tabelle \ref{tab:phase} dargestellt.
+Für die ersten fünf Werte finden sich die Graphen der Ausgangspannung im Anhang in
+den Abbildungen \ref{fig:phase_0} bis \ref{fig:phase_90} für die Messung ohne hinzugefügtes
+Rauschen und in den Abbildungen \ref{fig:rauschen_0} bis \ref{fig:rauschen_90} für
+die Messung mit hinzugefügtem Rauschen.
+An den Abbildungen ist zu erkennen, dass die Graphen der Ausgangsspannung
+der verrauschten Signale fast identisch zu den Graphen der Ausgangsspannung
+der nicht verrauschten Signale sind. Die Graphen der verrauschten Signale
+weisen lediglich an einigen Stellen kleine "Dellen" auf.
+Zudem kann an den Graphen bereits erkannt werden, wie sich die Ausgangsspannungen
+bei Integration durch den Tiefpass verhalten. Dabei ist darauf zu achten, dass
+die x-Achse des Oszilloskops nicht den Wert $y=0$ besitzt, da mittels automatischer
+Einstellung des Oszilloskops die Skala immer so gewählt wurde, dass der Graph möglichst
+groß angezeigt werden konnte. An den Abbildungen ist jedoch deutlich zu erkennen,
+dass immer eine halbe Periode des Kosinus periodisch fortgesetzt wird und dass
+der Teil dieser halben Periode mit steigender Phasenverschiebung verschoben wird.
+Bei einer Phasenverschiebung von $\phi=0$ liegt eine gleichgerichtete Sinusspannung vor.
+Diese entwickelt sich immer mehr zu einer stückweise punktsymmetrischen Spannung bei
+$\phi=\frac{\pi}{2}$, die dem Verlauf eines Sinus auf dem Intervall von $-\frac{\pi}{2}$
+bis $\frac{\pi}{2}$ folgt. Daran kann bereits erkannt werden, dass Betrag der integrierten
+Spannung für $\phi=0$ maximal und für $\phi=\frac{\pi}{2}$ minimal wird.
 
 \begin{table}
 \centering
@@ -85,3 +105,12 @@ Die Parameter der zweiten Ausgleichsrechnung ergeben sich dann zu
   U_{0,2} &= \SI{0,002(0124)}{\volt} \,\\
   \delta_2 &= \SI{-0,09(003)}{\radian} \,.
 \end{align*}
+
+Da während der gesamten Messung Gains eingeschaltet waren, müssen nun noch die
+Signalspannungen zurückgerechnet werden. Die drei Gains betrugen 5, 10 und 10, also
+muss die Signalspannung noch durch den Faktor 500 geteilt werden. Somit ergibt
+sich für die Parameter
+\begin{align}
+  U_\mathrm{m,1,rück} &= \SI{10,10(022)}{\milli\volt} \,\\
+  U_\mathrm{m,2,rück} &= \SI{10,02(028)}{\milli\volt} \,
+\end{align}

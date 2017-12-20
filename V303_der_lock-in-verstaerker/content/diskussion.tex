@@ -1,13 +1,11 @@
 \section{Diskussion}
 \label{sec:Diskussion}
 Der Lock-In-Verstärker ist laut Theorie in der Lage, schwache und eventuell
-verrauschte Signale zu verstärken und durch Filterung deutlich aus dem Rauschen
-sichtbar zu machen. Diese Eigenschaft wird bei diesem Versuch eindeutig bestätigt.
-Die Signale haben mit $\SI{10}{\milli\volt}$ eine sehr geringe Amplitude im Vergleich
-zur Referenzspannung mit $\SI{3,32}{\volt}$. Das Signal wird sogar auf Spannungen im Bereich
-von $\SI{5}{\volt}$ verstärkt. Die Werte der Ausgangsspannung sind im Wesentlichen
-unabhängig davon, ob das Messsignal verrauscht ist oder nicht. Daraus lässt sich
-schließen, dass der Lock-In-Verstärker hier ein Rauschen sehr gut wegfiltern kann.
+verrauschte Signale zu filtern. Diese Eigenschaft wird bei diesem Versuch eindeutig bestätigt.
+Die Werte der Ausgangsspannung sind im Wesentlichen unabhängig davon, ob das Messsignal
+verrauscht ist oder nicht. Die Abweichung hier liegt im Rahmen der Messunsichertheit.
+Auffällig ist jedoch, dass die Unsicherheiten der Ergebnisse bei dem verrauschten
+Signal geringfügig größer sind.
 
 Die Abhängigkeit der Ausgangsspannung von dem Kosinus der Phasenverschiebung zwischen
 Mess- und Referenzsignal wird in den Darstellungen der Messwerte und der Graphen
@@ -15,7 +13,8 @@ der Ausgleichsfunktionen gut deutlich. Die Parameter der Ausgleichsrechnung sind
 nahezu deckungsgleich. Die nichtverschwindenden Phasenparameter $\delta_i$ sind
 dadurch zu erklären, dass der Gang der Signale durch elektronische Bauteile diese
 auch geringfügig verändert, schließlich wurde die Phasenverschiebung nur am
-Anfang des Verstärkers auf null geregelt. Darüberhinaus können auch statistische
-Fehler zu diesen kleinen Unsicherheiten führen.
+Anfang des Verstärkers am phase-shifter auf Null gestellt, was widerum auch nicht
+garantiert, dass die Phasenverschiebung zu Beginn Null ist. Da die Parameter sehr
+klein sind, können sie jedoch auch im Rahmen der statistischen Unsicherheit liegen.
 Dass die Unsicherheiten der $U_{0,i}$ größer als die nominellen Werte sind ist hier unproblematisch,
 da der Theoriewert für diesen Parameter ohnehin null ist.
