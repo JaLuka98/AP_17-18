@@ -1,7 +1,46 @@
 \section{Theorie}
 \label{sec:Theorie}
+Wenn ein System nicht im thermodynamischen Gleichgewicht ist, findet Wärmeübertragung statt.
 Die Übertragung von Wärme geschieht durch Konvektion, Wärmestrahlung und Wärmeleitung.
 Die Wärmeübertragung durch Konvention geschieht durch Bewegung der Atome oder
 Moleküle innerhalb des Stoffes selbst. Da in Metallen die einzelnen Atome und
 Moleküle nahezu unbeweglich sind, findet bei guter Wärmeisolation näherungsweise
-nur der Mechanismus der Wärmeleitung statt.
+nur der Mechanismus der Wärmeleitung statt, welcher hier betrachtet werden soll.
+
+Die sogenannte Wärmeleitungsgleichung
+\begin{equation}
+  \dfrac{\partial T}{\partial t} = \sigma_T \, \dfrac{\partial^2 T}{\partial x^2}
+  \label{eqn:heat}
+\end{equation}
+beschreibt die Wärmeleitung in einer Raumdimension. Wie schnell die Wärmeleitung
+geschieht, hängt von der Temperaturleitfähigkeit $\sigma_T = \frac{\kappa}{\rho c}$
+ab. Dabei ist $\kappa$ die materialabhängige Wärmeleitfähigkeit, $\rho$ die Dichte
+und $c$ die spezifische Wärmekapazität des Materials. Die konkrete Lösung dieser
+partiellen Differentialgleichung ist von gegebenen Anfangs- und Randbedingungen sowie
+der Geometrie des Problems abhängig.
+
+Für die Wärme $Q$, die durch einen Stab der Querschnittsfläche $A$ fließt, gilt
+der Zusammenhang
+\begin{equation}
+  \dfrac{\symup{d} Q}{\symup{d} t} = - \kappa A \dfrac{\partial T}{\partial x}\,.
+  \label{eqn:waerme}
+\end{equation}
+
+Das abwechselnde Erwärmen und Abkühlen eines sehr langen Stabes mit der zeitlichen
+Periode $T*$ führt zu
+\begin{equation}
+  T(x,t) = T_\text{max} \exp(-kx) \cos(\omega t - kx)
+  \label{eqn:tempwelle}
+\end{equation}
+als Lösung von \eqref{eqn:heat}. Diese beschreibt eine in Raum und Zeit periodische
+Welle. Für die Wellenzahl gilt $k = \sqrt{\frac{\omega \rho c}{2 \kappa}}$.
+Um die Wärmeleitfähigkeit $\kappa$ zu bestimmen, sind die Amplituden der Welle
+$A_\text{nah}$ und $A_\text{fern}$ an zwei verschiedenen Stellen $x_\text{nah}$
+und $x_\text{fern}$ bzw. ihr Verhältnis nötig. Der Abstand dieser Stellen ist
+$\Delta x = x_\text{fern} - x_\text{nah}$. Es ergibt sich
+\begin{equation}
+  \kappa = \frac{\rho c {\Delta x}^2}{2 \Delta t \ln \left(A_\text{nah}/A_\text{fern}\right)}
+  \label{eqn:kappa}
+\end{equation}
+für die Wärmeleitfähigkeit. Hier ist $\Delta t$ die Phasendifferenz der Welle
+an den zwei Stellen $x_\text{nah}$ und $x_\text{fern}$.
