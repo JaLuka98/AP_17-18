@@ -17,7 +17,7 @@ die Messung mit hinzugefügtem Rauschen.
 An den Abbildungen ist zu erkennen, dass die Graphen der Ausgangsspannung
 der verrauschten Signale fast identisch zu den Graphen der Ausgangsspannung
 der nicht verrauschten Signale sind. Die Graphen der verrauschten Signale
-weisen lediglich an einigen Stellen kleine "Dellen" auf.
+weisen lediglich an einigen Stellen kleine Abweichungen auf.
 Zudem kann an den Graphen bereits erkannt werden, wie sich die Ausgangsspannungen
 bei Integration durch den Tiefpass verhalten. Dabei ist darauf zu achten, dass
 die x-Achse des Oszilloskops nicht den Wert $y=0$ besitzt, da mittels automatischer
@@ -53,12 +53,11 @@ $\phi/$grad & $U_\mathrm{out,1}(\phi)/$\,V & $U_\mathrm{out,2}(\phi)/$\,V \\
 \end{tabular}
 \end{table}
 
-Dabei ist $U_\mathrm{out,1}$ die Ausgangsspannung bei Verstärkung des Messsignals
+$U_\mathrm{out,1}$ wird ist in der folgenden Rechnung
+die Ausgangsspannung bei Verstärkung des Messsignals
 ohne hinzugefügtes Rauschen, $U_\mathrm{out,2}$ ist die Ausgangsspannung mit dazu geschaltetem
 Rauschen. Die Werte des Messsignals $U_\mathrm{sig}$ sind in Kapitel \ref{sec:Durchführung}
 aufgeführt.
-Für die ersten fünf Phasenverschiebungen werden auch Bilder der Ausgangsspannung
-angefertigt. Diese sind im Anhang zu finden.
 
 Die Ausgangsspannung ist nach Gleichung \eqref{eqn:U_out_prop} proportional zum Kosinus der
 Phasenverschiebung der gemischten Signale. Daher wird für die Ausgleichsfunktion
@@ -112,5 +111,7 @@ muss die Signalspannung noch durch den Faktor 500 geteilt werden. Somit ergibt
 sich für die Parameter
 \begin{align}
   U_\mathrm{m,1,rück} &= \SI{10,10(022)}{\milli\volt} \,\\
-  U_\mathrm{m,2,rück} &= \SI{10,02(028)}{\milli\volt} \,
+  U_\mathrm{m,2,rück} &= \SI{10,02(028)}{\milli\volt} \, \,.
 \end{align}
+Dies ist entspricht auch in guter Näherung dem Wert für die  Amplitude der
+Eingangsspannung.
