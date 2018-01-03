@@ -18,7 +18,7 @@ konstant und zeigt nach etwa $40$\,s ein leichtes Wachstum der Steigung.
   \centering
   \includegraphics[width=0.7\textwidth]{data/t1undt4.JPEG}
   \caption{Temperaturverlauf des dicken Messingstabes (in der Abbildung dick dargestellt)
-  und des dünnen Messingstabes (in der Abbildung dünn dargestellt) an den vom Peltier
+  und des dünnen Messingstabes (in der Abbildung dünn dargestellt) an den vom Peltier-
   Element weiter entfernten Themoelementen in Abhängigkeit von der Zeit}
   \label{fig:T1_T4}
 \end{figure}
@@ -27,7 +27,7 @@ konstant und zeigt nach etwa $40$\,s ein leichtes Wachstum der Steigung.
   \centering
   \includegraphics[width=0.7\textwidth]{data/t5undt8.JPEG}
   \caption{Temperaturverlauf des Aluminiumstabes (in der Abbildung dünn dargestellt)
-  und des Edelstahlstabes (in der Abbildung dick dargestellt) an den vom Peltier
+  und des Edelstahlstabes (in der Abbildung dick dargestellt) an den vom Peltier-
   Element weiter entfernten Themoelementen in Abhängigkeit von der Zeit}
   \label{fig:T5_T8}
 \end{figure}
@@ -79,10 +79,10 @@ Nun soll für den breiten Messingstab und für den Edelstahlstab der Wärmestrom
 zu fünf verschiedenen Zeiten bestimmt werden. Dafür wird die jeweilige Temperaturdifferenz
 zum jeweiligen Zeitpunkt aus den Abbildungen \ref{fig:Messing_diff} und
 \ref{fig:Stahl_diff} abgelesen. Zur Berechnung wird Gleichung \eqref{eqn:waerme}
-verwendet. Die Werte für die Querschnittsfläche $A$ der Stäbe können der Versuchsanleitung
+verwendet und die Differenzialquotienten als Differenzenquotienten diskretisiert. Die Werte für die Querschnittsfläche $A$ der Stäbe können der Versuchsanleitung
 \cite{Versuchsanleitung} entnommen werden. Die Werte für die Wärmeleitfähigkeit $\kappa$ wurden in der
 Literatur (ZITAT) nachgeschlagen. Der Abstand zwischen den beiden Thermoelementen
-wird durch Messung zu $d=3,0$\,cm bestimmt. Die für die Rechnung verwendeten Werte sind:
+wird durch Messung zu $d=\SI{3.0}{\centi\meter}$ bestimmt. Die für die Rechnung verwendeten Werte sind:
 \begin{align}
   \kappa_{\symup{Messing}} &= \SI{112}{\joule\per\meter\per\kelvin}\,, \nonumber\\
   A_{\symup{Messing}} &= \SI{48e-6}{\meter}\,, \nonumber\\
@@ -118,9 +118,9 @@ für den Wärmestrom zu finden.
 Zur Auswertung der dynamischen Methode soll die Wärmeleitfähigkeit $\kappa$ von
 Messing, Aluminium und Edelstahl nach Gleichung \eqref{eqn:kappa} bestimmt werden.
 Dafür werden aus den angefertigten Graphen Werte für die jeweiligen Amplituden
-$A_{\symup{nah}}$ und $A_{\symup{fern}}$, sowie für die Phasendifferenz $\Delta t$ abgelesen. Der Abstand der
-Thermoelemtente wurde auch bei dieser Messreihe für alle Stäbe zu $3,0$\,.cm bestimmt.
-Die zusätzlich benötigten Werte für die Dichte $\rho$ und die spezifische Wärme $c$
+$A_{\symup{nah}}$ und $A_{\symup{fern}}$, sowie für die Phasendifferenz $\Delta t$ abgelesen. Erneut wird für den Abstand der
+Thermoelemente bei dieser Messreihe für alle Stäbe zu $\SI{3.0}{\centi\meter}$ bestimmt.
+Die zusätzlich benötigten Werte für die Dichte $\rho$ und die spezifische Wärmekapazität $c$
 der Legierungen und Metalle können der Versuchsanleitung entnommen werden. Die Graphen
 finden sich in den Abbildungen \ref{fig:messing_welle} bis \ref{fig:edelstahl_welle}.
 
@@ -175,8 +175,8 @@ Dabei muss die Gauß'sche Fehlerfortpflanzung mittels Gleichung \eqref{eqn:gauss
 berücksichtigt werden.
 Der Literaturwert für die Wärmeleitfähigkeit von Messing liegt bei
 $\kappa_{\symup{Messing,lit}}=\SI{112}{\watt\per\meter\per\kelvin}$ \cite{Wärmeleitfähigkeit1}.
-Die Abweichung der Messung entspricht also $28,57\%$. Je nach Legierung kann
-jedoch auch der Wert für dieWärmeleitfähigkeit von Messing variieren, sodass auch Werte von
+Die Abweichung der Messung entspricht also 28,57\%. Je nach Legierung kann
+jedoch auch der Wert für die Wärmeleitfähigkeit von Messing variieren, sodass auch Werte von
 $\kappa_{\symup{Messing}} = \SI{81}{\watt\per\meter\per\kelvin}$ \cite{Wärmeleitfähigkeit2}
 möglich sind.
 
@@ -232,7 +232,7 @@ und \eqref{eqn:gaussfehler} zu
 Hier ist auffällig, dass der Fehler sehr groß ist.
 Der Literaturwert für die Wärmeleitfähigkeit von Aluminium ist
 $\kappa_{\symup{Aluminium}} = \SI{220}{\watt\per\meter\per\kelvin}$ \cite{Wärmeleitfähigkeit1}. Die relative
-Abweichung beträgt $12,27\%$.
+Abweichung beträgt 12,27\%.
 
 
 Für Edelstahl lassen sich folgende Werte finden:
@@ -282,4 +282,4 @@ und \eqref{eqn:gaussfehler} zu
 \end{align}
 Der Literaturwert ist $\kappa_{\symup{Edelstahl}} = \SI{15}{\watt\per\meter\per\kelvin}$
 \cite{Wärmeleitfähigkeit3}.
-Die relative Abweichung beträgt hier $18,00\%$.
+Die relative Abweichung beträgt hier 18,00\%.
