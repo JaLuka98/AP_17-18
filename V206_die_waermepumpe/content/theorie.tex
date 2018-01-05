@@ -1,6 +1,6 @@
 \section{Theorie}
 \label{sec:Theorie}
-\subsection{Allgemeines}
+\subsection{Allgemeines zur Wärmepumpe}
 Zu Betrachten sind zwei Wärmereservoirs mit verschiedener Temperatur.
 Zwischen diesen findet Wärmeübertragung ohne äußere Einwirkung stets vom
 wärmeren zum kälteren Wärmereservoir statt. Dies ist eine mögliche Formulierung des
@@ -30,11 +30,35 @@ einen Kreislauf des Gases durch die Wärmepumpe. Das Gas ist bei der Temperatur 
 und dem Druck $p_\text{warm}$ flüssig und liegt bei der Temperatur $T_\text{kalt}$ und dem
 Druck $p_\text{kalt}$ im gasförmigen Aggregatzustand vor. Reservoir 2 ist hier das
 kältere Reservoir, welches Reservoir 2 wärmt. Das flüssige Gas durchströmt die Stelle D
-und verdampt im Reservoir 2. Dabei wird dem dort befindlichen Stoff die Verdampfungswärme
+und verdampft im Reservoir 2. Dabei wird dem dort befindlichen Stoff die Verdampfungswärme
 $L$ pro Gramm entzogen. Daraufhin wird das Medium im Kompressor adiabatisch komprimiert,
 sodass Temperatur und Druck steigen. In Reservoir 1 verflüssigt sich das Gas, indem es
 die gleiche Wärmemenge, die es in Reservoir 2 aufgenommen hat, wieder abgibt.
 Die restlichen Bestandteile der Apparatur und die Steuereinrichtungen D, S und R sind
 ansonsten nicht weiter für die prinzipielle Funktionsweise der Wärmepumpe relevant.
 
-\subsection{Güteziffer}
+\subsection{Die Güteziffer einer Wärmepumpe}
+Wird der erste Hauptsatz der Thermodynamik auf das System einer Wärmepumpe angewandt,
+so erhält man die Beziehung
+\begin{equation}
+  Q_\text{warm} = Q_\text{kalt} + A\,.
+  \label{eqn:waermebilanz}
+\end{equation}
+Dabei ist $Q_\text{warm}$ die dem wärmeren Reservoir zugeführte Wärme,
+$Q_\text{kalt}$ die dem kälteren Reservoir entnomenne Wärme und $A$ die aufgewandte
+mechanische Arbeit.
+Die Größe
+\begin{equation}
+  \nu = \frac{Q_\text{warm}}{A}
+  \label{eqn:defnu}
+\end{equation}
+wird als Güteziffer der Wärmepumpe bezeichnet.
+Erfolgt die Wärmeübertragung idealisiert vollständig reversibel, so gilt für die ideale
+Güteziffer auch
+\begin{equation}
+  \nu_\text{id} = \frac{T_\text{warm}}{T_\text{warm} - T_\text{kalt}}\,.
+  \label{eqn:nuid}
+\end{equation}
+Bei einer realen Wärmepumpe liegt ein irreversibler thermodynamischer Prozess vor,
+sodass die reale Güteziffer $\nu_\text{real}$ stets echt kleiner als die ideale
+Güteziffer ist.
