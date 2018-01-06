@@ -62,3 +62,70 @@ Güteziffer auch
 Bei einer realen Wärmepumpe liegt ein irreversibler thermodynamischer Prozess vor,
 sodass die reale Güteziffer $\nu_\text{real}$ stets echt kleiner als die ideale
 Güteziffer ist.
+Gleichung \eqref{eqn:nuid} zeigt, dass eine Wärmepumpe effizient arbeitet und damit
+die Güteziffer groß wird, wenn die Temperaturdifferenz der Reservoire
+klein wird. Dies stellt einen Vorteil gegenüber Verfahren da, bei denen mechanische Arbeit
+direkt in Wärme umgewandelt wird, denn dabei ist die erhaltene Wärmemenge stets kleiner
+oder gleich der aufgewandten mechanischen Arbeit.\\
+Um die reale Güteziffer zu ermitteln, wird die Wärmekapazität der Substanz
+in Reservoir 1 benötigt. Diese wird mit $m_1 c_\text{W}$ bezeichnet, da in der konkreten Durchführung
+Wasser verwendet wird. Außerdem ist die Kenntnis der Wärmekapazität $m_\text{k} c_\text{k}$
+der Apparatur, hier konkret bestehend aus einem Eimer und der Kupferschlange, erforderlich.
+Für die als Differenzenquotient ausgedrückte gewonnene Wärmemenge pro Zeitintervall
+folgt aus einer Messreihe der Temperatur $T_\text{warm}$ in Abhängigkeit der Zeit $t$
+\begin{equation}
+  \frac{\Delta Q_\text{warm}}{\Delta t} = (m_1 c_\text{W} + m_\text{k} c_\text{k}) \frac{\Delta T_\text{warm}}{\Delta t}\,.
+  \label{eqn:waermewarmprozeit}
+\end{equation}
+Es gilt dann für die experimentell bestimmte reale Güteziffer
+\begin{equation}
+  \nu_\text{real} = \frac{\Delta Q_\text{warm}}{\Delta t N}\,.
+  \label{eqn:nureal}
+\end{equation}
+Mit $N$ wird die über das Zeitintervall $\Delta t$ gemittelte Leistungsaufnahme des
+Kompressors bezeichnet.
+\subsection{Der Massendurchsatz des Transportgases}
+Der diskretisierte Massendurchsatz $\frac{\Delta m}{\Delta t}$ beschreibt den Fluss einer Massendifferenz $\Delta m$, die
+pro Zeitintervall $\Delta t$ einen bestimmten Querschnitt durchfließt.
+Dieser ist hier eindeutig durch den Zusammenhang
+\begin{equation}
+  \frac{\Delta Q_\text{kalt}}{\Delta t} = L \frac{\Delta m}{\Delta t}
+  \label{eqn:massendurchsatz}
+\end{equation}
+festgelegt. Die Berechnung erfordert die Kenntnis der Verdampfungswärme $L$ und
+der pro Zeiteinheit aus dem Reservoir 2 entnommenen Wärmemenge. Diese kann analog zu
+Gleichung \eqref{eqn:waermewarmprozeit} durch
+\begin{equation}
+  \frac{\Delta Q_\text{kalt}}{\Delta t} = (m_2 c_\text{W} + m_\text{k} c_\text{k}) \frac{\Delta T_\text{kalt}}{\Delta t}
+  \label{eqn:waermekaltprozeit}
+\end{equation}
+mit Kenntnis einer Messreihe $T_\text{kalt}$ in Abhängigkeit der Zeit $t$ und
+der Wärmekapazität $m_2 c_\text{W}$ der Substanz in Reservoir 2 berechnet werden.
+Dies ist dadurch begründet, dass die Wärmeentnahme durch Verdampfung in Reservoir 2 geschieht
+und dafür pro Masseneinheit gerade die Verdämpfungswärme $L$ benötigt wird.
+\subsection{Die mechanische Kompressorleistung}
+Der Kompressor verringert das Volumen des Gases von $V_\text{kalt}$ auf $V_\text{warm}$
+und erhöht dabei auch die Temperatur des Gases. Für die dabei verrichtete Arbeit gilt
+\begin{equation}
+  A_m = - \displaystyle\varint\displaylimits_{V_\text{kalt}}^{V_\text{warm}} p \, \symup{d}V\,.
+  \label{eqn:arbeitkompressor1}
+\end{equation}
+Für eine näherungsweise adiabtische Kompression gilt die Poissonsche Gleichung
+\begin{equation}
+  p_\text{kalt} V_\text{kalt}^{\kappa} = p_\text{warm} V_\text{warm}^{\kappa} = p V^{\kappa}\,.
+  \label{eqn:poisson}
+\end{equation}
+Mit $\kappa$ wird das Verhältnis der molaren Wärmekapazitäten $C_p$ und $C_V$
+bezeichnet, diese Größe ist stets größer als eins.
+Für die verrichtete Arbeit folgt weiter
+\begin{equation}
+  A_m = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) V_\text{kalt}\,.
+  \label{eqn:arbeitkompressor2}
+\end{equation}
+Wird die Dichte des Transportgases im gasförmigen Zustand, also beim Druck $p_\text{kalt}$,
+mit $\rho$ bezeichnet, so lässt sich schließlich für die mechanische Kompressorleistung
+\begin{equation}
+  N_\text{mech} = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) \frac{1}{\rho} \frac{\Delta m}{\Delta t}
+  \label{eqn:kompressorleistung}
+\end{equation}
+schreiben.
