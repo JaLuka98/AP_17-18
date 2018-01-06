@@ -1,2 +1,27 @@
 \section{Theorie}
 \label{sec:Theorie}
+In diesem Versuch werden grundsätzlich nur Festkörper untersucht. Diese bestehen
+aus Atomen oder Molekülen, die über Ruhelagen auf ihren Gitterplätzen verfügen und
+rückwirkenden Kräften ausgesetzt sind, falls sie aus der Gleichgewichtslage ausgelenkt
+werden. Deswegen können im Modell als $n$ gekoppelte harmonische Oszillatoren
+mit Schwingungsmöglichkeiten in allen drei Raumdimensionen beschrieben werden.
+\subsection{Beschreibung in der klassischen Physik}
+In der klassischen Physik, also ohne Betrachtung relativistischer und quantenmechanischer
+Effekte, ist die Hamiltonfunktion identisch mit der Energie eines harmonischen
+Oszillators und beträgt
+\begin{equation}
+  H = \frac{\symbf{p}^2}{2 m} + \frac{1}{2} m \omega^2 \symbf{r}^2\,.
+  \label{eqn:hamilton}
+\end{equation}
+Dabei ist $\symbf{p}$ der klassische Impuls, $m$ bezeichnet die Masse des modellierten
+Teilchens, $\omega$ die Kreisfrequenz der harmonischen Schwingung und $\symbf{r}$
+den Ortsvektor im dreidimensionalen Raum. Der erste Term ist die klassische kinetische
+Energie und der zweite Term ist die potenzielle Energie. Die Energie des gesamten
+Systems lässt sich durch Summation über alle $n$ Gitterplätze erhalten.\newline
+Zur weiteren Berechnung wird der Gleichverteilungssatz, auch Äquipartitionstheorem, zur Hilfe genommen:
+Ist das betrachtete System mit der Hamiltonfunktion $H$ im thermischen Gleichgewicht, so gilt
+\begin{equation}
+  \Bigg \langle x_i \frac{\partial H}{\partial x_j} \Bigg \rangle = k_\text{B} T \delta_{ij}\,.
+\end{equation}
+Dabei bezeichnet $x_i$ entweder einen Ort oder einen Impuls, $k_\text{B}$ ist die Boltzmann-Konstante,
+$T$ ist die Temperatur des Systems und $\delta_ij$ ist das Kronecker-Delta.
