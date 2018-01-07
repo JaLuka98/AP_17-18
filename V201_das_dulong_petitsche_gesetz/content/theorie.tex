@@ -1,27 +1,77 @@
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Der Begriff der Wärmekapazität}
+Wird die Temperatur eines Körpers um $\Delta T$ erhöht, ohne dass Arbeit geleistet
+wird, so wird ihm die Wärmemenge $\Delta Q$ hinzugefügt. Dies kann durch die Gleichung
+\begin{equation}
+  \Delta Q = m c \Delta T
+  \label{eqn:specificheat}
+\end{equation}
+ausgedrückt werden. Dabei ist $m$ die Masse des Körpers. Die Proportionalitätskonstante
+$c$ wird dabei als spezifische Wärmekapazität bezeichnet und wird dem Material,
+aus dem der Körper besteht, zugeordnet. \newline
+Es ist auch möglich, die molare Wärmekapazität zu definieren. Dann lautet die
+Beziehung zwischen Wärmemenge und Temperaturänderung
+\begin{equation}
+  \Delta Q = n C_\text{m} \Delta T
+  \label{eqn:molarheat}
+\end{equation}
+mit der Stoffmenge $n$ und der molaren Wärmekapazität $C_\text{m}$. \newline
+Es ist auch wichtig, unter welchen Bedingungen die Wärme dem Körper zugeführt wird.
+Bei der spezifischen Wärmekapazität lässt sich zwischen Prozessen unterscheiden,
+die bei konstantem Volumen oder konstantem Druck ablaufen. Bei ersterem gilt
+dann für die spezifische Wärmekapazität bei konstantem Volumen
+\begin{equation}
+  C_V = \left(\frac{\symup{d}Q}{\symup{d}T}\right)_V = \left(\frac{\symup{d}U}{\symup{d}T}\right)_V\,.
+  \label{eqn:cv}
+\end{equation}
 In diesem Versuch werden grundsätzlich nur Festkörper untersucht. Diese bestehen
 aus Atomen oder Molekülen, die über Ruhelagen auf ihren Gitterplätzen verfügen und
 rückwirkenden Kräften ausgesetzt sind, falls sie aus der Gleichgewichtslage ausgelenkt
-werden. Deswegen können im Modell als $n$ gekoppelte harmonische Oszillatoren
+werden. Deswegen können sie im Modell als $N$ gekoppelte harmonische Oszillatoren
 mit Schwingungsmöglichkeiten in allen drei Raumdimensionen beschrieben werden.
-\subsection{Beschreibung in der klassischen Physik}
+\subsection{Beschreibung eines Festkörpers in der klassischen Physik}
 In der klassischen Physik, also ohne Betrachtung relativistischer und quantenmechanischer
-Effekte, ist die Hamiltonfunktion identisch mit der Energie eines harmonischen
-Oszillators und beträgt
+Effekte, ist die Hamiltonfunktion mit der Energie eines harmonischen
+Oszillators identisch. Die Gesamtenergie kann für das vorliegende Modell ausgedrückt werden als
 \begin{equation}
-  H = \frac{\symbf{p}^2}{2 m} + \frac{1}{2} m \omega^2 \symbf{r}^2\,.
+  H = \sum_{i=1}^N (\frac{\symbf{p}_i^2}{2 m} + \frac{1}{2} m \omega^2 \symbf{r}_i^2)\,.
   \label{eqn:hamilton}
 \end{equation}
-Dabei ist $\symbf{p}$ der klassische Impuls, $m$ bezeichnet die Masse des modellierten
-Teilchens, $\omega$ die Kreisfrequenz der harmonischen Schwingung und $\symbf{r}$
-den Ortsvektor im dreidimensionalen Raum. Der erste Term ist die klassische kinetische
+Dabei ist $\symbf{p}_i$ der klassische Impuls des $i$-ten Teilchens,
+$m$ bezeichnet seine Masse, $\omega$ die Kreisfrequenz der harmonischen Schwingung und $\symbf{r}_i$
+den Ortsvektor des $i$-ten Teilchens im dreidimensionalen Raum. Der erste Term ist die klassische kinetische
 Energie und der zweite Term ist die potenzielle Energie. Die Energie des gesamten
 Systems lässt sich durch Summation über alle $n$ Gitterplätze erhalten.\newline
-Zur weiteren Berechnung wird der Gleichverteilungssatz, auch Äquipartitionstheorem, zur Hilfe genommen:
-Ist das betrachtete System mit der Hamiltonfunktion $H$ im thermischen Gleichgewicht, so gilt
+Zur weiteren Berechnung wird der Gleichverteilungssatz, auch
+Äquipartitionstheorem, zur Hilfe genommen.
+Dieses besagt, dass der Mittelwert jedes in Ort oder Impuls quadratischen Terms
+in der Hamiltonfunktion $k_\text{B} T / 2$ beträgt.
+Dabei ist $k_\text{B}$ die Boltzmann-Konstante und $T$ die Temperatur des Systems.
+Das bedeutet insbesondere, dass die mittlere Energie gleich über alle
+Freiheitsgrade verteilt ist, sollten alle Terme der Hamiltonfunktion quadratisch
+in Ort und Impuls eingehen. Einzelheiten zu diesem Satz und sein Beweis können
+in \cite{Gleichverteilungssatz} nachgelesen werden.\newline
+Identifiziert man nun die Energie auch mit der inneren Energie (vergleiche dazu \cite{failure}), folgt aus dem Gleichverteilungssatz
+und Gleichung \eqref{eqn:hamilton} direkt für die innere Energie des Systems
 \begin{equation}
-  \Bigg \langle x_i \frac{\partial H}{\partial x_j} \Bigg \rangle = k_\text{B} T \delta_{ij}\,.
+  U = 3 N k_\text{B} T\,.
+  \label{eqn:usolid}
 \end{equation}
-Dabei bezeichnet $x_i$ entweder einen Ort oder einen Impuls, $k_\text{B}$ ist die Boltzmann-Konstante,
-$T$ ist die Temperatur des Systems und $\delta_ij$ ist das Kronecker-Delta.
+Nach Gleichung \eqref{eqn:cv} folgt sofort für die spezifische Wärmekapazität
+bei konstantem Volumen
+\begin{equation}
+  C_V = 3 N k_\text{B}\,.
+  \label{eqn:cvsolid}
+\end{equation}
+Es gilt nach \cite{failure} auch $R = N_\text{A} k_\text{B}$ mit der universellen Gaskonstante $R$ und der
+Avogadro-Konstante $N_\text{A}$, sodass für die molare Wärmekapazität
+\begin{equation}
+  C_\text{m} = 3 R
+  \label{eqn:dulongpetit}
+\end{equation}
+folgt. Identifiziert man das modellierte System mit dem Festkörper, so lässt sich
+das Dulong-Petitsche Gesetz formulieren: \newline
+Die Molare Wärmekapazität eines Festkörpers beträgt $3 R$. Insbesondere ist dieser
+Wert unabhängig von der Temperatur und allgemein konstant.
+\subsection{Quantenmechanische Betrachtung eines Festkörpers}
