@@ -28,18 +28,6 @@ Standardabweichungen $\sigma_i$ abhängt, so ist die Unsicherheit von f
 
 Diese Formel bezeichnet man als "Gauß'sches Fehlerfortpflanzungsgesetz".
 
-Bei einer linearen Regression folgt eine Ausgleichsgerade
-\begin{equation}
-  y(x) = ax+b\,
-\end{equation}
-mit der Steigung $a$ und dem Ordinatenabschnitt $b$. Liegen Fehler in y-Richtung
-und nur in y-Richtung vor, dann sind die Parameter $a$ und $b$ selbst unsicher
-und ergeben sich zu
-\begin{align}
-  a &= \frac{\overline{xy}-\overline{x} \cdot \overline{y}}{\overline{x^2}-\overline{x}^2}\,,\\
-  b &= \frac{\overline{y}-\overline{x^2}-\overline{xy} \cdot \overline{x}}{\overline{x^2}-\overline{x}^2}\,.
-\end{align}
-
 Wenn im Folgenden Mittelwerte, Standardabweichungen und Fehler von
 Funktionen unsicherer Größen berechnet werden, so werden stets die obigen
 Formeln verwendet. Regressionen werden mit IPython 5.3.0 in Python 3.6.1
