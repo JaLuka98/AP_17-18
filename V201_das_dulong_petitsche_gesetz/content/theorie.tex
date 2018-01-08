@@ -35,7 +35,7 @@ In der klassischen Physik, also ohne Betrachtung relativistischer und quantenmec
 Effekte, ist die Hamiltonfunktion mit der Energie eines harmonischen
 Oszillators identisch. Die Gesamtenergie kann für das vorliegende Modell ausgedrückt werden als
 \begin{equation}
-  H = \sum_{i=1}^N (\frac{\symbf{p}_i^2}{2 m} + \frac{1}{2} m \omega^2 \symbf{r}_i^2)\,.
+  H = \sum_{i=1}^N \left(\frac{\symbf{p}_i^2}{2 m} + \frac{1}{2} m \omega^2 \symbf{r}_i^2\right)\,.
   \label{eqn:hamilton}
 \end{equation}
 Dabei ist $\symbf{p}_i$ der klassische Impuls des $i$-ten Teilchens,
@@ -75,3 +75,34 @@ das Dulong-Petitsche Gesetz formulieren: \newline
 Die Molare Wärmekapazität eines Festkörpers beträgt $3 R$. Insbesondere ist dieser
 Wert unabhängig von der Temperatur und allgemein konstant.
 \subsection{Quantenmechanische Betrachtung eines Festkörpers}
+In der Quantenmechanik ist die Energie des harmonischen Oszillators quantisiert.
+Schwingt er mit der Kreisfrequenz $\omega$, so kann sich seine Gesamtenergie
+nur in Paketen der Größe
+\begin{equation}
+  \Delta E = n \hbar \omega
+  \label{eqn:equantum}
+\end{equation}
+ändern, wobei $n$ eine natürliche Zahl und $\hbar = h / 2 \pi$ das reduzierte Plancksche
+Wirkungsquantum mit dem Planckschen Wirkungsquantum $h$ ist. Daraus folgt, dass
+die zeitlich gemittelte Energie der harmonischen Oszillatoren im Festkörper
+anders als in der klassischen Theorie von der Temperatur $T$ abhängt. Wird angenommen,
+dass die Verteilung der Energien der Teilchen im Festkörper Boltzmann-verteilt ist,
+ergibt sich für das zeitliche Mittel der inneren Energie der Oszillatoren
+\begin{equation}
+  \langle u_\text{qu} \rangle = \frac{\hbar \omega}{\exp(\hbar \omega / K_\text{B} T) - 1}\,.
+  \label{eqn:uqu}
+\end{equation}
+Die mittlere Energie eines Festkörpers pro Mol ergibt sich dann zu
+\begin{equation}
+  \langle u_\text{qu} \rangle = \frac{3 N_\text{A} \hbar \omega}{\exp(\hbar \omega / K_\text{B} T) - 1}\,
+  \label{eqn:uqu}
+\end{equation}
+Die mittlere Energie ist somit eine Funktion der Temperatur. Im Grenzwert sehr hoher
+Temperaturen ergibt sich jedoch durch Taylorreihenentwicklung der obigen Gleichung
+die Gleichheit mit dem klassischen Ergebnis $3 R T$ (siehe \eqref{eqn:cvsolid}). \newline
+Abschließend lässt sich also formulieren, dass das Dulong-Petitsche Gesetz als Grenzfall
+des quantenmechanischen Modells die molare Wärmekapazität von Festkörpern für hohe
+Temperaturen zuverlässig vorhersagt. Dies ist gleichbedeutend damit, dass die quantenmechanischen
+Oszillatoren genügend Energie besitzen, um viele ihrer Zustände zu durchlaufen.
+Für tiefe Temperaturen versagt es jedoch. Die molare Wärmekapazität geht dann sogar gegen
+null.
