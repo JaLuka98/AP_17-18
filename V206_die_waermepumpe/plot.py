@@ -5,6 +5,7 @@ import uncertainties.unumpy as unp
 from scipy import optimize
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
+from scipy.constants import codata
 
 
 #rührmotoren: 5V
@@ -101,3 +102,7 @@ plt.grid()
 plt.savefig('build/L1.pdf')
 
 plt.clf()
+
+print('Die Verdampfungswärme zum Einsetzen hier ist jetzt')
+print(-a3*codata.value('molar gas constant')*1/0.12091*1e-3)
+print('in kJ/kg')
