@@ -1,7 +1,10 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Die Messreihen für die Temperaturen, Drücke und die Leistungsaufnahme $P$ des Kompressors
-in Abhängigkeit der Zeit sind in Tabelle \ref{tab:messwerte} dargestellt.
+in Abhängigkeit der Zeit sind in Tabelle \ref{tab:messwerte} dargestellt. Dabei
+werden die Werte für die Zeit in Sekunden und die Werte für die Temperaturen in Kelvin
+umgerechnet. Zu den gemessenen Werten für die Drücke $p_{\symup{a}}$ und
+$p_{\symup{a}}$ wird noch der Umgebungsdruck von $\SI{10e5}{\pascal}$ hinzuaddiert.
 
 \begin{table}[H]
   \centering
@@ -9,39 +12,45 @@ in Abhängigkeit der Zeit sind in Tabelle \ref{tab:messwerte} dargestellt.
   \label{tab:messwerte}
   \begin{tabular}{c c c c c c c c}
     \toprule
-    $t/$s & $T_\text{warm}/$K & $T_\text{kalt}/$K & $p_warm/(10^{5}\symup{Pa})$ & $p_kalt/(10^{5}\symup{Pa})$ &
+    $t/$s & $T_{\text{warm}}/$K & $T_{\text{kalt}}/$K & $p_{\text{kalt}}/(10^{5}\symup{Pa})$ & $p_{\text{warm}}/(10^{5}\symup{Pa})$ &
     $P$/W & $1/T_1/\left(10^{-3}\symup{\frac{1}{K}}\right)$ & $\ln\left(\frac{p_b}{p_0}\right)$ \\
     \midrule
-      60  &  295.5 &  295.4 & 4.6  &  6.6 & 120 & 3.4 & 1.8586 \\
-     120  &  296.8 &  294.8 & 4.6  &  6.6 & 125 & 3.4 & 1.8739 \\
-     180  &  297.9 &  293.8 & 4.8  &  7.0 & 127 & 3.4 & 1.8739 \\
-     240  &  299.2 &  292.5 & 4.8  &  7.1 & 129 & 3.4 & 1.9327 \\
-     300  &  300.5 &  291.5 & 4.8  &  7.4 & 129 & 3.3 & 1.9469 \\
-     360  &  301.8 &  290.6 & 4.7  &  7.7 & 128 & 3.3 & 1.9883 \\
-     420  &  303.0 &  289.8 & 4.0  &  7.9 & 125 & 3.3 & 2.0281 \\
-     480  &  304.3 &  289.0 & 4.5  &  8.0 & 125 & 3.3 & 2.0537 \\
-     540  &  305.4 &  288.3 & 4.4  &  8.4 & 125 & 3.3 & 2.0663 \\
-     600  &  306.6 &  287.8 & 4.4  &  8.6 & 125 & 3.3 & 2.1151 \\
-     660  &  307.8 &  287.0 & 4.2  &  8.8 & 125 & 3.3 & 2.1386 \\
-     720  &  308.8 &  286.3 & 4.2  &  9.0 & 125 & 3.2 & 2.1616 \\
-     780  &  309.8 &  285.8 & 4.1  &  9.1 & 125 & 3.2 & 2.1841 \\
-     840  &  310.8 &  285.1 & 4.1  &  9.4 & 125 & 3.2 & 2.1951 \\
-     900  &  311.8 &  284.5 & 4.0  &  9.6 & 125 & 3.2 & 2.2275 \\
-     960  &  312.6 &  283.9 & 4.0  &  9.9 & 125 & 3.2 & 2.2486 \\
-    1020  &  313.5 &  283.4 & 3.9  & 10.0 & 125 & 3.2 & 2.2794 \\
-    1080  &  314.4 &  282.9 & 3.9  &  9.1 & 125 & 3.2 & 2.2894 \\
-    1140  &  315.2 &  282.4 & 3.8  & 10.4 & 125 & 3.2 & 2.3319 \\
-    1200  &  316.0 &  282.0 & 3.8  & 10.8 & 125 & 3.2 & 2.3286 \\
-    1260  &  316.8 &  281.9 & 3.8  & 10.8 & 125 & 3.2 & 2.3664 \\
-    1320  &  317.6 &  281.1 & 3.8  & 11.0 & 125 & 3.2 & 2.3664 \\
-    1380  &  318.3 &  280.8 & 3.8  & 11.0 & 125 & 3.1 & 2.3847 \\
-    1440  &  319.0 &  280.5 & 3.7  & 11.2 & 125 & 3.1 & 2.3847 \\
-    1500  &  319.8 &  280.1 & 3.7  & 11.5 & 125 & 3.1 & 2.4028 \\
-    1560  &  320.3 &  279.8 & 3.7  & 11.6 & 125 & 3.1 & 2.4292 \\
-    1620  &  321.0 &  279.5 & 3.7  & 11.9 & 125 & 3.1 & 2.4378 \\
-    1680  &  321.6 &  279.3 & 3.6  & 12.0 & 125 & 3.1 & 2.4634 \\
-    1740  &  322.2 &  279.0 & 3.6  & 12.0 & 125 & 3.1 & 2.4717 \\
-    1800  &  322.8 &  278.8 & 3.6  & 12.1 & 125 & 3.1 & 2.4800 \\
+    0	    &  293.35	 & 	293.45 	&	 5.0	&  4.6   &  115  &  3.41	&   1.5261  \\
+    60    &	 293.75  & 	293.45 	&	 4.3	&  6.0   & 	115	 &  3.40 	&   1.7918  \\
+    120   &	 294.95  & 	293.05	&	 4.4	&  6.2   & 	119  &	3.39 	&   1.8245 \\
+    180	  &  296.05  & 	292.05	&	 4.6	&  6.4   & 	122	 &  3.38 	&   1.8563  \\
+    240	  &  297.05  & 	290.85	&	 4.6	&  6.7	 &  125	 &  3.37 	&   1.9021 \\
+    300	  &  298.45  & 	289.95	&	 4.5	&  7.0	 &  124  &	3.35	&   1.9459 \\
+    360	  &  299.45  & 	289.05	&	 4.4	&  7.1 	 &  123	 &  3.34	&   1.9601 \\
+    420	  &  300.75  & 	288.25	&	 4.4	&  7.3	 &  122  &	3.33	&   1.9879 \\
+    480	  &  301.95  & 	287.55	&	 4.3	&  7.6 	 &  121	 &  3.31	&   2.0281 \\
+    540	  &  302.95  & 	286.85	&	 4.2	&  7.8 	 &  121  &	3.30	&   2.0541  \\
+    600   &	 304.15  & 	286.05	&	 4.1	&  8.0	 &  120	 &  3.29	&   2.0794  \\
+    660   &	 305.25  & 	285.35	&	 4.0	&  8.2 	 &  120	 &  3.28	&   2.1041 \\
+    720   &	 306.25  & 	284.65	&	 3.9	&  8.4	 &  120  &	3.27	&   2.1282 \\
+    780   &	 307.25  &	284.05	&	 3.8	&  8.6 	 &  120  & 	3.25	&   2.1518  \\
+    840   &	 308.25  & 	283.45	&	 3.8	&  8.8 	 &  121  &	3.24	&   2.1748  \\
+    900   &	 309.15  &	282.85	&	 3.8	&  9.0 	 &  121  &  3.23	&   2.1972  \\
+    960   &	 310.05  &  282.25	&	 3.7	&  9.2 	 &  122  &  3.23	&   2.2192 \\
+    1020  &	 310.95  &  281.65	&	 3.6	&  9.3 	 &  122  &  3.22	&   2.2300 \\
+    1080  &	 311.75  &  281.05	&	 3.6	&  9.6 	 &  122	 &  3.21	&   2.2618 \\
+    1140  &	 312.65  &  280.55	&	 3.6	&  9.8 	 &  124  &  3.20	&   2.2824 \\
+    1200  &	 313.55  &  280.05	&	 3.6	&  10.0  &	124  &  3.19	&   2.3026  \\
+    1260  &	 314.35  &  279.65	&	 3.5	&  10.1  &	124  &  3.18	&   2.3125  \\
+    1320	&  315.05  &  279.25	&	 3.5	&  10.3  &  124  &  3.17	&   2.3321  \\
+    1380	&  315.85  &  278.85	&	 3.5	&  10.5  &	124  &  3.17	&   2.3514 \\
+    1440	&  316.55  &	278.45	&	 3.4	&  10.8  &	124	 &  3.16	&   2.3795  \\
+    1500	&  317.25  & 	278.05	&	 3.4	&  10.9  &	124	 &  3.15	&   2.3888 \\
+    1560	&  317.95  &	277.75	&	 3.4	&  11.0  &	124  &  3.15	&   2.3979  \\
+    1620	&  318.65  & 	277.45	&	 3.4	&  11.2  &	124  &  3.14	&   2.4159 \\
+    1680	&  319.25  & 	277.15	&	 3.4	&  11.3  &	124  &  3.13	&   2.4248 \\
+    1740	&  319.85  & 	276.85	&  3.4	&  11.5  &	124  &  3.13	&   2.4423 \\
+    1800	&  320.55  & 	276.55	&  3.4	&  11.8  &	124  &  3.12	&   2.4681 \\
+    1860	&  321.15  &	276.35	&  3.3	&  11.9  &	124  &  3.11	&   2.4765  \\
+    1920	&  321.75  &	276.15  &	 3.3	&  12.0  &  125  &  3.11	&   2.4849  \\
+    1980	&  322.25  &  275.95  &	 3.3	&  12.1  &  124  &  3.10	&   2.4932 \\
+    2040	&  322.85  &  275.75  &	 3.3	&  12.2  &  124  &  3.10	&   2.5014 \\
+
     \bottomrule
   \end{tabular}
 \end{table}
@@ -52,11 +61,41 @@ die üblichen Einheiten des SI-Einheitensystems verwendet und die Größen, wenn
 umgerechnet.
 
 \subsection{Graphische Darstellung der Temperaturverläufe}
-Die gemessenen Werte der Temperaturen werden in \ref{fig:tempgraphen} graphisch dargestellt.
+Die gemessenen Werte der Temperaturen werden in den Abbildungen \ref{fig:temp1} und \ref{fig:temp2}
+graphisch dargestellt. Zudem wird zu beiden Messreihen eine nicht-lineare
+Ausgleichsrechnung der Form
+\begin{equation}
+  T(t)=At^2+Bt+C
+\end{equation}
+durchgeführt. Dabei wird Python wie in Kapitel \ref{sec:Fehlerrechnung} beschrieben
+verwendet.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{data/HIERDENDATEINAMENEINFUEGEN.pdf}
-%  \caption{Darstellung der gemessenen Temperaturen und Graphen der Ausgleichsfunktion}
-%  \label{fig:tempgraphen}
-%\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{build/T1.pdf}
+  \caption{Darstellung der gemessenen Temperatur im wärmeren Reservoire
+   und Graph der Ausgleichsfunktion}
+  \label{fig:temp1}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/T2.pdf}
+  \caption{Darstellung der gemessenen Temperatur im kälteren Reservoire
+   und Graph der Ausgleichsfunktion}
+  \label{fig:temp2}
+\end{figure}
+
+Die Parameter $A$, $B$ und $C$ ergeben sich für das wärmere Reservoire zu:
+\begin{align*}
+  A_1=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
+  B_1=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
+  C_1=\SI{292.55(009)}{\kelvin}  \,.
+\end{align*}
+
+Für das kältere Wärmereservoire lauten die Parameter
+\begin{align*}
+  A_2=\SI{-3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
+  B_2=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
+  C_2=\SI{294.33(010)}{\kelvin}  \,.
+\end{align*}
