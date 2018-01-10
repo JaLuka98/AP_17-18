@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber build/main"] 1515445223 "build/main.bcf" "build/main.bbl" "build/main" 1515446016
-  "./build/main.bcf" 1515446014 94602 788ccbfbacabc07b66fd6de9447db5ae ""
+["biber build/main"] 1515445223 "build/main.bcf" "build/main.bbl" "build/main" 1515573189
+  "./build/main.bcf" 1515573187 94602 788ccbfbacabc07b66fd6de9447db5ae ""
   (generated)
-  "build/main.blg"
   "build/main.bbl"
-["lualatex"] 1515446006 "main.tex" "build/main.pdf" "main" 1515446016
+  "build/main.blg"
+["lualatex"] 1515573181 "main.tex" "build/main.pdf" "main" 1515573189
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/latinmodern-math.luc" 1509536116 609658 fb7e17e9fa36dfcb0034a84ef170d3f6 ""
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1509536115 132365 8f62eca4a1b79651c546bb3c626f4e32 ""
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1509536115 130352 b1740e533cbecdfb4413dc73d3a076ba ""
@@ -13,9 +13,9 @@
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc" 1509536123 132009 a38e7077aa751232cfb5a8ec6fc79b33 ""
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/xits-math.luc" 1509536117 445413 b3f22fdb6a8e605041d01106f19514ad ""
   "C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/xits-mathbold.luc" 1509536118 246589 9e04bce21939ae4bbc2a2ddff3730710 ""
-  "build/main.aux" 1515446014 1487 f7112b25a7983da67199b7492040a5de ""
+  "build/main.aux" 1515573187 1487 f7112b25a7983da67199b7492040a5de ""
   "build/main.bbl" 1515445228 486 87c763802318ca007e475d2fb9c40fb5 "biber build/main"
-  "build/main.run.xml" 1515446014 2330 4233a9836802043afc4fd6b527c0f360 ""
+  "build/main.run.xml" 1515573187 2330 4233a9836802043afc4fd6b527c0f360 ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1504718520 916 f87d7c45f9c908e672703b83b72241a3 ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1504718520 928 2dc8d444221b7a635bb58038579b861a ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1504718520 908 2921f8a10601f252058503cc6570e581 ""
@@ -200,10 +200,10 @@
   "c:/texlive/2017/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1504720656 10170 b1a2248f43cab899e3fe36f676176865 ""
   "c:/texlive/2017/texmf-var/tex/generic/config/language.dat.lua" 1504722628 18023 da740246d0680a6071456d6ceba7d480 ""
   "c:/texlive/2017/texmf-var/web2c/luatex/lualatex.fmt" 1504722750 1348219 8021d286803fc7b8d5ecfdff406c466c ""
-  "main.tex" 1515446002 4110 c3d6307f135654aec91e9c4af34b9aaf ""
+  "main.tex" 1515573178 4303 6b23774d312cb9f94c10a360ee0ac18d ""
   (generated)
-  "build/main.log"
-  "build/main.run.xml"
+  "build/main.pdf"
   "build/main.bcf"
   "build/main.aux"
-  "build/main.pdf"
+  "build/main.run.xml"
+  "build/main.log"
