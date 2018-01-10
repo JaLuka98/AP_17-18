@@ -60,7 +60,7 @@ die später in der Auswertung noch benötigt werden, zu sehen. Als Einheiten wer
 die üblichen Einheiten des SI-Einheitensystems verwendet und die Größen, wenn nötig,
 umgerechnet.
 
-\subsection{Graphische Darstellung der Temperaturverläufe und Ausgleichsrechnung}
+\subsection{Graphische Darstellung der Temperaturverläufe}
 Die gemessenen Werte der Temperaturen werden in den Abbildungen \ref{fig:temp1} und \ref{fig:temp2}
 graphisch dargestellt. Zudem wird zu beiden Messreihen eine nicht-lineare
 Ausgleichsrechnung der Form
@@ -73,7 +73,7 @@ verwendet.
 \begin{figure}
   \centering
   \includegraphics{build/T1.pdf}
-  \caption{Darstellung der gemessenen Temperatur im wärmeren Reservoir
+  \caption{Darstellung der gemessenen Temperatur im wärmeren Reservoire
    und Graph der Ausgleichsfunktion}
   \label{fig:temp1}
 \end{figure}
@@ -88,19 +88,46 @@ verwendet.
 
 Die Parameter $A$, $B$ und $C$ ergeben sich für das wärmere Reservoir zu:
 \begin{align*}
-  A_\text{warm}=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
-  B_\text{warm}=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
-  C_\text{warm}=\SI{292.55(009)}{\kelvin}  \,.
+  A_1=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
+  B_1=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
+  C_1=\SI{292.55(009)}{\kelvin}  \,.
 \end{align*}
 
-Für das kältere WärmeReservoir lauten die Parameter
+Für das kältere Wärmereservoir lauten die Parameter
 \begin{align*}
-  A_\text{warm}=\SI{-3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
-  B_\text{warm}=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
-  C_\text{warm}=\SI{294.33(010)}{\kelvin}  \,.
+  A_2=\SI{-3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
+  B_2=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
+  C_2=\SI{294.33(010)}{\kelvin}  \,.
 \end{align*}
 
 
 
 Nun sollen mithilfe dieser brechneten Parameter die Differentialquotienten
-$\frac{\symup{d}T_1}{\symup{d}t}$ und $\frac{\symup{d}T_2}{\symup{d}t}$
+$\frac{\symup{d}T_1}{\symup{d}t}$ und $\frac{\symup{d}T_2}{\symup{d}t}$ für
+vier verschiedene Temperaturen berechnet werden. Hierfür werden die Temperaturen
+bei $t=\SI{300}{second}$, $t=\SI{900}{second}$, $t=\SI{1200}{second}$ und
+$t=\SI{1800}{second}$ verwendet. Die Temperaturen zu diesen Zeiten können Tabelle
+\ref{tab:messwerte} entnommen werden.
+
+Die Differentialquotienten lassen sich durch
+\begin{equation}
+  \frac{\symup{d}T}{\symup{d}t}=2At+B
+\end{equation}
+aus den Parametern der Ausgleichsrechnungen bestimmen.
+
+Für das warme Reservoir $T_{\symup{warm}}$ ergibt sich
+\begin{align*}
+  \biggl()\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{300}} =
+  \biggl()\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{900}} =
+  \biggl()\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{1200}} =
+  \biggl()\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{1800}} =
+\end{align*}
+
+
+Für das kalte Reservoir ergeben sich die Werte
+\begin{align*}
+  \biggl()\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{300}} =
+  \biggl()\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{900}} =
+  \biggl()\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1200}} =
+  \biggl()\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1800}} =
+\end{align*}
