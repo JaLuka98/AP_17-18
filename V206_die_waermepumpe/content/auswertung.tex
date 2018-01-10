@@ -60,7 +60,7 @@ die später in der Auswertung noch benötigt werden, zu sehen. Als Einheiten wer
 die üblichen Einheiten des SI-Einheitensystems verwendet und die Größen, wenn nötig,
 umgerechnet.
 
-\subsection{Graphische Darstellung der Temperaturverläufe}
+\subsection{Graphische Darstellung der Temperaturverläufe und Ausgleichsrechnung}
 Die gemessenen Werte der Temperaturen werden in den Abbildungen \ref{fig:temp1} und \ref{fig:temp2}
 graphisch dargestellt. Zudem wird zu beiden Messreihen eine nicht-lineare
 Ausgleichsrechnung der Form
@@ -73,7 +73,7 @@ verwendet.
 \begin{figure}
   \centering
   \includegraphics{build/T1.pdf}
-  \caption{Darstellung der gemessenen Temperatur im wärmeren Reservoire
+  \caption{Darstellung der gemessenen Temperatur im wärmeren Reservoir
    und Graph der Ausgleichsfunktion}
   \label{fig:temp1}
 \end{figure}
@@ -81,21 +81,21 @@ verwendet.
 \begin{figure}
   \centering
   \includegraphics{build/T2.pdf}
-  \caption{Darstellung der gemessenen Temperatur im kälteren Reservoire
+  \caption{Darstellung der gemessenen Temperatur im kälteren Reservoir
    und Graph der Ausgleichsfunktion}
   \label{fig:temp2}
 \end{figure}
 
-Die Parameter $A$, $B$ und $C$ ergeben sich für das wärmere Reservoire zu:
+Die Parameter $A$, $B$ und $C$ ergeben sich für das wärmere Reservoir zu:
 \begin{align*}
-  A_1=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
-  B_1=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
-  C_1=\SI{292.55(009)}{\kelvin}  \,.
+  A_\text{warm}=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
+  B_\text{warm}=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
+  C_\text{warm}=\SI{292.55(009)}{\kelvin}  \,.
 \end{align*}
 
-Für das kältere Wärmereservoire lauten die Parameter
+Für das kältere WärmeReservoir lauten die Parameter
 \begin{align*}
-  A_2=\SI{-3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
-  B_2=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
-  C_2=\SI{294.33(010)}{\kelvin}  \,.
+  A_\text{warm}=\SI{-3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
+  B_\text{warm}=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
+  C_\text{warm}=\SI{294.33(010)}{\kelvin}  \,.
 \end{align*}
