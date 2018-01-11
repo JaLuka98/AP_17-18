@@ -95,19 +95,31 @@ Die Parameter der Ausgleichsfunktion ergeben sich für das wärmere Reservoir zu
 
 Für das kältere Wärmereservoir lauten die Parameter
 \begin{align*}
-  A_\text{kalt}&=\SI{-3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
+  A_\text{kalt}&=\SI{3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
   B_\text{kalt}&=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
   C_\text{kalt}&=\SI{294.33(010)}{\kelvin}  \,.
 \end{align*}
 
+Im weiteren Verlauf der Auswertung werden einige Zeitpunkte im Speziellen untersucht.
+Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich
+\label{fig:ausgewaehltemesswerte} entnehmen.
 
+\begin{table}[h]
+		\centering
+		\begin{tabular}{lcccc}
+			\toprule
+			& $T(\SI{300}{\second}) / \text{K}$ & $T(\SI{600}{\second}) / \text{K}$ & $T(\SI{900}{\second}) / \text{K}$ & $T(\SI{1200}{\second}) / \text{K}$\\
+			\midrule
+			Reservoir 1 (warm) & $298,45$ & $304,15$ & $309,15$ & $313,55$ \\
+			Reservoir 2 (kalt) & $289,95$ & $286,05$ & $282,85$ & $280,05$ \\
+			\bottomrule
+		\end{tabular}
+		\caption{Darstellung der gewählten Zeitpunkte und der Temperaturen}
+		\label{fig:ausgewaehltemesswerte}
+	\end{table}
 
 Nun sollen mithilfe dieser brechneten Parameter die Differenzialquotienten
-$\frac{\symup{d}T_\text{warm}}{\symup{d}t}$ und $\frac{\symup{d}T_\text{kalt}}{\symup{d}t}$ für
-vier verschiedene Temperaturen berechnet werden. Hierfür werden die Temperaturen
-bei $t=\SI{300}{\second}$, $t=\SI{900}{\second}$, $t=\SI{1200}{\second}$ und
-$t=\SI{1800}{\second}$ verwendet. Die Temperaturen zu diesen Zeiten können Tabelle
-\ref{tab:messwerte} entnommen werden.
+$\dot{T_\text{warm}}$ und $\dot{T_\text{kalt}}$ für vier verschiedene Temperaturen berechnet werden.
 
 Die Differentialquotienten lassen sich durch
 \begin{equation}
