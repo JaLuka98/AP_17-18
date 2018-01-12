@@ -149,13 +149,15 @@ Für das kalte Reservoir ergeben sich die Werte
   \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1800}} = -0,0040\pm0,0004\,.\\
 \end{align*}
 
+\subsection{Bestimmung der Güteziffern}
+
 Aus diesen Werten soll nun die reale Güteziffer der Wärmepumpe berechnet werden. Dies geschieht gemäß der Gleichungen
-\ref{eqn:waermewarmprozeit} und \ref{eqn:nureal}. Dabei ist die spezifische Wärme
+\ref{eqn:waermewarmprozeit} und \ref{eqn:nureal}. Dabei ist die Wärmekapazität
 der Apparatur ablesbar und hat den Wert
 \begin{equation}
   m_{\symup{k}}c_{\symup{k}}=\SI{750}{\joule\per\kelvin} \,. \nonumber
 \end{equation}
-Die spezifische Wärme des sich im wärmeren Reservoir befindenden Wassers lässt sich
+Die Wärmekapazität des sich im wärmeren Reservoir befindenden Wassers lässt sich
 mithilfe der spezifischen Wärmekapazität $c_{\symup{w}}=\SI{4187}{\joule\per\kilo\gram\kelvin}$
 und der Masse $m_{\symup{w}}=\SI{4}{\kilo\gram}$ des Wassers zu
 \begin{equation}
@@ -184,71 +186,66 @@ der nicht ideale WIrkungsgrad des Kompressors. Die Wärmereservoire bestanden
 aus lediglich durch eine Styroporschicht isolierten und oben nur dürftig durch Holzplatten
 abgedeckten Eimern. Zudem waren sämtliche Rohre nicht oder nur sehr schwach isoliert.
 
-
-
-
-
-\subsection{Bestimmung der Güteziffern}
-
 \subsection{Bestimmung des Massendurchsatzes}
-
-Zur Bestimmung des Massendurchsatzes muss zunächst die Verdampfungswärme $L$ des
-verwendeten Gases Dichloridfluormethan mithilfe einer Dampfdruck-Kurve bestimmt werden.
-Dafür wird der gemessene Druck im wärmeren Reservoir logarithmisch gegen die Temperatur im
+Der Massendurchsatz wird über die Gleichungen \eqref{eqn:massendurchsatz} und \eqref{eqn:waermekaltprozeit}
+bestimmt. Es wird zunächst die molare Verdampfungswärme $L_n$ des Transportgases
+Dichlordifluormethan mithilfe einer Dampfdruck-Kurve bestimmt
+\footnote{Die theoretische Grundlage hierfür kann in \cite{dampfdruck} nachgelesen
+werden.} und daraus die auf die Masse bezogene Verdampfungswärme $L_m$ errechnet.
+Der gemessene Druck im wärmeren Reservoir wird dafür logarithmisch gegen die reziproke Temperatur im
 wärmeren Reservoir aufgetragen und anschließend wird eine lineare Ausgleichsrechnung
 der Form
 \begin{equation}
-  \ln(p(T))=AT+B
+  \ln\left(\frac{p(T)}{p_0}\right)= \frac{A_L}{R T} + B_L
 \end{equation}
-durchgeführt.
+in den Parametern $A_L$ und $B_L$ und durchgeführt. Dabei bezeichnet $R$ die universelle Gaskonstante.
+Für den Umgebungsdruck $p_0$ wird der Näherungswert $\SI{1}{\bar}$ verwendet.
 Die Dampfdruck-Kurve ist in Abbildung \ref{fig:dampf} dargestellt.
 
 \begin{figure}
   \centering
   \includegraphics{build/L1.pdf}
   \caption{Logarithmische Darstellung des gemessenen Druckes im wärmeren Reservoir
-   in Abhängigkeit von der Temperatur und Ausgleichsfunktion.}
+   in Abhängigkeit von der Temperatur und Graph der Ausgleichsfunktion.}
   \label{fig:dampf}
 \end{figure}
 
-Die Parameter der Ausgleichsrechnung sind
+Die Parameter der konkreten Ausgleichsrechnung ergeben sich zu
 \begin{align*}
-  A = \SI{-2444.45(7910)}{1/K}\,, \\
-  B = 10.09\pm0.26 \,.
+  A_L &= \SI{20.3(07)}{\kilo\joule\per\mol}\,, \\
+  B_L &= \SI{10.09(026)} \,.
 \end{align*}
-Die Verdampfungswärme lässt sich nun mithilfe des Zusammenahnges
-%\begin{equation}
-%
-%\end{equation}
-berechnen. Dabei muss darauf geachtet werden...(MOLARE MASSE)
+Wird der y-Achsenabschnitt $B_L$ als vernachlässigbar angesehen, so lässt sich die
+Steigung $A_L$ mit der molaren Verdampfungswärme $L_n$ identifizieren.
+Die Verdampfungswärme pro Masse wird dann mit der molaren Masse $M = \SI{120.9}{\gram\per\mol}$
+nach \cite{molaremasse} zu
+\begin{equation*}
+  L_m = \SI{168(5)}{\kilo\joule\per\kilogram}
+\end{equation*}
+bestimmt.
 
 \subsection{Bestimmung der mechanischen Kompressorleistung}
 Für die Berechnung der mechanischen Leistung $N_\text{mech}$ mithilfe von Gleichung
 \eqref{eqn:kompressorleistung} des Kompressors an den vier ausgewählten Zeitpunkten
 wird die Dichte des Transportgases zu diesen Zeitpunkten benötigt.
 Diese wird nach Gleichung \eqref{eqn:rho} berechnet. Die verwendeten Werte für $p(t)$
-und $T(t)$ sind als $p_\text{warm}(t)$ und $T_\text{warm}(t)$ in Tabelle \ref{tab:nmechdata} zu finden.
+und $T(t)$ sind als $p_\text{kalt}(t)$ und $T_\text{kalt}(t)$ in Tabelle \ref{tab:datalast} zu finden.
 Zur Berechnung sind auch die Größen $\rho_0 = \SI{5.51}{\gram\per\litre}$ als Dichte
 des Transportgases bei einer Temperatur von $\SI{273.15}{\kelvin}$ und einem Druck von
 $\SI{1e5}{\pascal}$ und der Adiabatenkoeffizient $\kappa$ = 1,14 nötig.
 
-Dadurch lässt sich die Gleichung
-\label{eqn:Nmech} zur Berechnung der momentanen Kompressorleistung zu den
-gegebenen Zeitpunkten verwenden. In der vierten Spalte von Tabelle 6 ist der Wirkungsgrad nach
-Gleichung \eqref{eqn:eta} eingetragen.
-
-	\begin{table}
-		\centering
-		\begin{tabular}{cccc}
-			\toprule
-			$t/$s & $\rho/(g \cdot l^{-1}$) & $N_\text{mech} / [\mathrm{W}]$ & $\eta$\\
-			\midrule
-			300 & $22.1$ & $20.9 \pm 0.6$ & $0.174 \pm 0.005$ \\
-			900 & $20.7$ & $23.9 \pm 0.7$ & $0.199 \pm 0.006$\\
-		  1200 & $20.4$ & $24.0 \pm 0.8$ & $0.200 \pm 0.007$\\
-			1800 & $19.4$ & $23.6 \pm 0.9$ & $0.196 \pm 0.007$\\
-			\bottomrule
-		\end{tabular}
-		\label{tab:nmechdata}
-		\caption{Die Dichte des Gases, die theoretische Kompressorleistung und das Verhältnis $N_\text{mech}/N$ in Abhängigkiet von der Zeit.}
-	\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		$t/$s & $\rho/(g \cdot l^{-1}$) & $N_\text{mech} / [\mathrm{W}]$ & $\eta$\\
+		\midrule
+		300 & $22.1$ & $20.9 \pm 0.6$ & $0.174 \pm 0.005$ \\
+		900 & $20.7$ & $23.9 \pm 0.7$ & $0.199 \pm 0.006$\\
+	  1200 & $20.4$ & $24.0 \pm 0.8$ & $0.200 \pm 0.007$\\
+		1800 & $19.4$ & $23.6 \pm 0.9$ & $0.196 \pm 0.007$\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:datalast}
+	\caption{Die Dichte des Gases, die theoretische Kompressorleistung und das Verhältnis $N_\text{mech}/N$ in Abhängigkiet von der Zeit.}
+\end{table}

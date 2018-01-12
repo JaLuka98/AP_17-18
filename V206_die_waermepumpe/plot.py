@@ -16,7 +16,7 @@ def f(x, a, b, c):
     return a*x**2+b*x+c
 
 def g(x, a, b):
-    return x*a+b
+    return -x*a/codata.value('molar gas constant')+b
 
 
 
@@ -92,6 +92,8 @@ plt.clf()
 params, covariance_matrix = optimize.curve_fit(g, 1/T1, np.log(p_b))
 errors = np.sqrt(np.diag(covariance_matrix))
 print('a3 = ', params[0], '+-', errors[0])
+a3runden = ufloat(params[0], errors[0])
+print(a3runden)
 print('b3 = ', params[1], '+-', errors[1])
 a3 = ufloat(params[0], errors[0])
 b3 = ufloat(params[1], errors[1])
@@ -108,13 +110,24 @@ plt.savefig('build/L1.pdf')
 plt.clf()
 
 print('Die Verdampfungswärme zum Einsetzen hier ist jetzt')
-print(-a3*codata.value('molar gas constant')*1/0.12091*1e-3)
+L = a3runden*1/0.12091*1e-3
+print(L)
 print('in kJ/kg')
+
+# Massendurchsatz
+
+Qdot = (16748 + 750)*(2*t*a2+b2)
+massendurchsatz = Qdot/L
+print('Der Massendurchsatz bei t = 300s ist dann ', massendurchsatz[5])
+print('Der Massendurchsatz bei t = 900s ist dann ', massendurchsatz[15])
+print('Der Massendurchsatz bei t = 1200s ist dann ', massendurchsatz[20])
+print('Der Massendurchsatz bei t = 1800s ist dann ', massendurchsatz[30])
 
 rho0 = 5.51  # in gramm/liter
 T0 = 273.15  # in kelvin
 p0 = 1  # in bar
 kappa = 1.14  # in gar nix
 rhovont = ((rho0*T0)/p0) * p_a/T2
+Nmech = 1/(kappa - 1) * (p_b * (p_a/p_b)**(1/kappa)) * 1/rhovont * massendurchsatz
 
 print(rhovont)
