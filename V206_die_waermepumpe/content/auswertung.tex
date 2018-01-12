@@ -106,6 +106,8 @@ Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich
 
 \begin{table}[h]
 		\centering
+    \caption{Darstellung der gewählten Zeitpunkte und der Temperaturen}
+		\label{fig:ausgewaehltemesswerte}
 		\begin{tabular}{lcccc}
 			\toprule
 			& $T(\SI{300}{\second}) / \text{K}$ & $T(\SI{900}{\second}) / \text{K}$ & $T(\SI{1200}{\second}) / \text{K}$ & $T(\SI{1800}{\second}) / \text{K}$\\
@@ -114,8 +116,6 @@ Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich
 			Reservoir 2 (kalt) & 289,95 & 282,85 & 280,05 & 276,55 \\
 			\bottomrule
 		\end{tabular}
-		\caption{Darstellung der gewählten Zeitpunkte und der Temperaturen}
-		\label{fig:ausgewaehltemesswerte}
 	\end{table}
 
 Nun sollen mithilfe dieser brechneten Parameter die Differenzialquotienten
@@ -187,18 +187,21 @@ aus lediglich durch eine Styroporschicht isolierten und oben nur dürftig durch 
 abgedeckten Eimern. Zudem waren sämtliche Rohre nicht oder nur sehr schwach isoliert.
 
 \subsection{Bestimmung des Massendurchsatzes}
-Der Massendurchsatz wird über die Gleichungen \eqref{eqn:massendurchsatz} und \eqref{eqn:waermekaltprozeit}
-bestimmt. Es wird zunächst die molare Verdampfungswärme $L_n$ des Transportgases
+Es wird zunächst die molare Verdampfungswärme $L_n$ des Transportgases
 Dichlordifluormethan mithilfe einer Dampfdruck-Kurve bestimmt
 \footnote{Die theoretische Grundlage hierfür kann in \cite{dampfdruck} nachgelesen
-werden.} und daraus die auf die Masse bezogene Verdampfungswärme $L_m$ errechnet.
+werden.} und daraus die auf die Masse bezogene Verdampfungswärme $L_m$ errechnet, da
+diese für die Berechnung des Massendurchsatzes benötigt wird.
 Der gemessene Druck im wärmeren Reservoir wird dafür logarithmisch gegen die reziproke Temperatur im
 wärmeren Reservoir aufgetragen und anschließend wird eine lineare Ausgleichsrechnung
 der Form
 \begin{equation}
   \ln\left(\frac{p(T)}{p_0}\right)= \frac{A_L}{R T} + B_L
 \end{equation}
-in den Parametern $A_L$ und $B_L$ und durchgeführt. Dabei bezeichnet $R$ die universelle Gaskonstante.
+in den Parametern $A_L$ und $B_L$ und durchgeführt. Dabei bezeichnet $R$ die universelle Gaskonstante mit
+$R = \SI{8.3144598}{\joule\per\mol\kelvin}$. Da ihre geringe Unsicherheit in der Größenordnung
+von $1 \cdot 10^{-7}$ die Genauigkeit der Ergebnisse nicht signifikant beeinflusst, wird
+sie hier als exakt angesehen.
 Für den Umgebungsdruck $p_0$ wird der Näherungswert $\SI{1}{\bar}$ verwendet.
 Die Dampfdruck-Kurve ist in Abbildung \ref{fig:dampf} dargestellt.
 
@@ -222,7 +225,38 @@ nach \cite{molaremasse} zu
 \begin{equation*}
   L_m = \SI{168(5)}{\kilo\joule\per\kilogram}
 \end{equation*}
-bestimmt.
+bestimmt. Mit der Gauß'schen Fehlerfortpflanzung nach \eqref{eqn:gaussfehler} ergibt sich
+die Unsicherheit von $L_m$ zu
+\begin{equation*}
+  \sigma_{L_m} = \frac{1}{M} \sigma_{L_n}\,.
+\end{equation*}
+Da nun die auf die Masse bezogene Verdampfungswärme bekannt ist, ist es möglich, den
+als Differenzialquotienten ausgedrückten Massendurchsatz $\dot{m}$ mit den Gleichungen
+\eqref{eqn:massendurchsatz} und \eqref{eqn:waermekaltprozeit} zu berechnen, wobei die
+Diskretisierung in Ableitungen übergeht.
+Der an den ausgewählten Punkten berechnete Massendurchsatz $\dot{m}$ ist zusammen mit
+der zur Berechnung nötigenen Zwischenwerte $\dot{Q}_\text{kalt}$ in Tabelle
+\ref{tab:tabmassendurchsatz} aufgeführt.
+\begin{table}
+		\centering
+    \caption{Darstellung der Werte für den Wärmestrom am kalten Reservoir und den Massendurchsatz}
+    \label{tab:tabmassendurchsatz}
+		\begin{tabular}{ccc}
+			\toprule
+			$t/$s & $\dot{Q}_\text{kalt}/(\text{K} \cdot \text{s}^{-1})$ & $\dot{m}/(\text{g} \cdot \text{s}^{-1})$ \\
+			\midrule
+      300  & -241 $\pm$ 4 & -1,43 $\pm$ 0,05 \\
+      900  & -173 $\pm$ 5 & -1,03 $\pm$ 0,05 \\
+      1200 & -139 $\pm$ 6 & -0.83 $\pm$ 0,04 \\
+      1800 &  -71  $\pm$ 8 & -0.42 $\pm$ 0,05 \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+Die Unsicherheiten ergeben sich unter Berücksichtigung von Gleichung \eqref{eqn:gaussfehler} dann zu
+\begin{align*}
+  \sigma_{\dot{Q}_\text{kalt}} &= (m_2 c_\text{w} + m_\text{k} c_\text{k}) \sigma_{\dot{T}_\text{kalt}} \\
+  \sigma_{\dot{m}} &= \frac{1}{L_m} \sqrt{\dot{Q}_\text{kalt}^2 \sigma_{L_m}^2 + \sigma_{\dot{Q}_\text{kalt}}^2}\,.
+\end{align*}
 
 \subsection{Bestimmung der mechanischen Kompressorleistung}
 Für die Berechnung der mechanischen Leistung $N_\text{mech}$ mithilfe von Gleichung
@@ -236,9 +270,11 @@ $\SI{1e5}{\pascal}$ und der Adiabatenkoeffizient $\kappa$ = 1,14 nötig.
 
 \begin{table}
 	\centering
+	\caption{Die Dichte des Gases, die theoretische Kompressorleistung und das Verhältnis $N_\text{mech}/N$ in Abhängigkiet von der Zeit.}
+  \label{tab:datalast}
 	\begin{tabular}{cccc}
 		\toprule
-		$t/$s & $\rho/(g \cdot l^{-1}$) & $N_\text{mech} / [\mathrm{W}]$ & $\eta$\\
+		$t/$s & $\rho/(\text{g} \cdot \text{l}^{-1}$) & $N_\text{mech} / [\mathrm{W}]$ & $\eta$\\
 		\midrule
 		300 & $22.1$ & $20.9 \pm 0.6$ & $0.174 \pm 0.005$ \\
 		900 & $20.7$ & $23.9 \pm 0.7$ & $0.199 \pm 0.006$\\
@@ -246,6 +282,4 @@ $\SI{1e5}{\pascal}$ und der Adiabatenkoeffizient $\kappa$ = 1,14 nötig.
 		1800 & $19.4$ & $23.6 \pm 0.9$ & $0.196 \pm 0.007$\\
 		\bottomrule
 	\end{tabular}
-	\label{tab:datalast}
-	\caption{Die Dichte des Gases, die theoretische Kompressorleistung und das Verhältnis $N_\text{mech}/N$ in Abhängigkiet von der Zeit.}
 \end{table}

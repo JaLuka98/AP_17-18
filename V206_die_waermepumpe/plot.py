@@ -110,7 +110,7 @@ plt.savefig('build/L1.pdf')
 plt.clf()
 
 print('Die Verdampfungswärme zum Einsetzen hier ist jetzt')
-L = a3runden*1/0.12091*1e-3
+L = a3runden*1/0.12091*1e-3  # in kJ/kg
 print(L)
 print('in kJ/kg')
 
@@ -118,6 +118,10 @@ print('in kJ/kg')
 
 Qdot = (16748 + 750)*(2*t*a2+b2)
 massendurchsatz = Qdot/L
+print('Qdot bei t = 300s ist dann ', Qdot[5])
+print('Qdot t = 900s ist dann ', Qdot[15])
+print('Qdot t = 1200s ist dann ', Qdot[20])
+print('Qdot t = 1800s ist dann ', Qdot[30])
 print('Der Massendurchsatz bei t = 300s ist dann ', massendurchsatz[5])
 print('Der Massendurchsatz bei t = 900s ist dann ', massendurchsatz[15])
 print('Der Massendurchsatz bei t = 1200s ist dann ', massendurchsatz[20])
