@@ -116,16 +116,22 @@ Für eine näherungsweise adiabtische Kompression gilt die Poissonsche Gleichung
   \label{eqn:poisson}
 \end{equation}
 Mit $\kappa$ wird das Verhältnis der molaren Wärmekapazitäten $C_p$ und $C_V$
-bezeichnet, diese Größe ist stets größer als eins.
+bezeichnet. Diese Größe ist stets größer als eins und wird auch als Adiabatenkoeffizient bezeichnet.
 Für die verrichtete Arbeit folgt weiter
 \begin{equation}
   A_m = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) V_\text{kalt}\,.
   \label{eqn:arbeitkompressor2}
 \end{equation}
-Wird die Dichte des Transportgases im gasförmigen Zustand, also beim Druck $p_\text{kalt}$,
-mit $\rho$ bezeichnet, so lässt sich schließlich für die mechanische Kompressorleistung
+Wird diese die Änderung dieser Größe über ein Zeitintervall durch die Länge dieses Intervalls
+geteilt bzw. abgeleitet, so ergibt sich für die mechanische Kompressorleistung
 \begin{equation}
-  N_\text{mech} = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) \frac{1}{\rho} \frac{\Delta m}{\Delta t}
+  N_\text{mech} = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) \frac{1}{\rho} \frac{\Delta m}{\Delta t}\,.
   \label{eqn:kompressorleistung}
 \end{equation}
-schreiben.
+Dabei bezeichnet $\rho$ die Dichte des Transportgases beim gasförmigen Zustand, also beim
+Druck $p_\text{kalt}$. Diese lässt sich näherungsweise durch die ideale Gasgleichung
+\begin{equation}
+  \rho(t) = \frac{\rho_0 T_0}{p_0} \dfrac{p(t)}{T(t)}
+  \label{eqn:rho}
+\end{equation}
+berechnen.

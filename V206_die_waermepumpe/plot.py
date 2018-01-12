@@ -110,3 +110,11 @@ plt.clf()
 print('Die Verdampfungswärme zum Einsetzen hier ist jetzt')
 print(-a3*codata.value('molar gas constant')*1/0.12091*1e-3)
 print('in kJ/kg')
+
+rho0 = 5.51  # in gramm/liter
+T0 = 273.15  # in kelvin
+p0 = 1  # in bar
+kappa = 1.14  # in gar nix
+rhovont = ((rho0*T0)/p0) * p_a/T2
+
+print(rhovont)
