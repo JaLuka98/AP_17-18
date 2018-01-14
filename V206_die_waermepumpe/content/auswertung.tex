@@ -86,39 +86,53 @@ verwendet.
   \label{fig:temp2}
 \end{figure}
 
-Die Parameter der Ausgleichsfunktion ergeben sich für das wärmere Reservoir zu:
-\begin{align*}
-  A_\text{warm}&=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
-  B_\text{warm}&=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
-  C_\text{warm}&=\SI{292.55(009)}{\kelvin}  \,.
-\end{align*}
+Die Parameter der Ausgleichsfunktion sind in Tabelle \ref{tab:parameter} zu finden.
 
-Für das kältere Wärmereservoir lauten die Parameter
-\begin{align*}
-  A_\text{kalt}&=\SI{3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
-  B_\text{kalt}&=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
-  C_\text{kalt}&=\SI{294.33(010)}{\kelvin}  \,.
-\end{align*}
+\begin{table}[H]
+  \centering
+  \caption{Parameter der Ausgleichsrechnung für das wärmere und das kältere Reservoir}
+  \label{tab:parameter}
+  \begin{tabular}{c c c c}
+    \toprule
+    $ $& $A/\frac{\symup{K}}{\symup{s^2}}$ & $B/\frac{\symup{K}}{\symup{s}}$ & $C/$K \\
+    \midrule
+    Wämeres Reservoir   & \num{-3.08(010)e-6} & \num{21.2(02)e-3} & \num{292.55(009)} \\
+    Kälteres Reservoir  & \num{3.24(011)e-6}  & \num{-15.7(02)e-3} & \num{294.33(010)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+%\begin{align*}
+%  A_\text{warm}&=\SI{-3.08(010)e-6}{\kelvin\per\second\squared}  \,, \\
+%  B_\text{warm}&=\SI{21.2(02)e-3}{\kelvin\per\second} \,,  \\
+%  C_\text{warm}&=\SI{292.55(009)}{\kelvin}  \,.
+%\end{align*}
+
+%Für das kältere Wärmereservoir lauten die Parameter
+%\begin{align*}
+%  A_\text{kalt}&=\SI{3.24(011)e-6}{\kelvin\per\second\squared}  \,, \\
+%  B_\text{kalt}&=\SI{15.7(02)e-3}{\kelvin\per\second} \,,  \\
+%  C_\text{kalt}&=\SI{294.33(010)}{\kelvin}  \,.
+%\end{align*}
 
 Im weiteren Verlauf der Auswertung werden einige Zeitpunkte im Speziellen untersucht.
-Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich
-\ref{fig:ausgewaehltemesswerte} entnehmen.
+Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich Tabelle
+\ref{tab:ausgewaehltemesswerte} entnehmen.
 
 \begin{table}[h]
 		\centering
     \caption{Darstellung der gewählten Zeitpunkte und der Temperaturen}
-		\label{fig:ausgewaehltemesswerte}
+		\label{tab:ausgewaehltemesswerte}
 		\begin{tabular}{lcccc}
 			\toprule
 			& $T(\SI{300}{\second}) / \text{K}$ & $T(\SI{900}{\second}) / \text{K}$ & $T(\SI{1200}{\second}) / \text{K}$ & $T(\SI{1800}{\second}) / \text{K}$\\
 			\midrule
-			Reservoir 1 (warm) & 298,45 & 309,15 & 313,55 & 320,55 \\
-			Reservoir 2 (kalt) & 289,95 & 282,85 & 280,05 & 276,55 \\
+			Wärmeres Reservoir & 298,45 & 309,15 & 313,55 & 320,55 \\
+			Kälteres Reservoir & 289,95 & 282,85 & 280,05 & 276,55 \\
 			\bottomrule
 		\end{tabular}
 	\end{table}
 
-Nun sollen mithilfe dieser brechneten Parameter die Differenzialquotienten
+Nun sollen mithilfe deraus der Ausgleichsrechnung gewonnenen Parameter die Differenzialquotienten
 $\dot{T}_\text{warm}$ und $\dot{T}_\text{kalt}$ für vier verschiedene Temperaturen berechnet werden.
 
 Die Differentialquotienten lassen sich durch
@@ -132,22 +146,40 @@ Fehlerfortpflanzung in der Form
 \end{equation}
 berücksichtigt werden.
 
-Für das warme Reservoir $T_{\symup{warm}}$ ergibt sich
-\begin{align*}
-  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{300}} = 0,01927\pm0,00021 \,,\\
-  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{900}} =  0,01557\pm0,00027\,,\\
-  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{1200}} = 0,01372\pm0,00031\,,\\
-  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{1800}} = 0,0100\pm0,0004\,.\\
-\end{align*}
+Die berechneten Werte sind in Tabelle \ref{tab:differentialquotienten} zu finden.
 
+\begin{table}[H]
+  \centering
+  \caption{Berechnete Werte für die Differenzialquotienten $\dot{T}_\text{warm}$ und $\dot{T}_\text{kalt}$
+  zu den ausgewählten Zeitpunkten.}
+  \label{tab:differentialquotienten}
+  \begin{tabular}{c c c c c}
+    \toprule
+    $ $& $\dot{T}_{\symup{300}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$
+    &$\dot{T}_{\symup{900}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$
+    &$\dot{T}_{\symup{1200}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$
+    &$\dot{T}_{\symup{1800}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$\\
+    \midrule
+    Wämeres Reservoir   & \num{19.27(021)} & \num{15.57(027)} & \num{13.72(031)}    & \num{10.0(04)}  \\
+    Kälteres Reservoir  & \num{-13.75(023)}  & \num{-9.87(029)} & \num{-7.93(034)}  &  \num{4.0(04)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-Für das kalte Reservoir ergeben sich die Werte
-\begin{align*}
-  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{300}} = -0,01375\pm0,00023 \,,\\
-  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{900}} =  -0,00987\pm0,00029\,,\\
-  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1200}} = -0,00793\pm0,00034\,,\\
-  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1800}} = -0,0040\pm0,0004\,.\\
-\end{align*}
+%Für das warme Reservoir $T_{\symup{warm}}$ ergibt sich
+%\begin{align*}
+%  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{300}} = 0,01927\pm0,00021 \,,\\
+%  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{900}} =  0,01557\pm0,00027\,,\\
+%  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{1200}} = 0,01372\pm0,00031\,,\\
+%  \biggl(\frac{\symup{d}T_{\symup{warm}}}{\symup{d}t}\biggr)_{\symup{1800}} = 0,0100\pm0,0004\,.\\
+%\end{align*}
+%Für das kalte Reservoir ergeben sich die Werte
+%\begin{align*}
+%  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{300}} = -0,01375\pm0,00023 \,,\\
+%  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{900}} =  -0,00987\pm0,00029\,,\\
+%  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1200}} = -0,00793\pm0,00034\,,\\
+%  \biggl(\frac{\symup{d}T_{\symup{kalt}}}{\symup{d}t}\biggr)_{\symup{1800}} = -0,0040\pm0,0004\,.\\
+%\end{align*}
 
 \subsection{Bestimmung der Güteziffern}
 
@@ -170,15 +202,32 @@ Der Fehler bei der realen Güteziffer ergibt sich dabei durch die Gauß'sche Feh
   \sqrt{4 t^2 \sigma_{A_\text{warm}}^2 + \sigma_{B_\text{warm}}^2} \,.
 \end{equation}
 Die ideale Güteziffer der Wärmepumpe hingegen berechnet sich durch Gleichung
-\ref{eqn:nuid}. Damit ergeben sich die Werte für die realen und idealen
-Güteziffern zu den verschiedenen Zeitpunkten zu
-\begin{align*}
-  \nu_{\symup{real, 300}} &= \SI{2.72(003)}{einheit?} \,, & \nu_{\symup{real, 300}} &= \SI{35.11}{...}  \,,\\
-  \nu_{\symup{real, 900}} &= \SI{2.25(004)}{einheit?} \,, & \nu_{\symup{real, 900}} &= \SI{11.75}{}  \,,\\
-  \nu_{\symup{real, 1200}} &= \SI{1.94(004)}{einheit?} \,,& \nu_{\symup{real, 1200}} &= \SI{9.36}{}  \,,\\
-  \nu_{\symup{real, 1800}} &=  \SI{1.41(006)}{einheit?}\,,& \nu_{\symup{real, 1800}} &= \SI{7.29}{}  \,.\\
-\end{align*}
-(FEHLER BERECHNEN!)
+\ref{eqn:nuid}. Die berechneten Werte für die reale und die ideale Güteziffer
+sind in Tabelle \ref{tab:güteziffer} dargestellt.
+
+\begin{table}[H]
+  \centering
+  \caption{Berechnete Werte für die ideale und die reale Güteziffer zu den ausgewählten
+  Zeitpunkten und relative Abweichung der realen Werte von den idealen Werten.}
+  \label{tab:güteziffer}
+  \begin{tabular}{c c c c}
+    \toprule
+    $t/$s & $\nu_{\symup{real}}$ & $\nu_{\symup{ideal}}$ & relative Abweichung in \%\\
+    \midrule
+    300   & \num{2.72(003)} & 35.11 & -92,3 \\
+    900   & \num{2.25(004)} & 11.75 & -80,9 \\
+    1200  & \num{1.94(004)} & 9.36  & -79,3 \\
+    1800  & \num{1.41(006)} & 7.29  & -80,7 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+%\begin{align*}
+%  \nu_{\symup{real, 300}} &= \SI{2.72(003)}{einheit?} \,, & \nu_{\symup{real, 300}} &= \SI{35.11}{...}  \,,\\
+%  \nu_{\symup{real, 900}} &= \SI{2.25(004)}{einheit?} \,, & \nu_{\symup{real, 900}} &= \SI{11.75}{}  \,,\\
+%  \nu_{\symup{real, 1200}} &= \SI{1.94(004)}{einheit?} \,,& \nu_{\symup{real, 1200}} &= \SI{9.36}{}  \,,\\
+%  \nu_{\symup{real, 1800}} &=  \SI{1.41(006)}{einheit?}\,,& \nu_{\symup{real, 1800}} &= \SI{7.29}{}  \,.\\
+%\end{align*}
+
 Auffällig ist hier, dass die reale Güteziffer der Wärmepumpe zu allen betrachteten
 Zeitpunkten stark von der idealen Güteziffer abweicht.
 Mögliche Gründe hierfür sind die schlechte Isolierung der Wärmereservoire, sowie
