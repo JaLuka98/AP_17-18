@@ -1,12 +1,17 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Die Messreihen für die Temperaturen, Drücke und die Leistungsaufnahme $P$ des Kompressors
+Die Messreihen für die Temperaturen $T_{\text{warm}}$ und $T_{\text{kalt}}$,
+die Drücke $p_{\text{wamr}}$ und $p_{\text{kalt}}$ und die Leistungsaufnahme $P$ des Kompressors
 in Abhängigkeit der Zeit sind in Tabelle \ref{tab:messwerte} dargestellt. Dabei
 werden die Werte für die Zeit in Sekunden und die Werte für die Temperaturen in Kelvin
-umgerechnet. Zu den gemessenen Werten für die Drücke $p_{\symup{a}}$ und
-$p_{\symup{a}}$ wird noch der Umgebungsdruck von $\SI{10e5}{\pascal}$ hinzuaddiert.
+umgerechnet. Zu den gemessenen Werten für die Drücke $p_{\symup{warm}}$ und
+$p_{\symup{kalt}}$ wird noch der Umgebungsdruck von $\SI{10e5}{\pascal}$ hinzuaddiert.
 
-\begin{table}[H]
+Außerdem sind bereits berechnete Werte,
+die später in der Auswertung noch benötigt werden, zu sehen. Als Einheiten werden
+die üblichen Einheiten des SI-Einheitensystems verwendet.
+
+\begin{table}
   \centering
   \caption{Messwerte und aus diesen berechnete Werte}
   \label{tab:messwerte}
@@ -50,15 +55,9 @@ $p_{\symup{a}}$ wird noch der Umgebungsdruck von $\SI{10e5}{\pascal}$ hinzuaddie
     1920	&  321,75  &	276,15  &	 3,3	&  12,0  &  125  &  3,11	&   2,485  \\
     1980	&  322,25  &  275,95  &	 3,3	&  12,1  &  124  &  3,10	&   2,493 \\
     2040	&  322,85  &  275,75  &	 3,3	&  12,2  &  124  &  3,10	&   2,501 \\
-
     \bottomrule
   \end{tabular}
 \end{table}
-
-Außerdem sind bereits berechnete Werte,
-die später in der Auswertung noch benötigt werden, zu sehen. Als Einheiten werden
-die üblichen Einheiten des SI-Einheitensystems verwendet und die Größen, wenn nötig,
-umgerechnet.
 
 \subsection{Graphische Darstellung der Temperaturverläufe und Ausgleichsrechnung}
 Die gemessenen Werte der Temperaturen werden in den Abbildungen \ref{fig:temp1} und \ref{fig:temp2}
@@ -86,11 +85,12 @@ verwendet.
   \label{fig:temp2}
 \end{figure}
 
-Die Parameter der Ausgleichsfunktion sind in Tabelle \ref{tab:parameter} zu finden.
+Die Parameter der Ausgleichsfunktion für die Temperatur im wärmeren und im kälteren
+Reservoire sind in Tabelle \ref{tab:parameter} zu finden.
 
 \begin{table}[H]
   \centering
-  \caption{Parameter der Ausgleichsrechnung für das wärmere und das kältere Reservoir}
+  \caption{Parameter der Ausgleichsrechnung für das wärmere und das kältere Reservoir.}
   \label{tab:parameter}
   \begin{tabular}{c c c c}
     \toprule
@@ -120,7 +120,7 @@ Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich Tab
 
 \begin{table}[h]
 		\centering
-    \caption{Darstellung der gewählten Zeitpunkte und der Temperaturen}
+    \caption{Darstellung der gewählten Zeitpunkte und der Temperaturen.}
 		\label{tab:ausgewaehltemesswerte}
 		\begin{tabular}{lcccc}
 			\toprule
@@ -142,7 +142,7 @@ Die Differentialquotienten lassen sich durch
 aus den Parametern der Ausgleichsrechnungen bestimmen. Dabei muss die Gauß'sche
 Fehlerfortpflanzung in der Form
 \begin{equation}
-  \sigma_{\dot{T}_\text{warm}} = \sqrt{4 t^2 \sigma_{A_\text{warm}}^{2} + \sigma_{B_\text{warm}}^{2} t^{2}}
+  \sigma_{\dot{T}} = \sqrt{4 t^2 \sigma_{A}^{2} + \sigma_{B}^{2} t^{2}}
 \end{equation}
 berücksichtigt werden.
 
@@ -160,8 +160,8 @@ Die berechneten Werte sind in Tabelle \ref{tab:differentialquotienten} zu finden
     &$\dot{T}_{\symup{1200}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$
     &$\dot{T}_{\symup{1800}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$\\
     \midrule
-    Wämeres Reservoir   & \num{19.27(021)} & \num{15.57(027)} & \num{13.72(031)}    & \num{10.0(04)}  \\
-    Kälteres Reservoir  & \num{-13.75(023)}  & \num{-9.87(029)} & \num{-7.93(034)}  &  \num{-4.0(04)} \\
+    Wämeres Reservoir   & \num{19.3(02)} & \num{15.6(03)} & \num{13.7(03)}    & \num{10.0(04)}  \\
+    Kälteres Reservoir  & \num{-13.8(02)}  & \num{-9.9(03)} & \num{-7.9(03)}  &  \num{4.0(04)} \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -190,7 +190,7 @@ der Apparatur ablesbar und hat den Wert
   m_{\symup{k}}c_{\symup{k}}=\SI{750}{\joule\per\kelvin} \,. \nonumber
 \end{equation}
 Die Wärmekapazität des sich im wärmeren Reservoir befindenden Wassers lässt sich
-mithilfe der spezifischen Wärmekapazität $c_{\symup{w}}=\SI{4187}{\joule\per\kilo\gram\kelvin}$
+mithilfe der spezifischen Wärmekapazität $c_{\symup{w}}=\SI{4187}{\joule\per\kilo\gram\kelvin}$ \cite{waermewasser}
 und der Masse $m_{\symup{w}}=\SI{4}{\kilo\gram}$ des Wassers zu
 \begin{equation}
   m_{\symup{w}}c_{\symup{w}}=\SI{16748}{\joule\per\kelvin}  \nonumber
@@ -230,10 +230,7 @@ sind in Tabelle \ref{tab:güteziffer} dargestellt.
 
 Auffällig ist hier, dass die reale Güteziffer der Wärmepumpe zu allen betrachteten
 Zeitpunkten stark von der idealen Güteziffer abweicht.
-Mögliche Gründe hierfür sind die schlechte Isolierung der Wärmereservoire, sowie
-der nicht ideale WIrkungsgrad des Kompressors. Die Wärmereservoire bestanden
-aus lediglich durch eine Styroporschicht isolierten und oben nur dürftig durch Holzplatten
-abgedeckten Eimern. Zudem waren sämtliche Rohre nicht oder nur sehr schwach isoliert.
+
 
 \subsection{Bestimmung des Massendurchsatzes}
 Es wird zunächst die molare Verdampfungswärme $L_n$ des Transportgases
@@ -254,7 +251,7 @@ sie hier als exakt angesehen.
 Für den Umgebungsdruck $p_0$ wird der Näherungswert $\SI{1}{\bar}$ verwendet.
 Die Dampfdruck-Kurve ist in Abbildung \ref{fig:dampf} dargestellt.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{build/L1.pdf}
   \caption{Logarithmische Darstellung des gemessenen Druckes im wärmeren Reservoir
