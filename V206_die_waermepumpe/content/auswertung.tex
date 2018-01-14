@@ -102,7 +102,7 @@ Für das kältere Wärmereservoir lauten die Parameter
 
 Im weiteren Verlauf der Auswertung werden einige Zeitpunkte im Speziellen untersucht.
 Die Wahl dieser Zeitpunkte und die Temperaturen zu diesen Zeiten lassen sich
-\label{fig:ausgewaehltemesswerte} entnehmen.
+\ref{fig:ausgewaehltemesswerte} entnehmen.
 
 \begin{table}[h]
 		\centering
@@ -262,24 +262,33 @@ Die Unsicherheiten ergeben sich unter Berücksichtigung von Gleichung \eqref{eqn
 Für die Berechnung der mechanischen Leistung $N_\text{mech}$ mithilfe von Gleichung
 \eqref{eqn:kompressorleistung} des Kompressors an den vier ausgewählten Zeitpunkten
 wird die Dichte des Transportgases zu diesen Zeitpunkten benötigt.
-Diese wird nach Gleichung \eqref{eqn:rho} berechnet. Die verwendeten Werte für $p(t)$
-und $T(t)$ sind als $p_\text{kalt}(t)$ und $T_\text{kalt}(t)$ in Tabelle \ref{tab:datalast} zu finden.
+Diese wird nach Gleichung \eqref{eqn:rho} mit Werten aus Tabelle \ref{tab:messwerte}
+berechnet.
 Zur Berechnung sind auch die Größen $\rho_0 = \SI{5.51}{\gram\per\litre}$ als Dichte
 des Transportgases bei einer Temperatur von $\SI{273.15}{\kelvin}$ und einem Druck von
 $\SI{1e5}{\pascal}$ und der Adiabatenkoeffizient $\kappa$ = 1,14 nötig.
+Die berechneten Zwischenergebnisse für $\rho$ und die mechanische Kompressorleistung
+$N_\text{mech}$ zu den vier ausgewählten Zeitpunkten ist in Tabelle \ref{tab:datalast}
+eingetragen.
 
 \begin{table}
 	\centering
 	\caption{Die Dichte des Gases, die theoretische Kompressorleistung und das Verhältnis $N_\text{mech}/N$ in Abhängigkiet von der Zeit.}
   \label{tab:datalast}
-	\begin{tabular}{cccc}
+	\begin{tabular}{ccc}
 		\toprule
-		$t/$s & $\rho/(\text{g} \cdot \text{l}^{-1}$) & $N_\text{mech} / [\mathrm{W}]$ & $\eta$\\
-		\midrule
-		300 & $22.1$ & $20.9 \pm 0.6$ & $0.174 \pm 0.005$ \\
-		900 & $20.7$ & $23.9 \pm 0.7$ & $0.199 \pm 0.006$\\
-	  1200 & $20.4$ & $24.0 \pm 0.8$ & $0.200 \pm 0.007$\\
-		1800 & $19.4$ & $23.6 \pm 0.9$ & $0.196 \pm 0.007$\\
+		$t/$s & $\rho/(\text{g} \cdot \text{l}^{-1}$) & $N_\text{mech} / \text{W}$ \\
+    \midrule
+		300 & 23,36 & -11,0 $\pm$ 0,4 \\
+		900 & 20,22 & -15,4 $\pm$ 0,7 \\
+	  1200 & 19,35 & -14,7 $\pm$ 0,8 \\
+		1800 & 18,50 & -9,1 $\pm$ 1,0 \\
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+Die Unsicherheit von $N_\text{mech}$ ergibt durch Anwendung der Gauß'schen Fehlerfortpflanzung
+\eqref{eqn:gaussfehler} zu
+\begin{equation}
+  \sigma_{N_\text{mech}} = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) \frac{1}{\rho} \sigma_{\dot{m}}\,.
+\end{equation}
