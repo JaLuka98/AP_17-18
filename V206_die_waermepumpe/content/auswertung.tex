@@ -1,11 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Die Messreihen für die Temperaturen $T_{\text{warm}}$ und $T_{\text{kalt}}$,
-die Drücke $p_{\text{wamr}}$ und $p_{\text{kalt}}$ und die Leistungsaufnahme $P$ des Kompressors
+die Drücke $p_{\text{warm}}$ und $p_{\text{kalt}}$ und die Leistungsaufnahme $P$ des Kompressors
 in Abhängigkeit der Zeit sind in Tabelle \ref{tab:messwerte} dargestellt. Dabei
 werden die Werte für die Zeit in Sekunden und die Werte für die Temperaturen in Kelvin
 umgerechnet. Zu den gemessenen Werten für die Drücke $p_{\symup{warm}}$ und
-$p_{\symup{kalt}}$ wird noch der Umgebungsdruck von $\SI{10e5}{\pascal}$ hinzuaddiert.
+$p_{\symup{kalt}}$ wird noch der Umgebungsdruck von $\SI{1e5}{\pascal}$ hinzuaddiert.
 
 Außerdem sind bereits berechnete Werte,
 die später in der Auswertung noch benötigt werden, zu sehen. Als Einheiten werden
@@ -86,7 +86,7 @@ verwendet.
 \end{figure}
 
 Die Parameter der Ausgleichsfunktion für die Temperatur im wärmeren und im kälteren
-Reservoire sind in Tabelle \ref{tab:parameter} zu finden.
+Reservoir sind in Tabelle \ref{tab:parameter} zu finden.
 
 \begin{table}[H]
   \centering
@@ -140,7 +140,7 @@ Die Differentialquotienten lassen sich durch
   \frac{\symup{d}T}{\symup{d}t}=2At+B
 \end{equation}
 aus den Parametern der Ausgleichsrechnungen bestimmen. Dabei muss die Gauß'sche
-Fehlerfortpflanzung in der Form
+Fehlerfortpflanzung (vgl. Gleichung \eqref{eqn:gaussfehler}) in der Form
 \begin{equation}
   \sigma_{\dot{T}} = \sqrt{4 t^2 \sigma_{A}^{2} + \sigma_{B}^{2} t^{2}}
 \end{equation}
@@ -160,8 +160,8 @@ Die berechneten Werte sind in Tabelle \ref{tab:differentialquotienten} zu finden
     &$\dot{T}_{\symup{1200}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$
     &$\dot{T}_{\symup{1800}}/\frac{\symup{\num{e-3}K}}{\symup{s}}$\\
     \midrule
-    Wämeres Reservoir   & \num{19.3(02)} & \num{15.6(03)} & \num{13.7(03)}    & \num{10.0(04)}  \\
-    Kälteres Reservoir  & \num{-13.8(02)}  & \num{-9.9(03)} & \num{-7.9(03)}  &  \num{4.0(04)} \\
+    Wämeres Reservoir   & \num{19.27(021)} & \num{15.6(03)} & \num{13.7(03)}    & \num{10.0(04)}  \\
+    Kälteres Reservoir  & \num{-13.75(023)}  & \num{-9.9(03)} & \num{-7.9(03)}  &  \num{4.0(04)} \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -196,9 +196,10 @@ und der Masse $m_{\symup{w}}=\SI{4}{\kilo\gram}$ des Wassers zu
   m_{\symup{w}}c_{\symup{w}}=\SI{16748}{\joule\per\kelvin}  \nonumber
 \end{equation}
 berechnen.
-Der Fehler bei der realen Güteziffer ergibt sich dabei durch die Gauß'sche Fehlerfortpflanzung
+Der Fehler bei der realen Güteziffer ergibt sich dabei gemäß Gleichung \eqref{eqn:gaussfehler}
+durch die Gauß'sche Fehlerfortpflanzung
 \begin{equation}
-  \sigma_{\nu_\text{real}} = \frac{m_\text{warm} c_\text{W} + m_\text{K} c_\text{K}}{P}
+  \sigma_{\nu_\text{real}} = \frac{m_\text{warm} c_\text{w} + m_\text{k} c_\text{k}}{P}
   \sqrt{4 t^2 \sigma_{A_\text{warm}}^2 + \sigma_{B_\text{warm}}^2} \,.
 \end{equation}
 Die ideale Güteziffer der Wärmepumpe hingegen berechnet sich durch Gleichung
@@ -234,8 +235,8 @@ Zeitpunkten stark von der idealen Güteziffer abweicht.
 
 \subsection{Bestimmung des Massendurchsatzes}
 Es wird zunächst die molare Verdampfungswärme $L_n$ des Transportgases
-Dichlordifluormethan mithilfe einer Dampfdruck-Kurve bestimmt
-\footnote{Die theoretische Grundlage hierfür kann in \cite{dampfdruck} nachgelesen
+Dichlordifluormethan mithilfe einer Dampfdruck-Kurve bestimmt\footnote{Die
+theoretische Grundlage hierfür kann in \cite{dampfdruck} nachgelesen
 werden.} und daraus die auf die Masse bezogene Verdampfungswärme $L_m$ errechnet, da
 diese für die Berechnung des Massendurchsatzes benötigt wird.
 Der gemessene Druck im wärmeren Reservoir wird dafür logarithmisch gegen die reziproke Temperatur im

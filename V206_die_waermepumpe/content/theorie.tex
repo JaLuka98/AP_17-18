@@ -1,7 +1,7 @@
 \section{Theorie}
 \label{sec:Theorie}
 \subsection{Allgemeines zur Wärmepumpe}
-Zu Betrachten sind zwei Wärmereservoirs mit verschiedener Temperatur.
+Zu Betrachten sind zwei Wärmereservoire mit verschiedener Temperatur.
 Zwischen diesen findet Wärmeübertragung ohne äußere Einwirkung stets vom
 wärmeren zum kälteren Wärmereservoir statt. Dies ist eine mögliche Formulierung des
 zweiten Hauptsatzes der Thermodynamik oder kann alternativ in anderen Formulierungen
@@ -23,13 +23,13 @@ T_\text{warm} &\coloneqq T_1 & T_\text{kalt} &\coloneqq T_2
   \label{fig:waermepumpebild}
 \end{figure}
 
-Ein reales Gas durchläuft die Wärmepumpe als Transportmedium. Dieses gibt beim Verdampfen
+Ein reales Gas durchläuft die Wärmepumpe als Transportmedium. Dieses nimmt beim Verdampfen
 Wärme auf und gibt sie bei Verflüssigung wieder ab, sodass die transportierte Wärme
 als Phasenumwandlungsenergie des verwendeten Gases vorliegt. Der Kompressor K ermöglicht
 einen Kreislauf des Gases durch die Wärmepumpe. Das Gas ist bei der Temperatur $T_\text{warm}$
 und dem Druck $p_\text{warm}$ flüssig und liegt bei der Temperatur $T_\text{kalt}$ und dem
 Druck $p_\text{kalt}$ im gasförmigen Aggregatzustand vor. Reservoir 2 ist hier das
-kältere Reservoir, welches Reservoir 2 wärmt. Das flüssige Gas durchströmt die Stelle D
+kältere Reservoir, welches Reservoir 1 wärmt. Das flüssige Gas durchströmt die Stelle D
 und verdampft im Reservoir 2. Dabei wird dem dort befindlichen Stoff die Verdampfungswärme
 $L_m$ pro Gramm entzogen. Daraufhin wird das Medium im Kompressor adiabatisch komprimiert,
 sodass Temperatur und Druck steigen. In Reservoir 1 verflüssigt sich das Gas, indem es
@@ -64,7 +64,7 @@ sodass die reale Güteziffer $\nu_\text{real}$ stets echt kleiner als die ideale
 Güteziffer ist.
 Gleichung \eqref{eqn:nuid} zeigt, dass eine Wärmepumpe effizient arbeitet und damit
 die Güteziffer groß wird, wenn die Temperaturdifferenz der Reservoire
-klein wird. Dies stellt einen Vorteil gegenüber Verfahren da, bei denen mechanische Arbeit
+klein wird. Dies stellt einen Vorteil gegenüber Verfahren dar, bei denen mechanische Arbeit
 direkt in Wärme umgewandelt wird, denn dabei ist die erhaltene Wärmemenge stets kleiner
 oder gleich der aufgewandten mechanischen Arbeit.\\
 Um die reale Güteziffer zu ermitteln, wird die Wärmekapazität der Substanz
@@ -122,13 +122,13 @@ Für die verrichtete Arbeit folgt weiter
   A_m = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) V_\text{kalt}\,.
   \label{eqn:arbeitkompressor2}
 \end{equation}
-Wird diese die Änderung dieser Größe über ein Zeitintervall durch die Länge dieses Intervalls
+Wird die Änderung dieser Größe über ein Zeitintervall durch die Länge dieses Intervalls
 geteilt bzw. abgeleitet, so ergibt sich für die mechanische Kompressorleistung
 \begin{equation}
   N_\text{mech} = \frac{1}{1 - \kappa} \left(p_\text{warm} \sqrt[\leftroot{-1}\uproot{-1}\scriptstyle \kappa]{\frac{p_\text{kalt}}{p_\text{warm}}} - p_\text{kalt} \right) \frac{1}{\rho} \frac{\Delta m}{\Delta t}\,.
   \label{eqn:kompressorleistung}
 \end{equation}
-Dabei bezeichnet $\rho$ die Dichte des Transportgases beim gasförmigen Zustand, also beim
+Dabei bezeichnet $\rho$ die Dichte des Transportgases im gasförmigen Zustand, also beim
 Druck $p_\text{kalt}$. Diese lässt sich näherungsweise durch die ideale Gasgleichung
 \begin{equation}
   \rho(t) = \frac{\rho_0 T_0}{p_0} \dfrac{p(t)}{T(t)}
