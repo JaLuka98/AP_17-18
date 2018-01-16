@@ -1,2 +1,195 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+\subsection{Bestimmung der Wärmekapazität des Kaloriemeters}
+\label{sec:Auswertung_Kaloriemeter}
+
+Da die von dem erhitzen Wasser abgegebene Wärmemenge unter der Annahme, dass keine
+Arbeit verrichtet wird und keine Energie das System verlässt, genau so groß sein
+muss, wie die von dem kalten Wasser und den Wänden des Kaloriemeters aufgenommene
+Wärmemenge, lässt sich schreiben:
+\begin{equation}
+  (c_{\symup{w}}m_{\symup{x}}+c_{\symup{g}}m_{\symup{g}})(T_{\symup{m}}-T_{\symup{x}})
+  =c_{\symup{w}}m_{\symup{y}}(T_{\symup{y}}-T_{\symup{m}}) \,.
+\end{equation}
+Dabei ist $c_{\symup{w}}$ die spezifische Wärmekapazität des Wassers,
+$m_{\symup{x}}$ die Masse des Wassers im Kaloriemeter, $T_{\symup{x}}$ die
+Temperatur des Wassers im Kaloriemeter, $m_{\symup{y}}$ die Masse des
+im Becherglas zu erhitzenden Wassers, $T_{\symup{y}}$ die zugehörige Temperatur
+und $T_{\symup{m}}$ die Mischtemperatur nach dem Mischen. $c_{\symup{g}}m_{\symup{g}}$
+ist die Wärmekapazität des Kaloriemeters und $c_{\symup{w}}$ ist die spezifische Wärmekapazität
+von Wasser. Diese beträgt $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}.
+Wird diese Formel nach der Wärmekapazität des Kaloriemeters umgestellt, so ergibt sich:
+\begin{equation}
+  c_{\symup{g}}m_{\symup{g}}=\frac{c_{\symup{w}}m_{\symup{y}}(T_{\symup{y}}-T_{\symup{m}})
+  -c_{\symup{w}}m_{\symup{x}}(T_{\symup{m}}-T_{\symup{x}})}{(T_{\symup{m}}-T_{\symup{x}})} \,.
+  \label{eqn:kaloriemeter}
+\end{equation}
+Werden nun die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
+\begin{align*}
+  m_{\symup{x}} = \SI{340.77}{\gram}   \,,\\
+  T_{\symup{x}} = \SI{294.75}{\kelvin} \,,\\
+  m_{\symup{y}} = \SI{260.24}{\gram}   \,,\\
+  T_{\symup{y}} = \SI{354.15}{\kelvin} \,,\\
+  T_{\symup{m}} = \SI{319.05}{\kelvin} \,.\\
+\end{align*}
+in Gleichung \eqref{eqn:kaloriemeter} eingesetzt, so ergibt sich für die Kapazität
+desselben
+\begin{equation}
+  c_{\symup{g}}m_{\symup{g}} = \SI{146.85}{\joule\per\kelvin} \,.\nonumber
+\end{equation}
+
+
+\subsection{Bestimmung der spezifischen Wärmekapazitäten verschiedener Stoffe}
+\label{sec:Auswertung_stoffe}
+
+Auch hier lässt sich durch das Gleichsetzen der abgegebenen und der aufgenommenen
+Wärmemengen eine Beziehung zur Berechnung der spezifischen Wärmekapazitäten bestimmen:
+\begin{equation}
+  c_{\symup{k}}=\frac{(c_{\symup{w}}m_{\symup{w}}+c_{\symup{g}}m_{\symup{g}})
+  (T_{\symup{m}}-T_{\symup{w}})}{m_{\symup{k}}(T_{\symup{k}}-T_{\symup{m}})}\,.
+\end{equation}
+Dabei bezeichnet $c_{\symup{k}}$ die spezifische Wärmekapazität des Probekörpers,
+$c_{\symup{w}}$ die spezifische Wärmekapazität von Wasser, $m_{\symup{w}}$ diese
+Masse des sich im Kaloriemeter befindenden Wassers, $T_{\symup{w}}$ dessen Temperatur
+vor dem Wärmeaustausch und $T_{\symup{m}}$ dessen Temperatur nach dem Wärmeaustausch.
+$c_{\symup{g}}m_{\symup{g}}$ bezeichnet erneut die Wärmekapazität des Kaloriemeters
+und $m_{\symup{k}}$ ist die Masse des Probekörpers.
+
+Die Messwerte für Blei, sowie die zugehörigen berechneten spezifischen Wärmekapazitäten
+befinden sich in Tabelle \ref{tab:blei}. Dabei werden die Temperaturen in Kelvin umgerechnet.
+Die Masse der Bleiprobe beträgt $m_{\symup{Blei}}=\SI{530.75}{\gram}$. Die verwendete
+Wassermenge beträgt $m_{\symup{w,Blei}}=\SI{593.40}{\gram}$.
+
+\begin{table}
+  \centering
+  \caption{Messwerte für die Bleiprobe, sowie daraus berechnete Werte für die spezifische
+  Wärmekapazität von Blei.}
+  \label{tab:blei}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Blei}}/\frac{J}{g\cdot K}$ \\
+    \midrule
+    Messung 1 & 295,65 & 363,15 & 297,35 & 0,128 \\
+    Messung 2 & 297,35 & 372,25 & 299,05 & 0,115 \\
+    Messung 3 & 299,15 & 372,05 & 300,85 & 0,118 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Die spezifische Wärmekapazität wird nun mithilfe der Beziehung
+\begin{equation}
+  \overline{c} = \sum\limits_{i = 1}^N c_i
+  \label{eqn:mean}
+\end{equation}
+gemittelt. Die empirische Standardabweichung ergibt sich durch den Zusammenhang
+\begin{equation}
+  \sigma_c = \sqrt{\frac{1}{N-1}
+    \sum\limits_{i = 1}^N
+    (c_i-\overline{c})^2} \,.
+    \label{eqn:std}
+\end{equation}
+
+Damit ergibt sich die spezifische Wärmekapazität von Blei zu
+\begin{equation}
+  c_{\symup{Blei}} = \SI{0.120(0005)}{\joule\per\gram\per\kelvin} \,.\nonumber
+\end{equation}
+Der Literaturwert hierzu beträgt $c_{\symup{Blei,theo}}=\SI{0.130}{\joule\per\gram\per\kelvin}$ \cite{werte}.
+Die relative Abweichung beträgt also $-7,69\%$.
+
+Für die Aluminium- und Kupferprobe wird analog verfahren. Die Masse der Aluminiumprobe
+beträgt $m_{\symup{Alu}}=\SI{156.23}{\gram}$ und die verwendete Wassermenge
+beträgt $m_{\symup{w,Alu}}=\SI{600.77}{\gram}$. Die Werte für Aliminium sind in
+Tabelle \ref{tab:alu} zu finden.
+
+\begin{table}
+  \centering
+  \caption{Messwerte für die Aluminiumprobe, sowie daraus berechnete Werte für die spezifische
+  Wärmekapazität von Aluminium.}
+  \label{tab:alu}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Alu}}/\frac{J}{g\cdot K}$ \\
+    \midrule
+    Messung 1 & 295,15 & 366,75 & 296,65 & 0,364 \\
+    Messung 2 & 298,15 & 366,95 & 300,85 & 0,695 \\
+    Messung 3 & 300,95 & 368,15 & 304,25 & 0,879 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Der Mittelwert ergibt sich hier ebenfalls nach den Gleichungen \eqref{eqn:mean} und
+\eqref{eqn:std} zu
+\begin{equation}
+  c_{\symup{Alu}} = \SI{0.65(021)}{\joule\per\gram\per\kelvin} \,.\nonumber
+\end{equation}
+Der Literaturwert liegt hier bei $c_{\symup{Alu,theo}}=\SI{0.92}{\joule\per\gram\per\kelvin}$ \cite{werte},
+sodass die relative Abweichung des errechneten Wertes zum Literaturwert zu
+$-29,35\%$ ergibt.
+
+
+Die Kupferprobe besitzt eine Masse von $m_{\symup{Kupfer}}=\SI{237.61}{\gram}$.
+Die hierbei verwendete Wassermenge beträgt $m_{\symup{w,Kupfer}}=\SI{619.57}{\gram}$.
+
+\begin{table}
+  \centering
+  \caption{Messwerte für die Kupferprobe, sowie daraus berechnete Werte für die spezifische
+  Wärmekapazität von Kupfer.}
+  \label{tab:kupfer}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Kupfer}}/\frac{J}{g\cdot K}$ \\
+    \midrule
+    Messung 1 & 295,05 & 368,05 & 296,85 & 0,291 \\
+    Messung 2 & 297,15 & 369,95 & 298,75 & 0,259 \\
+    Messung 3 & 298,75 & 372,25 & 300,55 & 0,289 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Hier ist der Mittelwert nach den Gleichungen \eqref{eqn:mean} und
+\eqref{eqn:std}
+\begin{equation}
+  c_{\symup{Kupfer}} = \SI{0.280(0015)}{\joule\per\gram\per\kelvin} \,.\nonumber
+\end{equation}
+Der Literatuwert für die spezifische Wärmekapazität von Kupfer beträgt
+$c_{\symup{Alu,theo}}=\SI{0.39}{\joule\per\gram\per\kelvin}$ \cite{werte}.
+Demnach ist die relative Abweichung $-28,21\%$.
+
+
+\subsection{Bestimmung der Molwärmen der Stoffe}
+\label{sec:molwaerme}
+
+Die Molwärme der Stoffe lässt sich nach Gleichung \eqref{!!!} über den Zusammenhang
+\begin{equation}
+  C_{\symup{v}}=c_{\symup{k}}M-9\alpha^2 K\frac{M}{\rho}T_{\symup{m}}
+\end{equation}
+berechnen. Die Werte für den linearen Ausdehnungskoeffizienten $\alpha$,
+das Kompressionsmodul $K$ bzw. die Kompressibilität $\kappa=\frac{1}{K}$, die molare Masse $M$ und die Dichte $\rho$
+für die jeweiligen Materialien können der Versuchsanleitung \cite{Versuchsanleitung}
+entnommen werden.
+
+Damit ergeben sich für die Molwärmen die in Tabelle \ref{tab:molwaerme} dargestellten Werte.
+Die Mittelwerte berechnen sich dabei mit den Gleichungen \eqref{eqn:mean} und
+\eqref{eqn:std}.
+
+\begin{table}
+  \centering
+  \caption{Berechnete Molwärmen der Stoffe.}
+  \label{tab:molwaerme}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    & $C_{\symup{v,Blei}}/\frac{J}{mol\,K}$ & $C_{\symup{v,Alu}}/\frac{J}{mol\,K}$&
+    $C_{\symup{v,Kupfer}}/\frac{J}{mol\,K}$ \\
+    \midrule
+    Messung 1   & 26,50 & 9,83  & 18,49 \\
+    Messung 2   & 23,82 & 18,76 & 16,43 \\
+    Messung 3   & 24,49 & 23,72 & 18,36 \\
+    Mittelwert  & 24,9\pm1,1 & 17\pm6 & 17,8\pm0,9  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+ Die relativen Abweichungen bezogen auf den zu erwartenden Wert $3R\approx\SI{24,9434}{\joule\per\mol\per\kelvin}$
+ betragen dann $-0,17\%$ für Blei, $-31,85\%$ für Aluminium und $-28,64\%$ für
+ Kupfer.
