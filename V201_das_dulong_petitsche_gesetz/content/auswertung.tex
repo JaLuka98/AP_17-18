@@ -4,28 +4,7 @@
 \subsection{Bestimmung der Wärmekapazität des Kaloriemeters}
 \label{sec:Auswertung_Kaloriemeter}
 
-Da die von dem erhitzen Wasser abgegebene Wärmemenge unter der Annahme, dass keine
-Arbeit verrichtet wird und keine Energie das System verlässt, genau so groß sein
-muss, wie die von dem kalten Wasser und den Wänden des Kaloriemeters aufgenommene
-Wärmemenge, lässt sich schreiben:
-\begin{equation}
-  (c_{\symup{w}}m_{\symup{x}}+c_{\symup{g}}m_{\symup{g}})(T_{\symup{m}}-T_{\symup{x}})
-  =c_{\symup{w}}m_{\symup{y}}(T_{\symup{y}}-T_{\symup{m}}) \,.
-\end{equation}
-Dabei ist $c_{\symup{w}}$ die spezifische Wärmekapazität des Wassers,
-$m_{\symup{x}}$ die Masse des Wassers im Kaloriemeter, $T_{\symup{x}}$ die
-Temperatur des Wassers im Kaloriemeter, $m_{\symup{y}}$ die Masse des
-im Becherglas zu erhitzenden Wassers, $T_{\symup{y}}$ die zugehörige Temperatur
-und $T_{\symup{m}}$ die Mischtemperatur im Kaloriemeter nach dem Mischen. $c_{\symup{g}}m_{\symup{g}}$
-ist die Wärmekapazität des Kaloriemeters und $c_{\symup{w}}$ ist die spezifische Wärmekapazität
-von Wasser. Diese beträgt $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}.
-Wird diese Formel nach der Wärmekapazität des Kaloriemeters umgestellt, so ergibt sich:
-\begin{equation}
-  c_{\symup{g}}m_{\symup{g}}=\frac{c_{\symup{w}}m_{\symup{y}}(T_{\symup{y}}-T_{\symup{m}})
-  -c_{\symup{w}}m_{\symup{x}}(T_{\symup{m}}-T_{\symup{x}})}{(T_{\symup{m}}-T_{\symup{x}})} \,.
-  \label{eqn:kaloriemeter}
-\end{equation}
-Werden nun die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
+Die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
 \begin{align*}
   m_{\symup{x}} = \SI{340.77}{\gram}   \,,\\
   T_{\symup{x}} = \SI{294.75}{\kelvin} \,,\\
@@ -33,8 +12,9 @@ Werden nun die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
   T_{\symup{y}} = \SI{354.15}{\kelvin} \,,\\
   T_{\symup{m}} = \SI{319.05}{\kelvin} \,.\\
 \end{align*}
-in Gleichung \eqref{eqn:kaloriemeter} eingesetzt, so ergibt sich für die Kapazität
-desselben zu
+werden in Gleichung \eqref{eqn:kaloriemeter} eingesetzt. Dabei ist die spezifische Wärmekapazität
+von Wasser $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}. Es ergibt sich für die Kapazität
+des Kaloriemeters zu
 \begin{equation}
   c_{\symup{g}}m_{\symup{g}} = \SI{146.85}{\joule\per\kelvin} \,.\nonumber
 \end{equation}
@@ -43,20 +23,7 @@ desselben zu
 \subsection{Bestimmung der spezifischen Wärmekapazitäten verschiedener Stoffe}
 \label{sec:Auswertung_stoffe}
 
-Auch hier lässt sich durch das Gleichsetzen der abgegebenen und der aufgenommenen
-Wärmemengen eine Beziehung zur Berechnung der spezifischen Wärmekapazitäten bestimmen:
-\begin{equation}
-  c_{\symup{k}}=\frac{(c_{\symup{w}}m_{\symup{w}}+c_{\symup{g}}m_{\symup{g}})
-  (T_{\symup{m}}-T_{\symup{w}})}{m_{\symup{k}}(T_{\symup{k}}-T_{\symup{m}})}\,.
-\end{equation}
-Dabei bezeichnet $c_{\symup{k}}$ die spezifische Wärmekapazität des Probekörpers,
-$c_{\symup{w}}$ die spezifische Wärmekapazität von Wasser, $m_{\symup{w}}$ die
-Masse des sich im Kaloriemeter befindenden Wassers, $T_{\symup{w}}$ dessen Temperatur
-vor dem Wärmeaustausch und $T_{\symup{m}}$ dessen Temperatur nach dem Wärmeaustausch.
-$c_{\symup{g}}m_{\symup{g}}$ bezeichnet erneut die Wärmekapazität des Kaloriemeters
-und $m_{\symup{k}}$ ist die Masse des Probekörpers.
-
-Die Messwerte für Blei, sowie die zugehörigen berechneten spezifischen Wärmekapazitäten
+Die Messwerte für Blei, sowie die zugehörigen  nach Gleichung \ref{eqn:proben} berechneten spezifischen Wärmekapazitäten
 befinden sich in Tabelle \ref{tab:blei}. Dabei werden die Temperaturen in Kelvin umgerechnet.
 Die Masse der Bleiprobe beträgt $m_{\symup{Blei}}=\SI{530.75}{\gram}$. Die verwendete
 Wassermenge beträgt $m_{\symup{w,Blei}}=\SI{593.40}{\gram}$.
@@ -153,17 +120,14 @@ Hier ist der Mittelwert nach den Gleichungen \eqref{eqn:mean} und
   c_{\symup{Kupfer}} = \SI{0.280(0015)}{\joule\per\gram\per\kelvin} \,.\nonumber
 \end{equation}
 Der Literaturwert für die spezifische Wärmekapazität von Kupfer beträgt
-$c_{\symup{Alu,theo}}=\SI{0.39}{\joule\per\gram\per\kelvin}$ \cite{werte}.
+$c_{\symup{Kupfer,theo}}=\SI{0.39}{\joule\per\gram\per\kelvin}$ \cite{werte}.
 Demnach ist die relative Abweichung $-28,21\%$.
 
 
 \subsection{Bestimmung der Molwärmen der Stoffe}
 \label{sec:molwaerme}
 
-Die Molwärme der Stoffe lässt sich nach Gleichung \eqref{!!!} über den Zusammenhang
-\begin{equation}
-  C_{\symup{v}}=c_{\symup{k}}M-9\alpha^2 K\frac{M}{\rho}T_{\symup{m}}
-\end{equation}
+Die Molwärme der Stoffe lässt sich nach Gleichung \eqref{eqn:druckvolumen}
 berechnen. Die Werte für den linearen Ausdehnungskoeffizienten $\alpha$,
 das Kompressionsmodul $K$ bzw. die Kompressibilität $\kappa=\frac{1}{K}$, die molare Masse $M$ und die Dichte $\rho$
 für die jeweiligen Materialien können der Versuchsanleitung \cite{Versuchsanleitung}
@@ -179,8 +143,8 @@ Die Mittelwerte berechnen sich dabei mit den Gleichungen \eqref{eqn:mean} und
   \label{tab:molwaerme}
   \begin{tabular}{c c c c c c}
     \toprule
-    & $C_{\symup{v,Blei}}/\frac{J}{mol\,K}$ & $C_{\symup{v,Alu}}/\frac{J}{mol\,K}$&
-    $C_{\symup{v,Kupfer}}/\frac{J}{mol\,K}$ \\
+    & $C_{\symup{v,Blei}}/\frac{J}{\text{mol}\,K}$ & $C_{\symup{v,Alu}}/\frac{J}{\text{mol}\,K}$&
+    $C_{\symup{v,Kupfer}}/\frac{J}{\text{mol}\,K}$ \\
     \midrule
     Messung 1   & 26,50 & 9,83  & 18,49 \\
     Messung 2   & 23,82 & 18,76 & 16,43 \\

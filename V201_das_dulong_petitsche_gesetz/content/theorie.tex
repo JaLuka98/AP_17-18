@@ -30,6 +30,19 @@ aus Atomen oder Molekülen, die über Ruhelagen auf ihren Gitterplätzen verfüg
 rückwirkenden Kräften ausgesetzt sind, falls sie aus der Gleichgewichtslage ausgelenkt
 werden. Deswegen können sie im Modell als $N$ gekoppelte harmonische Oszillatoren
 mit Schwingungsmöglichkeiten in allen drei Raumdimensionen beschrieben werden.
+
+Wird bei der Messung mit konstantem Druck, statt mit konstantem Volumen gearbeitet,
+so muss der Zusammenhang
+\begin{align}
+  C_{\symup{V}}&= C_{\symup{P}} -9\alpha^2 K V_0 T \\
+  &=c_{\symup{k}}M-9\alpha^2 K\frac{M}{\rho}T_{\symup{m}}
+  \label{deqn:druckvolumen}
+\end{align}
+berücksichtigt werden. Dabei ist $M$ die molare Masse, $\alpha$ ein linearer Ausdehnungskoeffizient,
+$K$ das Kompressionsmodul, $\rho$ die Dichte der Probe und $T_{\symup{m}}$ die Mischtemperatur.
+$C_{\symup{P}}$ bezeichnet die bei konstantem Druck ermittelte spezifische Wärme
+des Probekörpers und $V_0$ das Molvolumen.
+
 \subsection{Beschreibung eines Festkörpers in der klassischen Physik}
 In der klassischen Physik, also ohne Betrachtung relativistischer und quantenmechanischer
 Effekte, ist die Hamiltonfunktion mit der Energie eines harmonischen
@@ -106,3 +119,44 @@ Temperaturen zuverlässig vorhersagt. Dies ist gleichbedeutend damit, dass die q
 Oszillatoren genügend Energie besitzen, um viele ihrer Zustände zu durchlaufen.
 Für tiefe Temperaturen versagt es jedoch. Die molare Wärmekapazität geht dann sogar gegen
 null.
+
+\subsection{Beschreibung der für die Auswertung notwendigen Zusammenhänge}
+
+Zur Auswertung des Versuchs werden einige Formeln benötigt. Diese sollen im Folgenden kurz
+erklärt werden. Das Messbehältnis ist dabei ein sog. Kaloriemeter.
+
+Da die von dem erhitzen Wasser abgegebene Wärmemenge unter der Annahme, dass keine
+Arbeit verrichtet wird und keine Energie das System verlässt, genau so groß sein
+muss, wie die von dem kalten Wasser und den Wänden des Kaloriemeters aufgenommene
+Wärmemenge, lässt sich schreiben:
+\begin{equation}
+  (c_{\symup{w}}m_{\symup{x}}+c_{\symup{g}}m_{\symup{g}})(T_{\symup{m}}-T_{\symup{x}})
+  =c_{\symup{w}}m_{\symup{y}}(T_{\symup{y}}-T_{\symup{m}}) \,.
+\end{equation}
+Dabei ist $c_{\symup{w}}$ die spezifische Wärmekapazität des Wassers,
+$m_{\symup{x}}$ die Masse des Wassers im Kaloriemeter, $T_{\symup{x}}$ die
+Temperatur des Wassers im Kaloriemeter, $m_{\symup{y}}$ die Masse des
+im Becherglas zu erhitzenden Wassers, $T_{\symup{y}}$ die zugehörige Temperatur
+und $T_{\symup{m}}$ die Mischtemperatur im Kaloriemeter nach dem Mischen. $c_{\symup{g}}m_{\symup{g}}$
+ist die Wärmekapazität des Kaloriemeters und $c_{\symup{w}}$ ist die spezifische Wärmekapazität
+von Wasser.
+Wird diese Formel nach der Wärmekapazität des Kaloriemeters umgestellt, so ergibt sich:
+\begin{equation}
+  c_{\symup{g}}m_{\symup{g}}=\frac{c_{\symup{w}}m_{\symup{y}}(T_{\symup{y}}-T_{\symup{m}})
+  -c_{\symup{w}}m_{\symup{x}}(T_{\symup{m}}-T_{\symup{x}})}{(T_{\symup{m}}-T_{\symup{x}})} \,.
+  \label{eqn:kaloriemeter}
+\end{equation}
+
+Auch für die spezifischen Wärmekapazitäten der Probekörper lässt sich durch das Gleichsetzen der abgegebenen und der aufgenommenen
+Wärmemengen eine Beziehung zur Berechnung der spezifischen Wärmekapazitäten bestimmen:
+\begin{equation}
+  c_{\symup{k}}=\frac{(c_{\symup{w}}m_{\symup{w}}+c_{\symup{g}}m_{\symup{g}})
+  (T_{\symup{m}}-T_{\symup{w}})}{m_{\symup{k}}(T_{\symup{k}}-T_{\symup{m}})}\,.
+  \label{eqn:proben}
+\end{equation}
+Dabei bezeichnet $c_{\symup{k}}$ die spezifische Wärmekapazität des Probekörpers,
+$c_{\symup{w}}$ die spezifische Wärmekapazität von Wasser, $m_{\symup{w}}$ die
+Masse des sich im Kaloriemeter befindenden Wassers, $T_{\symup{w}}$ dessen Temperatur
+vor dem Wärmeaustausch und $T_{\symup{m}}$ dessen Temperatur nach dem Wärmeaustausch.
+$c_{\symup{g}}m_{\symup{g}}$ bezeichnet erneut die Wärmekapazität des Kaloriemeters
+und $m_{\symup{k}}$ ist die Masse des Probekörpers.
