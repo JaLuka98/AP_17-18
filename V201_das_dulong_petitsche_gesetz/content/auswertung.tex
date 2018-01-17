@@ -16,7 +16,7 @@ Dabei ist $c_{\symup{w}}$ die spezifische Wärmekapazität des Wassers,
 $m_{\symup{x}}$ die Masse des Wassers im Kaloriemeter, $T_{\symup{x}}$ die
 Temperatur des Wassers im Kaloriemeter, $m_{\symup{y}}$ die Masse des
 im Becherglas zu erhitzenden Wassers, $T_{\symup{y}}$ die zugehörige Temperatur
-und $T_{\symup{m}}$ die Mischtemperatur nach dem Mischen. $c_{\symup{g}}m_{\symup{g}}$
+und $T_{\symup{m}}$ die Mischtemperatur im Kaloriemeter nach dem Mischen. $c_{\symup{g}}m_{\symup{g}}$
 ist die Wärmekapazität des Kaloriemeters und $c_{\symup{w}}$ ist die spezifische Wärmekapazität
 von Wasser. Diese beträgt $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}.
 Wird diese Formel nach der Wärmekapazität des Kaloriemeters umgestellt, so ergibt sich:
@@ -34,7 +34,7 @@ Werden nun die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
   T_{\symup{m}} = \SI{319.05}{\kelvin} \,.\\
 \end{align*}
 in Gleichung \eqref{eqn:kaloriemeter} eingesetzt, so ergibt sich für die Kapazität
-desselben
+desselben zu
 \begin{equation}
   c_{\symup{g}}m_{\symup{g}} = \SI{146.85}{\joule\per\kelvin} \,.\nonumber
 \end{equation}
@@ -50,7 +50,7 @@ Wärmemengen eine Beziehung zur Berechnung der spezifischen Wärmekapazitäten b
   (T_{\symup{m}}-T_{\symup{w}})}{m_{\symup{k}}(T_{\symup{k}}-T_{\symup{m}})}\,.
 \end{equation}
 Dabei bezeichnet $c_{\symup{k}}$ die spezifische Wärmekapazität des Probekörpers,
-$c_{\symup{w}}$ die spezifische Wärmekapazität von Wasser, $m_{\symup{w}}$ diese
+$c_{\symup{w}}$ die spezifische Wärmekapazität von Wasser, $m_{\symup{w}}$ die
 Masse des sich im Kaloriemeter befindenden Wassers, $T_{\symup{w}}$ dessen Temperatur
 vor dem Wärmeaustausch und $T_{\symup{m}}$ dessen Temperatur nach dem Wärmeaustausch.
 $c_{\symup{g}}m_{\symup{g}}$ bezeichnet erneut die Wärmekapazität des Kaloriemeters
@@ -68,7 +68,7 @@ Wassermenge beträgt $m_{\symup{w,Blei}}=\SI{593.40}{\gram}$.
   \label{tab:blei}
   \begin{tabular}{c c c c c c}
     \toprule
-    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Blei}}/\frac{J}{g\cdot K}$ \\
+    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Blei}}/\frac{J}{g K}$ \\
     \midrule
     Messung 1 & 295,65 & 363,15 & 297,35 & 0,128 \\
     Messung 2 & 297,35 & 372,25 & 299,05 & 0,115 \\
@@ -99,7 +99,7 @@ Die relative Abweichung beträgt also $-7,69\%$.
 
 Für die Aluminium- und Kupferprobe wird analog verfahren. Die Masse der Aluminiumprobe
 beträgt $m_{\symup{Alu}}=\SI{156.23}{\gram}$ und die verwendete Wassermenge
-beträgt $m_{\symup{w,Alu}}=\SI{600.77}{\gram}$. Die Werte für Aliminium sind in
+beträgt $m_{\symup{w,Alu}}=\SI{600.77}{\gram}$. Die Werte für Aluminium sind in
 Tabelle \ref{tab:alu} zu finden.
 
 \begin{table}
@@ -109,7 +109,7 @@ Tabelle \ref{tab:alu} zu finden.
   \label{tab:alu}
   \begin{tabular}{c c c c c c}
     \toprule
-    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Alu}}/\frac{J}{g\cdot K}$ \\
+    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Alu}}/\frac{J}{g K}$ \\
     \midrule
     Messung 1 & 295,15 & 366,75 & 296,65 & 0,364 \\
     Messung 2 & 298,15 & 366,95 & 300,85 & 0,695 \\
@@ -124,7 +124,7 @@ Der Mittelwert ergibt sich hier ebenfalls nach den Gleichungen \eqref{eqn:mean} 
   c_{\symup{Alu}} = \SI{0.65(021)}{\joule\per\gram\per\kelvin} \,.\nonumber
 \end{equation}
 Der Literaturwert liegt hier bei $c_{\symup{Alu,theo}}=\SI{0.92}{\joule\per\gram\per\kelvin}$ \cite{werte},
-sodass die relative Abweichung des errechneten Wertes zum Literaturwert zu
+sodass sich die relative Abweichung des errechneten Wertes zum Literaturwert zu
 $-29,35\%$ ergibt.
 
 
@@ -138,7 +138,7 @@ Die hierbei verwendete Wassermenge beträgt $m_{\symup{w,Kupfer}}=\SI{619.57}{\g
   \label{tab:kupfer}
   \begin{tabular}{c c c c c c}
     \toprule
-    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Kupfer}}/\frac{J}{g\cdot K}$ \\
+    & $T_{\symup{w}}/$K & $T_{\symup{k}}/$K & $T_{\symup{m}}/$K & $c_{\symup{Kupfer}}/\frac{J}{g K}$ \\
     \midrule
     Messung 1 & 295,05 & 368,05 & 296,85 & 0,291 \\
     Messung 2 & 297,15 & 369,95 & 298,75 & 0,259 \\
@@ -152,7 +152,7 @@ Hier ist der Mittelwert nach den Gleichungen \eqref{eqn:mean} und
 \begin{equation}
   c_{\symup{Kupfer}} = \SI{0.280(0015)}{\joule\per\gram\per\kelvin} \,.\nonumber
 \end{equation}
-Der Literatuwert für die spezifische Wärmekapazität von Kupfer beträgt
+Der Literaturwert für die spezifische Wärmekapazität von Kupfer beträgt
 $c_{\symup{Alu,theo}}=\SI{0.39}{\joule\per\gram\per\kelvin}$ \cite{werte}.
 Demnach ist die relative Abweichung $-28,21\%$.
 
