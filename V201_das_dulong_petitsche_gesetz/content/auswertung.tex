@@ -10,11 +10,11 @@ Die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
   T_{\symup{x}} = \SI{294.75}{\kelvin} \,,\\
   m_{\symup{y}} = \SI{260.24}{\gram}   \,,\\
   T_{\symup{y}} = \SI{354.15}{\kelvin} \,,\\
-  T_{\symup{m}} = \SI{319.05}{\kelvin} \,.\\
+  T_{\symup{m}} = \SI{319.05}{\kelvin} \,,\\
 \end{align*}
 werden in Gleichung \eqref{eqn:kaloriemeter} eingesetzt. Dabei ist die spezifische Wärmekapazität
-von Wasser $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}. Es ergibt sich für die Kapazität
-des Kaloriemeters zu
+von Wasser $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}. Die Wärmekapazität
+des Kaloriemeters ergibt sich zu
 \begin{equation}
   c_{\symup{g}}m_{\symup{g}} = \SI{146.85}{\joule\per\kelvin} \,.\nonumber
 \end{equation}
@@ -28,7 +28,7 @@ befinden sich in Tabelle \ref{tab:blei}. Dabei werden die Temperaturen in Kelvin
 Die Masse der Bleiprobe beträgt $m_{\symup{Blei}}=\SI{530.75}{\gram}$. Die verwendete
 Wassermenge beträgt $m_{\symup{w,Blei}}=\SI{593.40}{\gram}$.
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Messwerte für die Bleiprobe, sowie daraus berechnete Werte für die spezifische
   Wärmekapazität von Blei.}
@@ -49,7 +49,8 @@ Die spezifische Wärmekapazität wird nun mithilfe der Beziehung
   \overline{c} = \sum\limits_{i = 1}^N c_i
   \label{eqn:mean}
 \end{equation}
-gemittelt. Die empirische Standardabweichung ergibt sich durch den Zusammenhang
+gemittelt. Die empirische Standardabweichung wird durch den folgenden Zusammenhang
+beschrieben:
 \begin{equation}
   \sigma_c = \sqrt{\frac{1}{N-1}
     \sum\limits_{i = 1}^N
