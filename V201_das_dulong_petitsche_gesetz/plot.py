@@ -49,7 +49,7 @@ T_k+=273.15 #K
 T_m+=273.15 #K
 c_k=((c_w*m_wblei+cm_g)*(T_m-T_w))/(m_blei*(T_k-T_m))
 c_k_m = ufloat(np.sum(c_k)/len(c_k), np.std(c_k))
-mol=c_k*207.2-((9*((29*1e-6)**2)*207.2*T_m)/(11.35*42*1e9))
+mol=c_k*207.2-((9*((29)**2)*207.2*T_m)*1e-9/(11.35*42))
 
 print('BLEI')
 print('T_w = ', T_w)
@@ -67,7 +67,7 @@ T_k+=273.15 #K
 T_m+=273.15 #K
 c_k=((c_w*m_walu+cm_g)*(T_m-T_w))/(m_alu*(T_k-T_m))
 c_k_m = ufloat(np.sum(c_k)/len(c_k), np.std(c_k))
-mol=c_k*27-((9*((23.5*1e-6)**2)*27*T_m)/(2.7*75*1e9))
+mol=c_k*27-((9*((23.5)**2)*27*T_m)*1e-9/(2.7*75))
 
 print('ALUMINIUM')
 print('T_w = ', T_w)
@@ -86,7 +86,7 @@ T_k+=273.15 #K
 T_m+=273.15 #K
 c_k=((c_w*m_wkupfer+cm_g)*(T_m-T_w))/(m_kupfer*(T_k-T_m))
 c_k_m = ufloat(np.sum(c_k)/len(c_k), np.std(c_k))
-mol=c_k*63.5-((9*((16.8*1e-6)**2)*63.5*T_m)/(8.96*136*1e9))
+mol=c_k*63.5-((9*((16.8)**2)*63.5*T_m)*1e-9/(8.96*136))
 
 print('KUPFER')
 print('T_w = ', T_w)
