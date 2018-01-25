@@ -49,7 +49,8 @@ T_k+=273.15 #K
 T_m+=273.15 #K
 c_k=((c_w*m_wblei+cm_g)*(T_m-T_w))/(m_blei*(T_k-T_m))
 c_k_m = ufloat(np.sum(c_k)/len(c_k), np.std(c_k))
-mol=c_k*207.2-((9*((29)**2)*207.2*T_m)*1e-9/(11.35*42))
+T_m_m = ufloat(np.sum(T_m)/len(T_m), np.std(T_m))
+mol=c_k_m*207.2-((9*((29)**2)*207.2*T_m_m)*1e-9/(11.35*42))
 
 print('BLEI')
 print('T_w = ', T_w)
@@ -57,8 +58,9 @@ print('T_k = ', T_k)
 print('T_m = ', T_m)
 print('c_k = ', c_k)
 print('Mittelwert von c_k: ', c_k_m)
+print('Mittelwert von T_m:', T_m_m)
 print('Molwärme: ', mol)
-print('Mittelwert Molwärme: ', ufloat(np.sum(mol)/len(mol), np.std(mol)))
+
 
 T_w, T_k, T_m = np.genfromtxt('data/Aluminium.txt', unpack=True)
 
@@ -67,7 +69,8 @@ T_k+=273.15 #K
 T_m+=273.15 #K
 c_k=((c_w*m_walu+cm_g)*(T_m-T_w))/(m_alu*(T_k-T_m))
 c_k_m = ufloat(np.sum(c_k)/len(c_k), np.std(c_k))
-mol=c_k*27-((9*((23.5)**2)*27*T_m)*1e-9/(2.7*75))
+T_m_m = ufloat(np.sum(T_m)/len(T_m), np.std(T_m))
+mol=c_k_m*27-((9*((23.5)**2)*27*T_m_m)*1e-9/(2.7*75))
 
 print('ALUMINIUM')
 print('T_w = ', T_w)
@@ -75,8 +78,8 @@ print('T_k = ', T_k)
 print('T_m = ', T_m)
 print('c_k = ', c_k)
 print('Mittelwert von c_k: ', c_k_m)
+print('Mittelwert von T_m:', T_m_m)
 print('Molwärme: ', mol)
-print('Mittelwert Molwärme: ', ufloat(np.sum(mol)/len(mol), np.std(mol)))
 
 
 T_w, T_k, T_m = np.genfromtxt('data/Kupfer.txt', unpack=True)
@@ -86,7 +89,8 @@ T_k+=273.15 #K
 T_m+=273.15 #K
 c_k=((c_w*m_wkupfer+cm_g)*(T_m-T_w))/(m_kupfer*(T_k-T_m))
 c_k_m = ufloat(np.sum(c_k)/len(c_k), np.std(c_k))
-mol=c_k*63.5-((9*((16.8)**2)*63.5*T_m)*1e-9/(8.96*136))
+T_m_m = ufloat(np.sum(T_m)/len(T_m), np.std(T_m))
+mol=c_k_m*63.5-((9*((16.8)**2)*63.5*T_m_m)*1e-9/(8.96*136))
 
 print('KUPFER')
 print('T_w = ', T_w)
@@ -94,5 +98,5 @@ print('T_k = ', T_k)
 print('T_m = ', T_m)
 print('c_k = ', c_k)
 print('Mittelwert von c_k: ', c_k_m)
+print('Mittelwert von T_m:', T_m_m)
 print('Molwärme: ', mol)
-print('Mittelwert Molwärme: ', ufloat(np.sum(mol)/len(mol), np.std(mol)))

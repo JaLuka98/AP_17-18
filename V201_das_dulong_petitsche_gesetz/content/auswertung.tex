@@ -1,8 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{Bestimmung der Wärmekapazität des Kaloriemeters}
-\label{sec:Auswertung_Kaloriemeter}
+\subsection{Bestimmung der Wärmekapazität des Kalorimeters}
+\label{sec:Auswertung_Kalorimeter}
 
 Die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
 \begin{align*}
@@ -12,9 +12,9 @@ Die gemessenen (und ggf. in passende Einheiten umgerechneten) Werte
   T_{\symup{y}} = \SI{354.15}{\kelvin} \,,\\
   T_{\symup{m}} = \SI{319.05}{\kelvin} \,,\\
 \end{align*}
-werden in Gleichung \eqref{eqn:kaloriemeter} eingesetzt. Dabei ist die spezifische Wärmekapazität
+werden in Gleichung \eqref{eqn:kalorimeter} eingesetzt. Dabei ist die spezifische Wärmekapazität
 von Wasser $\SI{4.18}{\joule\per\gram\per\kelvin}$ \cite{Versuchsanleitung}. Die Wärmekapazität
-des Kaloriemeters ergibt sich zu
+des Kalorimeters ergibt sich zu
 \begin{equation}
   c_{\symup{g}}m_{\symup{g}} = \SI{146.85}{\joule\per\kelvin} \,.\nonumber
 \end{equation}
@@ -46,7 +46,7 @@ Wassermenge beträgt $m_{\symup{w,Blei}}=\SI{593.40}{\gram}$.
 
 Die spezifische Wärmekapazität wird nun mithilfe der Beziehung
 \begin{equation}
-  \overline{c} = \sum\limits_{i = 1}^N c_i
+  \overline{c} = \frac{1}{N}\sum\limits_{i = 1}^N c_i
   \label{eqn:mean}
 \end{equation}
 gemittelt. Die empirische Standardabweichung wird durch den folgenden Zusammenhang
@@ -134,27 +134,43 @@ das Kompressionsmodul $K$, die molare Masse $M$ und die Dichte $\rho$
 für die jeweiligen Materialien können der Versuchsanleitung \cite{Versuchsanleitung}
 entnommen werden.
 
-Damit ergeben sich für die Molwärmen die in Tabelle \ref{tab:molwaerme} dargestellten Werte.
-Die Mittelwerte berechnen sich dabei mit den Gleichungen \eqref{eqn:mean} und
-\eqref{eqn:std}.
+Es werden die zuvor berechneten Größen $c_{\symup{Blei}}$, $c_{\symup{Alu}}$
+und $c_{\symup{Kupfer}}$ verwendet. Aufgrunddessen wird der Mittelwert von
+$T_{\symup{m}}$ benötigt. Dieser wird mit den Gleichungen \eqref{eqn:mean} und
+\eqref{eqn:std} berechnet.
 
-\begin{table}
+Damit ergeben sich für die Molwärmen und die Mittelwerte von $T_{\symup{m}}$
+die in Tabelle \ref{tab:molwaerme} dargestellten Werte.
+Dabei muss für die Standardabweichung das Gauß'sche Fehlerfortpflanzungsgesetz
+\begin{equation}
+  \sigma_f = \sqrt{
+    \sum\limits_{i = 1}^N
+      \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
+  }\,.
+  \label{eqn:gaussfehler}
+\end{equation}
+in der Form
+\begin{equation}
+  \sigma_{\symup{C_{\symup{v}}}} = \sqrt{M^2\sigma_{\symup{c_{\symup{k}}}}
+  +\biggl(c_{\symup{k}}M-9\alpha^2 K \frac{M}{\rho}\biggr)^2 (\sigma_{\symup{T_{\symup{m}}}})^2}
+\end{equation}
+berücksichtigt werden.
+
+\begin{table}[H]
   \centering
   \caption{Berechnete Molwärmen der Stoffe.}
   \label{tab:molwaerme}
-  \begin{tabular}{c c c c c c}
+  \begin{tabular}{c c c}
     \toprule
-    & $C_{\symup{v,Blei}}/\frac{J}{\text{mol}\,K}$ & $C_{\symup{v,Alu}}/\frac{J}{\text{mol}\,K}$&
-    $C_{\symup{v,Kupfer}}/\frac{J}{\text{mol}\,K}$ \\
+    Material & $\bar{T}_{\symup{m}}/$K &$C_{\symup{v}}/\frac{J}{\text{mol}\,K}$ \\
     \midrule
-    Messung 1   & 26,50 & 9,83  & 18,49 \\
-    Messung 2   & 23,82 & 18,76 & 16,43 \\
-    Messung 3   & 24,49 & 23,72 & 18,36 \\
-    Mittelwert  & 24,9\pm1,1 & 17\pm6 & 17,8\pm0,9  \\
+    Blei      & \num{299.1(14)} & \num{24.9(11)}  \\
+    Aluminium & \num{300.6(31)} & \num{17(6)}     \\
+    Kupfer    & \num{298.7(15)} & \num{17.8(09)}  \\
     \bottomrule
   \end{tabular}
 \end{table}
 
- Die relativen Abweichungen bezogen auf den zu erwartenden Wert $3R\approx\SI{24,9434}{\joule\per\mol\per\kelvin}$
+ Die relativen Abweichungen bezüglich des zu erwartenden Wertes $3R\approx\SI{24,9434}{\joule\per\mol\per\kelvin}$
  betragen dann $-0,17\%$ für Blei, $-31,85\%$ für Aluminium und $-28,64\%$ für
  Kupfer.
