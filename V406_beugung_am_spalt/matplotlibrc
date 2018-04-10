@@ -17,6 +17,6 @@ ytick.labelsize : 9
 pgf.rcfonts : False
 
 # TeX benutzen
-text.usetex : True
-pgf.texsystem : lualatex
-pgf.preamble : \input{header-matplotlib.tex}
+#text.usetex : True
+#pgf.texsystem : lualatex
+#pgf.preamble : \input{header-matplotlib.tex}
