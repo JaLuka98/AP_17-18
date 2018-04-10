@@ -19,7 +19,7 @@ def f(x, A_0, s_0, b):
     #return (A_0*b*l_welle/(np.pi*b*np.sin((x-s_0)/l))*np.sin((np.pi*b*np.sin((x-s_0)/l))/l_welle))**2
 
 def theory(zeta, A0, zeta_0, b):
-    return (A0 * b * np.sinc(b * np.sin((zeta - zeta_0)/(np.pi**2*l)) / l_welle))**2
+    return (A0 * b * np.sinc(b * np.sin((zeta - zeta_0)/(l)) / l_welle))**2
 
 
 l=1 #Abstand Spalt Detektor in meter
@@ -41,7 +41,7 @@ I_1 *= 1e-9 #I/A
 I_1 -=I_1d  #Bereinigung Dunkelstrom
 
 
-params, covariance_matrix = optimize.curve_fit(theory, s_1, I_1, p0=[1e-7, 0, 1e-4])
+params, covariance_matrix = optimize.curve_fit(theory, s_1, I_1, p0=[0.73, -0.0005, 1.5e-3])
 
 errors = np.sqrt(np.diag(covariance_matrix))
 
@@ -52,9 +52,9 @@ print('b =', params[2], '+-', errors[2])
 A_0 = ufloat(params[0], errors[0])
 s_0 = ufloat(params[1], errors[1])
 b = ufloat(params[2], errors[2])
-params[0] = 0.73
-params[1] = -0.0005
-params[2] = 1.5e-3
+#params[0] = 0.73
+#params[1] = -0.0005
+#params[2] = 1.5e-3
 
 slinspace = np.linspace(-0.01, 0.01, 500)
 
