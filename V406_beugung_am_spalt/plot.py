@@ -6,6 +6,7 @@ from scipy import optimize
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 from uncertainties import correlated_values
+from matrix2latex import matrix2latex
 
 
 # Note that this piece of shit sinc-function from numpy is actually normalized sinc: np.sinc(x)=sin(pix)/pix
@@ -29,7 +30,7 @@ I_3d=3.2*1e-9 #Dunkelstrom 3 in Ampere
 
 b_1=0.15*1e-3 #spaltentfernung 1 in meter
 b_2=0.075*1e-3 #spaltentfernung 2 in meter
-b_3=0.15*1e-3 #spaltentfernung der Doppelspalte in meter
+b_3=0.15*1e-3 #spaltentfernung der Doppelspalte in meter ##du meinst sicher immer breite?
 d=0.5*1e3 #Spaltabstand der Doppelspalte in meter
 
 
@@ -128,8 +129,15 @@ plt.tight_layout()
 plt.legend()
 plt.grid()
 plt.savefig('build/doppelspalt.pdf')
-
 plt.clf()
+
+m = np.zeros((91, 6))
+m[:,0] = s_1*1e3
+m[:,1] = I_1*1e9
+m[:,2] = s_2*1e3
+hr = ['$s/$mm', '$I/$nA']
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 
 #Was ist das? Ich kommentiere es einfach mal aus ;)
