@@ -131,11 +131,26 @@ plt.grid()
 plt.savefig('build/doppelspalt.pdf')
 plt.clf()
 
-m = np.zeros((91, 6))
-m[:,0] = s_1*1e3
-m[:,1] = I_1*1e9
-m[:,2] = s_2*1e3
-hr = ['$s/$mm', '$I/$nA']
+m = np.zeros((112, 6))
+temp = np.zeros(112-s_1.size)
+s_1 = np.concatenate((s_1, temp))
+m[:,0] = np.zeros(112) + s_1*1e3
+temp = np.zeros(112-I_1.size)
+I_1 = np.concatenate((I_1, temp))
+m[:,1] = np.zeros(112) + I_1*1e9
+temp = np.zeros(112-s_2.size)
+s_2 = np.concatenate((s_2, temp))
+m[:,2] = np.zeros(112) + s_2*1e3
+temp = np.zeros(112-I_2.size)
+I_2 = np.concatenate((I_2, temp))
+m[:,3] = np.zeros(112) + I_2*1e9
+temp = np.zeros(112-s_3.size)
+s_3 = np.concatenate((s_3, temp))
+m[:,4] = np.zeros(112) + s_3*1e3
+temp = np.zeros(112-I_3.size)
+I_3 = np.concatenate((I_3, temp))
+m[:,5] = np.zeros(112) + I_3*1e9
+hr = ['$x_1/$mm', '$I_1/$nA', '$x_2/$mm', '$I_2/$nA', '$x_3/$mm', '$I_3/$nA']
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
