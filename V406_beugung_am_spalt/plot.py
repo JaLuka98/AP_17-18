@@ -41,7 +41,7 @@ I_1 -=I_1d  #Bereinigung Dunkelstrom
 slinspace = np.linspace(-0.017, 0.017, 500)
 
 
-params, covariance_matrix = optimize.curve_fit(theory, s_1, I_1, p0=[0.73, -0.0005, 1.5e-3])
+params, covariance_matrix = optimize.curve_fit(theory, s_1, I_1, p0=[0.73, -0.0005, 1e-3])
 
 A_0, s_0, b = correlated_values(params, covariance_matrix)
 
@@ -81,7 +81,7 @@ s_2 *= 1e-3 #s/m
 I_2 *= 1e-9 #I/A
 I_2 -=I_2d  #Bereinigung Dunkelstrom
 
-params, covariance_matrix = optimize.curve_fit(theory, s_2, I_2, p0=[0.73, -0.0005, 1.5e-3])
+params, covariance_matrix = optimize.curve_fit(theory, s_2, I_2, p0=[0.73, -0.0005, 1e-3])
 
 A_0, s_0, b = correlated_values(params, covariance_matrix)
 

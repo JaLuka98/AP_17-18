@@ -1,11 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Der zuallererst gemessene Abstand vom Spalt zum Detektor beträgt $L = \SI{1}{\meter}$.
 Es wurden drei Messreihen aufgenommen. Zunächst wurde die Beugung an einem Einzelspalt
 der Breite $b_1 = \SI{0.15}{\milli\meter}$ untersucht, danach an einem Einzelspalt
 der Breite $b_2 = \SI{0.075}{\milli\meter}$ und zuletzt an einem Doppelspalt mit
 der jeweiligen Spaltbreite von $b_3 = \SI{0.15}{\milli\meter}$ und dem Spaltmittenabstand
-$s = \SI{0.5}{\milli\meter}$. Der gemessene Dunkelstrom betrug beim ersten Einzelspalt
+$d = \SI{0.5}{\milli\meter}$. Der gemessene Dunkelstrom betrug beim ersten Einzelspalt
 $\SI{3.4}{\nano\ampere}$, beim zweiten Einzelspalt und beim Doppelspalt
 $\SI{3.2}{\nano\ampere}$. In Tabelle \ref{tab:messwerte} sind die Messreihen der Stromstärken
 $I_i$ gegen die Detektorpositionen $x_i$ dargestellt. Dabei nummerieren stets wie bereits oben die Indizes 1,2 und 3 die
@@ -18,7 +19,7 @@ subtrahiert, sodass in der Tabelle die bereinigten Werte zu sehen sind.
                 \begin{longtable}{S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2]}
                 \caption{Messreihen zur Beugung an zwei Einzelspalten und einem Doppelspalt}\\
                 \label{tab:messwerte}
-
+                %\toprule
                 {$x_1/$mm} & {$I_1/$nA} & {$x_2/$mm} & {$I_2/$nA} & {$x_3/$mm} & {$I_3/$nA} \\
                 \midrule
                 -13.00 & 9.60 & -13.00 & 16.80 & -12.00 & 14.80\\
@@ -141,13 +142,13 @@ subtrahiert, sodass in der Tabelle die bereinigten Werte zu sehen sind.
 Die Anpassungsfunktion für die Messreihen an den Einzelspalten ist in Analogie zu
 \eqref{eqn:einzeltheo}
 \begin{equation}
-  I_i (x) = A_{0,i} \,\, b_{\text{exp},i} \,\, \symup{sinc}^2\biggl(\frac{\pi b \sin(\frac{x-x_{0,i}}{L}}{\lambda}\biggr) \,.
+  I_i (x) = A_{0,i} \,\, b_{\text{exp},i} \,\, \symup{sinc}^2\biggl(\frac{\pi b \sin(\frac{x-x_{0,i}}{L}}{\lambda})\biggr) \,.
 \end{equation}
 Dabei sind die Parameter die Amplituden $A_{0,i}$, die experimentell bestimmten Spaltbreiten
-$b_{\text{exp},i}$ und die experimentelle Zentrierung $x_0$.
+$b_{\text{exp},i}$ und die experimentellen Zentrierungen $x_{0,i}$.
 Für beide Regressionen wurden die folgenden Anfangsparameter vorgegeben:
 \begin{equation}
-  {A_0, b_{\text{exp}}, x_0} = {0.73, \SI{-0.5}{\milli\meter}, \SI{-1.5}{\milli\meter}}\,.
+  \{A_0, b_{\text{exp}}, x_0\} = \{0.73, \SI{-0.5}{\milli\meter}, \SI{-1.5}{\milli\meter}\}\,.
 \end{equation}
 In den Abbildungen \ref{fig:spalt1} und \ref{fig:spalt2} sind die Messreihen der Beugung an den Einzelspalten aufgetragen
 und die Graphen der konkreten Ausgleichsfunktionen ist zu sehen.
@@ -164,4 +165,54 @@ und die Graphen der konkreten Ausgleichsfunktionen ist zu sehen.
   \includegraphics{build/einfachspalt_2.pdf}
   \caption{Auftragung der Stromstärke gegen die Detektorposition und Graph der Ausgleichsfunktion, zweiter Einzelspalt}
   \label{fig:spalt2}
+\end{figure}
+
+Die Parameter, die sich durch die nichtlineare Ausgleichsrechnung ergeben, sind
+in Tabelle \ref{tab:paramseinzel} zu sehen.
+
+\begin{table}
+\centering
+\begin{tabular}{cccc}
+\toprule
+& $A_{0,1}$ & $x_{0,1}/$mm & $b_{\text{exp},1}/$mm \\
+\midrule
+%Parameter & $\SI{7.551(0020)}$ & $\SI{-0.569(0006)}$ & $\SI{0.1458(00005)}$ & $\SI{6.603(0022)}$ & $\SI{-0.560(0013)}$ & $\SI{0.07720(000031)}$ \\
+Parameter & 7,551 $\pm$ 0,020 & -0,569 $\pm$ 0,006 & 0,1458 $\pm$ 0,0005 \\
+Relative Ungenauigkeit & 0,26\% & 1,05\% & 0,34\%\\
+\toprule
+& $A_{0,2}$ & $x_{0,2}/$mm & $b_{\text{exp},1}/$mm \\
+\midrule
+Parameter & 6,603 $\pm$ 0.022 & -0,560 $\pm$ 0,013 & 0,07720 $\pm$ 0,00031 \\
+Relative Ungenauigkeit & 0,33\% & 2,32\% & 0,40\%\\
+\bottomrule
+\end{tabular}
+\caption{Parameter der Ausgleichsfunktionen}
+\label{tab:paramseinzel}
+\end{table}
+
+Die relative Abweichung der experimentell ermittelten Spaltbreite des ersten Einzelspaltes zur am Anfang der
+Auswertung angemerkten Herstellerangabe beträgt -2,80\%, für den zweiten Einzelspalt 2,93\%.
+
+Die Messreihe zum Doppelspalt wird mit der Funktion
+\begin{equation}
+  I_3 (x) = 4 \cos^2\biggl(\frac{\pi d_\text{exp} \sin(\frac{x-x_{0,3}}{L}}{\lambda}\biggr) A_{0,3} \,\, b_{\text{exp},3} \,\, \symup{sinc}^2\biggl(\frac{\pi b \sin(\frac{x-x_{0,3}}{L}}{\lambda}\biggr)
+\end{equation}
+angepasst. Diese entspricht der theorisch berechneten Intensitätsverteilung \eqref{eqn:doppeltheo}.
+Diese Anpassungsfunktion hat vier zu bestimmende Parameter: Eine Amplitude $A_{0,3}$,
+die experimentell bestimmten Spaltbreiten der baugleichen Spalte $b_{\text{exp},3}$,
+die experimentelle Zentrierung $x_{0,3}$ und der experimentelle Spaltmittenabstand
+$d_\text{exp}$.
+Für die Regression wurden die Anfangsparameter
+\begin{equation}
+  \{A_0, b_{\text{exp}}, x_0, d_\text{exp}\} = \{0.73, \SI{-0.5}{\milli\meter}, \SI{-1.5}{\milli\meter}, \SI{1}{\milli\meter}\}\,,
+\end{equation}
+gewählt.
+Der Graph der Ausgleichsfunktion und die Auftragung der gemessenen Stromstärke gegen
+die Verschiebung des Detektors ist in \ref{fig:spalt3} veranschaulicht.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/doppelspalt.pdf}
+  \caption{Auftragung der Stromstärke gegen die Detektorposition und Graph der Ausgleichsfunktion, Doppelspalt}
+  \label{fig:spalt3}
 \end{figure}
