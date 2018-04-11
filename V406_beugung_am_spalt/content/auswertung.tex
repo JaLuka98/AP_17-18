@@ -217,7 +217,7 @@ die Verschiebung des Detektors ist in \ref{fig:spalt3} veranschaulicht.
   \label{fig:spalt3}
 \end{figure}
 
-Die Ergebnisse für die Parameter der Ausgleichsrechnung finden sich in \ref{paramsdoppel}.
+Die Ergebnisse für die Parameter der Ausgleichsrechnung finden sich in \ref{tab:paramsdoppel}.
 
 \begin{table}
 \centering
@@ -236,3 +236,24 @@ Relative Ungenauigkeit & 4,44\% & 5,12\% & 5,30\% & 1,29\%\\
 Die relative Abweichung der experimentell bestimmten Spaltbreite der beiden einzelnen
 Spalte zur Herstellerangabe beträgt -13,33\%, die Abweichung beim Spaltmittenabstand
 -6,80\%.
+
+Zuletzt soll noch das Beugungsbild eines Einzelspaltes mit dem eines Doppelspaltes
+verglichen werden. Da der erste Einzelspalt und der Doppelspalt mit $b_1 = b_3 = \SI{0.15}{\milli\meter}$
+die gleiche Spaltbreite haben, werden diese beiden Aperturen verglichen.
+Wie an Gleichung \eqref{eqn:doppeltheo} zu erkennen ist und dort danach angemerkt
+wurde, beschreibt die Intensitätsverteilung des Einzelspaltes die Einhüllende
+der Verteilung des Doppelspaltes. Um die konkreten Verteilungen miteinander vergleichen
+zu können, müssen sie angepasst werden. Alle Messwerte und die Werte der Ausgleichsfunktion
+des Einzelspaltes werden mit $\frac{\text{max} I_3(s)}{\text{max} I_1(s)} = \frac{2750}{1225}$
+multipliziert, sodass beide Verteilungen die gleiche Nullintensität haben. Außerdem
+werden sie um null zentriert, indem für die experimentelle Zentrierung in der Formel
+null eingesetzt wird und die Messwerte entsprechend verschoben werden.
+Die Darstellung beider angepasster Verteilungen ist in Abbildung \ref{fig:doppeleinzel}
+zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/doppeleinzel.pdf}
+  \caption{Vergleich der Beugungsbilder eines Einzel- und eines Doppelspalts}
+  \label{fig:doppeleinzel}
+\end{figure}

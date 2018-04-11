@@ -42,7 +42,7 @@ s_1, I_1 = np.genfromtxt('data/einfachspalt_1.txt', unpack=True) #s/mm I/nA
 s_1 *= 1e-3 #s/m
 I_1 *= 1e-9 #I/A
 I_1 -=I_1d  #Bereinigung Dunkelstrom
-slinspace = np.linspace(-0.017, 0.017, 500)
+slinspace = np.linspace(-0.015, 0.015, 500)
 
 
 params1, covariance_matrix1 = optimize.curve_fit(theory, s_1, I_1, p0=[0.73, -0.0005, 1e-3])
@@ -73,7 +73,7 @@ plt.ylabel(r'$I/$nA')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-#plt.axis((-0.017, 0.017, -100, 1400))
+plt.autoscale(enable=True, axis='x', tight=True)
 plt.savefig('build/einfachspalt_1.pdf')
 
 plt.clf()
@@ -103,6 +103,7 @@ plt.ylabel(r'$I/$nA')
 plt.tight_layout()
 plt.legend()
 plt.grid()
+plt.autoscale(enable=True, axis='x', tight=True)
 plt.savefig('build/einfachspalt_2.pdf')
 
 plt.clf()
@@ -132,6 +133,7 @@ plt.ylabel(r'$I/$nA')
 plt.tight_layout()
 plt.legend()
 plt.grid()
+plt.autoscale(enable=True, axis='x', tight=True)
 plt.savefig('build/doppelspalt.pdf')
 plt.clf()
 
@@ -173,6 +175,7 @@ plt.tight_layout()
 plt.legend()
 plt.legend(loc = 'upper left', fontsize = 'x-small')
 plt.grid()
+plt.autoscale(enable=True, axis='x', tight=True)
 plt.savefig('build/doppeleinzel.pdf')
 plt.clf()
 
