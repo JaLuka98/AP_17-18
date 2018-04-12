@@ -139,16 +139,16 @@ subtrahiert, sodass in der Tabelle die bereinigten Werte zu sehen sind.
 \end{longtable}
 
 Die Anpassungsfunktion für die Messreihen an den Einzelspalten ist in Analogie zu
-\eqref{eqn:einzeltheo}
-\begin{equation}
+\eqref{eqn:einzeltheo} und mit \eqref{eqn:phi}
+\begin{equation*}
   I_i (x) = A_{0,i} \,\, b_{\text{exp},i} \,\, \symup{sinc}^2\left(\frac{\pi b \sin\left(\frac{x-x_{0,i}}{L}\right)}{\lambda}\right) \,.
-\end{equation}
+\end{equation*}
 Dabei sind die Parameter die Amplitudenfaktoren $A_{0,i}$, die experimentell bestimmten Spaltbreiten
 $b_{\text{exp},i}$ und die experimentellen Zentrierungen $x_{0,i}$.
 Für beide Regressionen wurden die folgenden Anfangsparameter vorgegeben:
-\begin{equation}
+\begin{equation*}
   \{A_0, b_{\text{exp}}, x_0\} = \{0.73, \SI{-0.5}{\milli\meter}, \SI{-1.5}{\milli\meter}\}\,.
-\end{equation}
+\end{equation*}
 In den Abbildungen \ref{fig:spalt1} und \ref{fig:spalt2} sind die Messreihen der Beugung an den Einzelspalten aufgetragen
 und die Graphen der konkreten Ausgleichsfunktionen ist zu sehen.
 
@@ -193,19 +193,19 @@ Die relative Abweichung der experimentell ermittelten Spaltbreite des ersten Ein
 Auswertung angemerkten Herstellerangabe beträgt -2,80\%, für den zweiten Einzelspalt 2,93\%.
 
 Die Messreihe zum Doppelspalt wird mit der Funktion
-\begin{equation}
+\begin{equation*}
   I_3 (x) = 4 \cos^2\left(\frac{\pi d_\text{exp} \sin\left(\frac{x-x_{0,3}}{L}\right)}{\lambda}\right) {A_{0,3}}^2 \,\, {b_{\text{exp},3}}^2 \,\,
   \symup{sinc}^2\left(\frac{\pi b \sin\left(\frac{x-x_{0,3}}{L}\right)}{\lambda}\right)
-\end{equation}
+\end{equation*}
 angepasst. Diese entspricht der theorisch berechneten Intensitätsverteilung \eqref{eqn:doppeltheo}.
 Diese Anpassungsfunktion hat vier zu bestimmende Parameter: Eine Amplitudenfaktor $A_{0,3}$,
 die experimentell bestimmte Spaltbreite der baugleichen Spalte $b_{\text{exp},3}$,
 die experimentelle Zentrierung $x_{0,3}$ und der experimentelle Spaltmittenabstand
 $d_\text{exp}$.
 Für die Regression wurden die Anfangsparameter
-\begin{equation}
+\begin{equation*}
   \{A_0, b_{\text{exp}}, x_0, d_\text{exp}\} = \{0.73, \SI{-0.5}{\milli\meter}, \SI{-1.5}{\milli\meter}, \SI{1}{\milli\meter}\}\,,
-\end{equation}
+\end{equation*}
 gewählt.
 Der Graph der Ausgleichsfunktion und die Auftragung der gemessenen Stromstärke gegen
 die Verschiebung des Detektors ist in \ref{fig:spalt3} veranschaulicht.
