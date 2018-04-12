@@ -143,7 +143,7 @@ Die Anpassungsfunktion für die Messreihen an den Einzelspalten ist in Analogie 
 \begin{equation}
   I_i (x) = A_{0,i} \,\, b_{\text{exp},i} \,\, \symup{sinc}^2\left(\frac{\pi b \sin\left(\frac{x-x_{0,i}}{L}\right)}{\lambda}\right) \,.
 \end{equation}
-Dabei sind die Parameter die Amplituden $A_{0,i}$, die experimentell bestimmten Spaltbreiten
+Dabei sind die Parameter die Amplitudenfaktoren $A_{0,i}$, die experimentell bestimmten Spaltbreiten
 $b_{\text{exp},i}$ und die experimentellen Zentrierungen $x_{0,i}$.
 Für beide Regressionen wurden die folgenden Anfangsparameter vorgegeben:
 \begin{equation}
@@ -194,11 +194,11 @@ Auswertung angemerkten Herstellerangabe beträgt -2,80\%, für den zweiten Einze
 
 Die Messreihe zum Doppelspalt wird mit der Funktion
 \begin{equation}
-  I_3 (x) = 4 \cos^2\left(\frac{\pi d_\text{exp} \sin\left(\frac{x-x_{0,3}}{L}\right)}{\lambda}\right) A_{0,3} \,\, b_{\text{exp},3} \,\,
+  I_3 (x) = 4 \cos^2\left(\frac{\pi d_\text{exp} \sin\left(\frac{x-x_{0,3}}{L}\right)}{\lambda}\right) {A_{0,3}}^2 \,\, {b_{\text{exp},3}}^2 \,\,
   \symup{sinc}^2\left(\frac{\pi b \sin\left(\frac{x-x_{0,3}}{L}\right)}{\lambda}\right)
 \end{equation}
 angepasst. Diese entspricht der theorisch berechneten Intensitätsverteilung \eqref{eqn:doppeltheo}.
-Diese Anpassungsfunktion hat vier zu bestimmende Parameter: Eine Amplitude $A_{0,3}$,
+Diese Anpassungsfunktion hat vier zu bestimmende Parameter: Eine Amplitudenfaktor $A_{0,3}$,
 die experimentell bestimmte Spaltbreite der baugleichen Spalte $b_{\text{exp},3}$,
 die experimentelle Zentrierung $x_{0,3}$ und der experimentelle Spaltmittenabstand
 $d_\text{exp}$.
@@ -234,7 +234,9 @@ Relative Ungenauigkeit & 4,44\% & 5,12\% & 5,30\% & 1,29\%\\
 \end{table}
 
 Die relative Abweichung der experimentell bestimmten Spaltbreite der beiden einzelnen
-Spalte zur Herstellerangabe beträgt -13,33\%, die Abweichung beim Spaltmittenabstand
+Spalte zur Herstellerangabe beträgt 0,67\% \footnote{Dass die numerisch bestimmte
+experimentelle Spaltbreite negativ ist, ist nicht von Bedeutung, da die Spaltbreite
+in der Funktion ohnehin quadriert wird.}, die Abweichung beim Spaltmittenabstand
 -6,80\%.
 
 Zuletzt soll noch das Beugungsbild eines Einzelspaltes mit dem eines Doppelspaltes
