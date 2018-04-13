@@ -41,8 +41,8 @@ resultierenden magnetischen Momente gilt dann
   \symbf{\mu_S} &= - g_S \frac{\mu_B}{\hbar} \symbf{S} \,.
   \label{eqn:mulmus}
 \end{align}
-Dabei bezeichnet $\mu_B$ das Bohrsche Magneton und $\hbar$ das reduzierte Plancksche
-Wirkungsquantum.
+Dabei bezeichnet $\mu_B$ das Bohrsche Magneton, $\hbar$ das reduzierte Plancksche
+Wirkungsquantum und $g_S$ das gyromagnetische Verhältnis des freien Elektrons.
 Allgemein gilt die Relation
 \begin{equation}
   |\symbf{N}| = \sqrt(N(N+1)) \hbar
@@ -50,9 +50,8 @@ Allgemein gilt die Relation
 für einen der drei Drehimpulse als $\symbf{N}$ mit seiner dazugehörigen Quantenzahl
 $N$. Damit ergeben sich die Beträge der magnetischen Momente zu
 \begin{align}
-  |\symbf{\mu_L}| &= \mu_B \sqrt{L(L+1)} \, \label{eqn:absmul}\\
-  |\symbf{\mu_S}| &= g_S \mu_B \sqrt{S(S+1)} \, \label{eqn:absmus}.
-  \label{eqn:absmulmus}
+  |\symbf{\mu_L}| &= \mu_B \sqrt{L(L+1)} \, \\
+  |\symbf{\mu_S}| &= g_S \mu_B \sqrt{S(S+1)} \, .
 \end{align}
 Dabei ist $L$ die Bahndrehimpulsquantenzahl und $S$ die Spinquantenzahl.
 Mit $\symbf{\mu}_J$ sei der zu $\symbf{J}$ parallele Anteil des zum Gesamtdrehimpuls $\symbf{J}$
@@ -67,8 +66,34 @@ gehörigen magnetischen Moments $\symbf{\mu}$ bezeichnet.
 
 Aus Abbildung \ref{fig:vektordreh} lässt sich die Beziehung
 \begin{equation}
-  |\symbf{\mu}_J| = |\symbf{\mu}_S| \cos(\alpha) + |\symbf{\mu}_L| \cos(\beta)\,.
+  |\symbf{\mu}_J| = |\symbf{\mu}_S| \cos\alpha + |\symbf{\mu}_L| \cos\beta\,.
   \label{eqn:cos}
 \end{equation}
-Mithilfe des Kosinussatzes und dem Einsetzen der Gleichungen \ref{eqn:absmul} und \ref{eqn:absmus} in Gleichung
-\ref{eqn:cos} folgt 
+Mithilfe des Kosinussatzes und dem Einsetzen der oben ausgerechneten Beträge der magnetischen Momente in Gleichung
+\ref{eqn:cos} folgt
+\begin{equation}
+  |\symbf{\mu}_J| \approx \mu_B g_J \sqrt{J(J+1)}\,,
+\end{equation}
+dabei nennt man den Ausdruck
+\begin{equation}
+  g_J = \frac{3J(J+1) + (S(S+1)-L(L+1))}{2J(J+1)}
+\end{equation}
+den Landé-Faktor des Atoms und das gyromagnetische Verhältnis des Elektrons wurde
+mit 2 angenähert. \\
+Zwischen der Richtung des äußeren Magnetfeldes und der Richtung von $\symbf{\mu}_J$
+sind nicht beliebige Winkel möglich. Dies wird Richtungsquantelung genannt. Für die Komponente
+$\mu_{J_z}$ von $\symbf{\mu}_J$ gilt dann
+\begin{equation}
+  \mu_{J_z} = - \my_B g_J m\,.
+\end{equation}
+Dabei ist $m$ ganzzahlig und wird Orientierungs- oder magnetische Quantenzahl genannt.
+Der Wertebereich von $m$ ist begrenzt. Zu jedem $m$ gibt es also eine bestimmte Richtung
+des magnetischen Moments mit einer bestimmten potentiellen Energie, woraus sich die
+Magnetisierung $\symbf{M}$ einer makroskopischen Probe berechnen lässt.
+Dazu wird über das Produkt der Auftrittswahrscheinlichkeit der bestimmten
+Orientierung der magnetischen Momente mit ihren Beträgen summiert.
+Schlussendlich ergibt sich in Näherung von Zimmertemperatur und Feldern in der Größenordnung
+von bis zu einem Tesla für die paramagnetische Suszeptibilität
+\begin{equation}
+  \chi = \frac{\my_0 \my_B^2 g_J^2 N J (J+1)}{3 k_B T}\,.
+\end{equation}
