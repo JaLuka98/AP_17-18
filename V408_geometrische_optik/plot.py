@@ -68,10 +68,6 @@ g, b = np.genfromtxt('data/wasser.txt', unpack=True)  # in cm
 for i in range(0, len(b), 1):
     plt.plot([0, g[i]], [b[i], 0], 'rx-')
 
-np.delete(g, [7, 5])
-print(g)
-np.delete(b, [7, 5])
-print(b)
 einsdurchf = 1/g + 1/b
 f = 1/einsdurchf
 print(f)
