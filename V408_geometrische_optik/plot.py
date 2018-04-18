@@ -34,6 +34,10 @@ m[:,4] = V2
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
+# Diesen komischen Plot erzeugen
+for i in range(0, len(b), 1):
+    plt.plot([0, g[i]], [b[i], 0], 'rx-')
+
 # Ausreißer entfernen
 g = np.delete(g, np.argwhere(g == 19.4))
 g = np.delete(g, np.argwhere(g == 56.0))
@@ -46,10 +50,6 @@ f = 1/einsdurchf
 print(f)
 f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('f für Linse mit f=150cm mit herausgerechneten Ausreissern ist f=', f, 'cm')
-
-# Diesen komischen Plot erzeugen
-for i in range(0, len(b), 1):
-    plt.plot([0, g[i]], [b[i], 0], 'rx-')
 
 plt.xlabel(r'$g/$cm')
 plt.ylabel(r'$b/$cm')
