@@ -178,6 +178,15 @@ V = B/G
 print('V =', V)
 print('1+1/V', 1+1/V)
 
+hr = ['$g_strich/$cm', '$b_strich$cm', '$B/$cm', '$V$']
+m = np.zeros((10, 4))
+m[:,0] = gstrich
+m[:,1] = bstrich
+m[:,2] = B
+m[:,3] = V
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 params, covariance_matrix = optimize.curve_fit(linearfit, 1+1/V, gstrich)
 
 fg, h = correlated_values(params, covariance_matrix)
