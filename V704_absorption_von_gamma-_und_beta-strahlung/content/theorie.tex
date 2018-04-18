@@ -9,7 +9,7 @@ Zusätzlich hängt die Anzahl der Wechselwirkungen von der Dicke des Absorbermat
 Für $\gamma$-Strahlung ergibt sich für die Anzahl der Teilchen, die den Absorber
 durchqueren können der exponentielle Zusammenhang
 \begin{equation}
-  N(D)=N_0 \exp{-n \sigma D} \,.
+  N(D)=N_0 e^{-n \sigma D} \,.
   \label{eqn:absorptionsgesetz}
 \end{equation}
 Dabei beschreibt $N_0$ die Teilchenanzahl vor dem Absoprtionsvorgang, $n$ die
@@ -108,3 +108,31 @@ Bremsstrahlung genannt.
 
 Der letzte mögliche Prozess ist die inelastische Streuung an den Elektronen des
 Absorbers. Dabei werden einzelne Atome des Absorbers ionisiert und angeregt.
+
+Für natürliche $\beta$-Strahlung und eine geringe Schichtdicke $D$ gilt der
+Zusammenhang \eqref{eqn:absorptionsgesetz}. Eine typische
+Absorptionskurve für $\beta$-Strahlung ist in Abbildung \ref{fig:absorptionskurve}
+dargestellt.
+
+\begin{figure}
+  \centering
+  \includegraphics[height=4cm]{data/absorptionskurve.png}
+  \caption{Typische Absorptionskurve für natürliche $\beta$-Strahlung \cite{Versuchsanleitung}.
+  Die Skalen sind logarithmisch gewählt.}
+  \label{fig:absorptionskurve}
+\end{figure}
+
+Die Massenbelegung $R$ des Absorbers ist dabei definiert als
+\begin{equation}
+  R=\rho D \,,
+\end{equation}
+wobei $D$ die Dicke und $\rho$ die Dichte des Absorbermaterials sind. Die in der Abbildung
+als Untergrund gekennzeichnete Strahlung stammt nicht von der $\beta$-Strahlung an sich,
+sondern besteht aus Bremsstrahlung und Hintergrundstrahlung.
+
+Ist die maximale Reichweite $R_{\symup{max}}$ bekannt, so lässt sich aus ihr mithilfe
+der empirischen Formel
+\begin{equation}
+  E_{\symup{max}}=1,92 \sqrt{R_{\symup{max}}^2+0,22 R_{\symup{max}}}
+\end{equation}
+die maximale Energie $E_{\symup{max}}$ des $\beta$-Strahlers in MeV berechnet werden.
