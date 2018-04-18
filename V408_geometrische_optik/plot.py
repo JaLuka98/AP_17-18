@@ -22,21 +22,26 @@ G = 3  # Gegenstandsgröße in cm
 g, b, B = np.genfromtxt('data/bekannt.txt', unpack=True)  # in cm
 V1 = B/G
 V2 = b/g
+f = np.genfromtxt('data/f.txt', unpack=True) #in cm
 #Kannst du noch f oder so hier rein tun?
 hr = ['$g/$cm', '$b/$cm', '$B/$cm', '$V1/$cm', '$V2/$cm', '$f/$cm']
-m = np.zeros((11, 5))
+m = np.zeros((11, 6))
 m[:,0] = g
 m[:,1] = b
 m[:,2] = B
 m[:,3] = V1
 m[:,4] = V2
-#m[:,5] = g
+m[:,5] = f
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
 # Diesen komischen Plot erzeugen
 for i in range(0, len(b), 1):
     plt.plot([0, g[i]], [b[i], 0], 'rx-')
+
+einsdurchf = 1/g + 1/b
+f = 1/einsdurchf
+np.savetxt('f.txt', np.column_stack([f]))
 
 # Ausreißer entfernen
 g = np.delete(g, np.argwhere(g == 19.4))
@@ -51,6 +56,7 @@ print(f)
 f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('f für Linse mit f=150cm mit herausgerechneten Ausreissern ist f=', f, 'cm')
 
+
 plt.xlabel(r'$g/$cm')
 plt.ylabel(r'$b/$cm')
 plt.tight_layout()
@@ -64,13 +70,24 @@ plt.savefig('build/bekanntklein.pdf')
 plt.clf()
 
 g, b = np.genfromtxt('data/wasser.txt', unpack=True)  # in cm
+f = np.genfromtxt('data/f_wasser.txt', unpack=True) #in cm
 
 for i in range(0, len(b), 1):
     plt.plot([0, g[i]], [b[i], 0], 'rx-')
 
+hr = ['$g/$cm', '$b/$cm', '$f/$cm']
+m = np.zeros((10, 3))
+m[:,0] = g
+m[:,1] = b
+m[:,2] = f
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
+
 einsdurchf = 1/g + 1/b
 f = 1/einsdurchf
 print(f)
+np.savetxt('f_wasser.txt', np.column_stack([f]))
 f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('f für Wasserlinse mit unbekannter Brennweite ist f=', f, 'cm')
 
@@ -94,8 +111,21 @@ d1 = np.abs(g1-b1)
 d2 = np.abs(g2-b2)
 d = (d1+d2)/2
 f = (e**2-d**2)/(4*e)
+
+hr = ['$e/$cm', '$g_1/$cm', 'b_1$/$cm', '$g_2/$cm', '$b_2/$cm', '$f/$cm']
+m = np.zeros((10, 6))
+m[:,0] = e
+m[:,1] = g1
+m[:,2] = b1
+m[:,3] = g2
+m[:,4] = b2
+m[:,5] = f
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('Die Brennweite der Linse (weisses Licht) mit f=150mm mit der Methode von Bessel ist f=', f, 'cm')
+
 
 # Blaues Licht
 
@@ -104,6 +134,18 @@ d1 = np.abs(g1-b1)
 d2 = np.abs(g2-b2)
 d = (d1+d2)/2
 f = (e**2-d**2)/(4*e)
+
+hr = ['$e/$cm', '$g_1/$cm', 'b_1$/$cm', '$g_2/$cm', '$b_2/$cm', '$f/$cm']
+m = np.zeros((5, 6))
+m[:,0] = e
+m[:,1] = g1
+m[:,2] = b1
+m[:,3] = g2
+m[:,4] = b2
+m[:,5] = f
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('Die Brennweite der Linse (blaues Licht) mit f=150mm mit der Methode von Bessel ist f=', f, 'cm')
 
@@ -114,6 +156,18 @@ d1 = np.abs(g1-b1)
 d2 = np.abs(g2-b2)
 d = (d1+d2)/2
 f = (e**2-d**2)/(4*e)
+
+hr = ['$e/$cm', '$g_1/$cm', 'b_1$/$cm', '$g_2/$cm', '$b_2/$cm', '$f/$cm']
+m = np.zeros((5, 6))
+m[:,0] = e
+m[:,1] = g1
+m[:,2] = b1
+m[:,3] = g2
+m[:,4] = b2
+m[:,5] = f
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('Die Brennweite der Linse (rotes Licht) mit f=150mm mit der Methode von Bessel ist f=', f, 'cm')
 

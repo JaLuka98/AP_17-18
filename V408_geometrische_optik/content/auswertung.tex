@@ -10,6 +10,30 @@ Brennweite von $f_1 = \SI{150}{\milli\meter}$ sind dabei in Tabelle
 Abbildungsmaßstab, der konkret gemäß \eqref{eqn:V} mit $V_1=B/G$ bzw. mit $V_2=b/g$
 mit bekannter, fester Gegenstandsgröße $G = \SI{3}{\centi\meter}$ berechnet wurde.
 
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte zur Linse einer bekannten Brennweite.}
+    \label{tab:bekannt}
+		\begin{tabular}{cccccc}
+		\toprule
+			{$g/$cm} & {$b/$cm} & {$B/$cm} & {$V1/$cm} & {$V2/$cm} & {$f/$cm}\\
+			\midrule
+			44,80 & 21,10 & 1,40 & 0,47 & 0,47 & 14,34\\
+			33,00 & 25,40 & 2,20 & 0,73 & 0,77 & 14,35\\
+			33,10 & 25,40 & 2,20 & 0,73 & 0,77 & 14,37\\
+			47,80 & 20,50 & 1,30 & 0,43 & 0,43 & 14,35\\
+			26,80 & 31,00 & 3,30 & 1,10 & 1,16 & 14,37\\
+			56,00 & 11,40 & 1,00 & 0,33 & 0,20 & 9.,7\\
+			64,30 & 18,60 & 0,80 & 0,27 & 0,29 & 14,43\\
+			19,40 & 35,60 & 8,10 & 2,70 & 1,84 & 12,56\\
+			24,40 & 34,80 & 4,10 & 1,37 & 1,43 & 14,34\\
+			74,00 & 17,40 & 0,70 & 0,23 & 0,24 & 14,09\\
+			88,00 & 17,00 & 0,60 & 0,20 & 0,19 & 14,25\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
 
 Eine grafische Auswertung ist möglich. Dazu werden die gemessenen $g_i$ und
 $b_i$ auf die Abszissen- bzw. Ordinatenachse aufgetragen und Messwertpaare verbunden.
@@ -56,6 +80,29 @@ Die Messwerte sind in \ref{tab:unbekannt} zu finden.
 Die gemessenen Gegenstands- und Brennweiten werden in \ref{fig:wassergross} auf die Achsen aufgetragen
 und der relevante Bereich in \ref{fig:wasserklein} vergrößert dargestellt.
 
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte zur Wasserlinse  mit unbekannter Brennweite.}
+    \label{tab:unbekannt}
+		\begin{tabular}{ccc}
+		\toprule
+			{$g/$cm} & {$b/$cm} & {$f/$cm}\\
+			\midrule
+			24,20 & 25,90 & 12,51\\
+			32,40 & 20,80 & 12,67\\
+			41,60 & 17,80 & 12,47\\
+			19,00 & 40,40 & 12,92\\
+			16,90 & 46,50 & 12,40\\
+			62,30 & 15,50 & 12,41\\
+			70,60 & 15,30 & 12,57\\
+			50,40 & 16,70 & 12,54\\
+			25,30 & 24,90 & 12,55\\
+			53,70 & 16,40 & 12,56\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
 \begin{figure}[h]
   \centering
   \includegraphics{build/wassergross.pdf}
@@ -88,10 +135,71 @@ Fehlerrechnung durchgeführt, da dies mit zwei Werten zu keinen sinnvollen Ergeb
 führt. Unter Beachtung der Gleichungen \eqref{eqn:mean} und \eqref{eqn:std} lässt sich
 dann die Brennweite der Linse unter weißem Licht zu $\SI{144.1(8)}{\milli\meter}$ bestimmen.
 
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte zur Methode von Bessel mit weißem Licht.}
+    \label{tab:bessel}
+		\begin{tabular}{cccccc}
+		\toprule
+			{$e/$cm} & {$g_1/$cm} & {$b_1/$cm} & {$g_2/$cm} & {$b_2/$cm} & {$f/$cm}\\
+			\midrule
+			60,00 & 23,50 & 36,50 & 35,90 & 24,10 & 14,36\\
+			65,00 & 20,50 & 44,50 & 43,50 & 21,50 & 14,22\\
+			70,00 & 20,20 & 49,80 & 49,80 & 20,20 & 14,37\\
+			75,00 & 19,70 & 55,30 & 55,50 & 19,50 & 14,48\\
+			80,00 & 19,00 & 61,00 & 61,10 & 18,90 & 14,46\\
+			85,00 & 18,40 & 66,60 & 66,50 & 18,50 & 14,45\\
+			90,00 & 18,10 & 71,90 & 71,80 & 18,20 & 14,49\\
+			95,00 & 17,80 & 77,20 & 77,30 & 17,70 & 14,43\\
+			100,00 & 17,50 & 82,50 & 82,50 & 17,50 & 14,44\\
+			105,00 & 17,30 & 87,70 & 87,70 & 17,30 & 14,45\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
 Die Messreihen und genau wie zuvor berechneten Brennweiten für das blaue und das
-rote Licht finden sich in \ref{tab:blaurot}. Werden die Brennweiten wie zuvor gemittelt,
+rote Licht finden sich in den Tabellen \ref{tab:besselblau} und \ref{tab:besselrot}.
+Werden die Brennweiten wie zuvor gemittelt,
 ergibt sich eine Brennweite von $\SI{144.15(28)}{\milli\meter}$ für das blaue Licht.
 Für das rote Licht folgt eine Brennweite von $\SI{144.5(4)}{\milli\meter}$.
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte zur Methode von Bessel mit blauem Licht.}
+    \label{tab:besselblau}
+		\begin{tabular}{cccccc}
+		\toprule
+			{$e/$cm} & {$g_1/$cm} & {$b_1/$cm} & {$g_2/$cm} & {$b_2/$cm} & {$f/$cm}\\
+			\midrule
+			60,00 & 23,90 & 36,10 & 36,20 & 23,80 & 14,37\\
+			70,00 & 20,30 & 49,70 & 49,60 & 20,40 & 14,43\\
+			80,00 & 18,90 & 61,10 & 61,10 & 18,90 & 14,43\\
+			90,00 & 18,00 & 72,00 & 71,90 & 18,10 & 14,43\\
+		  100,00 & 17,50 & 82,50 & 82,60 & 17,40 & 14,40\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte zur Methode von Bessel mit rotem Licht.}
+    \label{tab:besselrot}
+		\begin{tabular}{cccccc}
+		\toprule
+			{$e/$cm} & {$g_1/$cm} & {$b_1/$cm} & {$g_2/$cm} & {$b_2/$cm} & {$f/$cm}\\
+			\midrule
+			60,00 & 23,90 & 36,10 & 35,90 & 24,10 & 14,40\\
+			70,00 & 20,40 & 49,60 & 49,50 & 20,50 & 14,48\\
+			80,00 & 19,00 & 61,00 & 61,10 & 18,90 & 14,46\\
+			90,00 & 18,00 & 72,00 & 71,90 & 18,10 & 14,43\\
+			100,00 & 17,60 & 82,40 & 82,40 & 17,60 & 14,50\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
 %Bereits in Kapitel \ref{sec:theorie} wurde die chromatische Abberation als Abbildungsfehler
 %erläutert. Dies
 
