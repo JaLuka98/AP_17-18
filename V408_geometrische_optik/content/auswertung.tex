@@ -114,7 +114,7 @@ und der relevante Bereich in \ref{fig:wasserklein} vergrößert dargestellt.
   \centering
   \includegraphics{build/wasserklein.pdf}
   \caption{Wasserlinse, Ausschnitt um den Schnittpunkt aus Abbildung \ref{fig:wasserklein}.}
-  \label{fig:wassergross}
+  \label{fig:wasserklein}
 \end{figure}
 
 Aufgrund des näherungsweise guten Schnitts aller Geraden in einem Punkt werden alle
@@ -204,3 +204,42 @@ Für das rote Licht folgt eine Brennweite von $\SI{144.5(4)}{\milli\meter}$.
 %erläutert. Dies
 
 \subsection{Bestimmung der Brennweite durch die Methode von Abbe}
+Die Messreihen bei der Methode von Abbe wurden mit einer Sammel- und einer
+Zerstreuungslinse mit den Brennweiten $f_{\pm} = \pm \SI{50}{\mm}$ aufgenommen.
+Die Messwerte sind in \ref{tab:abbe} eingetragen.
+
+Die gemessenen Gegenstands- und Bildweiten folgen den linearen Zusammenhängen
+(6) und (7). Also werden sie gegen $1+\frac{1}{V}$ bzw. $1+V$ in einem Diagramm
+aufgetragen und einer Ausgleichsrechnung unterzogen. Die Auftragung der Messwerte
+und die Graphen der Ausgleichsfunktionen sind dabei in Abbildung \ref{fig:gstrich}
+und \ref{fig:bstrich} zu sehen.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{build/abbegstrich.pdf}
+  \caption{Auftragung der gemssenen Gegenstandsweite gegen $1+1/V$ und Graph der Ausgleichsfunktion}
+  \label{fig:gstrich}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{build/abbegstrich.pdf}
+  \caption{Auftragung der gemssenen Bildweite gegen $1+V$ und Graph der Ausgleichsfunktion}
+  \label{fig:gstrich}
+\end{figure}
+
+Die Parameter der Ausgleichsfunktion ergeben sich dann zu
+\begin{align*}
+	f_g &= \SI{4.32(15)}{\centi\meter}		&		h &= {0.8(8)}{\centi\meter}\,,\ \\
+	f_b &= \SI{4.6(4)}{\centi\meter}		&		h^\prime &= {5.1}(5){\centi\meter}\,,
+\end{align*}
+wobei der Index die Variable kennzeichnet, für die die Ausgleichsrechnung
+angesetzt wurde. Das Mittel der beiden Brennwerte ergibt sich nach üblicher
+Bestimmung zu $\SI{4.47(20)}{\centi\meter}$.
+
+KANNST DU DAS MIT DEM THEORIEWERT MACHEN?
+\\
+\\
+\\
+\\
+DANKE!
