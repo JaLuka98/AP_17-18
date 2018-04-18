@@ -39,7 +39,7 @@ Eine grafische Auswertung ist möglich. Dazu werden die gemessenen $g_i$ und
 $b_i$ auf die Abszissen- bzw. Ordinatenachse aufgetragen und Messwertpaare verbunden.
 Dies ist in Abbildung \ref{fig:bekanntgross} geschehen.
 
-\begin{figure}[h]
+\begin{figure}%[h]
   \centering
   \includegraphics{build/bekanntgross.pdf}
   \caption{Linse mit $f_1$, Auftragung der Bildweiten auf der Ordinaten- und der Gegenstandsweiten auf der Abszissenachse mit Verbindungslinien.}
@@ -51,7 +51,7 @@ schneiden, dessen beide Koordinaten die Brennweite $f$ sein sollten. Nimmt man d
 beiden als Ausreißer zu erkennenden Messwertpaare heraus, ist dies
 erfüllt. Der relevante Bereich ist in Abbildung \ref{fig:bekanntklein} dargestellt.
 
-\begin{figure}[h]
+\begin{figure}%[h]
   \centering
   \includegraphics{build/bekanntklein.pdf}
   \caption{Linse mit $f_1$, Ausschnitt um den Schnittpunkt aus Abbildung \ref{fig:bekanntklein}.}
@@ -76,8 +76,9 @@ gemittelt werden. Dann beträgt die relative Abweichung zur Herstellerangabe von
 $f_1 = \SI{150}{\milli\meter}$ -4,27\%.
 
 Auch die Brennweite $f_2$ der Wasserlinse soll auf diese Art und Weise bestimmt werden.
-Die Messwerte sind in \ref{tab:unbekannt} zu finden.
-Die gemessenen Gegenstands- und Brennweiten werden in \ref{fig:wassergross} auf die Achsen aufgetragen
+Die Messwerte sind in \ref{tab:unbekannt} zu finden, auch die aus der Linsengleichung \eqref{eqn:linsengleichung}
+bestimmten Brennweiten sind bereits aufgeführt.
+Die gemessenen Gegenstands- und Bildweiten werden in \ref{fig:wassergross} auf die Achsen aufgetragen
 und der relevante Bereich in \ref{fig:wasserklein} vergrößert dargestellt.
 
 \begin{table}[htp]
@@ -103,14 +104,14 @@ und der relevante Bereich in \ref{fig:wasserklein} vergrößert dargestellt.
 	\end{center}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}%[h]
   \centering
   \includegraphics{build/wassergross.pdf}
   \caption{Wasserlinse, Auftragung der Bildweiten auf der Ordinaten- und der Gegenstandsweiten auf der Abszissenachse mit Verbindungslinien.}
   \label{fig:wassergross}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}%[h]
   \centering
   \includegraphics{build/wasserklein.pdf}
   \caption{Wasserlinse, Ausschnitt um den Schnittpunkt aus Abbildung \ref{fig:wasserklein}.}
@@ -119,9 +120,9 @@ und der relevante Bereich in \ref{fig:wasserklein} vergrößert dargestellt.
 
 Aufgrund des näherungsweise guten Schnitts aller Geraden in einem Punkt werden alle
 Messwertpaare verwendet. Dann ergibt sich $\SI{12.7}{\centi\meter}$ als grafisch bestimmte
-Brennweite für die Wasserlinse.
-
-HIER NOCH LINSENGlEICHUNG UND RECHNERISCH
+Brennweite für die Wasserlinse. Durch Mittelwertbildung der in Tabelle \ref{tab:unbekannt}
+aufgeführten Brennweiten ergibt sich eine Brennweite von $\SI{12.56(15)}{\centi\meter}$.
+Die Mittelung dieser Größen ergibt durch Bestimmung wie zuvor $\SI{12.63(15)}{\centi\meter}$.
 
 \subsection{Bestimmung der Brennweite durch die Methode von Bessel}
 
@@ -132,8 +133,8 @@ bereits die nach Gleichung \eqref{eqn:bessel} berechneten Werte für die Brennwe
 der Linse eingetragen. Für die benötigte Größe $d$ werden beide Berechnungsmöglichkeiten
 aus Gleichung \eqref{eqn:d} verwendet und das arithmetische Mittel genommen. Es wird hier keine
 Fehlerrechnung durchgeführt, da dies mit zwei Werten zu keinen sinnvollen Ergebnissen
-führt. Unter Beachtung der Gleichungen \eqref{eqn:mean} und \eqref{eqn:std} lässt sich
-dann die Brennweite der Linse unter weißem Licht zu $\SI{144.1(8)}{\milli\meter}$ bestimmen.
+führt. Es lässt sich dann die Brennweite der Linse unter weißem Licht durch
+übliche Mittelwertbildung zu $\SI{144.1(8)}{\milli\meter}$ bestimmen.
 
 \begin{table}[htp]
 	\begin{center}
@@ -214,24 +215,24 @@ aufgetragen und einer Ausgleichsrechnung unterzogen. Die Auftragung der Messwert
 und die Graphen der Ausgleichsfunktionen sind dabei in Abbildung \ref{fig:gstrich}
 und \ref{fig:bstrich} zu sehen.
 
-\begin{figure}[h]
+\begin{figure}%[h]
   \centering
   \includegraphics{build/abbegstrich.pdf}
   \caption{Auftragung der gemssenen Gegenstandsweite gegen $1+1/V$ und Graph der Ausgleichsfunktion}
   \label{fig:gstrich}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}%[h]
   \centering
-  \includegraphics{build/abbegstrich.pdf}
+  \includegraphics{build/abbebstrich.pdf}
   \caption{Auftragung der gemssenen Bildweite gegen $1+V$ und Graph der Ausgleichsfunktion}
-  \label{fig:gstrich}
+  \label{fig:bstrich}
 \end{figure}
 
 Die Parameter der Ausgleichsfunktion ergeben sich dann zu
 \begin{align*}
-	f_g &= \SI{4.32(15)}{\centi\meter}		&		h &= {0.8(8)}{\centi\meter}\,,\ \\
-	f_b &= \SI{4.6(4)}{\centi\meter}		&		h^\prime &= {5.1}(5){\centi\meter}\,,
+	f_g &= \SI{4.32(15)}{\centi\meter}		&		h &= \SI{0.8(8)}{\centi\meter}\,,\ \\
+	f_b &= \SI{4.6(4)}{\centi\meter}		&		h^\prime &= \SI{5.1(5)}{\centi\meter}\,,
 \end{align*}
 wobei der Index die Variable kennzeichnet, für die die Ausgleichsrechnung
 angesetzt wurde. Das Mittel der beiden Brennwerte ergibt sich nach üblicher
