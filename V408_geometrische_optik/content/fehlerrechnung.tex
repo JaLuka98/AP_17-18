@@ -16,17 +16,6 @@ Die empirische Standardabweichung dieser Stichprobe ist durch
 \end{equation}
 
 gegeben.
-Ist $f$ eine Funktion, die von unsicheren Variablen $x_i$ mit
-Standardabweichungen $\sigma_i$ abhängt, so ist die Unsicherheit von f
-\begin{equation}
-  \sigma_f = \sqrt{
-    \sum\limits_{i = 1}^N
-      \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
-  }\,.
-  \label{eqn:gaussfehler}
-\end{equation}
-
-Diese Formel bezeichnet man als "Gauß'sches Fehlerfortpflanzungsgesetz".
 
 Bei einer linearen Regression folgt eine Ausgleichsgerade
 \begin{equation}
@@ -43,6 +32,7 @@ und ergeben sich zu
 %Wenn im Folgenden Mittelwerte, Standardabweichungen und Fehler von
 %Funktionen unsicherer Größen berechnet werden, so werden stets die obigen
 %Formeln verwendet.
+
 Jegliche Rechnungen werden mit IPython 5.3.0 in Python 3.6.1 durchgeführt. Dabei
 werden die Bibliotheken "numpy" \cite{numpy} und "scipy" \cite{scipy} verwendet.
 Letztere dient insbesondere zur Erstellung von Ausgleichsrechnungen.
