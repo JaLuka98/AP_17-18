@@ -172,6 +172,11 @@ f = ufloat(np.mean(f), np.std(f, ddof=1))
 print('Die Brennweite der Linse (rotes Licht) mit f=150mm mit der Methode von Bessel ist f=', f, 'cm')
 
 # Und die Methode von Abbe folgt zuletzt
+d=60 #m
+durchftheo= 1/(50)-1/(50) + d/(50**2)
+ftheo=1/durchftheo
+print('Der Theoriewert für das Linsensystem beträgt f_theo=', ftheo, 'mm')
+
 
 gstrich, bstrich, B = np.genfromtxt('data/abbe.txt', unpack=True)  # in cm
 V = B/G
