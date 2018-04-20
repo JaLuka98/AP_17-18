@@ -48,8 +48,8 @@ Dies ist in Abbildung \ref{fig:bekanntgross} geschehen.
 \end{figure}
 
 Die Geraden sollten sich im Rahmen der Messgenauigkeit näherungsweise in einem Punkt
-schneiden, dessen beide Koordinaten die Brennweite $f$ sein sollten. Nimmt man die
-beiden als Ausreißer zu erkennenden Messwertpaare heraus, ist dies
+schneiden, dessen beide Koordinaten die Brennweite $f$ sein sollten.
+Werden die als Ausreißer zu erkennenden Messwertpaare ausgenommen, ist dies
 erfüllt. Der relevante Bereich ist in Abbildung \ref{fig:bekanntklein} dargestellt.
 
 \begin{figure}%[h]
@@ -132,13 +132,18 @@ der Linse eingetragen. Für die benötigte Größe $d$ werden beide Berechnungsm
 aus Gleichung \eqref{eqn:d} verwendet und das arithmetische Mittel genommen. Es wird hier keine
 Fehlerrechnung durchgeführt, da dies mit zwei Werten zu keinen sinnvollen Ergebnissen
 führt. Es lässt sich dann die Brennweite der Linse unter weißem Licht durch
-übliche Mittelwertbildung zu $\SI{144.1(8)}{\milli\meter}$ bestimmen.
+übliche Mittelwertbildung zu $\SI{144.1(8)}{\milli\meter}$ bestimmen. Die
+relative Abweichung zu $f_1$ beträgt -3,93\%.
 
 Die Messreihen und genau wie zuvor berechneten Brennweiten für das blaue und das
 rote Licht finden sich in den Tabellen \ref{tab:besselblau} und \ref{tab:besselrot}.
 Werden die Brennweiten wie zuvor gemittelt,
 ergibt sich eine Brennweite von $\SI{144.15(28)}{\milli\meter}$ für das blaue Licht.
 Für das rote Licht folgt eine Brennweite von $\SI{144.5(4)}{\milli\meter}$.
+Auf eine Angabe relativer Abweichungen zur Herstellerangabe wird verzichtet, da
+diese von anderem Licht ausgeht. Außerdem sind Messergebnisse für die Brennweiten hier
+ähnlich zu dem Ergebnis mit weißem Licht, sodass sich eine fast gleiche relative Abweichung
+ergeben würde.
 
 \begin{table}[htp]
 	\begin{center}
@@ -199,8 +204,6 @@ Für das rote Licht folgt eine Brennweite von $\SI{144.5(4)}{\milli\meter}$.
 	\end{center}
 \end{table}
 
-%Bereits in Kapitel \ref{sec:theorie} wurde die chromatische Abberation als Abbildungsfehler
-%erläutert. Dies
  \newpage
 \subsection{Bestimmung der Brennweite durch die Methode von Abbe}
 Die Messreihen bei der Methode von Abbe wurden mit einer Sammel- und einer
@@ -259,8 +262,7 @@ Die Parameter der Ausgleichsfunktion ergeben sich dann zu
 \end{align*}
 wobei der Index die Variable kennzeichnet, für die die Ausgleichsrechnung
 angesetzt wurde. Das Mittel der beiden Brennwerte ergibt sich nach üblicher
-Bestimmung zu $\SI{4.47(20)}{\centi\meter}$.
-
+Bestimmung zu $\SI{4.47(20)}{\centi\meter}$. \\
 Der Theoriewert für die Brennweite des Linsensystems ergibt sich nach Gleichung
 \eqref{eqn:system} zu $f_{\symup{theo}}=\SI{4.17}{\centi\meter}$. Die Abweichung
 der aus der Ausgleichsrechnung gewonnenen Parameter vom Theoriewert ergibt sich
