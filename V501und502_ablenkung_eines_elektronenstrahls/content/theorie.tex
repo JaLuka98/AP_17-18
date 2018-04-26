@@ -92,4 +92,86 @@ $U_d$ ist.
 Ein Kathodenstrahl-Oszillosgraph stellt die Zeitabhängigkeit von Wechselspannungen dar.
 Dazu wird an die Ablenkplatten der Kathodenstrahlröhre eine Sägezahnspannung für die
 horizontale Ablenkung verwendet. An die vertikal ablenkenden Platten wird die zu untersuchende
-Spannung angelegt.
+Spannung angelegt. Es kann gezeigt werden, dass
+\begin{equation}
+  n f_\text{Sä} = m f_\text{Si}
+\end{equation}
+für die Frequenz der anliegenden Sägezahnspannung $f_\text{Sä}$ und die Frequenz
+der zu untersuchenden sinusähnlichen Wechselspannung $f_\text{Si}$ gelten muss, damit
+der Oszillosgraph ein stehendes Bild der Wechselspannung aufzeichnet. Dabei sind
+$n$ und $m$ natürliche Zahlen. Die Frequenzen müssen also in einem rationalen
+Verhältnis stehen.
+
+\subsection{Ablenkung eines Elektronenstrahls im magnetischen Feld}
+\label{subsec:immagnetfeld}
+Die Kraft auf ein Teilchen mit Ladung $q$ und Geschwindigkeit $\symbf{v}$ in einem
+Magnetfeld mit magnetischer Flussdichte $\symbf{B}$, so ergibt sich die Kraft
+auf das Teilchen zu
+\begin{equation}
+  \symbf{F} = q \symbf{v} \times \symbf{B}\,.
+  \label{eqn:lorentz}
+\end{equation}
+Das ist die nichtrelativistische Lorentzkraft. Die Kraft wirkt also stets senkrecht
+zur Bewegungsrichtung des Teilchens und kann somit keine Arbeit verrichten.
+Die kinetische Energie ist somit konstant.
+Der Krümmungsradius der Kreisbahn, auf die das Teilchen durch die Lorentzkraft gezwungen
+wird, ist dann
+\begin{equation}
+  r = \frac{m v}{q B}\,.
+  \label{eqn:kruemmung}
+\end{equation}
+Für Elektronen ist entsprechend für $q$ die Elementarladung $e$ und für $m$ die Elektronenmasse
+einzusetzen $m_\text{e}$. \\
+Der Elektronenstrahl in der Kathodenstrahlröhre kann einem Magnetfeld ausgesetzt werden,
+um ihn abzulenken. Dies ist in \ref{fig:magnetkathode} skizziert.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=300pt]{data/immagnetfeld.png}
+  \caption{Darstellung der Ablenkung eines Elektronenstrahls in der Kathodenstrahlröhre durch ein Magnetfeld\cite{Versuchsanleitung502}}
+  \label{fig:magnetkathode}
+\end{figure}
+
+Der feldfreie Raum ist durch Mu-Metall von magnetischen Feldern abgeschirmt, sodass
+nur auf der Strecke mit der Länge $L$ eine vertikale Ablenkung erfolgt. Die Ablenkung
+auf dem Lichtschirm sei analog zur Ablenkung im elektrischen Feld mit $D$ bezeichnet.
+Mithilfe des Satzes von Pythagoras lässt sich der Krümmungsradius in Abhängigkeit
+der messbaren und bekannten Größen ausdrücken:
+\begin{equation}
+  r = \frac{L^2 + D^2}{2 D}\,.
+  \label{eqn:r}
+\end{equation}
+Die Geschwindigkeit des Elektrons ergibt sich durch die vorherige Beschleunigung
+im elektrischen Feld zu
+\begin{equation}
+  v = \sqrt{\frac{2 U_\text{B} e}{m_\text{e}}}\,.
+  \label{eqn:velektrisch}
+\end{equation}
+Werden die Gleichungen \eqref{eqn:kruemmung}, \eqref{eqn:r} und \eqref{eqn:velektrisch}
+kombiniert, so folgt der lineare Zusammenhang
+\begin{equation}
+  \frac{D}{L^2 + D^2} = \frac{1}{\sqrt{8 U_\text{B}}} \sqrt{\frac{e}{m_\text{e}}} B\,.
+\end{equation}
+Dies ermöglicht die experimentelle Bestimmung der spezifischen Elektronenladung
+$e/m_\text{e}$, wenn alle anderen Größen in der obigen Gleichung gemessen werden
+oder bekannt sind. \\
+
+Nahezu homogene Magnetfelder lassen sich mithilfe eines Helmholtz-Spulenpaars erzeugen, welches
+in Abbildung \ref{fig:helmholtz} skizziert ist.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=150pt]{data/helmholtz.png}
+  \caption{Skizze eines Helmholtzspulenpaars \cite{Versuchsanleitung308}}
+  \label{fig:helmholtz}
+\end{figure}
+
+Dieses besteht aus zwei in gleicher Richtung stromdurchflossenen Kreisspulen, die
+auf einer gemeinsamen Achse aufgebaut werden. Ihr Abstand $d$ entspricht dem Spulenradius $R$.
+Im Mittelpunkt des Spulenpaares beträgt die magnetische Flussdichte
+\begin{equation}
+  B = \mu_0 \frac{8}{\sqrt{125}} \frac{N I}{R}\,.
+  \label{eqn:helmholtz}
+\end{equation}
+Dabei ist $I$ der anliegende Strom, $N$ die Windungszahl der Spulen und $\mu_0$
+die magnetische Feldkonstante.
