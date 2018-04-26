@@ -2,14 +2,14 @@
 \label{sec:Fehlerrechnung}
 Der Mittelwert einer Stichprobe von $N$ Werten wird durch
 \begin{equation}
-  \overline{x} = \frac{1}{N} \sum\limits_{i = 1}^N x_i
+  \overline{x} = \sum\limits_{i = 1}^N x_i
   \label{eqn:mean}
 \end{equation}
 
 berechnet.
 Die empirische Standardabweichung dieser Stichprobe ist durch
 \begin{equation}
-  \sigma_x = \sqrt{\frac{1}{N(N-1)}
+  \sigma_x = \sqrt{\frac{1}{N-1}
     \sum\limits_{i = 1}^N
     (x_i-\overline{x})^2}
     \label{eqn:std}
