@@ -5,7 +5,7 @@ import uncertainties.unumpy as unp
 from scipy import optimize
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
-
+from matrix2latex import matrix2latex
 
 def linearfit(x, a, b):
     return a*x+b
@@ -97,6 +97,17 @@ plt.grid()
 plt.savefig('build/ablenkspannung2.pdf')
 plt.clf()
 
+hr = ['$U_d1/$V','$U_d2/$V','$U_d3/$V','$U_d4/$V','$U_d5/$V', '$D/$m']
+m = np.zeros((9, 6))
+m[:,0] = U_d1
+m[:,1] = U_d2
+m[:,2] = U_d3
+m[:,3] = U_d4
+m[:,4] = U_d5
+m[:,5] = D*1e3
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 #Im folgenden Abschnitt nehme ich die Fehler nicht mit... geht das vielleicht irgendwie schöner?
 
 E=np.array([b1, b2, b3, b4, b5])
@@ -128,13 +139,13 @@ U_b2=400
 L=0.175     #Strecke, auf der die Elektronen abgelenkt werden in m
 N=20        #Anzahl der Windungen
 
-R=0.3 #Haben wir das gemessen? ich habe jetzt einfach mal ganz grob irgendwas eingesetzt, was ind er größenordnung liegt, um zu gucken ob der plot akzeptabel aussieht...
+R=0.282 #Werte von Kevin :D
 
 r=D/(L**2+D**2)
 
 I_1, I_2, D= np.genfromtxt('data/bfeld.txt', unpack=True) #I/A, D/mm
-B_1=4*np.pi*1e7*8/(np.sqrt(125))*N*I_1/R
-B_2=4*np.pi*1e7*8/(np.sqrt(125))*N*I_2/R
+B_1=4*np.pi*1e-7*8/(np.sqrt(125))*N*I_1/R
+B_2=4*np.pi*1e-7*8/(np.sqrt(125))*N*I_2/R
 
 params, covariance_matrix = optimize.curve_fit(linearfit, B_1, r)
 errors = np.sqrt(np.diag(covariance_matrix))
@@ -153,14 +164,24 @@ a2 = ufloat(params[0], errors[0])
 plt.plot(B_2, r, 'rx', mew=0.5, label='Messwerte')
 plt.plot(B_2, linearfit(B_2, *params), 'r-', linewidth=0.5, label='Ausgleichsfunktion')
 
-plt.xlabel(r'$\frac{D}{L^2+D^2}$')
-plt.ylabel(r'$B$')
+plt.xlabel(r'$B$')
+plt.ylabel(r'$\frac{D}{L^2+D^2}$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.savefig('build/empfindlichkeiten.pdf')
+plt.savefig('build/bfeld.pdf')
 plt.clf()
 
+hr = ['$I_1/$A','$B_1/$µT','$I_2/$A','$B_2/$µT', '$D/$mm','$r/$m' ]
+m = np.zeros((9, 6))
+m[:,0] = I_1
+m[:,1] = B_1*1e6
+m[:,2] = I_2
+m[:,3] = B_2*1e6
+m[:,4] = D
+m[:,5] = r
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 I_erde=50*1e-3 #Stromstärke in A
 phi=72          #Winkel in Grad
