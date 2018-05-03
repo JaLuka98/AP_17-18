@@ -9,8 +9,8 @@
 Zur Auswertung der Ablenkung des Elektronenstrahls werden zunächst die gemessenen Werte
 für die Ablenkspannung $U_{\symup{d}}$ gegen die Ablenkung $D$ des Strahls aufgetragen.
 Es wurden fünf Messreihen bei jeweils verschiedenen Beschleunigungsspannungen aufgenommen.
-Diese betrugen $U_{\symup{d1}}=180$V, $U_{\symup{d12}}=230\,$V, $U_{\symup{d3}}=270\,$V,
-$U_{\symup{d4}}=300\,$V und $U_{\symup{d5}}=300\,$V.
+Diese betrugen $U_{\symup{b180}}=180$V, $U_{\symup{b230}}=230\,$V, $U_{\symup{b270}}=270\,$V,
+$U_{\symup{b300}}=300\,$V und $U_{\symup{b350}}=350\,$V.
 Für jede Messreihe wird eine lineare Ausgleichsrechnung der Form
 \begin{equation*}
   y=a x + b
@@ -19,13 +19,13 @@ durchgeführt. Die Graphen sind in den Abbildungen \ref{fig:ablenkspannung} und
 \ref{fig:ablenkspannung2} zu finden. Die zugrundeliegenden Messwerte befinden sich
 und Tabelle \ref{tab:elektrisch}.
 
-\begin{table}[htp]
+\begin{table}[h]
 	\begin{center}
     \caption{Messwerte zur Ablenkung des Elektronenstrahls im elektrischen Feld.}
     \label{tab:elektrisch}
 		\begin{tabular}{cccccc}
 		\toprule
-			{$U_{\symup{d1}}/$V} & {$U_{\symup{d2}}/$V} & {$U_{\symup{d3}}/$V} & {$U_{\symup{d4}}/$V} & {$U_{\symup{d5}}/$V} & {$D/$mm}\\
+			{$U_{\symup{d180}}/$V} & {$U_{\symup{d230}}/$V} & {$U_{\symup{d270}}/$V} & {$U_{\symup{d300}}/$V} & {$U_{\symup{d350}}/$V} & {$D/$mm}\\
 			\midrule
 			-17,48 & -22,50 & -28,90 & -29,10 & -34,10 & -24,00\\
 			-14,41 & -18,66 & -23,70 & -24,20 & -28,60 & -18,00\\
@@ -41,25 +41,30 @@ und Tabelle \ref{tab:elektrisch}.
 	\end{center}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \includegraphics{build/ablenkspannung.pdf}
   \caption{Messdaten und Ausgleichsfunktion für die Beschleunigungspannungen
-  $U_{\symup{d1}}=180$V (rot), $U_{\symup{d2}}=230$V (blau)und $U_{\symup{d3}}=270$V (grün).}
+  $U_{\symup{d180}}=180$V (rot), $U_{\symup{d230}}=230$V (blau) und $U_{\symup{d270}}=270$V (grün).}
   \label{fig:ablenkspannung}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \includegraphics{build/ablenkspannung2.pdf}
   \caption{Messdaten und Ausgleichsfunktion für die Beschleunigungspannungen
-  $U_{\symup{d4}}=300$V (gelb) und $U_{\symup{d5}}=350$V (violett).}
+  $U_{\symup{d300}}=300$V (gelb) und $U_{\symup{d350}}=350$V (violett).}
   \label{fig:ablenkspannung2}
 \end{figure}
 
-Die Parameter $a_{\symup{i}}$ der linearen Ausgleichsrechnungen sind
+Die Parameter $a_{\symup{i}}$ der linearen Ausgleichsrechnungen für die jeweiligen
+Beschleunigungsspanungen sind
 \begin{align*}
-  HIER WERTE EINFÜGEN!
+  a_{180} = \SI{1.863(0011)e-3}{\meter\per\volt} \,, \\
+  a_{230} = \SI{1.466(0007)e-3}{\meter\per\volt}  \,, \\
+  a_{270} = \SI{1.163(0007)e-3}{\meter\per\volt}  \,,\\
+  a_{300} = \SI{1.131(0006)e-3}{\meter\per\volt}  \,,\\
+  a_{350} = \SI{0.963(0009)e-3}{\meter\per\volt} \,.\\
 \end{align*}
 Diese entsprechen der Empfindlichkeit $D/U_{\symup{d_{\symup{i}}}}$ der Röhre bei
 der jeweils eingestellten Beschleunigungsspannung.
@@ -68,7 +73,7 @@ Nun werden die errechneten Empfindlichkeiten gegen die reziproken Beschleunigung
 aufgetragen und es wird erneut eine lineare Ausgleichsrechnung durchgeführt. Der
 zugehörige Graph ist in Abbildung \ref{fig:empfindlichkeiten} zu sehen.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \includegraphics{build/empfindlichkeiten.pdf}
   \caption{Auftragung der zuvor berechneten Empfindlichkeiten gegen die reziproken
@@ -78,8 +83,16 @@ zugehörige Graph ist in Abbildung \ref{fig:empfindlichkeiten} zu sehen.
 
 Der Parameter $a$ der Ausgleichsrechnung beträgt hier
 \begin{align*}
-  HIER WERTE EINFUEGEN \,.
+  a=\SI{0.3375(00212)}{\meter} \,.
 \end{align*}
+Der theoretische Wert hierzu beträgt $\frac{pL}{2d}=0.3575\,$m. Der Wert stellt eine
+Konstante der Kathodenstrahlröhre dar, der die Abmessungen der einzelnen Bauteile
+miteinander in Verbindung setzt. Dabei ist $p$ die
+Länge der ablenkenden Kondensatorplatten, $L$ die Strecke vom Kondensator bis zum
+Schirm und $d$ der Abstand der Kondensatoplatten zueinander. Die Werte können der
+im Anhang beigefügten Skizze entnommen werden. Die relative Abweichung
+des durch die Ausgleichsrechnung ermittelten Wertes vom theoretisch berechneten Wert
+beträgt $-5.59\%$.
 
 
 
@@ -89,17 +102,20 @@ Der Parameter $a$ der Ausgleichsrechnung beträgt hier
 
 Zur Auswertung der Ablenkung des Elektronenstrahls im magnetischen Feld werden
 zunächst aus den Messwerten die magnetische Feldstärke $B$ des Helmholtz-Spulenpaares
-gemäß (REFERENZ) und der Radius $r$ der Elektronenbahn nach (REFERENZ) berechnet. Die Messwerte und
+gemäß \eqref{eqn:helmholtz} und der Radius $r$ der Elektronenbahn nach \eqref{eqn:r} berechnet.
+Gemessen wurde mit Beschleunigungspannungen von $U_{\symup{b250}}=250$V und
+$U_{\symup{b400}}=400$V. Die Messwerte und
 die berechneten Werte befinden sich in Tabelle \ref{tab:magnetisch}.
 
 \begin{table}[htp]
 	\begin{center}
     \caption{Messwerte zur Ablenkung des Elektronenstrahls im magnetischen Feld und
-    daraus berechnete Werte.}
+    daraus berechnete Werte bei einer Beschleunigungsspannung von
+    $U_{\symup{b250}}=250$V und $U_{\symup{b400}}=400$V.}
     \label{tab:magnetisch}
 		\begin{tabular}{cccccc}
 		\toprule
-			{$I_1/$A} & {$B_1/$µT} & {$I_2/$A} & {$B_2/$µT} & {$D/$mm} & {$r/$m}\\
+			{$I_{250}/$A} & {$B_{250}/$µT} & {$I_{400}/$A} & {$B_{400}/$µT} & {$D/$mm} & {$r/$m}\\
 			\midrule
 			0,00 & 0,00  & 0,00 &  0,00 & 24,00 & -0,77\\
 			0,29 & 18,49 & 0,46 & 29,33 & 18,00 & -0,58\\
@@ -119,10 +135,49 @@ Nun wird der Radius $r$ der Elektronenbahn gegen die magnetische Feldstärke $B$
 des Spulenpaares aufgetragen und eine lineare Ausgleichsrechnung durchgeführt.
 Der zughörige Graph ist in Abbildung \ref{fig:bfeld} zu sehen.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \includegraphics{build/bfeld.pdf}
   \caption{Messdaten und Ausgleichsfunktion für die Beschleunigungspannungen
-  $U_{\symup{d1}}=250$V (blau) und $U_{\symup{d2}}=400$V (rot).}
+  $U_{\symup{b250}}=250$V (blau) und $U_{\symup{b400}}=400$V (rot).}
   \label{fig:bfeld}
 \end{figure}
+
+Die Parameter $a_{\symup{i}}$ der Ausgleichsrechnung betragen hier
+\begin{align*}
+  a_{250} = \SI{9504(0134)}{\meter\per\tesla}  \,, \\
+  a_{400} = \SI{7569(0088)}{\meter\per\tesla}  \,.
+\end{align*}
+Mithilfe dieser Werte soll nun unter Benutzung von Gleichung \eqref{eqn:elektronenladung}
+die spezifische Elektronenladung $e/m_{\symup{e}}$ bestimmt werden. Es folgt der
+Zusammenhang
+\begin{equation*}
+  \frac{e}{m_{\symup{e}}}= 8 a_{\symup{i}}^2 U_{\symup{bi}} \,.
+\end{equation*}
+Damit ergibt sich für die experimentell bestimmten spezifischen Elektronenladungen
+\begin{align*}
+  \left(\frac{e}{m_{\symup{e}}}\right)_{250}=\SI{1.81(005)e11}{\coulomb\per\kilo\per\gram}\,,\\
+  \left(\frac{e}{m_{\symup{e}}}\right)_{400}=\SI{1.83(004)e11}{\coulomb\per\kilo\per\gram}\,.
+\end{align*}
+
+Der Literaturwert für die spezifische Elektronen beträgt
+$\left(\frac{e}{m_{\symup{e}}}\right)_{\symup{lit}}=\SI{1.76e11}{\coulomb\per\kilo\per\gram}$
+\cite{elektronenladung}.
+Die relativen Abweichungen der ermittelten Ergebnisse vom Literaturwert betragen $2,84\%$ und
+$3,97\%$.
+
+\subsection{Bestimmung des Erdmagnetfeldes}
+\label{subsec:erdmagnetfeld}
+
+Der gemessene Winkel, den das Erdmagnetfeld mit der horizontalen einschließt beträgt
+$\phi=\SI{72}{\degree}$. Der notwendige Strom, um ein Gegenfeld mit dem Helmholtzspulenpaar
+zu erzeugen, beträgt laut Messung $I_{\symup{gegen}}=\SI{50}{\milli\ampere}$. Nach Gleichung
+\eqref{eqn:helmholtz} wird die magnetische Feldstärke für das Gegenfeld in horizontale
+Richtung zu $B_{\symup{hor}}=\SI{3.18}{\micro\tesla}$ bestimmt. Mithilfe des Zusammenhanges
+\begin{equation*}
+  B_{\symup{ges}}=\frac{B_{\symup{hor}}}{\cos(\phi)}
+\end{equation*}
+lässt sich die gesamte magnetische Feldstärke des Erdmagnetfeldes zu
+$B_{\symup{ges}}=\SI{10.32}{\micro\tesla}$ bestimmen. Der Literaturwert beträgt
+$B_{\symup{ges}}=\SI{48.5}{\micro\tesla}$ \cite{erdmagnetfeld}.
+Die relative Abweichung beträgt $-78,7\%$.
