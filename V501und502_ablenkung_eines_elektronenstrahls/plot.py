@@ -37,8 +37,8 @@ print('D/U_d1 =', params[0]*1e3, '+-', errors[0]*1e3)
 E1= ufloat(params[0], errors[0])
 b1 = params[0]  #brauchen wir nachher noch...
 
-plt.plot(U_d1, D, 'rx', mew=0.5, label='Messwerte')
-plt.plot(U_d1, linearfit(U_d1, *params), 'r-',linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(U_d1, D, 'rx', mew=0.5)
+plt.plot(U_d1, linearfit(U_d1, *params), 'r-',linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, U_d2, D)
@@ -47,8 +47,8 @@ print('D/U_d2 =', params[0]*1e3, '+-', errors[0]*1e3)
 E2 = ufloat(params[0], errors[0])
 b2 = params[0] #brauchen wir nachher noch...
 
-plt.plot(U_d2, D, 'bx',mew=0.5, label='Messwerte')
-plt.plot(U_d2, linearfit(U_d2, *params), 'b-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(U_d2, D, 'bx',mew=0.5)
+plt.plot(U_d2, linearfit(U_d2, *params), 'b-', linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, U_d3, D)
@@ -57,8 +57,8 @@ print('D/U_d3 =', params[0]*1e3, '+-', errors[0]*1e3)
 E3 = ufloat(params[0], errors[0])
 b3 = params[0]
 
-plt.plot(U_d3, D, 'gx',mew=0.5, label='Messwerte')
-plt.plot(U_d3, linearfit(U_d3, *params), 'g-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(U_d3, D, 'gx',mew=0.5)
+plt.plot(U_d3, linearfit(U_d3, *params), 'g-', linewidth=0.5)
 
 plt.xlabel(r'$U_d/$V')
 plt.ylabel(r'$D/$m')
@@ -76,8 +76,8 @@ print('D/U_d4 =', params[0]*1e3, '+-', errors[0]*1e3)
 E4 = ufloat(params[0], errors[0])
 b4 = params[0]
 
-plt.plot(U_d4, D, 'yx', mew=0.5, label='Messwerte')
-plt.plot(U_d4, linearfit(U_d4, *params), 'y-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(U_d4, D, 'yx', mew=0.5)
+plt.plot(U_d4, linearfit(U_d4, *params), 'y-', linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, U_d5, D)
@@ -86,8 +86,8 @@ print('D/U_d5 =', params[0]*1e3, '+-', errors[0]*1e3)
 E5 = ufloat(params[0], errors[0])
 b5 = params[0]
 
-plt.plot(U_d5, D, 'mx', mew=0.5, label='Messwerte')
-plt.plot(U_d5, linearfit(U_d5, *params), 'm-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(U_d5, D, 'mx', mew=0.5)
+plt.plot(U_d5, linearfit(U_d5, *params), 'm-', linewidth=0.5)
 
 plt.xlabel(r'$U_d/$V')
 plt.ylabel(r'$D/$m')
@@ -146,6 +146,17 @@ a_zeichnung=p*L/(2*d)
 print('Die Größe pL/(2d) ist a_zeichnung=', a_zeichnung)
 
 
+#kathodenstrahloszillograph
+print('Die Sinusfrequenz:')
+
+v_1*=2
+v_3*=1/2
+v_4*=1/3
+
+a=np.array([v_1, v_2, v_3, v_4])
+print('f=',np.mean(a), '+/-', np.std(a))
+
+
 #B-Feld Auswertung
 print('Jetzt die Berechnungen fürs B-Feld:')
 U_b1=250    #Beschleunigungsspannungen in V
@@ -166,8 +177,8 @@ errors = np.sqrt(np.diag(covariance_matrix))
 print('a_1 =', params[0], '+-', errors[0])
 a1 = ufloat(params[0], errors[0])
 
-plt.plot(B_1*1e6, r, 'bx', mew=0.5, label='Messwerte')
-plt.plot(B_1*1e6, linearfit(B_1, *params), 'b-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(B_1*1e6, r, 'bx', mew=0.5)
+plt.plot(B_1*1e6, linearfit(B_1, *params), 'b-', linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, B_2, r)
@@ -175,8 +186,8 @@ errors = np.sqrt(np.diag(covariance_matrix))
 print('a_2 =', params[0], '+-', errors[0])
 a2 = ufloat(params[0], errors[0])
 
-plt.plot(B_2*1e6, r, 'rx', mew=0.5, label='Messwerte')
-plt.plot(B_2*1e6, linearfit(B_2, *params), 'r-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot(B_2*1e6, r, 'rx', mew=0.5)
+plt.plot(B_2*1e6, linearfit(B_2, *params), 'r-', linewidth=0.5)
 
 plt.xlabel(r'$B$/µT')
 plt.ylabel(r'$r$/m')

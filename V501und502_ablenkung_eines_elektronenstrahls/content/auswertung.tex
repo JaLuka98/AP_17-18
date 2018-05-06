@@ -19,7 +19,7 @@ durchgeführt. Die Graphen sind in den Abbildungen \ref{fig:ablenkspannung} und
 \ref{fig:ablenkspannung2} zu finden. Die zugrundeliegenden Messwerte befinden sich
 in Tabelle \ref{tab:elektrisch}.
 
-\begin{table}[h]
+\begin{table}[]
 	\begin{center}
     \caption{Messwerte zur Ablenkung des Elektronenstrahls im elektrischen Feld.}
     \label{tab:elektrisch}
@@ -41,18 +41,18 @@ in Tabelle \ref{tab:elektrisch}.
 	\end{center}
 \end{table}
 
-\begin{figure}[h!]
+\begin{figure}[]
   \centering
   \includegraphics{build/ablenkspannung.pdf}
-  \caption{Messdaten und Ausgleichsfunktion für die Beschleunigungspannungen
+  \caption{Messdaten (Kreuze) und Ausgleichsfunktion (Geraden) für die Beschleunigungspannungen
   $U_{\symup{d180}}=180$V (rot), $U_{\symup{d230}}=230$V (blau) und $U_{\symup{d270}}=270$V (grün).}
   \label{fig:ablenkspannung}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[]
   \centering
   \includegraphics{build/ablenkspannung2.pdf}
-  \caption{Messdaten und Ausgleichsfunktion für die Beschleunigungspannungen
+  \caption{Messdaten (Kreuze) und Ausgleichsfunktion (Geraden) für die Beschleunigungspannungen
   $U_{\symup{d300}}=300$V (gelb) und $U_{\symup{d350}}=350$V (violett).}
   \label{fig:ablenkspannung2}
 \end{figure}
@@ -73,7 +73,7 @@ Nun werden die errechneten Empfindlichkeiten gegen die reziproken Beschleunigung
 aufgetragen und es wird erneut eine lineare Ausgleichsrechnung durchgeführt. Der
 zugehörige Graph ist in Abbildung \ref{fig:empfindlichkeiten} zu sehen.
 
-\begin{figure}[h!]
+\begin{figure}[]
   \centering
   \includegraphics{build/empfindlichkeiten.pdf}
   \caption{Auftragung der zuvor berechneten Empfindlichkeiten gegen die reziproken
@@ -95,6 +95,34 @@ des durch die Ausgleichsrechnung ermittelten Wertes vom theoretisch berechneten 
 beträgt $-5.59\%$.
 
 
+\subsection{Der Kathodenstrahl Oszillograph}
+\label{subsec:kathodenstrahloszillograph}
+
+Es wurden die in Tabelle \ref{tab:kat_os} dargestellten Messwerte für die Frequenz
+$f$ der Sinusspannung bei den Frequenzverhältnissen $m/n$ aufgenommen.
+
+\begin{table}[h!]
+	\begin{center}
+    \caption{Messwerte zum Kathodenstrahl Oszillographen.}
+    \label{tab:kat_os}
+		\begin{tabular}{cc}
+		\toprule
+			{$m/n$} & {$f/$Hz}\\
+			\midrule
+      0,5   &   39,94 \\
+      1   &   79,87 \\
+      2   &   159,70  \\
+      3   &   239,50\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+Die Frequenzen werden mit dem Inversen des Frequenzverhältnisses multipliziert und
+anschließend gemäß  den Gleichungen \eqref{eqn:mean} und \eqref{eqn:std} gemittelt.
+Daraus ergibt sich für die Freqenz der Sinusspannung ein Wert von
+\begin{equation*}
+  f=\SI{79.86(02)}{\hertz} \,.
+\end{equation*}
 
 
 \subsection{Ablenkung eines Elektronenstrahls im magnetischen Feld}
@@ -138,15 +166,15 @@ Der zughörige Graph ist in Abbildung \ref{fig:bfeld} zu sehen.
 \begin{figure}[h!]
   \centering
   \includegraphics{build/bfeld.pdf}
-  \caption{Messdaten und Ausgleichsfunktion für die Beschleunigungspannungen
+  \caption{Messdaten (Kreuze) und Ausgleichsfunktion (Geraden) für die Beschleunigungspannungen
   $U_{\symup{b250}}=250$V (blau) und $U_{\symup{b400}}=400$V (rot).}
   \label{fig:bfeld}
 \end{figure}
 
 Die Parameter $a_{\symup{i}}$ der Ausgleichsrechnung betragen hier
 \begin{align*}
-  a_{250} = \SI{9504(0134)}{\meter\per\tesla}  \,, \\
-  a_{400} = \SI{7569(0088)}{\meter\per\tesla}  \,.
+  a_{250} = \SI{9.504(0134)e3}{\meter\per\tesla}  \,, \\
+  a_{400} = \SI{7.570(0088)e3}{\meter\per\tesla}  \,.
 \end{align*}
 Mithilfe dieser Werte soll nun unter Benutzung von Gleichung \eqref{eqn:elektronenladung}
 die spezifische Elektronenladung $e/m_{\symup{e}}$ bestimmt werden. Es folgt der
