@@ -38,7 +38,8 @@ E1= ufloat(params[0], errors[0])
 b1 = params[0]  #brauchen wir nachher noch...
 
 plt.plot(U_d1, D, 'rx', mew=0.5)
-plt.plot(U_d1, linearfit(U_d1, *params), 'r-',linewidth=0.5)
+xlinspace = np.linspace(-30, 14, 500)
+plt.plot(xlinspace, linearfit(xlinspace, *params), 'r-',linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, U_d2, D)
@@ -48,7 +49,7 @@ E2 = ufloat(params[0], errors[0])
 b2 = params[0] #brauchen wir nachher noch...
 
 plt.plot(U_d2, D, 'bx',mew=0.5)
-plt.plot(U_d2, linearfit(U_d2, *params), 'b-', linewidth=0.5)
+plt.plot(xlinspace, linearfit(xlinspace, *params), 'b-', linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, U_d3, D)
@@ -58,13 +59,14 @@ E3 = ufloat(params[0], errors[0])
 b3 = params[0]
 
 plt.plot(U_d3, D, 'gx',mew=0.5)
-plt.plot(U_d3, linearfit(U_d3, *params), 'g-', linewidth=0.5)
+plt.plot(xlinspace, linearfit(xlinspace, *params), 'g-', linewidth=0.5)
 
 plt.xlabel(r'$U_d/$V')
 plt.ylabel(r'$D/$m')
 plt.tight_layout()
 plt.legend()
 plt.grid()
+plt.axis([-30, 14, -0.03, 0.03])
 plt.savefig('build/ablenkspannung.pdf')
 plt.clf()
 
@@ -77,7 +79,8 @@ E4 = ufloat(params[0], errors[0])
 b4 = params[0]
 
 plt.plot(U_d4, D, 'yx', mew=0.5)
-plt.plot(U_d4, linearfit(U_d4, *params), 'y-', linewidth=0.5)
+xlinspace = np.linspace(-35, 17, 500)
+plt.plot(xlinspace, linearfit(xlinspace, *params), 'y-', linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, U_d5, D)
@@ -87,13 +90,14 @@ E5 = ufloat(params[0], errors[0])
 b5 = params[0]
 
 plt.plot(U_d5, D, 'mx', mew=0.5)
-plt.plot(U_d5, linearfit(U_d5, *params), 'm-', linewidth=0.5)
+plt.plot(xlinspace, linearfit(xlinspace, *params), 'm-', linewidth=0.5)
 
 plt.xlabel(r'$U_d/$V')
 plt.ylabel(r'$D/$m')
 plt.tight_layout()
 plt.legend()
 plt.grid()
+plt.axis([-35, 17, -0.03, 0.03])
 plt.savefig('build/ablenkspannung2.pdf')
 plt.clf()
 
@@ -119,14 +123,16 @@ print('a =', params[0], '+-', errors[0])
 a = ufloat(params[0], errors[0])
 
 
-plt.plot((1/U_b)*1e3, E*1e3, 'rx', mew=0.5, label='Messwerte')
-plt.plot((1/U_b)*1e3, linearfit(1/U_b, *params)*1e3, 'b-', linewidth=0.5, label='Ausgleichsfunktion')
+plt.plot((1/U_b)*1e3, E*1e3, 'rx', mew=0.5, label='Ermittelte Werte')
+xlinspace = np.linspace(2.5*1e-3, 6*1e-3, 500)
+plt.plot(xlinspace*1e3, linearfit(xlinspace, *params)*1e3, 'b-', linewidth=0.5, label='Ausgleichsfunktion')
 
 plt.xlabel(r'$\frac{1}{U_b}/\frac{1}{V}\cdot 10^{-3}$')
 plt.ylabel(r'$\frac{D}{U_d}/\frac{m}{V}\cdot 10^{-3}$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
+plt.axis([2.5, 6, 0.8, 2])
 plt.savefig('build/empfindlichkeiten.pdf')
 plt.clf()
 
@@ -178,7 +184,8 @@ print('a_1 =', params[0], '+-', errors[0])
 a1 = ufloat(params[0], errors[0])
 
 plt.plot(B_1*1e6, r, 'bx', mew=0.5)
-plt.plot(B_1*1e6, linearfit(B_1, *params), 'b-', linewidth=0.5)
+xlinspace = np.linspace(0, 220*1e-6, 500)
+plt.plot(xlinspace*1e6, linearfit(xlinspace, *params), 'b-', linewidth=0.5)
 
 
 params, covariance_matrix = optimize.curve_fit(linearfit, B_2, r)
@@ -187,13 +194,14 @@ print('a_2 =', params[0], '+-', errors[0])
 a2 = ufloat(params[0], errors[0])
 
 plt.plot(B_2*1e6, r, 'rx', mew=0.5)
-plt.plot(B_2*1e6, linearfit(B_2, *params), 'r-', linewidth=0.5)
+plt.plot(xlinspace*1e6, linearfit(xlinspace, *params), 'r-', linewidth=0.5)
 
 plt.xlabel(r'$B$/µT')
 plt.ylabel(r'$r$/m')
 plt.tight_layout()
 plt.legend()
 plt.grid()
+plt.axis([-10, 220, -0.85, 0.85])
 plt.savefig('build/bfeld.pdf')
 plt.clf()
 

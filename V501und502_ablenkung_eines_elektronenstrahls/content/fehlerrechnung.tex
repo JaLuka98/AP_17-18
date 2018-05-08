@@ -14,20 +14,7 @@ Die empirische Standardabweichung dieser Stichprobe ist durch
     (x_i-\overline{x})^2}
     \label{eqn:std}
 \end{equation}
-
 gegeben.
-Ist $f$ eine Funktion, die von unsicheren Variablen $x_i$ mit
-Standardabweichungen $\sigma_i$ abhängt, so ist die Unsicherheit von f
-\begin{equation}
-  \sigma_f = \sqrt{
-    \sum\limits_{i = 1}^N
-      \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
-  }\,.
-  \label{eqn:gaussfehler}
-\end{equation}
-
-Diese Formel bezeichnet man als "Gauß'sches Fehlerfortpflanzungsgesetz".
-
 Bei einer linearen Regression folgt eine Ausgleichsgerade
 \begin{equation}
   y(x) = ax+b\,
