@@ -1,2 +1,81 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung der Grenzspannungen für das Licht der einzelnden Spektrallinien}
+\label{subsec:grenzspannungen}
+Wie bereits in \ref{subsec:Theorie_Messung} dargelegt und in Gleichung \eqref{eqn:iu2} konkret
+formuliert ist die Stromstärke nicht linear von der eingestellten Spannung abhängig.
+Stattdessen ist der Photostrom ungefähr proportional zum Quadrat der Spannung. Dies
+kann jedoch berücksichtigt werden, sodass zur Bestimmung der Gegenspannung $U_{\symup{g}}$
+lediglich $\sqrt{I}$ gegen $U$ aufgetragen werden und der Schnittpunkt der Geraden
+mit der $U$-Achse bestimmt werden muss. Dies wird im Folgenden stets durchgeführt.
+Bei einer linearen Ausgleichsrechnung nach Gleichung
+\eqref{eqn:ausgleichsgerade} berechnet sich die für $a \neq 0 \, \land \, b \neq 0$ eindeutige
+Nullstelle der Geraden zu
+\begin{equation}
+  x_\text{NS} = -b/a\,.
+  \label{eqn:ns}
+\end{equation}
+
+Die gemessene Stromstärke $I$ in Abhängigkeit der eingestellten Spannung $U$ für
+den Einfall des Lichts der gelben Spektrallinie mit einer Wellenlänge von $\SI{577}{\nano\meter}$
+bzw. $\SI{579}{\nano\meter}$ ist in Tabelle \ref{tab:gelb} zu sehen \footnote{Solange keine Verwechslungsgefahr
+besteht, seien alle Stromstärken und Spannungen stets leicht ungenau mit $I$ bzw. $U$ bezeichnet.
+In diesem Abschnitt sind alle Spannungen außerdem als Gegenspannungen zu verstehen}. Die radizierten
+Stromstärken sind ebenso eingetragen.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messreihe und radizierte Stromstärken zur gelben Spektrallinie.}
+          \label{tab:gelb}
+                \begin{tabular}{ccc}
+                \toprule
+                        {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
+                        \midrule
+                        0.64 & 0.00 & 0.00\\
+                        0.60 & 4.00 & 2.00\\
+                        0.55 & 10.00 & 3.16\\
+                        0.50 & 19.00 & 4.36\\
+                        0.45 & 32.00 & 5.66\\
+                        0.40 & 52.00 & 7.21\\
+                        0.35 & 76.00 & 8.72\\
+                        0.30 & 105.00 & 10.25\\
+                        0.25 & 132.00 & 11.49\\
+                        0.20 & 159.00 & 12.61\\
+                        0.15 & 178.00 & 13.34\\
+                        0.10 & 198.00 & 14.07\\
+                        0.05 & 220.00 & 14.83\\
+                        0.00 & 240.00 & 15.49\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Der Graph der Ausgleichsfunktion für diese Werte ist zusammen mit den Werten selbst
+in Abbildung \ref{fig:gelb} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/gelb.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die gelbe Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:gelb}
+\end{figure}
+
+Für die Gegenspannung für einfallendes Licht der gelben Spektrallinie ergibt sich
+\begin{equation}
+  U_{g,\text{gelb}} = \SI{0.685(0016)}{\volt}\,.
+\end{equation}
+Die relative Ungenauigkeit dieses Wertes beträgt 2.34\%.
+
+In Tabelle \ref{tab:gruen} sind die Messwerte und radizierten Stromstärken
+für das Licht der grünen Spektrallinie mit $\lambda = \SI{546}{\nano\meter}$
+eingetragen.
+
+In Abbildung \ref{fig:grün} sind diese Messwerte aufgetragen und der Graph der Ausgleichsfunktion zu
+diesen eingezeichnet.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/grün.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die gelbe Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:gelb}
+\end{figure}
