@@ -14,8 +14,8 @@ def linearfit(x, a, b):
 
 
 U_g = unp.uarray(np.zeros(6), np.zeros(6))  # brauchen wir später
-gelbU, gelbI = np.genfromtxt('data/gruen.txt', unpack=True)
-gruenU, gruenI = np.genfromtxt('data/gelb.txt', unpack=True)
+gelbU, gelbI = np.genfromtxt('data/gelb.txt', unpack=True)
+gruenU, gruenI = np.genfromtxt('data/gruen.txt', unpack=True)
 gruenblauU, gruenblauI = np.genfromtxt('data/gruenblau.txt', unpack=True)
 violett1U, violett1I = np.genfromtxt('data/violett1.txt', unpack=True)
 violett2U, violett2I = np.genfromtxt('data/violett2.txt', unpack=True)
@@ -37,7 +37,7 @@ plt.ylabel(r'$\sqrt{I}/\mathrm{\sqrt{pA}}$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.axis([-0.05, 0.7, -1, 18])
+plt.axis([-0.05, 0.6, -1, 11])
 plt.savefig('build/gelb.pdf')
 plt.clf()
 
@@ -65,17 +65,17 @@ plt.ylabel(r'$\sqrt{I}/\mathrm{\sqrt{pA}}$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.axis([-0.05, 0.6, -1, 10])
+plt.axis([-0.05, 0.9, -1, 30])
 plt.savefig('build/gruen.pdf')
 plt.clf()
 
-hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
-m = np.zeros((np.size(gruenU), 3))
-m[:,0] = gruenU
-m[:,1] = gruenI
-m[:,2] = np.sqrt(gruenI)
-t = matrix2latex(m, headerRow=hr, format='%.2f')
-print(t)
+#hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+#m = np.zeros((np.size(gruenU), 3))
+#m[:,0] = gruenU
+#m[:,1] = gruenI
+#m[:,2] = np.sqrt(gruenI)
+#t = matrix2latex(m, headerRow=hr, format='%.2f')
+#print(t)
 
 # Die gruenblaue Spektrallinie
 
@@ -96,6 +96,14 @@ plt.grid()
 plt.axis([-0.05, 0.90, -1, 6])
 plt.savefig('build/gruenblau.pdf')
 plt.clf()
+
+hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+m = np.zeros((np.size(gruenblauU), 3))
+m[:,0] = gruenblauU
+m[:,1] = gruenblauI
+m[:,2] = np.sqrt(gruenblauI)
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 # Die erste violette Spektrallinie
 

@@ -27,24 +27,22 @@ Stromstärken sind ebenso eingetragen.
         \begin{center}
           \caption{Messreihe und radizierte Stromstärken zur gelben Spektrallinie.}
           \label{tab:gelb}
-                \begin{tabular}{ccc}
+                \begin{tabular}{ScS}
                 \toprule
                         {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
                         \midrule
-                        0.64 & 0.00 & 0.00\\
-                        0.60 & 4.00 & 2.00\\
-                        0.55 & 10.00 & 3.16\\
-                        0.50 & 19.00 & 4.36\\
-                        0.45 & 32.00 & 5.66\\
-                        0.40 & 52.00 & 7.21\\
-                        0.35 & 76.00 & 8.72\\
-                        0.30 & 105.00 & 10.25\\
-                        0.25 & 132.00 & 11.49\\
-                        0.20 & 159.00 & 12.61\\
-                        0.15 & 178.00 & 13.34\\
-                        0.10 & 198.00 & 14.07\\
-                        0.05 & 220.00 & 14.83\\
-                        0.00 & 240.00 & 15.49\\
+                        0,54 &  0 & 0\\
+                        0,50 &  1 & 1\\
+                        0,45 &  4 & 2\\
+                        0,40 &  7 & 2,65\\
+                        0,35 & 12 & 3,46\\
+                        0,30 & 19 & 4,36\\
+                        0,25 & 26 & 5,1\\
+                        0,20 & 36 & 6\\
+                        0,15 & 46 & 6,78\\
+                        0,10 & 54 & 7,35\\
+                        0,05 & 62 & 7,87\\
+                        0,00 & 68 & 8,25\\
                 \bottomrule
                 \end{tabular}
         \end{center}
@@ -62,20 +60,102 @@ in Abbildung \ref{fig:gelb} zu sehen.
 
 Für die Gegenspannung für einfallendes Licht der gelben Spektrallinie ergibt sich
 \begin{equation}
-  U_{g,\text{gelb}} = \SI{0.685(0016)}{\volt}\,.
+  U_{g,\text{gelb}} = \SI{0.569(0011)}{\volt}\,.
 \end{equation}
-Die relative Ungenauigkeit dieses Wertes beträgt 2.34\%.
+Die relative Ungenauigkeit dieses Wertes beträgt 1,93\%.
 
 In Tabelle \ref{tab:gruen} sind die Messwerte und radizierten Stromstärken
 für das Licht der grünen Spektrallinie mit $\lambda = \SI{546}{\nano\meter}$
 eingetragen.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messreihe und radizierte Stromstärken zur grünen Spektrallinie.}
+          \label{tab:gruen}
+                \begin{tabular}{ScS}
+                \toprule
+                        {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
+                        \midrule
+                        0.64 &   0 &  0   \\
+                        0.60 &   4 &  2   \\
+                        0.55 &  10 &  3.16\\
+                        0.50 &  19 &  4.36\\
+                        0.45 &  32 &  5.66\\
+                        0.40 &  52 &  7.21\\
+                        0.35 &  76 &  8.72\\
+                        0.30 & 105 & 10.25\\
+                        0.25 & 132 & 11.49\\
+                        0.20 & 159 & 12.61\\
+                        0.15 & 178 & 13.34\\
+                        0.10 & 198 & 14.07\\
+                        0.05 & 220 & 14.83\\
+                        0.00   & 240 & 15.49\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
 
 In Abbildung \ref{fig:grün} sind diese Messwerte aufgetragen und der Graph der Ausgleichsfunktion zu
 diesen eingezeichnet.
 
 \begin{figure}
   \centering
-  \includegraphics{build/grün.pdf}
-  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die gelbe Spektrallinie und Graph der Ausgleichsfunktion.}
-  \label{fig:gelb}
+  \includegraphics{build/gruen.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die grüne Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:grün}
 \end{figure}
+
+Die Gegenspannung für das einfallende grüne Licht ist
+\begin{equation}
+  U_{g,\text{grün}} = \SI{0.685(0016)}{\volt}\,.
+\end{equation}
+Die relative Ungenauigkeit dieses Wertes ist 2,34\%.
+
+Die Werte zur grünblauen Spektrallinie sind Tabelle \ref{tab:grünblau} zu entnehmen.
+Dabei hat das Licht der grünblauen Spektrallinie eine Wellenlänge von $\SI{492}{\nano\meter}$.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messreihe und radizierte Stromstärken zur grünblauen Spektrallinie.}
+          \label{tab:grünblau}
+                \begin{tabular}{S[table-format=1.2]S[table-format=1.2]S[table-format=1.2]}
+                \toprule
+                        {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
+                        \midrule
+                        0.86 &  0 & 0\\
+                        0.80 &  0.5 & 0.71\\
+                        0.75 &  1.5 & 1.22\\
+                        0.70 &  2 & 1.41\\
+                        0.65 &  2.5 & 1.58\\
+                        0.60 &  3.5 & 1.87\\
+                        0.55 &  4.5 & 2.12\\
+                        0.50 &  6 & 2.45\\
+                        0.45 &  7.5 & 2.74\\
+                        0.40 &  9 & 3\\
+                        0.35 & 10.5 & 3.24\\
+                        0.30 & 12.5 & 3.54\\
+                        0.25 & 14 & 3.74\\
+                        0.20 & 16 & 4.00\\
+                        0.15 & 18 & 4.24\\
+                        0.10 & 19 & 4.36\\
+                        0.05 & 20.5 & 4.53\\
+                        0.00 & 22 & 4.69\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Die Auftragung der Messwerte und der Graph der Ausgleichsfunktion sind in Abbildung \ref{fig:grünblau} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/gruenblau.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die grünblaue Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:grünblau}
+\end{figure}
+
+Für einfallendes grünblaues Licht ergibt sich die Gegenspannung zu
+\begin{equation}
+  U_{g,\text{grün}} = \SI{0.952(0018)}{\volt}\,.
+\end{equation}
+Die relative Ungenauigkeit dieses Wertes beträgt 1,89\%.
