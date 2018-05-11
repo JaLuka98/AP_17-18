@@ -41,13 +41,13 @@ plt.axis([-0.05, 0.6, -1, 11])
 plt.savefig('build/gelb.pdf')
 plt.clf()
 
-hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
-m = np.zeros((np.size(gelbU), 3))
-m[:,0] = gelbU
-m[:,1] = gelbI
-m[:,2] = np.sqrt(gelbI)
-t = matrix2latex(m, headerRow=hr, format='%.2f')
-print(t)
+#hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+#m = np.zeros((np.size(gelbU), 3))
+#m[:,0] = gelbU
+#m[:,1] = gelbI
+#m[:,2] = np.sqrt(gelbI)
+#t = matrix2latex(m, headerRow=hr, format='%.2f')
+#print(t)
 
 # Die gruene Spektrallinie
 
@@ -97,13 +97,13 @@ plt.axis([-0.05, 0.90, -1, 6])
 plt.savefig('build/gruenblau.pdf')
 plt.clf()
 
-hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
-m = np.zeros((np.size(gruenblauU), 3))
-m[:,0] = gruenblauU
-m[:,1] = gruenblauI
-m[:,2] = np.sqrt(gruenblauI)
-t = matrix2latex(m, headerRow=hr, format='%.2f')
-print(t)
+#hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+#m = np.zeros((np.size(gruenblauU), 3))
+#m[:,0] = gruenblauU
+#m[:,1] = gruenblauI
+#m[:,2] = np.sqrt(gruenblauI)
+#t = matrix2latex(m, headerRow=hr, format='%.2f')
+#print(t)
 
 # Die erste violette Spektrallinie
 
@@ -125,6 +125,14 @@ plt.axis([-0.05, 1.3, -1, 26])
 plt.savefig('build/violett1.pdf')
 plt.clf()
 
+hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+m = np.zeros((np.size(violett1U), 3))
+m[:,0] = violett1U
+m[:,1] = violett1I
+m[:,2] = np.sqrt(violett1I)
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 # Die zweite violette Spektrallinie
 
 params, covariance_matrix = optimize.curve_fit(linearfit, violett2U, np.sqrt(violett2I))
@@ -145,6 +153,14 @@ plt.axis([-0.05, 1.5, -1, 16.5])
 plt.savefig('build/violett2.pdf')
 plt.clf()
 
+hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+m = np.zeros((np.size(violett2U), 3))
+m[:,0] = violett2U
+m[:,1] = violett2I
+m[:,2] = np.sqrt(violett2I)
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
 # Die ultraviolette Spektrallinie
 
 params, covariance_matrix = optimize.curve_fit(linearfit, ultraviolettU, np.sqrt(ultraviolettI))
@@ -164,6 +180,14 @@ plt.grid()
 plt.axis([-0.05, 1.8, -1, 19])
 plt.savefig('build/ultraviolett.pdf')
 plt.clf()
+
+hr = ['$U/$V', '$I/$A', '$\sqrt{I}/\mathrm{\sqrt{pA}}$']
+m = np.zeros((np.size(ultraviolettU), 3))
+m[:,0] = ultraviolettU
+m[:,1] = ultraviolettI
+m[:,2] = np.sqrt(ultraviolettI)
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 # Dicke Ausgleichsrechnung
 
@@ -200,3 +224,10 @@ plt.legend()
 plt.grid()
 plt.savefig('build/spannung.pdf')
 plt.clf()
+
+#hr = ['$U/$V', '$I/$A']
+#m = np.zeros((np.size(U), 2))
+#m[:, 0] = U
+#m[:, 1] = I
+#t = matrix2latex(m, headerRow=hr, format='%.2f')
+#print(t)

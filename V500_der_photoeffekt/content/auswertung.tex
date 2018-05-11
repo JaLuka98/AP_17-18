@@ -11,14 +11,17 @@ mit der $U$-Achse bestimmt werden muss. Dies wird im Folgenden stets durchgefüh
 Bei einer linearen Ausgleichsrechnung nach Gleichung
 \eqref{eqn:ausgleichsgerade} berechnet sich die für $a \neq 0 \, \land \, b \neq 0$ eindeutige
 Nullstelle der Geraden zu
-\begin{equation}
+\begin{equation*}
   x_\text{NS} = -b/a\,.
   \label{eqn:ns}
-\end{equation}
+\end{equation*}
 
 Die gemessene Stromstärke $I$ in Abhängigkeit der eingestellten Spannung $U$ für
-den Einfall des Lichts der gelben Spektrallinie mit einer Wellenlänge von $\SI{577}{\nano\meter}$
-bzw. $\SI{579}{\nano\meter}$ ist in Tabelle \ref{tab:gelb} zu sehen \footnote{Solange keine Verwechslungsgefahr
+den Einfall des Lichts der gelben Spektrallinie mit einer Wellenlänge von $\SI{578}{\nano\meter}$
+\footnote{Die Wellenlängen des Lichts der Spektrallinien sind \cite{Versuchsanleitung} zu entnehmen.
+Da dort einer Lichtfarbe manchmal mehrere Linien zugeordnet sind, werden die dafür angegebenen
+Wellenlängen entsprechend ihrer Stärke gewichtet.}
+ist in Tabelle \ref{tab:gelb} zu sehen \footnote{Solange keine Verwechslungsgefahr
 besteht, seien alle Stromstärken und Spannungen stets leicht ungenau mit $I$ bzw. $U$ bezeichnet.
 In diesem Abschnitt sind alle Spannungen außerdem als Gegenspannungen zu verstehen}. Die radizierten
 Stromstärken sind ebenso eingetragen.
@@ -59,9 +62,9 @@ in Abbildung \ref{fig:gelb} zu sehen.
 \end{figure}
 
 Für die Gegenspannung für einfallendes Licht der gelben Spektrallinie ergibt sich
-\begin{equation}
+\begin{equation*}
   U_{g,\text{gelb}} = \SI{0.569(0011)}{\volt}\,.
-\end{equation}
+\end{equation*}
 Die relative Ungenauigkeit dieses Wertes beträgt 1,93\%.
 
 In Tabelle \ref{tab:gruen} sind die Messwerte und radizierten Stromstärken
@@ -96,7 +99,7 @@ eingetragen.
 \end{table}
 
 In Abbildung \ref{fig:grün} sind diese Messwerte aufgetragen und der Graph der Ausgleichsfunktion zu
-diesen eingezeichnet.
+diesen ist eingezeichnet.
 
 \begin{figure}
   \centering
@@ -106,9 +109,9 @@ diesen eingezeichnet.
 \end{figure}
 
 Die Gegenspannung für das einfallende grüne Licht ist
-\begin{equation}
+\begin{equation*}
   U_{g,\text{grün}} = \SI{0.685(0016)}{\volt}\,.
-\end{equation}
+\end{equation*}
 Die relative Ungenauigkeit dieses Wertes ist 2,34\%.
 
 Die Werte zur grünblauen Spektrallinie sind Tabelle \ref{tab:grünblau} zu entnehmen.
@@ -155,7 +158,302 @@ Die Auftragung der Messwerte und der Graph der Ausgleichsfunktion sind in Abbild
 \end{figure}
 
 Für einfallendes grünblaues Licht ergibt sich die Gegenspannung zu
-\begin{equation}
-  U_{g,\text{grün}} = \SI{0.952(0018)}{\volt}\,.
-\end{equation}
+\begin{equation*}
+  U_{g,\text{grünblau}} = \SI{0.952(0018)}{\volt}\,.
+\end{equation*}
 Die relative Ungenauigkeit dieses Wertes beträgt 1,89\%.
+
+In Tabelle \ref{tab:violett1} sind die Messwerte und radizierten Stromstärken
+für das Licht der ersten violetten Spektrallinie mit $\lambda = \SI{435}{\nano\meter}$
+eingetragen.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messreihe und radizierte Stromstärken zur ersten violetten Spektrallinie.}
+          \label{tab:violett1}
+                \begin{tabular}{SSS}
+                \toprule
+                        {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
+                        \midrule
+                        1.17 & 0 & 0\\
+                        1.15 & 1,5 & 1.22\\
+                        1.10 & 6 & 2.45\\
+                        1.05 & 11 & 3.32\\
+                        1.00 & 18 & 4.24\\
+                        0.95 & 27 & 5.2\\
+                        0.90 & 38 & 6.16\\
+                        0.85 & 52 & 7.21\\
+                        0.80 & 68 & 8.25\\
+                        0.75 & 86 & 9.27\\
+                        0.70 & 105 & 10.25\\
+                        0.65 & 130 & 11.4\\
+                        0.60 & 155 & 12.45\\
+                        0.55 & 185 & 13.6\\
+                        0.50 & 210 & 14.49\\
+                        0.45 & 240 & 15.49\\
+                        0.40 & 270 & 16.43\\
+                        0.35 & 285 & 16.88\\
+                        0.30 & 300 & 17.32\\
+                        0.25 & 340 & 18.44\\
+                        0.20 & 365 & 19.10\\
+                        0.15 & 390 & 19.75\\
+                        0.10 & 415 & 20.37\\
+                        0.05 & 440 & 20.98\\
+                        0.00 & 460 & 21.45\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+In Abbildung \ref{fig:violett1} sind diese Messwerte aufgetragen und der Graph der Ausgleichsfunktion zu
+diesen ist eingezeichnet.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/violett1.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die erste violette Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:violett1}
+\end{figure}
+
+Die Gegenspannung für das einfallende Licht der ersten violetten Spektrallinie beträgt
+\begin{equation*}
+  U_{g,\text{violett1}} = \SI{1.241(0015)}{\volt}\,.
+\end{equation*}
+Die relative Ungenauigkeit dieses Wertes ist 1,21\%.
+
+Die eingestellten Spannungen und die gessenen Photoströme für das Licht
+der zweiten violetten Spektrallinie mit $\lambda = \SI{406}{\nano\meter}$ befinden sich zusammen mit
+den radizierten Stromstärken in Tabelle \ref{tab:violett2}.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messreihe und radizierte Stromstärken zur zweiten violetten Spektrallinie.}
+          \label{tab:violett2}
+                \begin{tabular}{SSS}
+                \toprule
+                        {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
+                        \midrule
+                        1.36 & 0 & 0\\
+                        1.30 & 2 & 1.41\\
+                        1.25 & 4 & 2\\
+                        1.20 & 6 & 2.45\\
+                        1.15 & 9.5 & 3.08\\
+                        1.10 & 13 & 3.61\\
+                        1.05 & 17 & 4.12\\
+                        1.00 & 22 & 4.69\\
+                        0.95 & 28 & 5.29\\
+                        0.90 & 35 & 5.92\\
+                        0.85 & 42 & 6.48\\
+                        0.80 & 51 & 7.14\\
+                        0.75 & 60 & 7.75\\
+                        0.70 & 69 & 8.31\\
+                        0.65 & 78 & 8.83\\
+                        0.60 & 89 & 9.43\\
+                        0.55 & 100 & 10\\
+                        0.50 & 110 & 10.49\\
+                        0.45 & 125 & 11.18\\
+                        0.40 & 135 & 11.62\\
+                        0.35 & 145 & 12.04\\
+                        0.30 & 155 & 12.45\\
+                        0.25 & 165 & 12.85\\
+                        0.20 & 177 & 13.32\\
+                        0.15 & 190 & 13.78\\
+                        0.10 & 200 & 14.14\\
+                        0.05 & 210 & 14.49\\
+                        0.00 & 220 & 14.83\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Die Auftragung der Messwerte und der Graph der Ausgleichsfunktion sind in Abbildung \ref{fig:violett2} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/violett2.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die erste grüne Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:violett2}
+\end{figure}
+
+Die Gegenspannung für das einfallende Licht der zweiten violetten Spektrallinie ist
+\begin{equation*}
+  U_{g,\text{violett2}} = \SI{1.439(0013)}{\volt}\,.
+\end{equation*}
+Die relative Ungenauigkeit dieses Wertes beträgt 0.90\%.
+
+In Tabelle \ref{tab:ultraviolett} sind die Messwerte und radizierten Stromstärken
+für das Licht der ersten violetten Spektrallinie mit $\lambda = \SI{365.5}{\nano\meter}$
+eingetragen.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messreihe und radizierte Stromstärken zur ultravioletten Spektrallinie.}
+          \label{tab:ultraviolett}
+                \begin{tabular}{SSS}
+                \toprule
+                        {$U/$V} & {$I/$A} & {$\sqrt{I}/\mathrm{\sqrt{pA}}$}\\
+                        \midrule
+                        1.17 & 0 & 0\\
+                        1.15 & 1,5 & 1.22\\
+                        1.10 & 6 & 2.45\\
+                        1.05 & 11 & 3.32\\
+                        1.00 & 18 & 4.24\\
+                        0.95 & 27 & 5.2\\
+                        0.90 & 38 & 6.16\\
+                        0.85 & 52 & 7.21\\
+                        0.80 & 68 & 8.25\\
+                        0.75 & 86 & 9.27\\
+                        0.70 & 105 & 10.25\\
+                        0.65 & 130 & 11.4\\
+                        0.60 & 155 & 12.45\\
+                        0.55 & 185 & 13.6\\
+                        0.50 & 210 & 14.49\\
+                        0.45 & 240 & 15.49\\
+                        0.40 & 270 & 16.43\\
+                        0.35 & 285 & 16.88\\
+                        0.30 & 300 & 17.32\\
+                        0.25 & 340 & 18.44\\
+                        0.20 & 365 & 19.10\\
+                        0.15 & 390 & 19.75\\
+                        0.10 & 415 & 20.37\\
+                        0.05 & 440 & 20.98\\
+                        0.00 & 460 & 21.45\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+In Abbildung \ref{fig:ultraviolett} sind diese Messwerte aufgetragen und der Graph der Ausgleichsfunktion zu
+diesen eingezeichnet.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/ultraviolett.pdf}
+  \caption{Auftragung der radizierten Stromstärken gegen die eingestellte Spannung für die ultraviolette Spektrallinie und Graph der Ausgleichsfunktion.}
+  \label{fig:ultraviolett}
+\end{figure}
+
+Die Gegenspannung für das einfallende Licht der ultravioletten Spektrallinie beträgt
+\begin{equation*}
+  U_{g,\text{ultraviolett}} = \SI{1.809(0021)}{\volt}\,.
+\end{equation*}
+Die relative Ungenauigkeit dieses Wertes ist 1,16\%.
+
+\subsection{Untersuchung der Beziehung zwischen Grenzspannungen und Frequenzen}
+
+Gemäß Gleichung \eqref{eqn:hfeUA} lässt sich das Verhältnis $\frac{h}{e_0}$ und die
+materialspezifische Austrittsarbeit $A_\text{k}$ bestimmen, wenn eine lineare Ausgleichsrechnung
+mit den Grenzspannungen und den Frequenzen der Spektrallinien durchgeführt wird.
+Die Werte sind in Tabelle \ref{tab:spannungfrequenz} zusammengefasst.
+Dabei wird die Frequenz des Lichts durch $f = c/\lambda$ mit der Lichtgeschwindigkeit $c$ im Vakuum berechnet.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Werte der Grenzspannungen mit dazugehörigen Wellenlängen und Frequenzen.}
+          \label{tab:spannungfrequenz}
+                \begin{tabular}{cSc}
+                \toprule
+                        {$U_\text{g}/$V} & {$\lambda/$nm} & {$f \cdot 10^{-14}/$Hz}\\
+                        \midrule
+                        $\SI{0.569(0011)}{}$ & 578   & 5,19 \\
+                        $\SI{0.685(0016)}{}$ & 546   & 5,49 \\
+                        $\SI{0.952(0018)}{}$ & 492   & 6,09 \\
+                        $\SI{1.241(0015)}{}$ & 435   & 6,89 \\
+                        $\SI{1.439(0013)}{}$ & 406   & 7,38 \\
+                        $\SI{1.809(0021)}{}$ & 365,5 & 8,20 \\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Im Folgenden werden die in \ref{subsec:grenzspannungen} bestimmten Grenzspannungen
+als nicht fehlerbehaftet angenommen, da die Unsicherheiten durchgehend gering sind.
+Wird nun eine lineare Ausgleichsrechnung gemäß $y = ax+b$ angesetzt, wobei die Grenzspannungen
+die y-Werte und die Frequenzen die x-Werte sind, so ist der Parameter $a$ der experimentell
+bestimmte Wert für den Quotienten $h/e_0$ und der Betrag von $b$ entspricht der Austrittsarbeit
+$A_\text{k}$. Die Werte und der Graph der konkreten Ausgleichsfunktion ist in \ref{fig:spannungfrequenz}
+dargestellt.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/dickfett.pdf}
+  \caption{Auftragung der zuvor bestimmten Gegenspannungen gegen die Frequenzen des Lichts der Spektrallinien und Graph der Ausgleichsfunktion.}
+  \label{fig:spannungfrequenz}
+\end{figure}
+
+Der experimentelle Schätzwert für $h/e_0$ beträgt $\SI{4.06(007)e-15}{\volt\second}$ mit einer relativen Unsicherheit von 1,72\%.
+Der Literaturwert beträgt ungefähr $\SI{4.13577e-15}{\volt\second}$ \footnote{Dieser berechnet
+sich aus den in \cite{hunde_0} angegeben Werten für das Plancksche Wirkungsquantum $h$ und der Elementarladung $e$.},
+sodass die relative Abweichung zu diesem -1.83\% ist.
+Der experimentell bestimmte Wert für die Austrittsarbeit $A_\text{k}$ beträgt $\SI{1.54(005)}{\electronvolt}$.
+Die relative Unsicherheit dieses Wertes ist 3,25\%.
+
+\subsection{Untersuchung des Photostroms über ein großes Intervall anliegender Spannung}
+\label{subsec:drei}
+
+Das Verhalten des Photostroms in Abhängigkeit der Spannung für einfallendes Licht
+der gelben Spektrallinie ist über ein großes Intervall von $\SI{-19}{\volt}$ bis $\SI{19}{\volt}$
+zu untersuchen. Hier sind negative Spannungen explizit als Bremsspannungen und positive als
+beschleunigende Spannungen zu verstehen. Die Messwerte sind in Tabelle \ref{tab:spannung}
+zu sehen.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messwerte des Photostroms in Abhängigkeit der angelegten Spannung für die gelbe Spektrallinie über das große Intervall.}
+          \label{tab:spannung}
+                \begin{tabular}{SS}
+                \toprule
+                        {$U/$V} & {$I/$A}\\
+                        \midrule
+                        -19 & -6\\
+                        -18 & -6\\
+                        -17 & -6\\
+                        -16 & -6\\
+                        -15 & -6\\
+                        -14 & -6\\
+                        -13 & -6\\
+                        -12 & -6\\
+                        -11 & -6\\
+                        -10 & -5\\
+                         -9 & -5\\
+                         -8 & -5\\
+                         -7 & -5\\
+                         -6 & -5\\
+                         -5 & -5\\
+                         -4 & -4\\
+                         -3 & -4\\
+                         -2 & -3\\
+                         -1 & -3\\
+                          0 &  95\\
+                          1 & 235\\
+                          2 & 340\\
+                          3 & 460\\
+                          4 & 560\\
+                          5 & 620\\
+                          6 & 670\\
+                          7 & 720\\
+                          8 & 770\\
+                          9 & 800\\
+                         10 & 820\\
+                         11 & 860\\
+                         12 & 880\\
+                         13 & 900\\
+                         14 & 920\\
+                         15 & 920\\
+                         16 & 940\\
+                         17 & 960\\
+                         18 & 970\\
+                         19 & 980\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Zur Veranschaulichung sind diese Werte in Abbildung \ref{fig:letztes} grafisch dargestellt.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/spannung.pdf}
+  \caption{Auftragung des Photostroms in Abhängigkeit der eingestellten Spannung in einem großen Intervall.}
+  \label{fig:letztes}
+\end{figure}
