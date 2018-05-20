@@ -13,6 +13,7 @@ mu_B=1.602*1e-19*6.626*1e-34/(4*np.pi*9.11*1e-31)
 T=293.15 #Kelvin
 k_B=1.3805*1e-23 #J/K
 N_A=6.022*1e23
+R3=998 #Ohm
 
 f, U = np.genfromtxt('data/glocke.txt', unpack=True) #f/kHz, U/V
 
@@ -74,24 +75,23 @@ R_m=np.array([R_m1, R_m2, R_m3])
 deltaU=U_m-U_o
 deltaR=R_o-R_m
 
-deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
 U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
 deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
-R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
+#R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
 
 X_U=4*F*U_mmittel/(Q1*U_sp)*1e-2  #GAINS!!!
-X_R=2*deltaRmittel/R_mmittel*F/Q1 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
+X_R=2*deltaRmittel/R3*F/Q1 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
 print('Die Suszeptibilität aus der Spannung beträgt:', X_U)
 print('Die Suszeptibilität aus dem Widerstand beträgt:', X_R)
 
-hr = ['$U_o/$mV','$U_m/$mV','$\Delta U/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
-m = np.zeros((3, 6))
+hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 5))
 m[:,0] = U_o*1e3
 m[:,1] = U_m*1e3
-m[:,2] = deltaU*1e3
-m[:,3] = R_o
-m[:,4] = R_m
-m[:,5] = deltaR
+m[:,2] = R_o
+m[:,3] = R_m
+m[:,4] = deltaR
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
@@ -131,7 +131,27 @@ R_o3=633*5e-3
 R_m1=600*5e-3
 R_m2=614*5e-3
 R_m3=560*5e-3
+U_o=np.array([U_o1, U_o2, U_o3])
+U_m=np.array([U_m1, U_m2, U_m3])
+R_o=np.array([R_o1, R_o2, R_o3])
+R_m=np.array([R_m1, R_m2, R_m3])
 
+deltaU=U_m-U_o
+deltaR=R_o-R_m
+
+#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
+#R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
+hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 5))
+m[:,0] = U_o*1e3
+m[:,1] = U_m*1e3
+m[:,2] = R_o
+m[:,3] = R_m
+m[:,4] = deltaR
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 
 #Berechnung des Theoriewerts
@@ -169,7 +189,33 @@ R_m2=146*5e-3
 R_m3=147*5e-3
 
 
+U_o=np.array([U_o1, U_o2, U_o3])
+U_m=np.array([U_m1, U_m2, U_m3])
+R_o=np.array([R_o1, R_o2, R_o3])
+R_m=np.array([R_m1, R_m2, R_m3])
 
+deltaU=U_m-U_o
+deltaR=R_o-R_m
+
+#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
+#R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
+
+X_U=4*F*U_mmittel/(Q3*U_sp)*1e-2  #GAINS!!!
+X_R=2*deltaRmittel/R3*F/Q3 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
+print('Die Suszeptibilität aus der Spannung beträgt:', X_U)
+print('Die Suszeptibilität aus dem Widerstand beträgt:', X_R)
+
+hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 5))
+m[:,0] = U_o*1e3
+m[:,1] = U_m*1e3
+m[:,2] = R_o
+m[:,3] = R_m
+m[:,4] = deltaR
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 
 #Berechnung des Theoriewerts
@@ -192,7 +238,7 @@ m4=9*1e-3
 L4=0.135     #ungefähr gleich der Länge der Spule
 rho4=7240 #kg/m^3
 
-Q_4=m4/(L4*rho4)
+Q4=m4/(L4*rho4)
 
 U_o1=16.5*1e-3
 U_o2=18.25*1e-3
@@ -207,6 +253,33 @@ R_m1=297*5e-3
 R_m2=286*5e-3
 R_m3=296*5e-3
 
+U_o=np.array([U_o1, U_o2, U_o3])
+U_m=np.array([U_m1, U_m2, U_m3])
+R_o=np.array([R_o1, R_o2, R_o3])
+R_m=np.array([R_m1, R_m2, R_m3])
+
+deltaU=U_m-U_o
+deltaR=R_o-R_m
+
+#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
+#R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
+
+X_U=4*F*U_mmittel/(Q4*U_sp)*1e-2  #GAINS!!!
+X_R=2*deltaRmittel/R3*F/Q4 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
+print('Die Suszeptibilität aus der Spannung beträgt:', X_U)
+print('Die Suszeptibilität aus dem Widerstand beträgt:', X_R)
+
+hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 5))
+m[:,0] = U_o*1e3
+m[:,1] = U_m*1e3
+m[:,2] = R_o
+m[:,3] = R_m
+m[:,4] = deltaR
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
 
 #Berechnung des Theoriewerts
 J=4.5
@@ -219,3 +292,18 @@ N4=2*N_A*rho4/M4 #Vielleicht auch noch mit Faktor zwei....?!
 
 X_T4=4*np.pi*1e-7*(mu_B)**2*(g_j)**2*N4*J*(J+1)/(3*k_B*T)
 print('Der Theoriewert ist:', X_T4)
+
+
+
+m_i=np.array([m1, m3, m4])
+rho=np.array([rho1, rho3, rho4])
+Q=np.array([Q1, Q3, Q4])
+
+
+hr = ['$m/$g','$rho/frac{\symup{g}}{\symup{cm}^3}$','$Q/\symup{mm}^2$']
+m = np.zeros((3, 3))
+m[:,0] = m_i*1e3
+m[:,1] = rho*1e-3
+m[:,2] = Q*1e6
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
