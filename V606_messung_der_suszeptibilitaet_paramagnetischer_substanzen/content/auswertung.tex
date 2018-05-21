@@ -220,12 +220,14 @@ Dabei wird für $U_{\symup{Br}}$ der gemäß den Gleichungen \eqref{eqn:mean} un
 Wert von $U_{\symup{m}}$ und für $\Delta R$ der gleichermaßen gemittelte Wert
 von $\Delta R$ eingesetzt. Die Speisespannung beträgt $U_{\symup{Sp}}=1 \,$V,
 der Querschnitt der Spule beträgt $F=\SI{86.6e-6}{\meter\squared}$ und der Widerstand
-ist $R_3=\SI{998}{\ohm}$. Damit ergeben
+ist $R_3=\SI{998}{\ohm}$. Zudem muss beachtet werden, dass bei der Messung der
+Spannung zwei zehnfache Gains eingeschaltet waren, sodass noch ein Faktor
+von $10^{-2}$ hinzugefügt werden muss. Damit ergeben
 sich die in Tabelle \ref{tab:chiexp} dargestellten Werte für die Suszeptibilitäten.
 
 \begin{table}[htp]
 	\begin{center}
-    \caption{Experimentell bestimmte Suzeptibilitäten $\chi_{\symup{U}}$ und $\chi_{\symup{U}}$.}
+    \caption{Experimentell bestimmte Suzeptibilitäten $\chi_{\symup{U}}$ und $\chi_{\symup{R}}$.}
     \label{tab:chiexp}
 		\begin{tabular}{ccc}
 		\toprule
@@ -248,7 +250,7 @@ gilt
 \begin{equation}
   N=\frac{2 \rho N_{\symup{A}}}{M} \,.
 \end{equation}
-Dabei ist $\rho$ die Dichte des Materials, $N_{\symup{A}}=\SI{6.022e23}{\per\mol}$
+Dabei ist $\rho$ die Dichte des Materials, $N_{\symup{A}}=\SI{6.022e23}{}\,\frac{1}{\text{mol}}$
 die Avogadrokonstante und $M$ die Molare Masse des Materials. Die berechneten
 Theoriewerte und die zugrundeliegenden Daten sind in Tabelle \ref{tab:chitheo}
 dargestellt. Die Molaren Massen werden dabei \cite{molaremasse} entnommen.
