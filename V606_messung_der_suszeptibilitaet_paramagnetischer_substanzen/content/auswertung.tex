@@ -5,8 +5,9 @@
 \label{subsec:guete}
 
 Zur Bestimmung der Güte wird die Ausgangsspannung $U_{\symup{a}}$ gegen die Frequenz
-$f$ aufgetragen. Die Messwerte hierzu befinden sich in Tabelle \ref{tab:guete}.
-Es zeigt sich der in Abbildung \ref{fig:guete} dargestellte Verlauf.
+$f$ aufgetragen. Die Messwerte hierzu befinden sich in den Tabellen \ref{tab:guete}
+und \ref{tab:guete2}. Es zeigt sich der in Abbildung \ref{fig:guete} dargestellte
+Verlauf.
 
 \begin{table}[htp]
 	\begin{center}
@@ -55,8 +56,20 @@ Es zeigt sich der in Abbildung \ref{fig:guete} dargestellte Verlauf.
 			35,80 & 0,58\\
 			35,90 & 0,46\\
 			36,00 & 0,42\\
-			36,50 & 0,23\\
-			37,00 & 0,14\\
+      36,50 & 0,23\\
+      37,00 & 0,14\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte zur Bestimmung der Güte des Selektivverstärkers (Fortsetzung).}
+    \label{tab:guete2}
+		\begin{tabular}{cc}
+		\toprule
+			{$f/$kHz} & {$U_a/$V}\\
+			\midrule
 			37,50 & 0,09\\
 			38,00 & 0,06\\
 			39,00 & 0,02\\
@@ -82,22 +95,23 @@ Dabei ist $f_0$ die Durchlassfrequenz und $f_{+}$ und $f_{-}$ sind die Frequenze
 bei denen die Ausgangsspannung $\frac{1}{\sqrt{2}}$ des Scheitelwerts beträgt. Durch
 graphische Auswertung erhält man die Werte
 \begin{align*}
-  f_0=      \,\\
-  f_{+}=     \, \\
-  f_{-}=      \.\\
+  f_0=\SI{35.2}{\kilo\hertz}      \,,\\
+  f_{+}=\SI{35.4}{\kilo\hertz}     \,, \\
+  f_{-}=\SI{35.05}{\kilo\hertz}     \,.\\
 \end{align*}
-Die Güte des Selektivverstärkers berechnet sich dann zu $Q= $.
+Die Güte des Selektivverstärkers berechnet sich dann zu $Q=100,57$. Die Abweichung
+vom eingestellten Wert $Q=100$ beträgt $0,57\%$.
 
 
 \subsection{Bestimmung der Suszeptibilitäten der Proben}
 \label{subsec:suszept}
 
-Es werden die Materialien Dysprosiumoxid, Trisdipraseodynumoxid, Gadoliniumoxid und
+Es werden die Materialien Dysprosiumoxid, Praseodymiumoxalat, Gadoliniumoxid und
 Neodymoxid untersucht. Die Messwerte befinden sich in den Tabellen \ref{tab:dysprosium},
 \ref{tab:seodynumoxid}, \ref{tab:gadolinium} und \ref{tab:neodym}. Dabei bezeichnen
 $U_{\symup{o}}$ und $R_{\symup{o}}$ die Spannung bzw. den Widerstand ohne eingeführte
 Probe und $U_{\symup{m}}$ und $R_{\symup{m}}$ die Spannung bzw. den Widerstand mit
-eingeführter Probe. Da die Dichte von Trisdipraseodynumoxid nicht bestimmt werden
+eingeführter Probe. Da die Dichte von Praseodymiumoxalat nicht bestimmt werden
 kann, können zu dieser Probe keine Rechnungen durchgeführt werden, da alle später
 zu benutzenden Formeln abhängig von der Dichte des Materials sind.
 
@@ -121,15 +135,15 @@ zu benutzenden Formeln abhängig von der Dichte des Materials sind.
 
 \begin{table}[htp]
 	\begin{center}
-    \caption{Messwerte zu Trisdipraseodynumoxid ($\ce{C6O12Pr2}$).}
+    \caption{Messwerte zu Praseodymiumoxalat ($\ce{C6O12Pr2}$).}
     \label{tab:seodynumoxid}
 		\begin{tabular}{ccccc}
 		\toprule
 			{$U_o/$mV} & {$U_m/$mV} & {$R_o/\symup{\Omega}$} & {$R_m/\symup{\Omega}$} & {$\Delta R/\symup{\Omega}$}\\
 			\midrule
-			14.50 & 16.00 & 3.20 & 3.00 & 0.20\\
-			16.00 & 16.00 & 3.14 & 3.07 & 0.06\\
-			15.50 & 16.00 & 3.17 & 2.80 & 0.36\\
+			14,50 & 16,00 & 3,20 & 3,00 & 0,20\\
+			16,00 & 16,00 & 3,14 & 3,07 & 0,06\\
+			15,50 & 16,00 & 3,17 & 2,80 & 0,36\\
 		\bottomrule
 		\end{tabular}
 	\end{center}
@@ -174,10 +188,10 @@ zu benutzenden Formeln abhängig von der Dichte des Materials sind.
 Zur Bestimmung der Suszeptibilitäten der verschiedenen Proben muss zunächst
 der reale Querschnitt $Q_{\symup{r}}$ der Proben bestimmt werden. Dies ist notwendig,
 da die Proben aus staubförmigem Material bestehen und die in Kapitel \ref{sec:Theorie}
-hergeleiteten Formeln nur für Dichten der Einkristalle der jeweiligen Porben
+hergeleiteten Formeln nur für Dichten der Einkristalle der jeweiligen Proben
 gültig sind. Der reale Querschnitt folgt dem Zusammenhang
 \begin{align}
-  Q_{\symup{r}}=\frac{m}{L\rho}
+  Q_{\symup{r}}=\frac{m}{L\rho} \,.
 \end{align}
 Dabei bezeichnet $m$ die Masse, $L$ die Länge und $\rho$ die Dichte der Probe. Die
 Länge aller Proben beträgt $L=13,5\,$cm. Die verschiedenen Querschnitte und die zugrundeliegenden
@@ -190,11 +204,11 @@ Versuchsanleitung \cite{Versuchsanleitung} entnommen.
     \label{tab:querschnitt}
 		\begin{tabular}{cccc}
 		\toprule
-			&{$m/$g} & {$rho/\frac{\symup{g}}{\symup{cm}^3}$} & {$Q/\symup{mm}^2$}\\
+			&{$m/$g} & {$\rho/\frac{\symup{g}}{\symup{cm}^3}$} & {$Q/\symup{mm}^2$}\\
 			\midrule
-			\ce{Dy2O3} & 15.10 & 7.80 & 14.34\\
-			\ce{Gd2O3} & 14.08 & 7.40 & 14.09\\
-			\ce{Nd2O3} & 9.00 & 7.24 & 9.21\\
+			\ce{Dy2O3} & 15,10 & 7,80 & 14,34\\
+			\ce{Gd2O3} & 14,08 & 7,40 & 14,09\\
+			\ce{Nd2O3} & 9,00 & 7,24 & 9,21\\
 		\bottomrule
 		\end{tabular}
 	\end{center}
@@ -227,12 +241,12 @@ sich die in Tabelle \ref{tab:chiexp} dargestellten Werte für die Suszeptibilit�
 
 Diese sollen nun mit den Theoriewerten verglichen werden. Die Theoriewerte werden
 mit Gleichung \eqref{eqn:theoriewert} berechnet. Die Quantenzahlen und der
-Landé-Faktor für die Materialien, aus denen die Prben bestehen, wurden bereits
+Landé-Faktor für die Materialien, aus denen die Proben bestehen, wurden bereits
 in Kapitel \ref{subsec:berechnungquantenzahlenundlande} berechnet und sind in
 Tabelle \ref{tab:lsjg} dargestellt. Für das $N$ aus Gleichung \eqref{eqn:theoriewert}
 gilt
 \begin{equation}
-  N=\frac{2 \rho N_{\symup{A}}}{M}
+  N=\frac{2 \rho N_{\symup{A}}}{M} \,.
 \end{equation}
 Dabei ist $\rho$ die Dichte des Materials, $N_{\symup{A}}=\SI{6.022e23}{\per\mol}$
 die Avogadrokonstante und $M$ die Molare Masse des Materials. Die berechneten
@@ -256,22 +270,21 @@ dargestellt. Die Molaren Massen werden dabei \cite{molaremasse} entnommen.
 \end{table}
 
 Die Abweichungen der experimentell bestimmten Werte $\chi_{\symup{U}}$ und
-$\chi_{\symup{R}}$ vom Theoriewert $\chi_{\symup{theo}}$ sind in Tabelle
+$\chi_{\symup{R}}$ von den Theoriewerten $\chi_{\symup{theo}}$ sind in Tabelle
 \ref{tab:abweichung} dargestellt.
 
 \begin{table}[htp]
 	\begin{center}
     \caption{Abweichung der Werte $\chi_{\symup{U}}$ und $\chi_{\symup{R}}$  von
-    $\chi_{\symup{U}}$.}
+    $\chi_{\symup{theo}}$.}
     \label{tab:abweichung}
 		\begin{tabular}{ccc}
 		\toprule
-			&  Abweichung $\chi_{\symup{U}}$  & Abweichung $\chi_{\symup{R}}$\\
+			&  Abweichung $\chi_{\symup{U}}$ in \%  & Abweichung $\chi_{\symup{R}}$ in \% \\
 			\midrule
-			\ce{Dy2O3} &     &    \\
-      \ce{C6O12Pr2} &  &    \\
-      \ce{Gd2O3}  &    &    \\
-      \ce{Nd2O3}  &    &    \\
+			\ce{Dy2O3} &  -68,15   &  -11,02  \\
+      \ce{Gd2O3}  &  -62,26  &   -32,37 \\
+      \ce{Nd2O3}  &  125,17  &   -10,60 \\
 		\bottomrule
 		\end{tabular}
 	\end{center}
