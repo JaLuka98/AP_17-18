@@ -45,28 +45,37 @@ In einem Atom mit mehreren Elektronen wird die Kernladung durch die Elektronen
 abgeschirmt. Damit wird die Coulomb-Kraft auf ein Elektron auf der n-ten Schale auf
 \begin{equation}
   E_{\symup{n}}=-R_{\symup{\infty}} z_{\symup{eff}}^2 \cdot \frac{1}{n^2}
+  \label{eqn:bindungsenergie}
 \end{equation}
 reduziert. Dabei ist $R_{\symup{\infty}}=13.6\,$eV die Rydbergenergie und
 $z_{\symup{eff}}=z-\sigma$ die effektive Kernladung, wobei $\sigma$ die
 Abschirmkonstante ist.
 
-Jede charakteristische Linie besteht aus mehreren eng beieinanderliegenden Linien.
-Dies nennt man auch die Feinstruktur der charakteristischen Strahlung. Diese tritt auf,
-da die äußeren Elektronen aufgrund von Spins und Bahndrehimpulsen leicht unterschiedliche
-Bindungsenergien besitzen. Diese Bindungsenergie beschreibt die Sommerfeld'sche
-Feinstrukturformel:
-\begin{equation}
-  E_{\symup{n,j}}=-R_{\symup{\infty}}\Biggl(z_{\symup{eff,1}}^2\cdot \frac{1}{n^2} +
-   \alpha^2 z_{\symup{eff,2}}^4\cdot \frac{1}{n^3}\Biggl(\frac{1}{j+\frac{1}{2}} -
-   \frac{3}{4n}\Biggr)\Biggr) \,.
-\end{equation}
-$R_{\symup{\infty}}$ ist hier erneut die Rydbergenergie und $z_{\symup{eff}}$ erneut
-die effektive Kernladungszahl. $\alpha$ ist die Sommerfeld'sche Konstante, $n$
-die Hauptquantenzahl und $j$ der Bahndrehimpuls des Elektrons.
+%Jede charakteristische Linie besteht aus mehreren eng beieinanderliegenden Linien.
+%Dies nennt man auch die Feinstruktur der charakteristischen Strahlung. Diese tritt auf,
+%da die äußeren Elektronen aufgrund von Spins und Bahndrehimpulsen leicht unterschiedliche
+%Bindungsenergien besitzen. Diese Bindungsenergie beschreibt die Sommerfeld'sche
+%Feinstrukturformel:
+
+%$R_{\symup{\infty}}$ ist hier erneut die Rydbergenergie und $z_{\symup{eff}}$ erneut
+%die effektive Kernladungszahl. $\alpha$ ist die Sommerfeld'sche Konstante, $n$
+%die Hauptquantenzahl und $j$ der Bahndrehimpuls des Elektrons.
 
 \subsection{Röntgenabsorptionsspektrum}
 \label{sec:Theorie_absorption}
 
+Trifft Röntgenstrahlung auf Materie, so wird sie durch die Materie abgebremst und
+abgelgenkt. Die bei den im Versuch auftretenden Energien dominant auftretenden
+Prozesse sind der Photoeffekt und der Compton-Effekt.
+Beim Compton Effekt werden die auf den Absorber treffenden Photonen abgelenkt.
+Diese Ablenkung ist umso schwächer, je größer die Energie der Photonen ist. Daher
+fällt der Absorptionskoeffizient mit steigender Photonenergie.
+Beim Photoeffekt wird ein Röntgenquant von einem Elektron im Absorbermaterial absorbiert,
+wodurch das Elektron auf eine andere Schale gehoben wird. Ist die Photonenenergie der
+Röntgenstrahlung gerade so groß, dass dies möglich ist, kommt es daher zu einem
+Anstieg der Absorption.
+Eine Skizze des durch die beiden zuvor erläuterten Effekte entstehenden Absorptionsspektrums
+ist in Abbildung \ref{fig:absorption} zu sehen.
 
 \begin{figure}
   \centering
@@ -74,3 +83,78 @@ die Hauptquantenzahl und $j$ der Bahndrehimpuls des Elektrons.
   \caption{Skizze des Absorptionsspektrums \cite{Versuchsanleitung}.}
   \label{fig:absorption}
 \end{figure}
+
+Im Verlauf zeigen sich klare Kanten. Diese erhalten eine Bezeichnung durch die
+Schale, aus der die Elektronen stammen, die nun die Röntgenquanten absorbieren.
+Auch bei den Aborptionskanten ist eine Feinstruktur erkennbar, die sich mithilfe
+der Sommerfeld'schen Freinstrukturformel
+\begin{equation}
+  E_{\symup{n,j}}=-R_{\symup{\infty}}\Biggl(z_{\symup{eff,1}}^2\cdot \frac{1}{n^2} +
+   \alpha^2 z_{\symup{eff,2}}^4\cdot \frac{1}{n^3}\Biggl(\frac{1}{j+\frac{1}{2}} -
+   \frac{3}{4n}\Biggr)\Biggr) \,.
+   \label{eqn:sommerfeld}
+\end{equation}
+annähern lassen. Dabei Bezeichnet $E$ die Bindungsenergie eines Elektrons, $\alpha$ die Sommerfeld'sche
+Feinstrukturkonstante, $n$ die Hauptquantenzahl und $j$ der Gesamtdrehimpuls des
+Elektrons. $R_{\symup{\infty}}$ ist hier erneut die Rydbergenergie und $z_{\symup{eff}}$ erneut
+die effektive Kernladungszahl.
+
+Für die Bestimmung der Abschirmkonstante $\sigma_{\symup{L}}$ aus der L-Kante besteht ein
+sehr komplexer Zusammenhang, der durch die Bestimmung der Energiedifferenz zweier
+L-Kanten angenähert werden kann. Es ergibt sich für die im Versuch zu bestimmende
+Abschirmkonstante
+\begin{equation}
+  \sigma_{\symup{L}}=Z-\left(\frac{4}{\alpha} \sqrt{\frac{\Delta E_{\symup{L}}}{R_{\symup{\infty}}}}
+  -\frac{5\Delta E_{\symup{L}}}{R_{\symup{\infty}}}\right)^{1/2}
+  \left(1+\frac{19}{32}\alpha^2 \frac{\Delta E_{\symup{L}}}{R_{\symup{\infty}}}\right)^{1/2} \,.
+  \label{eqn:naeherung}
+\end{equation}
+Die experientelle Bestimmung der Energie ist mithilfe der Bragg'schen Reflexion
+möglich. Dabei wird ein Kristall mit Röntgenlicht bestrahlt. Dabei wird das Licht
+am Kristall gebeugt und es entstehen Interferenzen. Beim sogenannten Glanzwinkel
+entsteht Konstruktive Interferenz. Die Bragg Bedingung
+\begin{equation}
+  2 d \sin(\theta)= n \lambda
+  \label{eqn:bragg}
+\end{equation}
+folgt aus trigonometrischen Beziehungen am Kristall und liefert einen Zusammenhang
+zwischen Wellenlänge und Winkel. Dabei ist $d$ der Netebendenabstand der Gitterebenen
+des Kristalls, $\theta$ der Winkel, den der Kristall mit der Horizontalen einschließt,
+n die BeugungsOrdnung und $\lambda$ die Wellenlänge des Lichts.  Die Energie der
+Röntgenphotonen folgt demnach dem Zusammenhang
+\begin{equation}
+  E=\frac{h c}{2 d \sin(\theta)} \,.
+  \label{eqn:winkel}
+\end{equation}
+
+
+\subsection{Vorbereitende Rechnungen für die Bestimmung der K- und L-Kanten}
+\label{sec:K_L_Kanten}
+
+Zur Vorbereitung der Messung werden für die zu verwendenden Elemente bereits
+die Ordnungszahl und die Energie für die K-Kante aus der Literatur entnommen und
+daraus der Winkel $\theta_{\symup{K}}$, unter dem die K-Kante zu messen sein wird,
+nach Gleichung \eqref{eqn:winkel}, sowie die Abschirmkonstante $\sigma_{\symup{K}}$
+für die K-Kante mithilfe von Gleichung \eqref{eqn:bindungsenergie} berechnet.
+Es ergeben sich die in Tabelle \ref{tab:theoriewerte} dargestellten Werte.
+
+\begin{table}
+	\begin{center}
+    \caption{Theoretisch berechnete Werte für die Winkel und Abschirmkonstanten
+    für die K-Kanten der zu verwendenden Elemente.}
+    \label{tab:theoriewerte}
+		\begin{tabular}{ccccc}
+		\toprule
+			& {$Z$} & {$E_{\symup{lit, K}}/$KeV} & {$\theta_{\symup{lit, K}}$} & {$\sigma_{\symup{K}}$}\\
+			\midrule
+			Zn & 30  & 9,65  &  18,60   &  3,36  \\
+      Br &  35  & 13,47 &  13,21  &  3,53 \\
+      Sr &  38  & 16,20 &  11,02  &  3,59 \\
+      Zr &  40  & 17,99 &  9,85   &  3,63 \\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+%Hier vielleicht noch das mit den K-Linien des Emissionsspektrums und die Rechnung
+%für Gold?
