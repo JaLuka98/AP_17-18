@@ -29,7 +29,8 @@ plt.clf()
 
 #Emission
 
-zweitheta, I = np.genfromtxt('data/bragg.txt', unpack=True)
+zweitheta, I = np.genfromtxt('data/emission.txt', unpack=True)
+zweitheta[0] = 8.0 # dummer scheiß geht nur so
 plt.plot(zweitheta, I, 'rx', mew=0.5)
 plt.xlabel(r'$2 \cdot \theta/$Grad')
 plt.ylabel(r'$I$')
