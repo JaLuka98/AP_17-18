@@ -10,34 +10,48 @@ from matrix2latex import matrix2latex
 
 #Bragg
 
-I, alpha = np.genfromtxt('data/bragg.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, alpha, 'rx', mew=0.5)
-plt.xlabel(r'$\alpha/$°')
-plt.ylabel(r'$I/$')
+alpha, I = np.genfromtxt('data/bragg.txt', unpack=True)
+plt.plot(alpha, I, 'rx', mew=0.5)
+plt.xlabel(r'$\alpha/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
 plt.savefig('build/bragg.pdf')
 plt.clf()
 
+# hr = ['$\alpha/$Grad', '$I$']
+# m = np.zeros((np.size(I), 2))
+# m[: ,0] = alpha
+# m[:, 1] = I
+# t = matrix2latex(m, headerRow=hr, format='%.1f')
+# print(t)
+
 #Emission
 
-I, zweitheta = np.genfromtxt('data/emission.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, zweitheta, 'rx', mew=0.5)
-plt.xlabel(r'$2\theta/$°')
-plt.ylabel(r'$I/$')
+zweitheta, I = np.genfromtxt('data/bragg.txt', unpack=True)
+plt.plot(zweitheta, I, 'rx', mew=0.5)
+plt.xlabel(r'$2 \cdot \theta/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
 plt.savefig('build/emission.pdf')
 plt.clf()
 
+hr = ['$2 \cdot \theta/$Grad', '$I$']
+m = np.zeros((np.size(I), 2))
+m[:, 0] = zweitheta
+m[:, 1] = I
+t = matrix2latex(m, headerRow=hr, format='%.1f')
+print(t)
+
 #Strontium
 
-I, zweitheta = np.genfromtxt('data/strontium.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, zweitheta, 'rx', mew=0.5)
-plt.xlabel(r'$2\theta/$°')
-plt.ylabel(r'$I/$')
+zweitheta, I = np.genfromtxt('data/strontium.txt', unpack=True) #f/kHz, U/V
+plt.plot(zweitheta, I, 'rx', mew=0.5)
+plt.xlabel(r'$2 \cdot \theta/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
@@ -46,10 +60,10 @@ plt.clf()
 
 #Zirkonium
 
-I, zweitheta = np.genfromtxt('data/zirkonium.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, zweitheta, 'rx', mew=0.5)
-plt.xlabel(r'$2\theta/$°')
-plt.ylabel(r'$I/$')
+zweitheta, I = np.genfromtxt('data/zirkonium.txt', unpack=True) #f/kHz, U/V
+plt.plot(zweitheta, I, 'rx', mew=0.5)
+plt.xlabel(r'$2 \cdot \theta/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
@@ -58,10 +72,10 @@ plt.clf()
 
 #Zink
 
-I, zweitheta = np.genfromtxt('data/zink.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, zweitheta, 'rx', mew=0.5)
-plt.xlabel(r'$2\theta/$°')
-plt.ylabel(r'$I/$')
+zweitheta, I = np.genfromtxt('data/zink.txt', unpack=True) #f/kHz, U/V
+plt.plot(zweitheta, I, 'rx', mew=0.5)
+plt.xlabel(r'$2 \cdot \theta/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
@@ -70,10 +84,10 @@ plt.clf()
 
 #Brom
 
-I, zweitheta = np.genfromtxt('data/brom.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, zweitheta, 'rx', mew=0.5)
-plt.xlabel(r'$2\theta/$°')
-plt.ylabel(r'$I/$')
+zweitheta, I = np.genfromtxt('data/brom.txt', unpack=True) #f/kHz, U/V
+plt.plot(zweitheta, I, 'rx', mew=0.5)
+plt.xlabel(r'$2 \cdot \theta/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
@@ -82,10 +96,10 @@ plt.clf()
 
 #Gold
 
-I, zweitheta = np.genfromtxt('data/gold.txt', unpack=True) #f/kHz, U/V
-plt.plot(I, zweitheta, 'rx', mew=0.5)
-plt.xlabel(r'$2\theta/$°')
-plt.ylabel(r'$I/$')
+zweitheta, I = np.genfromtxt('data/gold.txt', unpack=True) #f/kHz, U/V
+plt.plot(zweitheta, I, 'rx', mew=0.5)
+plt.xlabel(r'$2 \cdot \theta/$Grad')
+plt.ylabel(r'$I$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
