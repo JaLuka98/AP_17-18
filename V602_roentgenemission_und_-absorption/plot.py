@@ -41,11 +41,20 @@ plt.savefig('build/emission.pdf')
 plt.clf()
 
 hr = ['$2 \cdot \theta/$Grad', '$I$']
-m = np.zeros((np.size(I), 2))
-m[:, 0] = zweitheta
-m[:, 1] = I
+m = np.zeros((np.size(alpha), 4))
+m[:, 0] = zweitheta[0:np.size(alpha)]
+m[:, 1] = I[0:np.size(alpha)]
+m[:, 2] = zweitheta[np.size(alpha):2*np.size(alpha)]
+m[:, 3] = I[np.size(alpha):2*np.size(alpha)]
+#temp = np.zeros(np.size(alpha))
+#for i in range(0, np.size(zweitheta)-2*np.size(alpha)):
+#    temp += zweitheta[2*np.size(alpha)+i]
+#print(temp)
+#m[:, 4] = np.zeros(np.size(alpha)) + zweitheta
+#m[:, 5] = I[2*np.size(alpha):-1]
 t = matrix2latex(m, headerRow=hr, format='%.1f')
 print(t)
+#Shits not even close to working
 
 #Strontium
 
