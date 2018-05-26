@@ -3,7 +3,10 @@
 \subsection{Überprüfung der Bragg-Bedingung}
 \label{subsec:bragg}
 Zunächst sei erwähnt, dass der verwendete LiF-Kristall einen Netzebendenabstand von
-$d = \SI{201.4}{\pico\meter}$ besitzt. Dieser Wert wird stets für $d$ angenommen.\\
+$d = \SI{201.4}{\pico\meter}$ besitzt. Dieser Wert wird stets für $d$ angenommen.
+Außerdem werden Werte stets nach Ermessen sinnvoll gerundet, auch beim Ablesen aus
+Diagrammen kann keine perfekte Genauigkeit gewährleistet werden. Ohne später
+explizit darauf hinzuweisen, sind deswegen alle experimentell bestimmten Werte als Näherungen zu verstehen.\\
 Die Werte, die zur Überprüfung der Bragg-Bedingung aufgenommen wurden, sind in Tabelle
 \ref{tab:bragg} zu sehen. Es wurden ursprünglich die Impulse pro Sekunde aufgezeichnet,
 im Folgenden wird diese Messgröße jedoch als Intensität $I$ bezeichnet.
@@ -72,7 +75,7 @@ Die Messreihe ist grafisch in Abbildung \ref{fig:bragg} dargestellt.
 \end{figure}
 
 Wie an den Messwerten und am Diagramm zu erkennen ist, befindet sich das Maximum
-der Intensität näherungsweise bei $28{,}1°$.
+der Intensität bei $28{,}1°$.
 
 Der theoretische Wert beträgt $28°$, da der verwendete LiF-Kristall für diese Messreihe
 auf einen festen Kristallwinkel von $14°$ eingestellt wurde. Der relative Fehler bei
@@ -159,7 +162,7 @@ die experimentell bestimmte maximale Energie des Bremsspektrums zu $\SI{44.126}{
 Da die Röntgenröhre mit einer Spannung von $\SI{35}{\kilo\volt}$ betrieben wurde,
 beträgt der theoretisch zu erwartende Wert $\SI{35}{\kilo\electronvolt}$. Die Abweichung
 zu diesem Wert beträgt $26{,}07\%$. \\
-Die $K_\beta$-Linie wird bei ungefähr $20°$, die $K_\alpha$-Linie bei circa $22.3°$ identifiziert.
+Die $K_\beta$-Linie wird bei $20°$, die $K_\alpha$-Linie bei $22.3°$ identifiziert.
 Gemäß Gleichung \eqref{eqn:winkel} und dem Zusammenhang $\lambda = hc/E$ ergibt
 sich dann für die experimentell bestimmten Energien der Übergänge
 \begin{align*}
@@ -234,13 +237,13 @@ $\theta_{\text{K,exp}}^{\text{Br}} = 13{,}25$ abgelesen wird. Gemäß Gleichung 
 zu $E_{\text{K,exp}}^{\text{Br}} = \SI{13.43}{\kilo\electronvolt}$.
 Stets können die Theoriewerte aus Tabelle \ref{tab:theoriewerte} entnommen werden,
 sodass deren Werte in diesem Kapitel nicht wiederholt werden. Die relative Abweichung zum Theoriewert
-beträgt $-0{,}37\%$. Durch Einsetzen in Gleichung \eqref{eqn:bindungsenergie}
+beträgt $-0{,}11\%$. Durch Einsetzen in Gleichung \eqref{eqn:bindungsenergie}
 folgt für die Abschirmkonstante
 \begin{equation*}
-  \sigma_{\text{K,exp}}^{\text{Br}} =  35 - \sqrt{\frac{E_{\text{Br,K,exp}}}{R_\infty}} = \frac{70-5\sqrt{158}}{2} \approx 3{,}58\,.
+  \sigma_{\text{K,exp}}^{\text{Br}} =  35 - \sqrt{\frac{E_{\text{K,exp}}^{\text{Br}}}{R_\infty}} = 3{,}58\,.
 \end{equation*}
 Dabei wurde für die eigentlich negative Bindungsenergie ein positives Vorzeichen angesetzt.
-Die Abweichung zum theoretischen Wert beträgt $1{,}58\%$.
+Die relative Abweichung zum theoretischen Wert beträgt $1{,}58\%$.
 
 \subsection{Untersuchung des Absorptionsspektrums von Strontium}
 \label{subsec:strontium}
@@ -296,15 +299,77 @@ In Abbildung \ref{fig:strontium} ist die Messreihe aufgetragen.
   \label{fig:strontium}
 \end{figure}
 
-Die K-Kante befindet sich bei dem Maximum der Intensität, das bei ungefähr
-$\theta_{\text{K,exp}}^{\text{Br}} = 13{,}25$ abgelesen wird. Gemäß Gleichung \eqref{eqn:winkel} ergibt sich die dazugehörige Energie
-zu $E_{\text{K,exp}}^{\text{Br}} = \SI{13.43}{\kilo\electronvolt}$.
-Stets können die Theoriewerte aus Tabelle \ref{tab:theoriewerte} entnommen werden,
-sodass deren Werte in diesem Kapitel nicht wiederholt werden. Die relative Abweichung zum Theoriewert
-beträgt $-0{,}37\%$. Durch Einsetzen in Gleichung \eqref{eqn:bindungsenergie}
-folgt für die Abschirmkonstante
+Das Maximum der Intensität liegt bei circa $\theta_{\text{K,exp}}^{\text{Sr}} = 11{,}2$.
+Gemäß Gleichung \eqref{eqn:winkel} folgt für die Energie der K-Kante $E_{\text{K,exp}}^{\text{Sr}} = \SI{15.85}{\kilo\electronvolt}$.
+Der relative Fehler zum Theoriewert ist $-1{,}67\%$. Mit Gleichung \eqref{eqn:bindungsenergie}
+beträgt die Abschirmkonstante
 \begin{equation*}
-  \sigma_{\text{K,exp}}^{\text{Br}} =  35 - \sqrt{\frac{E_{\text{Br,K,exp}}}{R_\infty}} = \frac{70-5\sqrt{158}}{2} \approx 3{,}58\,.
+  \sigma_{\text{K,exp}}^{\text{Sr}} =  38 - \sqrt{\frac{E_{\text{K,exp}}^{\text{Sr}}}{R_\infty}} = 3{,}86\,.
 \end{equation*}
-Dabei wurde für die eigentlich negative Bindungsenergie ein positives Vorzeichen angesetzt.
-Die Abweichung zum theoretischen Wert beträgt $1{,}58\%$.
+Die relative Abweichung zum Theoriewert ist $8{,}25\%$.
+
+\subsection{Untersuchung des Absorptionsspektrums von Zink}
+\label{subsec:zink}
+
+Jetzt wird das Absorptionsspektrum eines Zinkabsorbers untersucht.
+Die Messreihe ist in Tabelle \ref{tab:brom} zu sehen. Es ist zu erkennen, dass
+der Messbereich so weit gewählt wurde, dass auch noch die charakteristische
+Strahlung aufgenommen wurde. Da diese für das Verhalten von Zink als Absorber nicht
+relevant ist, wird der Bereich ab $2 \cdot \theta = 39.4°$ bis zum Ende des Messbereichs
+nicht für die grafische Darstellung in Abbildung \ref{fig:zink} berücksichtigt.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messwerte der Intensität in Abhängigkeit des doppelten Kristallwinkels zur Untersuchung des Absorptionsspektrums von Zink.}
+          \label{tab:zink}
+                \begin{tabular}{S[table-format=2.1] S[table-format=2.0] S[table-format=2.1] S[table-format=2.0]}
+                \toprule
+                        {$2 \cdot \theta/$°} & {$I$} & {$2 \cdot \theta/$°} & {$I$} \\
+                        \midrule
+                        32.0 & 40 & 37.2 &  52\\
+                        32.2 & 37 & 37.4 &  56\\
+                        32.4 & 37 & 37.5 &  58\\
+                        32.5 & 41 & 37.8 &  57\\
+                        32.8 & 39 & 38.0 &  53\\
+                        33.0 & 36 & 38.2 &  53\\
+                        33.2 & 33 & 38.4 &  53\\
+                        33.4 & 36 & 38.6 &  56\\
+                        33.6 & 36 & 38.8 &  54\\
+                        33.8 & 35 & 39.0 &  55\\
+                        34.0 & 35 & 39.2 &  52\\
+                        34.2 & 34 & 39.4 &  67\\
+                        34.4 & 35 & 39.5 &  92\\
+                        34.5 & 36 & 39.8 &  496\\
+                        34.8 & 34 & 40.0 &  692\\
+                        35.0 & 34 & 40.2 &  654\\
+                        35.2 & 32 & 40.4 &  477\\
+                        35.4 & 31 & 40.5 &  281\\
+                        35.5 & 32 & 40.8 &  93\\
+                        35.8 & 32 & 41.0 &  79\\
+                        36.0 & 30 & 41.2 &  71\\
+                        36.2 & 30 & 41.4 &  65\\
+                        36.4 & 31 &      &  \\
+                        36.6 & 32 &      &  \\
+                        36.8 & 41 &      &  \\
+                        37.0 & 49 &      &  \\
+                        \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{build/zink.pdf}
+  \caption{Auftragung der Messwerte des Absorptionsspektrums von Zink.}
+  \label{fig:zink}
+\end{figure}
+
+Die K-Kante liegt erneut bei dem Maximum der Intensität, welches bei ungefähr
+$\theta_{\text{K,exp}}^{\text{Zn}} = 18{,}75$ abgelesen wird. Mit Gleichung \eqref{eqn:winkel} ergibt sich die dazugehörige Energie
+zu $E_{\text{K,exp}}^{\text{Zn}} = \SI{9.58}{\kilo\electronvolt}$.
+Die relative Abweichung zum Theoriewert beträgt $-0{,}11\%$. Durch Einsetzen in Gleichung \eqref{eqn:bindungsenergie}
+ist die Abschirmkonstante dann
+\begin{equation*}
+  \sigma_{\text{K,exp}}^{\text{Zn}} =  30 - \sqrt{\frac{E_{\text{K,exp}}^{\text{Zn}}}{R_\infty}} = 3{,}46\,.
+\end{equation*}
+Die relative Abweichung zum theoretischen Wert beträgt $3{,}90\%$.
