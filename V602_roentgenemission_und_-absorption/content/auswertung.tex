@@ -90,7 +90,7 @@ Kupfer. Die Messreihe ist in Tabelle \ref{tab:emission} zu finden.
           \label{tab:emission}
                 \begin{tabular}{S[table-format=2.1] S[table-format=3.0] S[table-format=2.1] S[table-format=3.0] S[table-format=2.1] S[table-format=3.0]}
                 \toprule
-                        {$\alpha_\text{GM}/$°} & {$I$} & {$\alpha_\text{GM}/$°} & {$I$} & {$\alpha_\text{GM}/$°} & {$I$} \\
+                        {$2 \cdot \theta/$°} & {$I$} & {$2 \cdot \theta/$°} & {$I$} & {$2 \cdot \theta/$°} & {$I$} \\
                         \midrule
                          8.0 &  16 & 24.4 &  163 & 40.8 &  135\\
                          8.4 &  16 & 24.8 &  168 & 41.2 &  104\\
@@ -154,7 +154,11 @@ ansteigt, wird dieser Winkel als Grenzwinkel in Gleichung \eqref{eqn:bragg} eing
 Wellenlänge des Bremsspektrums $\SI{28.098}{\pico\meter}$ zu erhalten. Nach Gleichung
 \eqref{eqn:lambdamin} ist das Minimum der Wellenlängen des Bremsspektrums theoretisch
 bei $\SI{35.424}{\pico\meter}$ zu erwarten. Es ergibt sich ein relativer Fehler von
-$20{,}68\%$ zum Theoriewert.
+$20{,}68\%$ zum Theoriewert. Durch Gleichung \eqref{eqn:winkel} ergibt sich
+die experimentell bestimmte maximale Energie des Bremsspektrums zu $\SI{44.126}{\kilo\electronvolt}$.
+Da die Röntgenröhre mit einer Spannung von $\SI{35}{\kilo\volt}$ betrieben wurde,
+beträgt der theoretisch zu erwartende Wert $\SI{35}{\kilo\electronvolt}$. Die Abweichung
+zu diesem Wert beträgt $26{,}07\%$. \\
 Die $K_\beta$-Linie wird bei ungefähr $20°$, die $K_\alpha$-Linie bei circa $22.3°$ identifiziert.
 Gemäß Gleichung \eqref{eqn:winkel} und dem Zusammenhang $\lambda = hc/E$ ergibt
 sich dann für die experimentell bestimmten Energien der Übergänge
@@ -168,9 +172,139 @@ jeweils nur die \enquote{Kalpha1}- und \enquote{Kbeta1}-Werte übernommen wurden
 } und
 betragen
 \begin{align*}
-  E_{\alpha,\text{theo}} &= \SI{8.0481}{\kilo\electronvolt} \,\\
+  E_{\alpha,\text{theo}} &= \SI{8.0481}{\kilo\electronvolt} \,,\\
   E_{\beta,\text{theo}} &= \SI{8.9069}{\kilo\electronvolt} \,.
 \end{align*}
 Diese werden als nicht fehlerbehaftet betrachtet.
 Die relative Abweichung des experimentell bestimmten Wertes der Energie
 der $K_\alpha$-Linie beträgt $0{,}79\%$, bei der $K_\beta$-Linie sind es $1{,}04\%$.
+
+\subsection{Untersuchung des Absorptionsspektrums von Brom}
+\label{subsec:brom}
+
+Nun wird das Absorptionsspektrum eines Bromabsorbers untersucht, der sich vor
+dem Geiger-Müller Zählrohr befindet. Die dazugehörigen Messwerte sind in
+Tabelle \ref{tab:brom} zu sehen.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messwerte der Intensität in Abhängigkeit des doppelten Kristallwinkels zur Untersuchung des Absorptionsspektrums von Brom.}
+          \label{tab:brom}
+                \begin{tabular}{S[table-format=2.1] S[table-format=2.0] S[table-format=2.1] S[table-format=2.0]}
+                \toprule
+                        {$2 \cdot \theta/$°} & {$I$} & {$2 \cdot \theta/$°} & {$I$} \\
+                        \midrule
+                        22.0 & 4 & 26.2 &  7\\
+                        22.2 & 4 & 26.4 &  9\\
+                        22.4 & 5 & 26.6 &  9\\
+                        22.6 & 5 & 26.8 &  8\\
+                        22.8 & 6 & 27.0 &  8\\
+                        23.0 & 5 & 27.2 &  8\\
+                        23.2 & 4 & 27.4 &  8\\
+                        23.4 & 5 & 27.6 &  8\\
+                        23.6 & 6 & 27.8 &  6\\
+                        23.8 & 5 & 28.0 &  8\\
+                        24.0 & 5 & 28.2 &  6\\
+                        24.2 & 5 & 28.4 &  6\\
+                        24.4 & 5 & 28.6 &  6\\
+                        24.6 & 4 & 28.8 &  5\\
+                        24.8 & 5 & 29.0 &  5\\
+                        25.0 & 5 & 29.2 &  5\\
+                        25.2 & 5 & 29.4 &  5\\
+                        25.4 & 4 & 29.6 &  5\\
+                        25.6 & 4 & 29.8 &  4\\
+                        25.8 & 5 & 30.0 &  5\\
+                        26.0 & 6 &      &  \\
+                        \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Die Messwerte sind in Abbildung \ref{fig:brom} in ein Diagramm eingezeichnet.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/brom.pdf}
+  \caption{Auftragung der Messwerte des Absorptionsspektrums von Brom.}
+  \label{fig:brom}
+\end{figure}
+
+Die K-Kante befindet sich bei dem Maximum der Intensität, das bei ungefähr
+$\theta_{\text{K,exp}}^{\text{Br}} = 13{,}25$ abgelesen wird. Gemäß Gleichung \eqref{eqn:winkel} ergibt sich die dazugehörige Energie
+zu $E_{\text{K,exp}}^{\text{Br}} = \SI{13.43}{\kilo\electronvolt}$.
+Stets können die Theoriewerte aus Tabelle \ref{tab:theoriewerte} entnommen werden,
+sodass deren Werte in diesem Kapitel nicht wiederholt werden. Die relative Abweichung zum Theoriewert
+beträgt $-0{,}37\%$. Durch Einsetzen in Gleichung \eqref{eqn:bindungsenergie}
+folgt für die Abschirmkonstante
+\begin{equation*}
+  \sigma_{\text{K,exp}}^{\text{Br}} =  35 - \sqrt{\frac{E_{\text{Br,K,exp}}}{R_\infty}} = \frac{70-5\sqrt{158}}{2} \approx 3{,}58\,.
+\end{equation*}
+Dabei wurde für die eigentlich negative Bindungsenergie ein positives Vorzeichen angesetzt.
+Die Abweichung zum theoretischen Wert beträgt $1{,}58\%$.
+
+\subsection{Untersuchung des Absorptionsspektrums von Strontium}
+\label{subsec:strontium}
+
+Das Absorptionsspektrum von Stromtium wird anschließend untersucht.
+Die Messwerte befinden sich in Tabelle \ref{tab:strontium}.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messwerte der Intensität in Abhängigkeit des doppelten Kristallwinkels zur Untersuchung des Absorptionsspektrums von Strontium.}
+          \label{tab:strontium}
+                \begin{tabular}{S[table-format=2.1] S[table-format=2.0] S[table-format=2.1] S[table-format=2.0]}
+                \toprule
+                        {$2 \cdot \theta/$°} & {$I$} & {$2 \cdot \theta/$°} & {$I$} \\
+                        \midrule
+                        16.0 & 35 & 21.2 &  26\\
+                        16.2 & 32 & 21.4 &  27\\
+                        16.4 & 33 & 21.6 &  39\\
+                        16.7 & 33 & 21.8 &  59\\
+                        16.8 & 33 & 22.0 &  68\\
+                        17.0 & 32 & 22.2 &  82\\
+                        17.2 & 33 & 22.4 &  80\\
+                        17.4 & 31 & 22.6 &  82\\
+                        17.6 & 30 & 22.8 &  82\\
+                        17.7 & 33 & 23.0 &  77\\
+                        18.0 & 30 & 23.2 &  77\\
+                        18.2 & 30 & 23.4 &  74\\
+                        18.4 & 28 & 23.6 &  75\\
+                        18.6 & 28 & 23.8 &  71\\
+                        18.8 & 28 & 24.0 &  73\\
+                        19.0 & 32 & 24.2 &  70\\
+                        19.2 & 28 & 24.4 &  70\\
+                        19.4 & 26 & 24.6 &  67\\
+                        19.6 & 26 & 24.8 &  65\\
+                        19.8 & 28 & 25.0 &  63\\
+                        20.0 & 26 & 25.2 &  64\\
+                        20.2 & 25 & 25.4 &  59\\
+                        20.4 & 24 & 25.6 &  58\\
+                        20.6 & 26 & 25.8 &  57\\
+                        20.8 & 24 & 26.0 &  52\\
+                        21.0 & 25 &      &  \\
+                        \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+In Abbildung \ref{fig:strontium} ist die Messreihe aufgetragen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/strontium.pdf}
+  \caption{Auftragung der Messwerte des Absorptionsspektrums von Strontium.}
+  \label{fig:strontium}
+\end{figure}
+
+Die K-Kante befindet sich bei dem Maximum der Intensität, das bei ungefähr
+$\theta_{\text{K,exp}}^{\text{Br}} = 13{,}25$ abgelesen wird. Gemäß Gleichung \eqref{eqn:winkel} ergibt sich die dazugehörige Energie
+zu $E_{\text{K,exp}}^{\text{Br}} = \SI{13.43}{\kilo\electronvolt}$.
+Stets können die Theoriewerte aus Tabelle \ref{tab:theoriewerte} entnommen werden,
+sodass deren Werte in diesem Kapitel nicht wiederholt werden. Die relative Abweichung zum Theoriewert
+beträgt $-0{,}37\%$. Durch Einsetzen in Gleichung \eqref{eqn:bindungsenergie}
+folgt für die Abschirmkonstante
+\begin{equation*}
+  \sigma_{\text{K,exp}}^{\text{Br}} =  35 - \sqrt{\frac{E_{\text{Br,K,exp}}}{R_\infty}} = \frac{70-5\sqrt{158}}{2} \approx 3{,}58\,.
+\end{equation*}
+Dabei wurde für die eigentlich negative Bindungsenergie ein positives Vorzeichen angesetzt.
+Die Abweichung zum theoretischen Wert beträgt $1{,}58\%$.
