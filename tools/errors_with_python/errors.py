@@ -17,8 +17,8 @@ def error(f, err_vars=None):
     return latex(sqrt(s), symbol_names=latex_names)
 
 
-a, x, b, c = var('a x b c')
+R = var('R')
 
-f = a*x**2+b*x+c
+f = 1.92* sqrt(R**2+0.22*R)
 
 print(error(f))
