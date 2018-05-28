@@ -171,7 +171,7 @@ sich dann für die experimentell bestimmten Energien der Übergänge
 \end{align*}
 Die theoretisch zu erwartenden Werte für die Energien werden \cite{xraydata} entnommen \footnote{
 Bei Entnahme der Theoriewerte wird die Feinstrukturaufspaltung nicht beachtet, da zur Vereinfachung
-jeweils nur die \enquote{Kalpha1}- und \enquote{Kbeta1}-Werte übernommen wurden.
+jeweils nur $K_{\symup{\alpha,1}}$- und $K_{\symup{\beta,1}}$-Werte übernommen wurden.
 } und
 betragen
 \begin{align*}
@@ -199,7 +199,7 @@ zu sehen.
 Dabei beschreiben die blau gestrichelten Linien das Minimum und das Maximum des
 jeweiligen Peaks. Die grüne gestrichelte Linie befindet sich in der Mitte der
 beiden blauen und beschreibt somit die halbe Höhe des Peaks. Die magenta farbenen
-vertikalen linien zeigen die Frequenzen, an denen die Verbindungsgeraden zwischen
+vertikalen Linien zeigen die Frequenzen, an denen die Verbindungsgeraden zwischen
 den Messwerten gerade die halbe Höhe des Peaks besitzen. Die Differenz der beiden
 Frequenzen ergibt in guter Näherung die Halbwertsbreite des jeweiligen Peaks.
 Es ergeben sich die Werte
@@ -219,7 +219,7 @@ Das Auflösungsvermögen des gegebenen Versuchsaufbaus ist dann gegeben durch di
 Energiedifferenzen $\Delta E_{\symup{\alpha}}=E_{\theta_{\symup{\alpha,1}}}
 -E_{\theta_{\symup{\alpha,2}}}$ und $\Delta E_{\symup{\beta}}=
 E_{\theta_{\symup{\beta,1}}}-E_{\theta_{\symup{\beta,2}}}$ der Linien. Diese
-ergeben sich nach Gleichung \eqref{eqn:energieauswinkel} zu
+ergeben sich nach Gleichung \eqref{eqn:winkel} zu
 \begin{align*}
   \Delta E_{\symup{\alpha}}=(8{,}191-8{,}043)\,\symup{keV}=0{,}148\,\symup{keV} \,, \\
   \Delta E_{\symup{\beta}}=(9{,}072-8{,}888)\,\symup{keV}=0{,}184\,\symup{keV} \,.
@@ -504,8 +504,8 @@ zur Ordnungszahl des Elements. Dies kann durch
 ausgedrückt werden, wobei die Proportionalitätskonstante gerade die zu bestimmende
 Rydbergenergie $R_\infty = \SI{13.6}{\electronvolt}$ ist.\\
 Es wird eine lineare Ausgleichsrechnung mit den vorliegenden Werten durchgeführt.
-Dabei soll $a$ die Steigung und $b$ den Ordinatenabschnitt der Ausgleichsgerade  Die Messwerte
-und der Graph der Ausgleichsfunktion sind in \ref{fig:rydberg} dargestellt.
+Dabei soll $a$ die Steigung und $b$ den Ordinatenabschnitt der Ausgleichsgeradedarstellen.  Die Messwerte
+und der Graph der Ausgleichsfunktion sind in Abbildung \ref{fig:rydberg} dargestellt.
 
 \begin{figure}
   \centering
@@ -578,16 +578,19 @@ findet sich in Abbildung \ref{fig:gold}.
 Dabei lassen sich Maxima bei Winkeln von $\theta_{\symup{I,II}}=12{,}9°$ und
 $\theta_{\symup{III}}=15{,}1°$ erkennen. Laut Versuchsanleitung \cite{Versuchsanleitung}
 sind die $L_{\symup{I}}$- und $L_{\symup{II}}$-Linie im Experiment nicht auflösbar.
-Daher wird im Folgenden für die Theoriewerte mit dem gemäß Gleichung \eqref{eqn:mean}
-gebildeten Mittelwert aus den Werten für die beiden Kanten gerechnet. Auf eine
-Fehlerfortpflanzung wird dabei verzichtet, da der Fehler aus zwei Elementen nicht
-repräsentativ ist. Die Energien lassen sich mithilfe von Gleichung \eqref{eqn:winkel}
+Daher wird nur eine Kante unter dem Winkel $\theta_{\symup{I,II}}$ gemessen, die
+beide enthält. Die Energien lassen sich mithilfe von Gleichung \eqref{eqn:winkel}
 zu
 \begin{align*}
   E_{\symup{I,II}}=13{,}80\,\symup{keV} \, \\
   E_{\symup{III}}=11{,}83\,\symup{keV}
 \end{align*}
 bestimmen.
+Zur Bestimmung der Abweichung der Messwerte von den Theoriewerten wird für den
+Theoriewert für die $L_{\symup{I}}$- und $L_{\symup{II}}$-Kante mit
+dem gemäß Gleichung \eqref{eqn:mean} gebildeten Mittelwert aus den Werten für
+die beiden Kanten gerechnet. Auf eine Fehlerrechnung wird dabei verzichtet, da
+der Fehler aus zwei Elementen nicht repräsentativ ist.
 Die Abweichungen zu den in Tabelle \ref{tab:gold} dargestellten Theoriewerten
 betragen dann $-1{,}78\%$ für $E_{\symup{I,II}}$ und $-0{,}84\%$ für $E_{\symup{III}}$.
 Die Abschirmkonstante $\sigma_{\symup{L}}$ ergibt sich gemäß Gleichung
