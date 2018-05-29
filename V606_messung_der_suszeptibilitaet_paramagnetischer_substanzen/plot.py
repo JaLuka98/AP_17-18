@@ -76,23 +76,24 @@ R_m=np.array([R_m1, R_m2, R_m3])
 deltaU=U_m-U_o
 deltaR=R_o-R_m
 
-#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
-U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+#U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
 deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
 #R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
 
-X_U=4*F*U_mmittel/(Q1*U_sp)*1e-2  #GAINS!!!
+X_U=4*F*deltaUmittel/(Q1*U_sp)*1e-2  #GAINS!!!
 X_R=2*deltaRmittel/R3*F/Q1 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
 print('Die Suszeptibilität aus der Spannung beträgt:', X_U)
 print('Die Suszeptibilität aus dem Widerstand beträgt:', X_R)
 
-hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
-m = np.zeros((3, 5))
+hr = ['$U_o/$mV','$U_m/$mV','$\Delta U/$mV', '$R_o/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 6))
 m[:,0] = U_o*1e3
 m[:,1] = U_m*1e3
-m[:,2] = R_o
-m[:,3] = R_m
-m[:,4] = deltaR
+m[:,2] = deltaU*1e3
+m[:,3] = R_o
+m[:,4] = R_m
+m[:,5] = deltaR
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
@@ -140,17 +141,18 @@ R_m=np.array([R_m1, R_m2, R_m3])
 deltaU=U_m-U_o
 deltaR=R_o-R_m
 
-#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
-U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+#U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
 deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
 #R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
-hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
-m = np.zeros((3, 5))
+hr = ['$U_o/$mV','$U_m/$mV','$\Delta U/$mV', '$R_o/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 6))
 m[:,0] = U_o*1e3
 m[:,1] = U_m*1e3
-m[:,2] = R_o
-m[:,3] = R_m
-m[:,4] = deltaR
+m[:,2] = deltaU*1e3
+m[:,3] = R_o
+m[:,4] = R_m
+m[:,5] = deltaR
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
@@ -198,23 +200,24 @@ R_m=np.array([R_m1, R_m2, R_m3])
 deltaU=U_m-U_o
 deltaR=R_o-R_m
 
-#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
-U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+#U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
 deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
 #R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
 
-X_U=4*F*U_mmittel/(Q3*U_sp)*1e-2  #GAINS!!!
+X_U=4*F*deltaUmittel/(Q3*U_sp)*1e-2  #GAINS!!!
 X_R=2*deltaRmittel/R3*F/Q3 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
 print('Die Suszeptibilität aus der Spannung beträgt:', X_U)
 print('Die Suszeptibilität aus dem Widerstand beträgt:', X_R)
 
-hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
-m = np.zeros((3, 5))
+hr = ['$U_o/$mV','$U_m/$mV','$\Delta U/$mV', '$R_o/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 6))
 m[:,0] = U_o*1e3
 m[:,1] = U_m*1e3
-m[:,2] = R_o
-m[:,3] = R_m
-m[:,4] = deltaR
+m[:,2] = deltaU*1e3
+m[:,3] = R_o
+m[:,4] = R_m
+m[:,5] = deltaR
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
@@ -262,23 +265,24 @@ R_m=np.array([R_m1, R_m2, R_m3])
 deltaU=U_m-U_o
 deltaR=R_o-R_m
 
-#deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
-U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
+deltaUmittel = ufloat(np.mean(deltaU), np.std(deltaU))
+#U_mmittel=ufloat(np.mean(U_m), np.std(U_m))
 deltaRmittel = ufloat(np.mean(deltaR), np.std(deltaR))
 #R_mmittel = ufloat(np.mean(R_m), np.std(R_m))
 
-X_U=4*F*U_mmittel/(Q4*U_sp)*1e-2  #GAINS!!!
+X_U=4*F*deltaUmittel/(Q4*U_sp)*1e-2  #GAINS!!!
 X_R=2*deltaRmittel/R3*F/Q4 #Hier wusste ich nicht genau was hier was sein soll, aber Lucas meinte das muss so
 print('Die Suszeptibilität aus der Spannung beträgt:', X_U)
 print('Die Suszeptibilität aus dem Widerstand beträgt:', X_R)
 
-hr = ['$U_o/$mV','$U_m/$mV','$R_o4/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
-m = np.zeros((3, 5))
+hr = ['$U_o/$mV','$U_m/$mV','$\Delta U/$mV', '$R_o/\Omega$','$R_m/\Omega$', '$\Delta R/\Omega$']
+m = np.zeros((3, 6))
 m[:,0] = U_o*1e3
 m[:,1] = U_m*1e3
-m[:,2] = R_o
-m[:,3] = R_m
-m[:,4] = deltaR
+m[:,2] = deltaU*1e3
+m[:,3] = R_o
+m[:,4] = R_m
+m[:,5] = deltaR
 t = matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
