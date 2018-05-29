@@ -16,18 +16,18 @@ magnetischen Dipolmomente im Material und hängt durch
   \symbf{M} = \mu_0 \chi \symbf{H}
   \label{eqn:mchih}
 \end{equation}
-von dem externen Magnetfeld $\symbf{H}$ ab. Dabei ist die Proportionalitätskonstante
+von $\symbf{H}$ ab. Dabei ist die Proportionalitätskonstante
 $\chi$ die magnetische Suszeptibilität. Im einfachsten Fall ist sie eine materialabhängige
 Konstante, kann aber im allgemeinen Fall vom externen Magnetfeld und der Temperatur $T$
 des Materials abhängen.
 In diesem Versuch wird die Suszeptibilität paramagnetischer Substanzen untersucht.
 Nur Atome, Moleküle oder Ionen mit nicht verschwindendem Drehimpuls weisen
 Paramagnetismus auf. Dieser beruht darauf, dass sich magnetische Momente parallel zu
-einem äußeren Magnetfeld ausrichten. Da thermische Bewegungen dies stören, ist der Effekt
+einem äußeren Magnetfeld ausrichten. Aufgrund der Störung durch thermische Bewegungen ist der Effekt
 temperaturabhängig. Da der atomare Drehimpuls mit dem magnetischen Moment gekoppelt ist,
 soll dieser Zusammenhang erläutert werden. \\
 Der Gesamtdrehimpuls $\symbf{J}$ eines Atoms setzt sich aus dem Bahndrehimpuls
-$\symbf{L}$ der Elektronenhülle, dem Eigendrehimpuls, dem sogenannten Spin, $\symbf{S}$
+$\symbf{L}$ der Elektronenhülle, dem Eigendrehimpuls, dem sogenannten Spin, $\symbf{S}$,
 und dem Kernspin, der für paramagnetische Effekte vernachlässigt werden kann, zusammen.
 Unter die Voraussetzung eines nicht zu starken Magnetfeldes addieren sich beide
 Drehimpulse zu einem Gesamtdrehimpuls $\symbf{J}$ durch
@@ -104,11 +104,11 @@ von bis zu einem Tesla für die Magnetisierung und die paramagnetische Suszeptib
   \label{eqn:theoriewert}
 \end{align}
 Dabei bezeichnet $k_\text{B}$ die Boltzmann-Konstante, $T$ ist die Temperatur.
-Es ist ersichtlich, dass die Suszeptibilität invers in Hochtemperaturnäherung
+Es ist ersichtlich, dass die Suszeptibilität in Hochtemperaturnäherung proportional
 zum Inversen der Temperatur ist. Dies ist auch als Curiesches Gesetz des Paramagnetismus bekannt.
 
-\subsection{Berechnung der quantenmechanischen Größen für Verbindungen von Metallen der seltenen Erden}
-\label{subsec:berechnungquantenzahlenundlande}
+\subsection{Die Hundschen Regeln}
+\label{subsec:hundscheregeln}
 Ionische Verbindungen der Metalle seltener Erden zeigen starken Paramagnetismus.
 Um diesen zu untersuchen, ist es zuvor nötig, die Quantenzahlen $S$, $L$ und $J$ sowie
 den Landé-Faktor der Verbindung zu berechnen. Die Hundschen Regeln treffen Aussagen
@@ -129,29 +129,6 @@ $\symbf{J} = \symbf{L} + \symbf{S}$.
 Es sei angemerkt, dass für genau halb volle Schalen beide Formeln in Regel 3 das gleiche
 Ergebnis liefern, sodass auch dieser Fall durch Anwendung einer der beiden Formeln
 gedeckt ist.
-In diesem Versuch werden die Verbindungen $\ce{Dy2O3}$, $\ce{C6O12Pr2}$, $\ce{Gd2O3}$ und $\ce{Nd2O3}$ verwendet, sodass die dreifach positiv geladenen
-Ionen $\ce{Dy^{3+}}$, $\ce{Pr^{3+}}$, $\ce{Gd^{3+}}$, $\ce{Nd^{3+}}$ betrachtet werden.
-Die sich ergebenden Quantenzahlen und Landé-Faktoren sind in Tabelle \ref{tab:lsjg}
-dargestellt. Die Größen ergeben sich durch konsistente Anwendung der Hundschen Regeln
-auf die angegebene Elektronenkonfiguration, wobei beachtet wird, dass volle Schalen nicht beitragen.
-Der Landé-Faktor wird mit Gleichung \eqref{eqn:lande} berechnet.
-
-\begin{table}[H]
-\begin{center}
-\caption{Gemäß den Hundschen Regeln bestimmte Werte für die relevanten Quantenzahlen und den Landé-Faktor der Ionen.}
-\label{tab:lsjg}
-\begin{tabular}{cccccc}
-\toprule
-Ion & Elektronenkonfiguration & $L$ & $S$ & $J$ & $g_{\text{J}}$\\
-\midrule
-$\ce{Dy^{3+}}$ & $[\text{Xe}] \, 4f^9$ & $5$ & $5/2$ & $15/2$ & $4/3$  \\
-$\ce{Pr^{3+}}$ & $[\text{Xe}] \, 4f^2$ & $5$ & $1$   & $4$    & $4/5$  \\
-$\ce{Gd^{3+}}$ & $[\text{Xe}] \, 4f^7$ & $0$ & $7/2$ & $7/2$  & $2$    \\
-$\ce{Nd^{3+}}$ & $[\text{Xe}] \, 4f^3$ & $6$ & $3/2$ & $9/2$  & $8/11$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
 
 \subsection{Apparatur zur Messung der Suszeptibilität}
 \label{subsec:apparatur}
@@ -164,7 +141,7 @@ Induktivität verwendet. Diese werden zu einer Brückenschaltung verbunden, die 
 \begin{figure}
   \centering
   \includegraphics[width=180pt]{data/bruecke.png}
-  \caption{Brückenschaltung zur Bestimmung der Suszeptibilität einer Probe\cite{Versuchsanleitung}.}
+  \caption{Brückenschaltung zur Bestimmung der Suszeptibilität einer Probe,\cite{Versuchsanleitung}.}
   \label{fig:brueckenschaltung}
 \end{figure}
 
