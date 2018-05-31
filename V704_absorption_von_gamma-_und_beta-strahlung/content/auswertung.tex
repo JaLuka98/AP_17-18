@@ -1,9 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Untersuchung der Absorption von Gammastrahlung}
+\label{subsec:absorption}
+
 Die Messreihe der gemessenen Ereignisse $N_\text{z}$ in der Zeit $t$ in Abhängigkeit der
 Dicke $d$ der absorbierenden Zinkplattenschicht ist in \ref{tab:zink} zu sehen.
-Den $N_\text{z}$ wurde direkt ihre Unsicherheit $\sigma N_\mathrm{z} = \sqrt{N_\mathrm{z}}$
+Den $N_\text{z}$ wurde direkt ihre Unsicherheit $\sigma_{N_\mathrm{z}} = \sqrt{N_\mathrm{z}}$
 zugeordnet, die sich aus der Eigenschaft ergibt, dass der Prozess des radioaktiven Zerfalls
 einer Poisson-Verteilung folgt. Dabei wird der Fehler auf zwei signifikante Stellen
 gerundet, falls die erste signifikante Stellung eine eins oder zwei ist, anderfalls auf eine.
@@ -19,7 +22,7 @@ Letztere beträgt $\SI{1.028}{\per\second}$, da bei einer Nullmessung ohne Strah
           \label{tab:zink}
                 \begin{tabular}{S[table-format=2.0] S[table-format=3.0] S[table-format=4.0,table-figures-uncertainty=3] S[table-format=3.1, table-figures-uncertainty=2]}
                 \toprule
-                        {$d/$mm} & {$t/$s} & {$N_\mathrm{z} \pm \sigma N_\mathrm{z}$} & {$(A_\mathrm{z}) \pm \sigma N_\mathrm{z})\cdot $s}\\
+                        {$d/$mm} & {$t/$s} & {$N_\mathrm{Zn} \pm \sigma_{N_\mathrm{Zn}}$} & {$(A_\mathrm{z}) \pm \sigma_{N_\mathrm{Zn}})\,\cdot\, $s}\\
                         \midrule
                          2 &  40 &  5050 \pm  80 & 125.2 \pm 1.8 \\
                          4 &  60 &  7230 \pm  90 & 119.4 \pm 1.4 \\
@@ -35,3 +38,89 @@ Letztere beträgt $\SI{1.028}{\per\second}$, da bei einer Nullmessung ohne Strah
                 \end{tabular}
         \end{center}
 \end{table}
+
+Da das Absorptionsgesetz nach Gleichung \eqref{eqn:absorptionsgesetz} einen exponentiellen Zusammenhang darstellt,
+wird für die Ausgleichsfunktion der Ansatz
+\begin{equation*}
+  A_\mathrm{Fe} = A_{0,\,\text{Fe}} \cdot \exp(-\mu_{\text{exp},\,\text{Fe}}\cdot d)
+\end{equation*}
+gewählt, wobei die Parameter die Aktivität ohne Absorption $A_{0,\,\text{Fe}}$ und der experimentell bestimmte Wert für den
+Absorptionskoeffizient $\mu_{\text{exp},\,\text{Fe}}$ sind.
+Für die konkreten Messwerte ergeben sich die Parameter zu
+\begin{align*}
+  A_{0,\,\text{Fe}} &= \SI{140(21)}{\per\second}\,,\\
+  \mu_{\text{exp},\,\text{Fe}} &=  \SI{43.4(15)}{\per\meter}\,.
+\end{align*}
+\\
+Die Messwerte und der Graph der Ausgleichsfunktion sind in \ref{fig:eisen}
+dargestellt. Dabei ist die $y$-Achse logarithmiert.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/zink.pdf}
+  \caption{Auftragung der gemessenen Aktivität in Abhängigkeit der Dicke des absorbierenden Zinks und Graph der Ausgleichsfunktion.}
+  \label{fig:zink}
+\end{figure}
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Messwerte zur Absorption von Gammastrahlung durch Eisen.}
+          \label{tab:eisen}
+                \begin{tabular}{S[table-format=2.0] S[table-format=3.0] S[table-format=4.0,table-figures-uncertainty=3] S[table-format=3.1, table-figures-uncertainty=2]}
+                \toprule
+                        {$d/$mm} & {$t/$s} & {$N_\mathrm{Fe} \pm \sigma_{N_\mathrm{Fe}}$} & {$(A_\mathrm{Fe} \pm \sigma_{N_\mathrm{Fe}})\,\cdot\, $s}\\
+                        \midrule
+                         5 &  50 & 6040 \pm 80 & 119.7 \pm 1.6 \\
+                        10 &  70 & 6540 \pm 90 &  92.4 \pm 1.2 \\
+                        15 &  90 & 6395 \pm 80 &  70.0 \pm 0.9 \\
+                        25 & 100 & 5786 \pm 80 &  56.8 \pm 0.8 \\
+                        30 & 110 & 4971 \pm 80 &  44.2 \pm 0.7 \\
+                        35 & 110 & 3785 \pm 70 &  33.4 \pm 0.6 \\
+                        40 & 110 & 3099 \pm 60 &  27.1 \pm 0.5 \\
+                        45 & 110 & 2568 \pm 60 &  22.3 \pm 0.5 \\
+                        50 & 110 & 1874 \pm 50 &  16.0 \pm 0.4 \\
+                        55 & 110 & 1354 \pm 40 &  11.3 \pm 0.4 \\
+                        60 & 110 & 1004 \pm 40 &   8.1 \pm 0.3 \\
+                        65 & 130 &  945 \pm 40 &   6.2 \pm 0.3 \\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Für Eisen wird für die Ausgleichsfunktion
+\begin{equation*}
+  A_\mathrm{Fe} = A_{0,\,\text{Fe}} \cdot \exp(-\mu_{\text{exp},\,\text{Fe}} \cdot d)
+\end{equation*}
+angesetzt, wobei die Parameter die entsprechende Bedeutung haben.
+Für sie folgt nach Ausgleichsrechnung
+\begin{align*}
+  A_{0,\,\text{Fe}} &= \SI{145(5)}{\per\second}\,,\\
+  \mu_{\text{exp},\,\text{Fe}} &=  \SI{42.5(18)}{\per\meter}\,.
+\end{align*}
+\\
+Die Messwerte und der Graph der Ausgleichsfunktion sind in \ref{fig:eisen}
+zu sehen. Dabei wird die $y$-Achse erneut logarithmiert.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/eisen.pdf}
+  \caption{Auftragung der gemessenen Aktivität in Abhängigkeit der Dicke des absorbierenden Eisens und Graph der Ausgleichsfunktion.}
+  \label{fig:eisen}
+\end{figure}
+
+Es ist möglich, die experimentell bestimmten Werte für die Absorptionskoeffizienten mit
+Theoriewerten zu vergleichen. Wird angenommen, dass die Absorption ausschließlich durch
+Comptonstreuung geschieht, so lässt sich der Absorptionskoeffizient für diese Annahme
+mit den Gleichungen \eqref{eqn:sigma_compton} und \eqref{eqn:mucompton} berechnen.
+Für den verwendeten Strahler gilt $\epsilon = 1{,}295$. Außerdem wird für das molare Volumen
+von Zink $\SI{9.157e-6}{\cubic\meter\per\mole}$ und für Eisen $\SI{7.0923e-6}{\cubic\meter\per\mole}$
+verwendet. Diese Werte sind \cite{molarvolume} zu entnehmen. Es ergeben sich die folgenden Theoriewerte:
+\begin{align*}
+  \mu_{\text{com},\,\text{Zn}} &=  \SI{50.544}{\per\meter}\,,\\
+  \mu_{\text{com},\,\text{Fe}} &=  \SI{56.557}{\per\meter}\,.
+\end{align*}
+Die relativen Fehler ergeben sich dann zu
+\begin{align*}
+  \frac{\mu_{\text{exp},\,\text{Zn}} - \mu_{\text{com},\,\text{Zn}}}{\mu_{\text{com},\,\text{Zn}}} &= -14{,}13 \% \,,\\
+  \frac{\mu_{\text{exp},\,\text{Fe}} - \mu_{\text{com},\,\text{Fe}}}{\mu_{\text{com},\,\text{Fe}}} &= -24{,}85 \% \,.
+\end{align*}

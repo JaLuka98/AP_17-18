@@ -25,21 +25,19 @@ Nnm=8808
 
 # Zink
 
-# theoretische Berechnung
-
-epsilon = 1.295
-
-sigmacompton = 2*np.pi*(2.81794032*1e-15)*2 * ((1+epsilon)/epsilon**2 *
-               ((2*(1+epsilon))/(1+2*epsilon) - np.log(2+2*epsilon)/epsilon) +
-               np.log(1+2*epsilon)/(2*epsilon)-(1+3*epsilon)/(1+2*epsilon)**2)
-print(sigmacompton)
-print(30*6.022140857*1e23*sigmacompton/(9.16*1e-6))
+e = 1.295
+eins = (1+e)/e**2
+zwei = eins*(2*(1+e)/(1+2*e)-np.log(1+2*e)/e)
+drei = np.log(1+2*e)/(2*e)
+vier = -(1+3*e)/(1+2*e)**2
+sigmacompton = 2*np.pi*(2.81794032*1e-15)**2 * (zwei+drei+vier)
+print(30*6.022140857*1e23*sigmacompton/(9.157*1e-6))
 
 d, t, N = np.genfromtxt('data\zink.txt', unpack=True)  # d in mm, t in s
 Azink = N/t - Ano
 
 # Az = N/t - An0
-hr = ['$d/$mm', '$t/$s', '$N_\mathrm{z} \pm \sigma N_\mathrm{z}$', '$(A_\mathrm{z} \pm \sigma N_\mathrm{z})\cdot $s']
+hr = ['$d/$mm', '$t/$s', '$N_\mathrm{Zn} \pm \sigma N_\mathrm{Zn}$', '$(A_\mathrm{Zn} \pm \sigma N_\mathrm{Zn})\cdot $s']
 m = np.zeros((np.size(d), 4))
 m[:, 0] = d
 m[:, 1] = t
@@ -57,13 +55,57 @@ params, covariance_matrix = optimize.curve_fit(expfit, d, Azink)
 N0, mu = correlated_values(params, covariance_matrix)
 
 print('N0 =', N0)
-print('mu=', mu)
+print('mu in 1/mm =', mu*1e3)
 
-plt.semilogy(d, Azink, 'rx', mew=0.5)
+dlin = np.linspace(0, 22)
+plt.errorbar(d, Azink, yerr=sigmaA-sigmaAno, fmt = 'rx', mew = 0.5, ecolor='blue', label='Messwerte')
+plt.plot(dlin, expfit(dlin, *params), 'r-', label='Ausgleichsrechnung')
+plt.yscale('log', nonposy='clip')
 plt.xlabel(r'$d/$mm')
-plt.ylabel(r'$A_\mathrm{z} \,\cdot\, $s')
+plt.ylabel(r'$A_\mathrm{zn} \,\cdot\, $s')
 plt.tight_layout()
+plt.axis((0,22,50,145))
 plt.legend()
 plt.grid()
 plt.savefig('build/zink.pdf')
+plt.clf()
+
+# Eisen
+
+print(26*6.022140857*1e23*sigmacompton/(7.0923*1e-6))
+d, t, N = np.genfromtxt('data\eisen.txt', unpack=True)  # d in mm, t in s
+Aeisen = N/t - Ano
+
+# Az = N/t - An0
+hr = ['$d/$mm', '$t/$s', '$N_\mathrm{Fe} \pm \sigma N_\mathrm{Fe}$', '$(A_\mathrm{Fe} \pm \sigma N_\mathrm{Fe})\cdot $s']
+m = np.zeros((np.size(d), 4))
+m[:, 0] = d
+m[:, 1] = t
+m[:, 2] = N
+m[:, 3] = Aeisen
+table = matrix2latex(m, headerRow=hr, format='%.2f')
+print(table)
+
+sigmaAno = np.sqrt(Nno)/tno
+sigmaA = np.sqrt(N)/t
+print(sigmaA-sigmaAno)
+
+params, covariance_matrix = optimize.curve_fit(expfit, d, Aeisen)
+
+N0, mu = correlated_values(params, covariance_matrix)
+
+print('N0 =', N0)
+print('mu in 1/mm =', mu*1e3)
+
+dlin = np.linspace(0, 70)
+plt.errorbar(d, Aeisen, yerr=sigmaA-sigmaAno, fmt = 'rx', mew = 0.5, ecolor='blue', label='Messwerte')
+plt.plot(dlin, expfit(dlin, *params), 'r-', label='Ausgleichsrechnung')
+plt.yscale('log', nonposy='clip')
+plt.xlabel(r'$d/$mm')
+plt.ylabel(r'$A_\mathrm{Fe} \,\cdot\, $s')
+plt.tight_layout()
+plt.axis((0,70,0,200))
+plt.legend()
+plt.grid()
+plt.savefig('build/eisen.pdf')
 plt.clf()
