@@ -109,3 +109,44 @@ plt.legend()
 plt.grid()
 plt.savefig('build/eisen.pdf')
 plt.clf()
+
+#Betastrahlung
+
+d, derror, t, N, A, sigmaA = np.genfromtxt('data/beta.txt', unpack=True)
+sigmaA = np.sqrt(N)/t
+print(sigmaA)
+
+hr = ['$d/$mm', '$t/$s', '$N_\beta \pm \sigma N_beta$', '$(A_\beta \pm \sigma N_\beta)\,\cdot\, $s']
+m = np.zeros((np.size(d), 4))
+m[:, 0] = d
+m[:, 1] = t
+m[:, 2] = N
+m[:, 3] = A
+table = matrix2latex(m, headerRow=hr, format='%.2f')
+print(table)
+
+params1, covariance_matrix1 = optimize.curve_fit(linfit, d[0:3], A[0:3])
+a1, b1 = correlated_values(params1, covariance_matrix1)
+print('a1 =', a1)
+print('b1 =', b1)
+
+params2, covariance_matrix2 = optimize.curve_fit(linfit, d[4:], A[4:])
+a2, b2 = correlated_values(params2, covariance_matrix2)
+print('a2 =', a2)
+print('b2 =', b2)
+
+d1lin = np.linspace(75, 200, 1000)
+d2lin = np.linspace(75, 475, 1000)
+plt.errorbar(d[0:3], A[0:3], xerr=derror[0:3], yerr=sigmaA[0:3], fmt = 'rx', mew = 0.5, ecolor='blue', label='Messwerte 1')
+plt.errorbar(d[4:], A[4:], xerr=derror[4:], yerr=sigmaA[4:], fmt = 'x', color = 'orchid', mew = 0.5, ecolor='indigo', label='Messwerte 2')
+plt.plot(d1lin, linfit(d1lin, *params1), 'r-', label='Ausgleichsrechnung 1')
+plt.plot(d2lin, linfit(d2lin, *params2), '-', color = 'orchid', label='Ausgleichsrechnung 2')
+#plt.yscale('log', nonposy='clip')
+plt.xlabel(r'$d/$mm')
+plt.ylabel(r'$A_\beta \,\cdot\, $s')
+plt.tight_layout()
+plt.axis((75,475,0,50))
+plt.legend()
+plt.grid()
+plt.savefig('build/beta.pdf')
+plt.clf()
