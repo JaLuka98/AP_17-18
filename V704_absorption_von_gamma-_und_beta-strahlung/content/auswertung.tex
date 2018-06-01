@@ -42,17 +42,17 @@ Letztere beträgt $\SI{1.028}{\per\second}$, da bei einer Nullmessung ohne Strah
 Da das Absorptionsgesetz nach Gleichung \eqref{eqn:absorptionsgesetz} einen exponentiellen Zusammenhang darstellt,
 wird für die Ausgleichsfunktion der Ansatz
 \begin{equation*}
-  A_\mathrm{Fe} = A_{0,\,\text{Fe}} \cdot \exp(-\mu_{\text{exp},\,\text{Fe}}\cdot d)
+  A_\mathrm{Zn} = A_{0,\,\text{Zn}} \cdot \exp(-\mu_{\text{exp},\,\text{Zn}}\cdot d)
 \end{equation*}
-gewählt, wobei die Parameter die Aktivität ohne Absorption $A_{0,\,\text{Fe}}$ und der experimentell bestimmte Wert für den
+gewählt, wobei die Parameter die Aktivität ohne Absorption $A_{0,\,\text{Zn}}$ und der experimentell bestimmte Wert für den
 Absorptionskoeffizient $\mu_{\text{exp},\,\text{Fe}}$ sind.
 Für die konkreten Messwerte ergeben sich die Parameter zu
 \begin{align*}
-  A_{0,\,\text{Fe}} &= \SI{140(21)}{\per\second}\,,\\
-  \mu_{\text{exp},\,\text{Fe}} &=  \SI{43.4(15)}{\per\meter}\,.
+  A_{0,\,\text{Zn}} &= \SI{140(21)}{\per\second}\,,\\
+  \mu_{\text{exp},\,\text{Zn}} &=  \SI{43.4(15)}{\per\meter}\,.
 \end{align*}
 \\
-Die Messwerte und der Graph der Ausgleichsfunktion sind in \ref{fig:eisen}
+Die Messwerte und der Graph der Ausgleichsfunktion sind in \ref{fig:zink}
 dargestellt. Dabei ist die $y$-Achse logarithmiert.
 
 \begin{figure}
@@ -131,7 +131,9 @@ Die relativen Fehler ergeben sich dann zu
 \subsection{Untersuchung der Absorption von Betastrahlung}
 \label{subsec:auswertungbeta}
 
-Die
+Die Messreihe der Ereignisse in Abhängigkeit der Dicke der absorbierenden Aluminiumplattenschicht
+ist in \ref{tab:aluminium} eingetragen. Auch sind die Unsicherheiten der Dicke, der Ereignisse und
+die Aktivität mit Unsicherheit zu sehen. In diesem Versuchsteil wird ein Nulleffekt nicht berücksichtigt.
 
 \begin{table}[htp]
         \begin{center}
@@ -155,3 +157,55 @@ Die
                 \end{tabular}
         \end{center}
 \end{table}
+
+Im Folgenden wird die Aktivität $A_\beta$ in Abhängigkeit der Massenbelegung $R = \rho d$
+untersucht, wobei $\rho = \SI{2700}{\kilo\gram\per\meter\cubed}$ die Dichte von Aluminium ist.
+Analog dem theoretisch zu erwartenden Verlauf der Absorptionskurve, zu sehen in \ref{fig:absorptionskurve},
+werden zwei getrennte lineare Ausgleichsrechnungen durchgeführt. Es ist darauf zu achten, die Aktivitäten
+einheitenlos machen, was durch Multiplikation mit einer Sekunde geschieht, und zu logarithmieren. Die Fehler werden entsprechend behandelt. Der vierte und der fünfte Messwert
+werden für die Ausgleichsrechnungen nicht berücksichtigt, da sich diese näherungsweise im gekrümmten Bereich
+der Kurve befinden. Auf das Ausnehmen von Punkten und den Folgen daraus wird genauer in der Diskussion eingegangen.
+Der Ansatz für die beiden Ausgleichsfunktionen ist
+\begin{equation*}
+  A_i(R) = a_i R + b_i
+\end{equation*}
+mit $i=1{,}2$, wobei $i=1$ die erste Gerade mit negativer Steigung bezeichnet. Der Untergrund
+wird durch die Gerade mit $i=2$ beschrieben.
+Die Ausgleichsrechnung ergibt konkret die Parameter
+\begin{align*}
+  a_1 &= \SI{-9(6)}{\meter\squared\per\kilo\gram}\,,\\
+  b_1 &= \SI{5.9(22)}{}\,,\\
+  a_2 &= \SI{0.0(28)}{\meter\squared\per\kilo\gram}\,,\\
+  b_2 &= \SI{-0.40(28)}\,.
+\end{align*}
+Die Auftragung der Messwerte und die Graphen der Ausgleichsfunktionen sind in \ref{fig:beta} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics{build/beta.pdf}
+  \caption{Auftragung der logarithmierten einheitenlosen Aktivität in Abhängigkeit der Massenbelegung des absorbierenden Aluminiums und Graph der Ausgleichsfunktionen.}
+  \label{fig:beta}
+\end{figure}
+Der Schnittpunkt beider Ausgleichsfunktionen wird $R_\text{max}$ genannt und ergibt sich zu
+\begin{equation*}
+  R_\text{max} = \frac{b_2-b_1}{a_2-a_1} = \SI{0.68(25)}{\kilo\gram\per\meter\squared}\,.
+\end{equation*}
+Der Fehler dieser Größe wird durch Anwendung von Gleichung \eqref{eqn:gaussfehler}
+zu
+\begin{equation*}
+  \sigma_{R_\text{max}} =
+  \sqrt{\frac{\sigma_{a_{1}}^{2} \left(- b_{1} + b_{2}\right)^{2}}{\left(a_{1} - a_{2}\right)^{4}}
+  + \frac{\sigma_{a_{2}}^{2} \left(- b_{1} + b_{2}\right)^{2}}{\left(a_{1} - a_{2}\right)^{4}}
+  + \frac{\sigma_{b_{1}}^{2}}{\left(a_{1} - a_{2}\right)^{2}} + \frac{\sigma_{b_{2}}^{2}}{\left(a_{1} - a_{2}\right)^{2}}}
+\end{equation*}
+berechnet.
+
+Mit Gleichung \eqref{eqn:emax} folgt für die maximale Energie des Strahlers
+\begin{equation*}
+  E_\text{max} = \SI{0.27(6)}{\mega\electronvolt}\,.
+\end{equation*}
+Erneut wird der Fehler mithilfe von Gleichung \eqref{eqn:gaussfehler} berechnet und beträgt
+\begin{equation*}
+  \sigma_{E_\text{max}} = 1.92 \sqrt{\frac{\sigma_{R}^{2} \left(R + 0.11\right)^{2}}{R^{2} + 0.22 R}} \,.
+\end{equation*}
+Der Theoriewert beträgt $\SI{0.294}{\mega\electronvolt}$ \cite{energy}, sodass sich der relative
+Fehler des experimentell bestimmten Wertes zu $-8{,}16\%$ ergibt.

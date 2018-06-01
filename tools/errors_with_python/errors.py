@@ -17,8 +17,10 @@ def error(f, err_vars=None):
     return latex(sqrt(s), symbol_names=latex_names)
 
 
-R = var('R')
+Rmax = var('a1, b1, a2, b2')
 
-f = 1.92* sqrt(R**2+0.22*R)
+f = (b2-b1)/(a1-a2)
 
 print(error(f))
+
+#(b2-b1)/(a1-a2)
