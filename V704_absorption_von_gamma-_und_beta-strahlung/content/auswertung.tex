@@ -5,13 +5,13 @@
 \label{subsec:auswertunggamma}
 
 Die Messreihe der gemessenen Ereignisse $N_\text{z}$ in der Zeit $t$ in Abhängigkeit der
-Dicke $d$ der absorbierenden Zinkplattenschicht ist in \ref{tab:zink} zu sehen.
+Dicke $d$ der absorbierenden Zinkplattenschicht ist in Tabelle \ref{tab:zink} zu sehen.
 Den $N_\text{z}$ wurde direkt ihre Unsicherheit $\sigma_{N_\mathrm{z}} = \sqrt{N_\mathrm{z}}$
 zugeordnet, die sich aus der Eigenschaft ergibt, dass der Prozess des radioaktiven Zerfalls
 einer Poisson-Verteilung folgt. Dabei wird der Fehler auf zwei signifikante Stellen
 gerundet, falls die erste signifikante Stellung eine eins oder zwei ist, anderfalls auf eine.
 Stets wird er aufgerundet. Die Messergebnisse werden entsprechend gemäß des kaufmännischen
-Rundens gerundet. Die Rohdaten sind REFERENZ????????????????????????? zu entnehmen.
+Rundens gerundet. Die Rohdaten sind angehängt.
 Außerdem ist bereits die Aktivität abzüglich der Nullaktivität eingetragen.
 Letztere beträgt $\SI{1.028}{\per\second}$, da bei einer Nullmessung ohne Strahler
 1028 Ereignisse in $\SI{1000}{\second}$ auftraten.
@@ -45,14 +45,14 @@ wird für die Ausgleichsfunktion der Ansatz
   A_\mathrm{Zn} = A_{0,\,\text{Zn}} \cdot \exp(-\mu_{\text{exp},\,\text{Zn}}\cdot d)
 \end{equation*}
 gewählt, wobei die Parameter die Aktivität ohne Absorption $A_{0,\,\text{Zn}}$ und der experimentell bestimmte Wert für den
-Absorptionskoeffizient $\mu_{\text{exp},\,\text{Fe}}$ sind.
+Absorptionskoeffizient $\mu_{\text{exp},\,\text{Zn}}$ sind.
 Für die konkreten Messwerte ergeben sich die Parameter zu
 \begin{align*}
   A_{0,\,\text{Zn}} &= \SI{140(21)}{\per\second}\,,\\
   \mu_{\text{exp},\,\text{Zn}} &=  \SI{43.4(15)}{\per\meter}\,.
 \end{align*}
 \\
-Die Messwerte und der Graph der Ausgleichsfunktion sind in \ref{fig:zink}
+Die Messwerte und der Graph der Ausgleichsfunktion sind in Abbildung \ref{fig:zink}
 dargestellt. Dabei ist die $y$-Achse logarithmiert.
 
 \begin{figure}
@@ -62,14 +62,14 @@ dargestellt. Dabei ist die $y$-Achse logarithmiert.
   \label{fig:zink}
 \end{figure}
 
-Die Werte für die Messung für Eisen als Absorbermaterial sind in \ref{tab:eisen}
+Die Werte für die Messung für Eisen als Absorbermaterial sind in Tabelle \ref{tab:eisen}
 zu sehen.
 
 \begin{table}[htp]
         \begin{center}
           \caption{Messwerte zur Absorption von Gammastrahlung durch Eisen.}
           \label{tab:eisen}
-                \begin{tabular}{S[table-format=2.0] S[table-format=3.0] S[table-format=4.0,table-figures-uncertainty=3] S[table-format=3.1, table-figures-uncertainty=2]}
+                \begin{tabular}{cccc}
                 \toprule
                         {$d/$mm} & {$t/$s} & {$N_\mathrm{Fe} \pm \sigma_{N_\mathrm{Fe}}$} & {$(A_\mathrm{Fe} \pm \sigma_{N_\mathrm{Fe}})\,\cdot\, $s}\\
                         \midrule
@@ -101,7 +101,7 @@ Für sie folgt nach Ausgleichsrechnung
   \mu_{\text{exp},\,\text{Fe}} &=  \SI{42.5(18)}{\per\meter}\,.
 \end{align*}
 \\
-Die Messwerte und der Graph der Ausgleichsfunktion sind in \ref{fig:eisen}
+Die Messwerte und der Graph der Ausgleichsfunktion sind in Abbildung \ref{fig:eisen}
 zu sehen. Dabei wird die $y$-Achse erneut logarithmiert.
 
 \begin{figure}
@@ -132,7 +132,7 @@ Die relativen Fehler ergeben sich dann zu
 \label{subsec:auswertungbeta}
 
 Die Messreihe der Ereignisse in Abhängigkeit der Dicke der absorbierenden Aluminiumplattenschicht
-ist in \ref{tab:aluminium} eingetragen. Auch sind die Unsicherheiten der Dicke, der Ereignisse und
+ist in Tabelle \ref{tab:aluminium} eingetragen. Auch sind die Unsicherheiten der Dicke, der Ereignisse und
 die Aktivität mit Unsicherheit zu sehen. In diesem Versuchsteil wird ein Nulleffekt nicht berücksichtigt.
 
 \begin{table}[htp]
@@ -144,9 +144,9 @@ die Aktivität mit Unsicherheit zu sehen. In diesem Versuchsteil wird ein Nullef
                         {$(d \pm \sigma_\mathrm{d})/$mm} & {$t/$s} & {$N_\beta \pm \sigma_{N_\beta}$} & {$(A_\beta \pm \sigma_{N_\beta})\,\cdot\, $s}\\
                         \midrule
                         100         &  60 & 2430 \pm 50 & 40.6   \pm 0.9\\
-                        125         &  60 &  576 \pm 24 &  9.60  \pm 0.4\\
-                        153 \pm 0.5 &  60 &  630 \pm 26 & 10.50  \pm 0.5\\
-                        160 \pm 1   &  60 &  362 \pm 20 &  6.03  \pm 0.4\\
+                        125         &  60 &  576 \pm 24 &  9.60  \pm 0.40\\
+                        \,\,\,\,\,\,\text{153 \pm \,0,5} &  60 &  630 \pm 26 & 10.50  \pm 0.50\\
+                        160 \pm 1   &  60 &  362 \pm 20 &  6.03  \pm 0.40\\
                         200 \pm 1   & 200 &  416 \pm 21 &  2.08  \pm 0.11\\
                         253 \pm 1   & 484 &  417 \pm 21 &  0.86  \pm 0.05\\
                         302 \pm 1   & 620 &  408 \pm 21 &  0.66  \pm 0.04\\
@@ -160,7 +160,7 @@ die Aktivität mit Unsicherheit zu sehen. In diesem Versuchsteil wird ein Nullef
 
 Im Folgenden wird die Aktivität $A_\beta$ in Abhängigkeit der Massenbelegung $R = \rho d$
 untersucht, wobei $\rho = \SI{2700}{\kilo\gram\per\meter\cubed}$ die Dichte von Aluminium ist.
-Analog dem theoretisch zu erwartenden Verlauf der Absorptionskurve, zu sehen in \ref{fig:absorptionskurve},
+Analog dem theoretisch zu erwartenden Verlauf der Absorptionskurve, zu sehen in Abbildung \ref{fig:absorptionskurve},
 werden zwei getrennte lineare Ausgleichsrechnungen durchgeführt. Es ist darauf zu achten, die Aktivitäten
 einheitenlos machen, was durch Multiplikation mit einer Sekunde geschieht, und zu logarithmieren. Die Fehler werden entsprechend behandelt. Der vierte und der fünfte Messwert
 werden für die Ausgleichsrechnungen nicht berücksichtigt, da sich diese näherungsweise im gekrümmten Bereich
@@ -178,7 +178,7 @@ Die Ausgleichsrechnung ergibt konkret die Parameter
   a_2 &= \SI{0.0(28)}{\meter\squared\per\kilo\gram}\,,\\
   b_2 &= \SI{-0.40(28)}\,.
 \end{align*}
-Die Auftragung der Messwerte und die Graphen der Ausgleichsfunktionen sind in \ref{fig:beta} zu sehen.
+Die Auftragung der Messwerte und die Graphen der Ausgleichsfunktionen sind in Abbildung\ref{fig:beta} zu sehen.
 \begin{figure}
   \centering
   \includegraphics{build/beta.pdf}

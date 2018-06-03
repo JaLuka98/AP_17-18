@@ -33,7 +33,7 @@ vier = -(1+3*e)/(1+2*e)**2
 sigmacompton = 2*np.pi*(2.81794032*1e-15)**2 * (zwei+drei+vier)
 print(30*6.022140857*1e23*sigmacompton/(9.157*1e-6))
 
-d, t, N = np.genfromtxt('data\zink.txt', unpack=True)  # d in mm, t in s
+d, t, N = np.genfromtxt('data/zink.txt', unpack=True)  # d in mm, t in s
 Azink = N/t - Ano
 
 # Az = N/t - An0
@@ -73,7 +73,7 @@ plt.clf()
 # Eisen
 
 print(26*6.022140857*1e23*sigmacompton/(7.0923*1e-6))
-d, t, N = np.genfromtxt('data\eisen.txt', unpack=True)  # d in mm, t in s
+d, t, N = np.genfromtxt('data/eisen.txt', unpack=True)  # d in mm, t in s
 Aeisen = N/t - Ano
 
 # Az = N/t - An0
