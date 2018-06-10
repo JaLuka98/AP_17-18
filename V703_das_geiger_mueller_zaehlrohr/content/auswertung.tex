@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{Bestimmung der Plateau-Steigun}
+\subsection{Bestimmung der Plateau-Steigung}
 \label{subsec:plateau}
 
 Den Messergebnissen aus der Messreihe der Anzahl $N$ der Ereignisse in einem Zeitintervall
@@ -15,7 +15,7 @@ gemäß des kaufmännischen Rundens gerundet. Die Rohdaten befinden sich im Anha
 In Tabelle \ref{tab:messwerte} befinden sich die Messwerte für die Anzahl der
 Ereignisse sowie die daraus berechnete Zählrate $Z=\frac{N}{t}$ in Abhängigkeit
 der Spannung. Außerdem befinden sich dort die berechneten Werte für die Bestimmung
-der im Zählrohr freigesetzten Ladung, auf die in Kapitel (REFERENZ!!!) eingegangen
+der im Zählrohr freigesetzten Ladung, auf die später noch eingegangen
 wird.
 
 \begin{table}[htp]
@@ -78,7 +78,7 @@ graphisch dargestellt.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{build/charakteristik.pdf}
-  \caption{Auftragung der Zählraten gegen die Spannungen und lineare Ausgleichsrechnung
+  \caption{Auftragung der Zählrate gegen die Spannung und lineare Ausgleichsrechnung
   im Bereich des Plateaus.}
   \label{fig:plateau}
 \end{figure}
@@ -105,14 +105,14 @@ Plateaus
 
 
 
-Es sollen nun die pro in das Zählrohr einfallende Teilchen freigesetzte Ladung
+Es soll nun die pro in das Zählrohr einfallende Teilchen freigesetzte Ladung
 als Vielfaches der Elementarladung $e_0$ bestimmt werden. Dafür wird mithilfe von
-Gleichung (REFERENZ) zunächst die Ladungsmenge bestimmt. Die Ladungsmenge wird durch die
+Gleichung \eqref{eqn:ladung} zunächst die Ladungsmenge bestimmt. Die Ladungsmenge wird durch die
 Elektronenladung $e_0$ dividiert, um die Anzahl der freigesetzten Elektronen
 zu erhalten. Der Fehler ergibt sich dabei
-gemäß der Gauß'schen Fehlerforpflanzung \eqref{eqn:gaussfehler} zu
+gemäß der Gauß'schen Fehlerforpflanzung nach Gleichung \eqref{eqn:gaussfehler} zu
 \begin{equation*}
-  \sigma_{\symup{Q}}=\sqrt{\frac{I t}{N e_0}}=\sqrt{Q} \,.
+  \sigma_{\symup{\Delta Q}}=\sqrt{\frac{I \Delta t}{N e_0}}=\sqrt{\Delta Q} \,.
 \end{equation*}
 Da $\Delta Q$ in der Größenordnung von $10^{10}$ und der Fehler in der
 Größenordnung $10^{5}$, also vergleichsweise sehr gering ist, werden die
@@ -129,7 +129,7 @@ gegen die ans Zählrohr angelegte Spannung aufgetragen.
   \label{fig:ladung}
 \end{figure}
 
-Der Verlauf der Messwerte sollte dem in Abbildung (REFERENZ) folgen. Zu Beginn ist
+Der Verlauf der Messwerte sollte dem in Abbildung \ref{fig:nu} folgen. Zu Beginn ist
 dieser Verlauf gut zu erkennen, ab Spannungen von etwa 400\,V folgen die Messwerte
 jedoch einem annähernd linearen Verlauf. Laut der Theoriekurve sollte es hier
 einen exponentiellen Anstieg geben.
@@ -163,7 +163,8 @@ befinden sich in Tabelle \ref{tab:totzeit_osz}. Diese werden gemäß den Gleichu
 
 Bei der Bestimmung der Totzeit mithilfe des Vergleichs der Zählraten der zwei
 Proben wurden die in Tabelle \ref{tab:totzeit_exp} aufgeführten Werte gemessen.
-Aus diesen Werten wird wie zuvor die Zählrate $Z$ berechnet.
+Aus diesen Werten wird wie zuvor die Zählrate $Z$ berechnet. Gemessen wurde hier
+bei einer Spannung von $U= 600\,$V.
 
 \begin{table}[htp]
 	\begin{center}
@@ -181,8 +182,8 @@ Aus diesen Werten wird wie zuvor die Zählrate $Z$ berechnet.
 	\end{center}
 \end{table}
 
-Die Berechnung der Totzeit erfolgt gemäß Gleichung \eqref{} (REFERENZ!!!). Der dabei
-entstehende Fehler ergibt sich mithilfe der Gauß'schen Fehlerfortpflanzung
+Die Berechnung der Totzeit erfolgt gemäß Gleichung \eqref{eqn:zweiquellentotzeit}.
+Der dabei entstehende Fehler ergibt sich mithilfe der Gauß'schen Fehlerfortpflanzung
 nach Gleichung \eqref{eqn:gaussfehler} zu
 \begin{center}
   $\sigma_T = \sqrt{\sigma_{\symup{N_1}}^{2} \left(\frac{1}{2 \symup{N_1} \symup{N_2}}
@@ -193,5 +194,5 @@ nach Gleichung \eqref{eqn:gaussfehler} zu
 \end{center}
 Für die Totzeit ergibt sich damit bei dieser Methode
 \begin{equation*}
-  T_{\symup{Proben}}= (120 \pm 40)µs \,.
+  T_{\symup{ZQ}}= (120 \pm 40)µs \,.
 \end{equation*}
