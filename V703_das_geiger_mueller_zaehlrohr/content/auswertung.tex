@@ -23,11 +23,12 @@ wird.
     \caption{Messwerte für die Anzahl der Impule in Abhängikeit von der Spannung
     und daraus berechnete Werte.}
     \label{tab:messwerte}
-		\begin{tabular}{ccccc}
+		\begin{tabular}{S[table-format=3.0] S[table-format=4.0,table-figures-uncertainty=3]
+       S[table-format=3.1,table-figures-uncertainty=2] S[table-format=1.2] S[table-format=1.2]}
 		\toprule
 			{$U/$V} & {$N$}  & {$Z/$(1/s)} & {$I/$µA} & {$\Delta Q/e_0 \cdot \symup{10^{10}}$}\\
 			\midrule
-			300 & 0,00 \pm 0 & 0,00 \pm 0,00 & 0,00 & {-} \\
+			300 & \text{\,\,\,0,0 \pm  \, 0,0} & 0,0 \pm 0,0 & 0,00 & {-} \\
 			310 & 8350 \pm 100 & 139,2 \pm 1,5 & 0,05 & 0,22\\
 			320 & 8710 \pm 100 & 145,1 \pm 1,6 & 0,10 & 0,43\\
 			330 & 8730 \pm 100 & 145,5 \pm 1,6 & 0,15 & 0,64\\
@@ -95,11 +96,16 @@ einbezogen. Es ergeben sich die Parameter
   a = (0{,}0361 \pm 0{,}0020)\, \frac{1}{\text{V\,s}} \,,\\
   b = (136{,}4 \pm 1{,}0)\,\frac{1}{\text{s}} \,.
 \end{align*}
-Wird die Steigung in $\%$ pro 100\,V angegeben, so ergibt sich für die Steigung des
-Plateaus
+Die Steigung des Plateaus eines Zählrohres wird üblicherweise in $\%$ pro 100\,V
+angegeben. Diese Angabe ist etwas irreführend, da die Steigung die Einheit
+$\frac{1}{\text{V\,s}}$ besitzt. Wird sie dennoch in der üblichen Einheit angegeben,
+so ergibt sich für die Steigung des Plateaus
 \begin{equation*}
   a=(3{,}61 \pm 0{,}20) \symup{\frac{\%}{100V}} \,.  %Vielleicht noch mal mal 100???
 \end{equation*}
+Diese Einheit dient lediglich der Veranschaulichung. Sie soll verdeutlichen, um welchen
+Faktor die Zählrate bei einer Zunahme der ans Zählrohr angelgten Spannung von 100\,V
+steigt. 
 
 
 
@@ -112,9 +118,9 @@ Elektronenladung $e_0$ dividiert, um die Anzahl der freigesetzten Elektronen
 zu erhalten. Der Fehler ergibt sich dabei
 gemäß der Gauß'schen Fehlerforpflanzung nach Gleichung \eqref{eqn:gaussfehler} zu
 \begin{equation*}
-  \sigma_{\symup{\Delta Q}}=\sqrt{\frac{I \Delta t}{N e_0}}=\sqrt{\Delta Q} \,.
+  \sigma_{\symup{\Delta Q}}=\sqrt{\frac{I \Delta t}{N e_0}}=\sqrt{\frac{\Delta Q}{e_0}} \,.
 \end{equation*}
-Da $\Delta Q$ in der Größenordnung von $10^{10}$ und der Fehler in der
+Da $\frac{\Delta Q}{e_0}$ in der Größenordnung von $10^{10}$ und der Fehler in der
 Größenordnung $10^{5}$, also vergleichsweise sehr gering ist, werden die
 Werte im Folgenden als fehlerlos betrachtet. Daher wird auch auf das Einzeichnen von
 Fehlerbalken verzichtet. Die berechneten Werte
@@ -125,7 +131,7 @@ gegen die ans Zählrohr angelegte Spannung aufgetragen.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{build/ladung.pdf}
-  \caption{Auftragung der Anzahl der Elektronen gegen die Spannung.}
+  \caption{Auftragung der Anzahl der im Zählrohr freigesetzten Elektronen gegen die Spannung.}
   \label{fig:ladung}
 \end{figure}
 

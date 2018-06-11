@@ -73,8 +73,6 @@ plt.ylabel(r'$(\Delta Q/e_0)$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.tight_layout()
-plt.grid()
 plt.savefig('build/ladung.pdf')
 plt.clf()
 
