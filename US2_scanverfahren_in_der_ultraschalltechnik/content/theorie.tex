@@ -1,2 +1,67 @@
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Theoretische Betrachtungen zu Schall und Ultraschall}
+\label{subsec:theorie1}
+Ultraschall bezeichnet longitudinale Schallwellen im Frequenzbereich von ca.
+20\,kHz bis 1\,GHz, der oberhalb der Hörschwelle des Menschen liegt.
+Schall wird als longitudinale Welle angesehen, die sich gemäß
+\begin{equation}
+  p(x,t) = p_0 + v_0 Z \cos(\omega t - kx)
+\end{equation}
+durch Druckschwankung ausbreitet. Dabei bezeichnet $p(x,t)$ den Druck des Mediums
+am Ort $x$ zur Zeit $t$, $p_0$ den Normaldruck des Mediums, $v_0$ die Amplitude der Teilchengeschwindigkeit,
+$\omega$ die Kreisfrequenz der Welle, $k$ den Betrag des Wellenzahlvektors und $Z = c \rho$ ist die akustische
+Impedanz, auch Schallkennwiderstand genannt. Sie beschreibt, wie stark das Medium
+der Wellenausbreitung widersteht und ist von der Phasengeschwindigkeit $c$ und der
+Dichte des Mediums $\rho$ abhängig. Da Schall sich im Allgemein mindestens teilweise
+longitudinal ausbreitet, ist die Phasengeschwindigkeit abhängig vom Medium. Inbesondere
+ist in Festkörpern auch transversale Ausbreitung möglich, sodass sich dort komplizierte Zusammenhänge
+ergeben.\\
+Im Allgemeinen erleidet eine Welle bei der Ausbreitung in einem Medium Energieverlust
+durch Absorption. Es gilt das Exponentialgesetz
+\begin{equation}
+  I(x) = I_0 \cdot e^{\alpha x}
+\end{equation}
+für die Abnahme der Anfangsintensität $I_0$, wenn die Welle eine Strecke von $x$ durch
+das Medium durchlaufen hat und $\alpha$ der Absorptionskoeffizient ist.
+Luft absorbiert Ultraschall sehr stark, sodass in der Praxis ein Kontaktmittel
+zum besseren Übertrag des Ultraschalls von Quelle zum zu untersuchenden Material
+verwender wird.\\
+Beim Übergang einer Schallwelle von einem Medium in ein anderes treten Reflexion und
+Transmission auf. Der Reflexionskoeffizient $R$ gibt dabei das Verhältnis der reflektierten
+zur einfallenden Intensität an und ist durch
+\begin{equation}
+R = \left( \frac{Z_1-Z_2}{Z_1+Z_2} \right)
+\end{equation}
+gegeben. Wieder bezeichnen die $Z_i$ die akustischen Impedanzen der Medien. Der
+transmittierte Anteil beträgt $T = 1 - R$.\\
+Die Erzeugung von Ultraschall kann zum Beispiel durch Anwendung des reziproken piezo-elektrischen
+Effektes geschene. Zeigt eine polare Achse eines piezoelektrischen Kristalls in Richtung
+eines elektrischen Wechselfeldes, so kann dieser zu Schwingungen angeregt werden.
+Bei diesen werden Ultraschallwellen durch den Kristall abgestrahlt, Resonanzeffekte
+sind bei übereinstimmender Eigen- und Anregungsfrequenz möglich. Auch das Empfangen
+von Ultraschall ist mit piezoelektrischen Kristallen möglich, da diese zu Schwingungen
+angeregt werden, wenn jener auf den Kristall trifft. Häufig werden Quarze zu diesen
+Zwecken verwendet.
+
+\subsection{Mögliche Scanverfahren mit Ultraschall}
+\label{subsec:theorie2}
+Grundsätzlich werden zwei verschiedene Verfahren bei der Untersuchung von Material
+durch Ultraschall unterschieden.\\
+Beim Durchschallungsverfahren nimmt ein Empfänger gegenüber des Senders die Intensität auf.
+Aus einer gemessenen abgeschwächten Intensität kann dann auf Fehlstellen in der Probe geschlossen werden.
+Hierbei kann jedoch keine Aussage darüber getroffen werden, wo sich die Fehlstelle befindet.\\
+Wird der Sender auch gleichzeitig als Empfänger an Grenzflächen refelktierter Pulse verwendet, so wird vom Impuls-Echo-Verfahren
+gesprochen. Die Höhe des Echos kann Rückschlüsse auf die Größe der Fehlstelle geben.
+Ist die Schallgeschwindigkeit $c$ im Medium bekannt, so kann mit gemessener Laufzeit $t$
+mithilfe von
+\begin{equation}
+  s = \frac{1}{2} ct
+\end{equation}
+die Lage der Fehlstelle bestimmt werden, wobei $s$ den Abstand von ihr zur Ultraschallsonde bezeichnet.\\
+Die Messergebnisse der Amplitude und der Laufzeit können auf verschiedene Weisen aufgetragen werden.
+Beim A-Scan wird die Amplitude in Abhängigkeit der Laufzeit aufgetragen. Dies stellt
+ein eindimensionales Verfahren zur Abtastung dar. Der B-Scan stellt ein zweidimensionales
+Bild dar. Dieser wird durch Bewegen der Sonde auf der Probe aufgenommen. Die Amplituden
+werden durch Schattierungen dargestellt.
+Beim TM-Scan erfolgt eine Aufnahme einer Bildfolge durch schnelle Abtastung, die eine Bewegung sichtbar machen kann.
