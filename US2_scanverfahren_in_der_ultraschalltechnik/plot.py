@@ -86,6 +86,8 @@ print(table)
 
 
 #Herzfrequenz
+f=1.125
+
 s_s = np.genfromtxt('data/herz.txt', unpack=True) #Daten Herzfrequenz
 s_s*=(c_W/c_A) #Korrektur falscher Wert
 s_s*=1e-3   #Umrechnung in Meter
@@ -101,3 +103,8 @@ m[:, 1] = h*1e3
 m[:, 2] = V_s*1e6
 table = matrix2latex(m, headerRow=hr, format='%.1f')
 print(table)
+
+V_m=ufloat(np.mean(V_s),np.std(V_s))
+
+print('Der Mittelwert für das Volumen ist:', V_m*1e6, 'cm^3')
+print('Damit ist das gesuchte Herzvolumen', V_m*1e6*f,'cm^3/s')
