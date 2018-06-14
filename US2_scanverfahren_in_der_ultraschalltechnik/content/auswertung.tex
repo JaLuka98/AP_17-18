@@ -1,28 +1,28 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{Bestimmung der Tiefe und der Größe der Störstellen mit einem A-Scan}
-\label{subsec:A_scan_störstellen}
+\subsection{Bestimmung der Tiefe und der Größe der Fehlstellen mit einem A-Scan}
+\label{subsec:A_scan_Fehlstellen}
 
-Zur Bestimmung der Eindringtiefen müssen diese zunächst Laufzeitkorrekturen, die durch
+Zur Bestimmung der Eindringtiefen müssen zunächst Laufzeitkorrekturen, die durch
 die Schutzschichten auf den Sonden entstehen, berücksichtigt werden. Dafür wird der
 mit der Schieblehre bestimmte Wert von der Höhe $h_{\symup{S}}=8{,}03\,$cm des Blocks
 von dem des mit Ultraschall bestimmten Wertes $h_{\symup{US}}=8,07\,$cm subtrahiert.
-Es muss also von allen Werten in dieser Messreihe diese Differenz von $\Delta h=0{,}04\,$cm
+Es muss also von allen Werten in dieser Messreihe die Differenz $\Delta h=0{,}04\,$cm
 subtrahiert werden. In Tabelle \ref{tab:messwerte} sind die  bereits bereinigten
 Messwerte zur Messung mit dem A-Scan, sowie die mit der Schieblehre bestimmten
 Werte dargestellt. Zudem befinden sich dort die berechneten Werte für die Dicken
-der Störstellen.
+der Fehlstellen.
 
 \begin{table}[htp]
 	\begin{center}
-    \caption{Messwerte zur Messung der Störstellen mit einem A-Scan und mit einer Schieblehre,
+    \caption{Messwerte zur Messung der Fehlstellen mit einem A-Scan und mit einer Schieblehre,
     sowie daraus berechnete Werte.}
     \label{tab:messwerte}
 		\begin{tabular}{cccccccc}
 		\toprule
-			{Störstelle} & {$s_{\symup{1,A}}/$mm} & {$s_{\symup{2,A}}/$mm} & {$d_{\symup{A}}/$mm} &
-      {$s_{\symup{1,S}}/$mm} & {$s_{\symup{2,S}}/$mm} & {$d_{\symup{S}}/$mm} & {$\Delta d/mm$}\\
+			{Fehlstelle} & {$s_{\symup{1,A}}/$mm} & {$s_{\symup{2,A}}/$mm} & {$d_{\symup{A}}/$mm} &
+      {$s_{\symup{1,S}}/$mm} & {$s_{\symup{2,S}}/$mm} & {$d_{\symup{S}}/$mm} & {$\Delta d$/mm}\\
 			\midrule
 			3   & 15,2 & 63,0 & 2,1 & 13,2 & 61,1 & 6,0 & 3,9\\
 			4   & 23,7 & 55,8 & 0,8 & 21,6 & 53,7 & 5,0 & 4,2\\
@@ -38,17 +38,18 @@ der Störstellen.
 	\end{center}
 \end{table}
 
-Dabei werden die Strecken, die in Abbildung \ref{fig:acrylblock} unterhalb der Störstellen liegen
-als $s_1$ und die Strekcne, die oberhalb der Störstellen liegen als $s_2$ bezeichnet.
+Dabei werden die Strecken, die in Abbildung \ref{fig:acrylblock} unterhalb der Fehlstellen liegen
+als $s_1$ und die Strecken, die oberhalb der Fehlstellen liegen als $s_2$ bezeichnet.
 Die Messwerte, die mit dem A-Scan aufgenommen wurden, werden mit dem Index "A"
 und die, die mit der Schieblehre aufgenommen wurden mit dem Index "S" versehen.
 
-Die Bestimmung der Dicke der Störstellen mithilfe des A-Scans erfolgt durch den
+Die Bestimmung der Dicke der Fehlstellen mithilfe des A-Scans erfolgt durch den
 Zusammenhang
 \begin{equation}
   d_{\symup{A}}=h_{\symup{S}}-s_{\symup{1,A}}-s_{\symup{2,A}} \,.
 \end{equation}
-Die Differenz $\Delta d$ ergibt sich durch
+Die Differenz $\Delta d$ der mit der Schieblehre und mit dem A-Scan bestimmten
+Dicken ergibt sich durch
 \begin{equation}
   \Delta d=|d_{\symup{A}}-d_{\symup{S}}| \,.
 \end{equation}
@@ -59,15 +60,15 @@ besitzen.
 \subsection{Bestimmung des Auflösungsvermögens mit einem A-Scan}
 \label{subsec:A_scan_auflösung}
 
-Zur Bestimmung der Auflösung werden eine 1\,MHz-Sonde und eine 4\,MHz-Sonde verwendet die
-Störstellen 1 und 2 werden von beiden Seiten ausgemessen.
-Die augenommenen Bilder für die Störstellen 1 und 2 befinden sich in den Abbildung \ref{fig:auflösung1},
+Zur Bestimmung der Auflösung werden eine 1\,MHz-Sonde und eine 4\,MHz-Sonde verwendet
+und die Fehlstellen 1 und 2 werden von beiden Seiten ausgemessen.
+Die aufgenommenen Bilder für die Fehlstellen 1 und 2 befinden sich in den Abbildungen \ref{fig:auflösung1},
 \ref{fig:auflösung2}, \ref{fig:auflösung3} und \ref{fig:auflösung4}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{data/1mhzdoppelteFehlstellekurzelLaufzeitGedrehtwieinZeichnung.jpeg}
-  \caption{Darstellung der Störstellen 1 und 2 mit einem A-Scan mit einer 1\,MHz-Sonde, wobei der Ultraschall
+  \caption{Darstellung der Fehlstellen 1 und 2 mit einem A-Scan mit einer 1\,MHz-Sonde, wobei der Ultraschall
   zuvor die kurze Strecke durchlaufen musste.}
   \label{fig:auflösung1}
 \end{figure}
@@ -75,7 +76,7 @@ Die augenommenen Bilder für die Störstellen 1 und 2 befinden sich in den Abbil
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{data/1mhzdoppelteFehlstellelangeLaufzeit.jpg}
-  \caption{Darstellung der Störstellen 1 und 2 mit einem A-Scan mit einer 1\,MHz-Sonde, wobei der Ultraschall
+  \caption{Darstellung der Fehlstellen 1 und 2 mit einem A-Scan mit einer 1\,MHz-Sonde, wobei der Ultraschall
   zuvor die lange Strecke durchlaufen musste.}
   \label{fig:auflösung2}
 \end{figure}
@@ -83,7 +84,7 @@ Die augenommenen Bilder für die Störstellen 1 und 2 befinden sich in den Abbil
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{data/4mhzdoppelteFehlstellekurzelLaufzeitGedrehtwieinZeichnung.jpg}
-  \caption{Darstellung der Störstellen 1 und 2 mit einem A-Scan mit einer 4\,MHz-Sonde, wobei der Ultraschall
+  \caption{Darstellung der Fehlstellen 1 und 2 mit einem A-Scan mit einer 4\,MHz-Sonde, wobei der Ultraschall
   zuvor die kurze Strecke durchlaufen musste.}
   \label{fig:auflösung3}
 \end{figure}
@@ -91,7 +92,7 @@ Die augenommenen Bilder für die Störstellen 1 und 2 befinden sich in den Abbil
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{data/4mhzdoppelteFehlstellelangeLaufzeit.jpg}
-  \caption{Darstellung der Störstellen 1 und 2 mit einem A-Scan mit einer 4\,MHz-Sonde, wobei der Ultraschall
+  \caption{Darstellung der Fehlstellen 1 und 2 mit einem A-Scan mit einer 4\,MHz-Sonde, wobei der Ultraschall
   zuvor die lange Strecke durchlaufen musste.}
   \label{fig:auflösung4}
 \end{figure}
@@ -102,24 +103,24 @@ deutlich stärker auf und die Maxima sind kaum noch zu erkennen. Dafür liefert 
 4\,MHz-Sonde jedoch bei einer kurzen Laufzeit ein deutlich schärferes Bild als die
 1\,MHz-Sonde.
 
-\subsection{Bestimmung der Tiefe und der Größe der Störstellen mit einem B-Scan}
-\label{subsec:B_scan_störstellen}
+\subsection{Bestimmung der Tiefe und der Größe der Fehlstellen mit einem B-Scan}
+\label{subsec:B_scan_Fehlstellen}
 
-Zur Bestimmung der Lage und der Größe der Störstellen mit einem B-Scan muss zunächst
+Zur Bestimmung der Lage und der Größe der Fehlstellen mit einem B-Scan muss zunächst
 erneut die Laufzeitkorrektur durchgeführt werden. Der mithilfe des Ultraschalls bestimmte
 Wert für die Höhe des Blocks beträgt $h=80{,}8\,$mm. Der Differenz zur mit der Schieblehre
 bestimmten Wert beträgt also $\Delta h=0{,}5\,$mm. In Tabelle \ref{tab:b-scan}
 sind die bereinigten Messwerte, sowie die daraus berechneten Werte dargestellt.
-Für Störstelle 10 konnten dabei nicht alle Werte aufgenommen werden, da diese bei einer
-Messung von Störstelle 11 überlagert wurde.
+Für Fehlstelle 10 konnten dabei nicht alle Werte aufgenommen werden, da diese bei einer
+Messung von Fehlstelle 11 überlagert wurde.
 
 \begin{table}[htp]
 	\begin{center}
-    \caption{Messwerte zur Messung der Störstellen mit einem B-Scan und daraus berechnete Werte.}
+    \caption{Messwerte zur Messung der Fehlstellen mit einem B-Scan und daraus berechnete Werte.}
     \label{tab:b-scan}
 		\begin{tabular}{ccccc}
 		\toprule
-			{Störstelle} & {$s_{\symup{1,B}}/$mm} & {$s_{\symup{2,B}}/$mm} & {$d_{\symup{B}}/$mm} & {$\Delta d/mm$}\\
+			{Fehlstelle} & {$s_{\symup{1,B}}/$mm} & {$s_{\symup{2,B}}/$mm} & {$d_{\symup{B}}/$mm} & {$\Delta d/$mm}\\
 			\midrule
 			3 & 12,8 & 61,1 & 6,4 & 0,4\\
 			4 & 21,1 & 55,8 & 3,4 & 1,6\\
@@ -135,7 +136,7 @@ Messung von Störstelle 11 überlagert wurde.
 	\end{center}
 \end{table}
 
-Die Rechnung erfolgt dabei analog zu der in Kapitel \ref{subsec:A_scan_störstellen}.
+Die Rechnung erfolgt dabei analog zu der in Kapitel \ref{subsec:A_scan_Fehlstellen}.
 In Abbildung \ref{fig:b-scan} ist beispielhaft für einen B-Scan der B-Scan des
 Acrylblocks von der oberen Kante aus dargestellt.
 \begin{figure}[H]
@@ -145,6 +146,7 @@ Acrylblocks von der oberen Kante aus dargestellt.
   \label{fig:b-scan}
 \end{figure}
 
+\newpage
 \subsection{Bestimmung der Herzvolumens mit einem TM-Scan}
 \label{subsec:Herzvolumen}
 
@@ -155,7 +157,7 @@ simulierten Herschläge in Abhängigkeit von der Zeit dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=10cm]{data/Herzfrequenz.jpg}
-  \caption{Abhängigkeit der simulierten Herzschläge in Abhängigkeit von der Zeit; augenommen
+  \caption{Abhängigkeit der simulierten Herzschläge in Abhängigkeit von der Zeit; aufgenommen
   mit einem TM-Scan.}
   \label{fig:herzvolumen}
 \end{figure}
@@ -179,7 +181,7 @@ In Tabelle \ref{tab:herz} sind die aus dem Diagramm abgelesenen und bereits mit 
 Korrekturfaktor multiplizierten Werte, sowie daraus berechnete Werte zu sehen. Für den
 ersten Schlag wird kein Wert abgelesen, da dieser nur sehr schlecht erkennbar ist.
 
-\begin{table}[htp]
+\begin{table}[h!]
 	\begin{center}
     \caption{Aus dem Diagramm abgelesene und mit dem Korrekturfaktor multiplizierte Werte und
     daraus berechnete Werte für die Höhe $h$ und das Volumen $V$ des Kugelsegments.}
@@ -210,8 +212,20 @@ ersten Schlag wird kein Wert abgelesen, da dieser nur sehr schlecht erkennbar is
 	\end{center}
 \end{table}
 
-Nach den Gleichungen \eqref{eqn:mean} und \eqref{eqn:std} wird der Mittelwert
-der Volumina $V$ zu $V_{\symup{mittel}}=11{,}5\pm1{,}6\,\symup{cm^3}$ berechnet.
+Nach den Gleichungen
+\begin{equation}
+  \overline{x} = \frac{1}{N} \sum\limits_{i = 1}^N x_i
+  \label{eqn:mean}
+\end{equation}
+und
+\begin{equation}
+  \sigma_x = \sqrt{\frac{1}{N(N-1)}
+    \sum\limits_{i = 1}^N
+    (x_i-\overline{x})^2}
+    \label{eqn:std}
+\end{equation}
+wird der Mittelwert der Volumina $V$ zu $V_{\symup{mittel}}=11{,}5\pm1{,}6\,\symup{cm^3}$
+berechnet.
 
 Die Frequenz des simulierten Herzschlags ist $f=1{,}125\,$Hz. Damit ergibt sich
 das gesuchte Herzvolumen\footnote{Es sei explizit darauf hingewiesen, dass dies kein
