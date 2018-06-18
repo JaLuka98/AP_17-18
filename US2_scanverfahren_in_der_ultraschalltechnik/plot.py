@@ -46,6 +46,7 @@ d_s*=1e-3
 d_a=h-s1_a-s2_a
 
 deltad=np.absolute(d_s-d_a)
+deltadpa=((d_a/d_s)-1)*100
 
 hr = ['Störstelle', '$s_{\symup{1,A}}/$mm', '$s_{\symup{2,A}}/$mm', '$d_{\symup{A}}/$mm',
 '$s_{\symup{1,S}}/$mm','$s_{\symup{2,S}}/$mm','$d_{\symup{S}}/$mm','$\Delta d/mm$']
@@ -61,6 +62,13 @@ m[:, 7] = deltad*1e3
 table = matrix2latex(m, headerRow=hr, format='%.2f')
 print(table)
 
+hr = ['Störstelle', '$\Delta d/\%$']
+m = np.zeros((9, 2))
+m[:, 0] = nummer
+m[:, 1] = deltadpa
+table = matrix2latex(m, headerRow=hr, format='%.0f')
+print(table)
+
 
 #B-Scan
 
@@ -73,6 +81,7 @@ s2_b*=1e-3
 d_b=h-s1_b-s2_b
 
 deltad=np.absolute(d_s-d_b)
+deltadpb=((d_b/d_s)-1)*100
 
 hr = ['Störstelle', '$s_{\symup{1,A}}/$mm', '$s_{\symup{2,A}}/$mm', '$d_{\symup{A}}/$mm','$\Delta d/mm$']
 m = np.zeros((9, 5))
@@ -82,6 +91,13 @@ m[:, 2] = s2_b*1e3
 m[:, 3] = d_b*1e3
 m[:, 4] = deltad*1e3
 table = matrix2latex(m, headerRow=hr, format='%.2f')
+print(table)
+
+hr = ['Störstelle', '$\Delta d/\%$']
+m = np.zeros((9, 2))
+m[:, 0] = nummer
+m[:, 1] = deltadpb
+table = matrix2latex(m, headerRow=hr, format='%.0f')
 print(table)
 
 

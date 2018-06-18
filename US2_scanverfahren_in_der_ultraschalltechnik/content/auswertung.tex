@@ -54,8 +54,35 @@ Dicken ergibt sich durch
   \Delta d=|d_{\symup{A}}-d_{\symup{S}}| \,.
 \end{equation}
 
-Auffällig ist, dass diese Differenzen alle ungefähr die Größe der Laufzeitkorrektur
-besitzen.
+Auffällig ist, dass diese Differenzen teilweise negativ sind und hohe Abweichungen
+vom den mit der Schieblehre bestimmten Werten aufweisen.
+
+In Tabelle \ref{tab:abweichunga} sind die relativen Abweichungen der durch den A-Scan
+bestimmten Dicken von den mithilfe der Schieblehre bestimmten Dicken der Fehlstellen
+dargestellt.
+
+\begin{table}[htp]
+	\begin{center}
+		\caption{Relative Abweichungen der durch den A-Scan bestimmten Dicken der Fehlstellen
+		von den mithilfe der Schieblehre bestimmten Dicken der Fehlstellen.}
+		\label{tab:abweichunga}
+		\begin{tabular}{cc}
+		\toprule
+			{Fehlstelle} & {$\Delta d/\%$}\\
+			\midrule
+			3 & -65\\
+			4 & -84\\
+			5 & -105\\
+			6 & -160\\
+			7 & -157\\
+			8 & -140\\
+			9 & -140\\
+			10 & -160\\
+			11 & -42\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
 
 \subsection{Bestimmung des Auflösungsvermögens mit einem A-Scan}
 \label{subsec:A_scan_auflösung}
@@ -129,25 +156,52 @@ Messung von Fehlstelle 11 überlagert wurde.
 			7 & 46,5 & 31,9 & 1,9 & 1,1\\
 			8 & 54,8 & 23,7 & 1,8 & 1,2\\
 			9 & 62,6 & 15,4 & 2,3 & 0,7\\
-			10 & {-} & 6,6 & {-} & {-}\\
-			11 & 14,6 & 57,3 & 8,4 & 1,60\\
+			10 & {-} & 6,6 & {-} & {-} \\
+		11 & 14,6 & 57,3 & 8,4 & 1,60\\
 		\bottomrule
 		\end{tabular}
 	\end{center}
 \end{table}
 
 Die Rechnung erfolgt dabei analog zu der in Kapitel \ref{subsec:A_scan_Fehlstellen}.
+In Tabelle \ref{tab:abweichungb} sind die relativen Abweichungen der mithilfe des B-Scans
+bestimmten Dicken von den mithilfe der Schieblehre bestimmten Dicken der Fehlstellen
+dargestellt.
+
+\begin{table}[htp]
+	\begin{center}
+		\caption{Relative Abweichungen der mithilfe des B-Scans bestimmten Dicken der Fehlstellen
+		von den mithilfe der Schieblehre bestimmten Dicken.}
+		\label{tab:abweichungb}
+		\begin{tabular}{cc}
+		\toprule
+			{Fehlstelle} & {$\Delta d/\%$}\\
+			\midrule
+			3 & 7\\
+			4 & -32\\
+			5 & -43\\
+			6 & -47\\
+			7 & -37\\
+			8 & -40\\
+			9 & -23\\
+			10 & {-}\\
+			11 & -16\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
 In Abbildung \ref{fig:b-scan} ist beispielhaft für einen B-Scan der B-Scan des
 Acrylblocks von der oberen Kante aus dargestellt.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{data/Bscanrechtsnachlinkswieinzeichnung.jpg}
+  \includegraphics[width=15cm]{data/Bscanrechtsnachlinkswieinzeichnung.jpg}
   \caption{B-Scan des Acrylblocks von der oberen Kante aus.}
   \label{fig:b-scan}
 \end{figure}
 
 \newpage
-\subsection{Bestimmung der Herzvolumens mit einem TM-Scan}
+\subsection{Bestimmung des Herzvolumens mit einem TM-Scan}
 \label{subsec:Herzvolumen}
 
 
@@ -156,7 +210,7 @@ simulierten Herschläge in Abhängigkeit von der Zeit dargestellt.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{data/Herzfrequenz.jpg}
+  \includegraphics[width=15cm]{data/Herzfrequenz.jpg}
   \caption{Abhängigkeit der simulierten Herzschläge in Abhängigkeit von der Zeit; aufgenommen
   mit einem TM-Scan.}
   \label{fig:herzvolumen}
@@ -175,7 +229,7 @@ Es gilt damit für das Volumen
 \end{equation}
 wobei $r$ der Radius des verwendeten Zylinders und $h=s_0-s$ ist. Dabei ist $s$
 die gemessene Eindringtiefe beim Herzschlag und $s_0$ die gemessene Strecke in
-der Ausganglage.
+der Ausgangslage.
 
 In Tabelle \ref{tab:herz} sind die aus dem Diagramm abgelesenen und bereits mit dem
 Korrekturfaktor multiplizierten Werte, sowie daraus berechnete Werte zu sehen. Für den
