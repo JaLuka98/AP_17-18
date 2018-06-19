@@ -22,19 +22,21 @@ I*=1e-6 #I/A
 A = (N/t)
 sigmaA = np.sqrt(N)/t
 
-params, covariance_matrix = optimize.curve_fit(f, U[2:], A[2:])
+params, covariance_matrix = optimize.curve_fit(f, U[4:40], A[4:40])
 a, b = correlated_values(params, covariance_matrix)
 print('a =', a)
 print('b =', b)
 
 linspace = np.linspace(290, 710, 1000)
-plt.errorbar(U[0:2], A[0:2], yerr= np.sqrt(N[0:2])/t, fmt = 'gx', mew = 0.5,
+plt.errorbar(U[1:4], A[1:4], yerr= np.sqrt(N[1:4])/t, fmt = 'gx', mew = 0.5,
              capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='ausgenommene Messwerte')
-plt.errorbar(U[2:], A[2:],yerr= np.sqrt(N[2:])/t,fmt = 'rx', mew = 0.5,
+plt.errorbar(U[4:40], A[4:40],yerr= np.sqrt(N[4:40])/t,fmt = 'rx', mew = 0.5,
              capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='Messwerte')
+plt.errorbar(U[40], A[40], yerr= np.sqrt(N[40])/t, fmt = 'gx', mew = 0.5,
+             capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5)
 plt.plot(linspace, f(linspace, *params), 'm-',linewidth=0.5, label='Ausgleichsfunktion')
-plt.axvline(320 , color='g', linestyle='--', linewidth=0.5)
-plt.axvline(700, color='g', linestyle='--', linewidth=0.5)
+plt.axvline(340 , color='g', linestyle='--', linewidth=0.5)
+plt.axvline(690, color='g', linestyle='--', linewidth=0.5)
 plt.xlabel(r'$U/$V')
 plt.ylabel(r'$Z/$(1/s)')
 plt.xlim(290,710)
