@@ -4,22 +4,33 @@
 \subsection{Bestimmung der Strömungsgeschwindigkeit als Funktion des Dopplerwinkels}
 \label{subsec:geschwindigkeit}
 
--Berechnung der Dopplerfrequenzen
-
--Berechnung der einzelnen Geschwindigkeiten
-
-mitteln?!
-
-
+Zur Bestimmung der Strömungsgeschwindigkeit als Funktion des Dopplerwinkels müssen
+zunächst die Dopplerwinkel gemäß Gleichung \eqref{eqn:dopplerwinkel} berechnet.
+Es ergeben sich für die Prismenwinkel $\theta=15°$, $\theta=30°$ und $\theta=60°$
+die Dopplerwinkel
+\begin{align*}
+  \alpha_{15}=80{,}06° \,,\\
+  \alpha_{30}=70{,}53°\,,\\
+  \alpha_{60}=54{,}74° \,.\\
+\end{align*}
+Dabei werden für die Schallgeschindigkeiten die Werte $c_{\symup{L}}=1800\,\symup{\frac{m}{s}}$
+und $c_{\symup{P}}=2700\,\symup{\frac{m}{s}}$ der Versuchsanleitung \cite{Versuchsanleitung} entnommen.
+Mithilfe dieser Winkel kann dann mit Gleichung \eqref{eqn:geschwindigkeit} aus den
+Messwerten die Strömungsgeschwindigkeit $v$ berechnet werden. Die Messwerte und die
+daraus berechneten Strömungsgeschwindigkeiten im Rohr mit einem Innendurchmesser von
+16\,mm befinden sich in Tabelle \ref{tab:dick}, die für das Rohr mit einem
+Innendurchmesser von 10\,mm in Tabelle \ref{tab:mittel} und die für das Rohr
+mit einem Innendurchmesser von 7\,mm in Tabelle \ref{tab:dünn}.
 
 \begin{table}[htp]
-	\begin{center}<
+	\begin{center}
     \caption{Messwerte zum dicken Rohr ($d=16\,$mm) und daraus berechnete Werte.}
     \label{tab:dick}
 		\begin{tabular}{ccccccc}
 		\toprule
-			{U/min} & {$\Delta u_{15}/$Hz} & {$\Deltau_{30}/$Hz} & {$\Delta u_{60}/$Hz} &
-      {$v_{15}/$\frac{m}{s}} & {$v_{30}/$\frac{m}{s}} & {$v_{60}/$\frac{m}{s}}\\                                                        rac{m}{s}}\\
+			{U/min} & {$\Delta \nu_{15}/$Hz} & {$\Delta \nu_{30}/$Hz} & {$\Delta \nu_{60}/$Hz} &
+      {$v_{15}/\frac{\symup{m}}{\symup{s}}$} & {$v_{30}/\frac{\symup{m}}{\symup{s}}$} &
+      {$v_{60}/\frac{\symup{m}}{\symup{s}}$}\\
 			\midrule
 			3000 & -73 & 110 & -159 & -0,19 & 0,15 & -0,12\\
 			4000 & -98 & 183 & -269 & -0,26 & 0,25 & -0,21\\
@@ -38,8 +49,8 @@ mitteln?!
     \label{tab:mittel}
 		\begin{tabular}{ccccccc}
 		\toprule
-			{U/min} & {$\Delta u_{15}/$Hz} & {$\Deltau_{30}/$Hz} & {$\Delta u_{60}/$Hz} &
-      {$v_{15}/$\frac{m}{s}} & {$v_{30}/$\frac{m}{s}} & {$v_{60}/$\frac{m}{s}}\\                                                        rac{m}{s}}\\
+			{U/min} & {$\Delta \nu_{15}/$Hz} & {$\Delta \nu_{30}/$Hz} & {$\Delta \nu_{60}/$Hz} &
+      {$v_{15}/\symup{\frac{m}{s}}$} & {$v_{30}/\symup{\frac{m}{s}}$} & {$v_{60}/\symup{\frac{m}{s}}$}\\
 			\midrule
 			3000 & -220 & 354 & -354 & -0,57 & 0,48 & -0,28\\
 			4000 & -366 & 586 & -671 & -0,95 & 0,79 & -0,52\\
@@ -58,8 +69,8 @@ mitteln?!
     \label{tab:dünn}
 		\begin{tabular}{ccccccc}
 		\toprule
-			{U/min} & {$\Delta u_{15}/$Hz} & {$\Deltau_{30}/$Hz} & {$\Delta u_{60}/$Hz} &
-      {$v_{15}/$\frac{m}{s}} & {$v_{30}/$\frac{m}{s}} & {$v_{60}/$\frac{m}{s}}\\
+			{U/min} & {$\Delta \nu_{15}/$Hz} & {$\Delta \nu_{30}/$Hz} & {$\Delta \nu_{60}/$Hz} &
+      {$v_{15}/\symup{\frac{m}{s}}$} & {$v_{30}/\symup{\frac{m}{s}}$} & {$v_{60}/\symup{\frac{m}{s}}$}\\
 			\midrule
 			3000 & -433 & 629 & -720 & -1,13 & 0,85 & -0,56\\
 			4000 & -653 & 958 & -1276 & -1,70 & 1,29 & -0,99\\
@@ -71,6 +82,11 @@ mitteln?!
 		\end{tabular}
 	\end{center}
 \end{table}
+
+Nun wird für jedes Rohr für jeden der Dopplerwinkel die Größe $\frac{\Delta \nu}{\cos(\alpha)}$
+gegen die berechnete Strömungsgeschwindigkeit aufgetragen. Dies ist in den Abbildungen
+\ref{fig:dick_15} bis \ref{fig:dünn_60} im Anhang zu sehen. In allen Abbildungen sind
+lineare Zusammenhänge zu sehen.
 
 \subsection{Bestimmung des Strömungsprofils der Dopplerflüssigkeit}
 \label{subsec:strömungsprofil}
