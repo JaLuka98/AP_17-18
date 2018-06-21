@@ -61,7 +61,7 @@ print('Bestimmung der freigesetzen Ladungen:')
 
 Q=I*t/N               #Ladung in Coulomb
 Q_e=Q/(1.602*1e-19)      #Anzahl der Elektronen
-Q_eerror=np.sqrt(Q_e)
+Q_eerror=(I*t/(N**(3/2)))/(1.602*1e-19)
 print(Q_eerror)
 
 #print('Ladung in Coulomb: Q=', Q)
@@ -91,6 +91,7 @@ m[:, 6] = Q_e*1e-10
 m[:, 7] = Q_eerror*1e-10
 table = matrix2latex(m, headerRow=hr, format='%.2f')
 print(table)
+print(Q_e*1e-10)
 
 #Bestimmung der Totzeiten
 print('Bestimmung der Totzeiten:')
