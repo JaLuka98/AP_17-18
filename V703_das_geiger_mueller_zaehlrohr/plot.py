@@ -3,6 +3,7 @@ import scipy.optimize
 import uncertainties as unc
 import uncertainties.unumpy as unp
 from scipy import optimize
+from scipy import stats # for error of mean
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 from uncertainties import correlated_values
@@ -35,7 +36,7 @@ plt.errorbar(U[4:40], A[4:40],yerr= np.sqrt(N[4:40])/t,fmt = 'rx', mew = 0.5,
 plt.errorbar(U[40], A[40], yerr= np.sqrt(N[40])/t, fmt = 'gx', mew = 0.5,
              capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5)
 plt.plot(linspace, f(linspace, *params), 'm-',linewidth=0.5, label='Ausgleichsfunktion')
-plt.axvline(340 , color='g', linestyle='--', linewidth=0.5)
+plt.axvline(340, color='g', linestyle='--', linewidth=0.5)
 plt.axvline(690, color='g', linestyle='--', linewidth=0.5)
 plt.xlabel(r'$U/$V')
 plt.ylabel(r'$Z/$(1/s)')
@@ -44,7 +45,6 @@ plt.tight_layout()
 plt.legend()
 plt.grid()
 plt.tight_layout()
-plt.grid()
 plt.savefig('build/charakteristik.pdf')
 plt.clf()
 
@@ -62,16 +62,19 @@ print('Bestimmung der freigesetzen Ladungen:')
 Q=I*t/N               #Ladung in Coulomb
 Q_e=Q/(1.602*1e-19)      #Anzahl der Elektronen
 Q_eerror=(I*t/(N**(3/2)))/(1.602*1e-19)
+print(Q_e)
 print(Q_eerror)
 
 #print('Ladung in Coulomb: Q=', Q)
 #print('Anzahl der Elektronen: N=',Q_e)
 
-plt.plot(U, Q_e, 'rx', mew=0.5, label='Messwerte')
-#plt.errorbar(U, Q_e, yerr=Q_eerror, fmt = 'rx', mew = 0.5,markersize=2,
+#plt.plot(U, Q_e, 'rx', mew=0.5, label='Messwerte')
+plt.errorbar(U, Q_e, yerr=Q_eerror,fmt = 'rx', mew = 0.5,
+             capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='Messwerte')
+#plt.errorbar(U, Q_e, yerr=Q_eerror, fmt = 'rx', mew = 0.5,markersize=2)
 #capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='Messwerte')
 plt.xlabel(r'$U/$V')
-plt.ylabel(r'$(\Delta Q/e_0)$')
+plt.ylabel(r'$\Delta Q/e_0$')
 plt.tight_layout()
 plt.legend()
 plt.grid()
@@ -79,7 +82,7 @@ plt.savefig('build/ladung.pdf')
 plt.clf()
 
 
-hr = ['$U/$V', '$N$', '$sigmaN$','$A/\frac{1}{\text{s}}$', 'simgaA', '$I$µA', '$\Delta Q/e_0 \cdot \symup{10^{10}}$']
+hr = ['$U/$V', '$N$', '$sigmaN$', '$A/\frac{1}{\text{s}}$', 'simgaA', '$I$µA', '$\Delta Q/e_0 \cdot \symup{10^{10}}$']
 m = np.zeros((41, 8))
 m[:, 0] = U
 m[:, 1] = N
@@ -115,7 +118,7 @@ U, T, T_e = np.genfromtxt('data/totzeit.txt', unpack=True) #U/V, T/µs, I/µA
 T*=1e-6 #T/s
 T_e*=1e-6 #T/s
 
-T_mittel = ufloat(np.mean(T), np.std(T))
+T_mittel = ufloat(np.mean(T), stats.sem(T))  # sem berechnet den Fehler des Mittelwerts!
 print('Der Mittelwert der Totzeit T ist:', T_mittel)
 
 
