@@ -117,10 +117,10 @@ m[:,6] = v_60
 t=matrix2latex(m, headerRow=hr, format='%.2f')
 print(t)
 
-#dünnes Rohr
-d_dünn=7 #mm
+#duennes Rohr
+d_duenn=7 #mm
 
-rpm, deltanu_15, deltanu_30, deltanu_60  = np.genfromtxt('data/dünn.txt', unpack=True)
+rpm, deltanu_15, deltanu_30, deltanu_60  = np.genfromtxt('data/duenn.txt', unpack=True)
 
 v_15=deltanu_15*c_L/(2*nu_0*np.cos(alpha_15*np.pi/180))
 v_30=deltanu_30*c_L/(2*nu_0*np.cos(alpha_30*np.pi/180))
@@ -132,7 +132,7 @@ plt.ylabel(r'$(\Delta \nu / \cos(\alpha))/$Hz')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.savefig('build/dünn_15.pdf')
+plt.savefig('build/duenn_15.pdf')
 plt.clf()
 
 plt.plot(v_30, deltanu_30/np.cos(np.pi/180*alpha_30), 'rx', mew=0.5, label='Messwerte')
@@ -141,7 +141,7 @@ plt.ylabel(r'$(\Delta \nu / \cos(\alpha))/$Hz')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.savefig('build/dünn_30.pdf')
+plt.savefig('build/duenn_30.pdf')
 plt.clf()
 
 plt.plot(v_60, deltanu_60/np.cos(np.pi/180*alpha_60), 'rx', mew=0.5, label='Messwerte')
@@ -150,7 +150,7 @@ plt.ylabel(r'$(\Delta \nu / \cos(\alpha))/$Hz')
 plt.tight_layout()
 plt.legend()
 plt.grid()
-plt.savefig('build/dünn_60.pdf')
+plt.savefig('build/duenn_60.pdf')
 plt.clf()
 
 hr = ['U/min','$\Delta\nu_{15}/$Hz','$\Delta\nu_{30}/$Hz','$\Delta\nu_{60}/$Hz',
