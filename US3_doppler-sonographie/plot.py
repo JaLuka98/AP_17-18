@@ -208,3 +208,48 @@ m[:,5] = v_mitteldünn
 m[:,6] = v_mittelfehlerdünn
 t=matrix2latex(m, headerRow=hr, format='%.3f')
 print(t)
+
+# stroemungsprofil
+
+t, nu, sigma = np.genfromtxt('data/stroemung70.txt', unpack=True)
+nu[0:5] *= c_P/(2*nu_0*np.cos(alpha_15*np.pi/180))
+nu[5:] *= (12.28/t[5:]*c_P+((1-12.28/t[5:])*c_L))/(2*nu_0*np.cos(alpha_15*np.pi/180))
+v = nu  # Umrechnung in Geschwindikeit erfolgt
+plt.subplot(2, 1, 1)
+plt.plot(t, np.abs(v), 'x', color='firebrick', mew=0.5, label=r'Mittlere Strömungsgeschwindigkeit')
+plt.xlabel(r'$t/$µs')
+plt.ylabel(r'$|\bar{v}|/$(m/s)')
+plt.legend()
+plt.grid()
+plt.subplot(2,1,2)
+plt.plot(t, sigma, 'rx', color = 'orchid', mew=0.5, label=r'Streuintensität')
+plt.xlabel(r'$t/$µs')
+plt.ylabel(r'$\mathrm{Streuintensität}/\%$')
+plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
+          ncol=1, fancybox=True)
+plt.grid()
+plt.tight_layout()
+plt.savefig('build/stroemung70.pdf')
+plt.clf()
+
+t, nu, sigma = np.genfromtxt('data/stroemung45.txt', unpack=True)
+nu[0:5] *= c_P/(2*nu_0*np.cos(alpha_15*np.pi/180))
+nu[5:] *= (12.28/t[5:]*c_P+((1-12.28/t[5:])*c_L))/(2*nu_0*np.cos(alpha_15*np.pi/180))
+v = nu  # Umrechnung in Geschwindikeit erfolgt
+plt.subplot(2, 1, 1)
+plt.plot(t, np.abs(v), 'x', color='firebrick', mew=0.5, label=r'Mittlere Strömungsgeschwindigkeit')
+plt.xlabel(r'$t/$µs')
+plt.ylabel(r'$|\bar{v}|/$(m/s)')
+plt.legend(loc='upper center', bbox_to_anchor=(0.175, -0.15),
+          ncol=1, fancybox=True)
+plt.grid()
+plt.subplot(2,1,2)
+plt.plot(t, sigma, 'rx', color = 'orchid', mew=0.5, label=r'Streuintensität')
+plt.xlabel(r'$t/$µs')
+plt.ylabel(r'$\mathrm{Streuintensität}/\%$')
+plt.legend(loc='upper center', bbox_to_anchor=(0.75, 1.425),
+          ncol=1, fancybox=True)
+plt.grid()
+plt.tight_layout()
+plt.savefig('build/stroemung45.pdf')
+plt.clf()
