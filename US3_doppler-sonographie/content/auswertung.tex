@@ -13,7 +13,7 @@ die Dopplerwinkel
   \alpha_{30}=70{,}53°\,,\\
   \alpha_{60}=54{,}74° \,.\\
 \end{align*}
-Dabei werden für die Schallgeschindigkeiten die Werte $c_{\symup{L}}=1800\,\symup{\frac{m}{s}}$
+Dabei werden für die Schallgeschwindigkeiten die Werte $c_{\symup{L}}=1800\,\symup{\frac{m}{s}}$
 und $c_{\symup{P}}=2700\,\symup{\frac{m}{s}}$ der Versuchsanleitung \cite{Versuchsanleitung} entnommen.
 Mithilfe dieser Winkel kann dann mit Gleichung \eqref{eqn:geschwindigkeit} aus den
 Messwerten die Strömungsgeschwindigkeit $v$ berechnet werden. Die Messwerte und die
@@ -82,9 +82,9 @@ mit einem Innendurchmesser von 7\,mm in Tabelle \ref{tab:dünn}.
 		\end{tabular}
 	\end{center}
 \end{table}
-Auffällig ist, dass die ermittelten Geschwindikeiten $v_{\symup{i}}$ genau so wie die gemessenen
+Auffällig ist, dass die ermittelten Geschwindigkeiten $v_{\symup{i}}$ genau so wie die gemessenen
 Werte für die Frequenzverschiebung $\Delta \nu_{\symup{i}}$ unterschiedliche Vorzeichen haben.
-Der Grund dafür wird schnell klar, wenn noch ein mal das Dopplerprisma aus Abbildung
+Der Grund dafür wird schnell klar, wenn noch ein Mal das Dopplerprisma aus Abbildung
 \ref{fig:dopplerprisma} betrachtet wird. Die Winkel sind bezüglich der Strömungsgeschwindigkeit
 unterschiedlich orientiert, sodass das Vorzeichen eine Aussage über die Strömungsgeschwindigkeit
 in Relation zur Orientierung des Dopplerwinkels angibt. Unter Betrachtung des verwendeten
@@ -127,3 +127,81 @@ lineare Zusammenhänge zu sehen.
 
 \subsection{Bestimmung des Strömungsprofils der Dopplerflüssigkeit}
 \label{subsec:strömungsprofil}
+
+In Tabelle \ref{tab:profil} sind die mittlere Frequenzverschiebung,
+die Streuintensität (std.) in Prozent und die aus der Frequenzverschiebung
+berechnete mittlere Strömungsgeschwindigkeit in Abhängigkeit der Eindringtiefe,
+ausgedrückt in µs, eingetragen. Es wurden zwei Messreihen aufgenommen, jeweils für
+6100 und 3920 Umdrehungen pro Minute.
+
+\begin{table}[htp]
+        \begin{center}
+          \caption{Werte für das Erstellen der Strömungsprofile.}
+          \label{tab:profil}
+                \begin{tabular}{ccccccc}
+                \toprule
+                & \multicolumn{3}{c}{$6100$rpm} & \multicolumn{3}{c}{$3920$rpm} \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                        {$t/$µs} & {$\bar{\nu}/$Hz} & {std./\%} & {$\bar{v}/\symup{\frac{m}{s}}$} & {$\bar{\nu}/$Hz} & {std./\%} & {$\bar{v}/\symup{\frac{m}{s}}$}\\
+                        \midrule
+                        10,0 & -452 &  5,5 & -1,77 & -244 &  6,7 & -0,95\\
+                        10,5 & -464 &  5,6 & -1,81 & -244 &  6,5 & -0,95\\
+                        11,0 & -452 &  5,9 & -1,77 & -232 &  6,4 & -0,91\\
+                        11,5 & -299 & 13,1 & -1,17 & -195 & 11,7 & -0,76\\
+                        12,0 & -208 & 12,6 & -0,81 & -134 & 13,0 & -0,52\\
+                        12,5 & -244 &  6,3 & -0,95 & -146 & 10,0 & -0,57\\
+                        13,0 & -305 &  6,5 & -1,17 & -171 &  7,4 & -0,66\\
+                        13,5 & -403 &  3,8 & -1,53 & -208 &  5,6 & -0,79\\
+                        14,0 & -476 &  3,2 & -1,79 & -244 &  6,0 & -0,92\\
+                        14,5 & -537 &  2,8 & -1,99 & -269 &  4,3 & -1,00\\
+                        15,0 & -574 &  3,5 & -2,11 & -269 &  4,0 & -0,99\\
+                        15,5 & -574 &  2,9 & -2,09 & -256 &  3,4 & -0,93\\
+                        16,0 & -513 &  3,6 & -1,85 & -220 &  4,7 & -0,79\\
+                        16,5 & -452 &  4,0 & -1,62 & -195 &  6,9 & -0,70\\
+                        17,0 & -366 &  6,2 & -1,30 & -159 & 10,1 & -0,56\\
+                        17,5 & -391 &  7,5 & -1,38 & -183 & 10,3 & -0,64\\
+                        18,0 & -439 &  4,1 & -1,53 & -195 &  9,6 & -0,68\\
+                        18,5 & -452 &  5,8 & -1,57 & -195 &  8,9 & -0,68\\
+                        19,0 & -439 &  5,7 & -1,51 & -195 &  7,2 & -0,67\\
+                        19,5 & -464 &  5,5 & -1,59 & -195 &  6,6 & -0,67\\
+                \bottomrule
+                \end{tabular}
+        \end{center}
+\end{table}
+
+Die Geschwindigkeit wird mithilfe von Gleichung \eqref{eqn:geschwindigkeit} berechnet.
+Es muss beachtet werden, dass die Messtiefe in µs angegeben wird. In Acryl, dem Material
+des Prismas, entsprechen 4\,µs 10\,mm und in der Flüssigkeit entsprechen 4\,µs 6\,mm.
+Da die Länge der Vorlaufstrecke im Glasprisma nach \cite{Versuchsanleitung} $30{,}7$\,mm
+beträgt, beginnt das Rohr erst bei einer Eindringtiefe von $12{,}$28\,µs. Allgemein
+sind so also die unterschiedlichen Anteile der Medien an der Laufstrecke zu berücksichtigen.
+Dies kann geschehen, indem eine effektive Ultraschallgeschwindigkeit $c_\text{eff}$ in die Formel
+eingesetzt wird, die für eine Eindringtiefe kleiner als $12{,}28$\,µs gleich $c_{\symup{P}}$
+ist und für größere $t$ die unterschiedlichen Medien durch
+\begin{equation}
+  c_\text{eff} = \frac{12{,}28}{t} c_{\symup{P}} + \left(1-\frac{12{,}28}{t} c_{\symup{L}} \right)
+\end{equation}
+berücksichtigt. Es sei angemerkt, dass hier die Unterscheidung zwischen der Flüssigkeit im Rohr
+und der Ummantelung nicht vorgenommen werden kann, da das Material der Hülle und damit auch nicht die
+Ultraschallgeschwindigkeit im Medium bekannt ist.
+
+Anhand dieser Daten können nun zwei Strömungsprofile erstellt werden, welche in den
+Abbildungen \ref{fig:profil70} und \ref{fig:profil45} zu sehen sind. Es wird nur
+der Betrag der Geschwindigkeit aufgetragen, da ein Vorzeichen nur eine andere Richtung der
+Strömung anzeigt.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{build/profil70.pdf}
+  \caption{Betrag der mittleren Strömungsgeschwindigkeit und Streuintensität in Prozent
+  in Abhängigkeit der Eindringtiefe für .. Umdrehungen pro Minute}
+  \label{fig:profil70}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{build/profil45.pdf}
+  \caption{Betrag der mittleren Strömungsgeschwindigkeit und Streuintensität in Prozent
+  in Abhängigkeit der Eindringtiefe für .. Umdrehungen pro Minute}
+  \label{fig:profil45}
+\end{figure}

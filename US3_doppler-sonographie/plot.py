@@ -211,45 +211,56 @@ print(t)
 
 # stroemungsprofil
 
-t, nu, sigma = np.genfromtxt('data/stroemung70.txt', unpack=True)
-nu[0:5] *= c_P/(2*nu_0*np.cos(alpha_15*np.pi/180))
-nu[5:] *= (12.28/t[5:]*c_P+((1-12.28/t[5:])*c_L))/(2*nu_0*np.cos(alpha_15*np.pi/180))
-v = nu  # Umrechnung in Geschwindikeit erfolgt
+t70, nu70, sigma70 = np.genfromtxt('data/stroemung70.txt', unpack=True)
+v70 = np.zeros(np.size(nu70))
+v70[0:5] = nu70[0:5] * c_P/(2*nu_0*np.cos(alpha_15*np.pi/180))
+v70[5:] = nu70[5:] * (12.28/t70[5:]*c_P+((1-12.28/t70[5:])*c_L))/(2*nu_0*np.cos(alpha_15*np.pi/180))
+# Umrechnung in Geschwindikeit erfolgt
 plt.subplot(2, 1, 1)
-plt.plot(t, np.abs(v), 'x', color='firebrick', mew=0.5, label=r'Mittlere Strömungsgeschwindigkeit')
+plt.plot(t70, np.abs(v70), 'x', color='firebrick', mew=0.5, label=r'Mittlere Strömungsgeschwindigkeit')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$|\bar{v}|/$(m/s)')
 plt.legend()
 plt.grid()
-plt.subplot(2,1,2)
-plt.plot(t, sigma, 'rx', color = 'orchid', mew=0.5, label=r'Streuintensität')
+plt.subplot(2, 1, 2)
+plt.plot(t70, sigma70, 'rx', color='orchid', mew=0.5, label=r'Streuintensität')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$\mathrm{Streuintensität}/\%$')
-plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
-          ncol=1, fancybox=True)
+plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05), ncol=1, fancybox=True)
 plt.grid()
 plt.tight_layout()
-plt.savefig('build/stroemung70.pdf')
+plt.savefig('build/profil70.pdf')
 plt.clf()
 
-t, nu, sigma = np.genfromtxt('data/stroemung45.txt', unpack=True)
-nu[0:5] *= c_P/(2*nu_0*np.cos(alpha_15*np.pi/180))
-nu[5:] *= (12.28/t[5:]*c_P+((1-12.28/t[5:])*c_L))/(2*nu_0*np.cos(alpha_15*np.pi/180))
-v = nu  # Umrechnung in Geschwindikeit erfolgt
+t45, nu45, sigma45 = np.genfromtxt('data/stroemung45.txt', unpack=True)
+v45 = np.zeros(np.size(nu45))
+v45[0:5] = nu45[0:5] * c_P/(2*nu_0*np.cos(alpha_15*np.pi/180))
+v45[5:] = nu45[5:] * (12.28/t45[5:]*c_P+((1-12.28/t45[5:])*c_L))/(2*nu_0*np.cos(alpha_15*np.pi/180))
+# Umrechnung in Geschwindikeit erfolgt
 plt.subplot(2, 1, 1)
-plt.plot(t, np.abs(v), 'x', color='firebrick', mew=0.5, label=r'Mittlere Strömungsgeschwindigkeit')
+plt.plot(t45, np.abs(v45), 'x', color='firebrick', mew=0.5, label=r'Mittlere Strömungsgeschwindigkeit')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$|\bar{v}|/$(m/s)')
-plt.legend(loc='upper center', bbox_to_anchor=(0.175, -0.15),
-          ncol=1, fancybox=True)
+plt.legend(loc='upper center', bbox_to_anchor=(0.175, -0.15), ncol=1, fancybox=True)
 plt.grid()
-plt.subplot(2,1,2)
-plt.plot(t, sigma, 'rx', color = 'orchid', mew=0.5, label=r'Streuintensität')
+plt.subplot(2, 1, 2)
+plt.plot(t45, sigma45, 'rx', color='orchid', mew=0.5, label=r'Streuintensität')
 plt.xlabel(r'$t/$µs')
 plt.ylabel(r'$\mathrm{Streuintensität}/\%$')
-plt.legend(loc='upper center', bbox_to_anchor=(0.75, 1.425),
-          ncol=1, fancybox=True)
+plt.legend(loc='upper center', bbox_to_anchor=(0.75, 1.425), ncol=1, fancybox=True)
 plt.grid()
 plt.tight_layout()
-plt.savefig('build/stroemung45.pdf')
+plt.savefig('build/profil45.pdf')
 plt.clf()
+
+hr = ['$t/$µs','$\nu/$Hz','std./\%','$v/\symup{\frac{m}{s}}$','$\nu/$Hz','std./\%','$v/\symup{\frac{m}{s}}$']
+m = np.zeros((20, 7))
+m[:,0] = t70
+m[:,1] = nu70
+m[:,2] = sigma70
+m[:,3] = v70
+m[:,4] = nu45
+m[:,5] = sigma45
+m[:,6] = v45
+t = matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
