@@ -1,0 +1,11 @@
+#Farbenliste
+#rot
+#orange1
+#orange2
+#gelb(grün)
+#grün
+#blaugrün
+#blau
+#violettstark
+#violettschwach
+#Alleausserblauundrotsindhg
