@@ -111,6 +111,13 @@ in Abbildung \ref{fig:kurve} dargestellt.
   \label{fig:kurve}
 \end{figure}
 
+Es werden später noch direkt Brechungsindizes durch Einsetzen der Wellenlänge
+in die Dispersionskurve mit den empirisch bestimmten Koeffizienten $A_0$ und $A_2$
+berechnet. Die Unsicherheit ergibt sich dann zu
+\begin{equation*}
+  \sigma_n = \sqrt{\sigma_{A_{0}}^{2} + \frac{\sigma_{A_{2}}^{2}}{l^{4}}}\,.
+\end{equation*}
+
 \subsection{Bestimmung der Abbeschen Zahl}
 \label{subsec:abbe}
 Die Abbesche Zahl ist eine Materialkonstante, die ein Maß für die Farbzerstreuung darstellt.
@@ -148,7 +155,11 @@ werden. Sie ergibt sich zu
   \nu = 44 \pm 4\,.
 \end{equation*}
 
-FEHLERFORTPFLANZUNG
+Der Fehler ergibt sich durch Fortpflanzung der Unsicherheiten der Brechungsindizes zu
+\begin{equation*}
+  \sigma_{\nu}= \sqrt{\frac{\sigma_{n_C}^{2} \left(n_D - 1\right)^{2}}{\left(- n_C + n_F\right)^{4}}
+  + \frac{\sigma_{n_D}^{2}}{\left(- n_C + n_F\right)^{2}} + \frac{\sigma_{n_F}^{2} \left(n_D - 1\right)^{2}}{\left(- n_C + n_F\right)^{4}}}
+\end{equation*}
 
 \subsection{Bestimmung des Auflösungsvermögens}
 \label{subsec:auflösung}
@@ -161,3 +172,9 @@ für das Auflösungsvermögen
   \frac{\lambda}{\Delta \lambda} = b \left|\frac{\symup{d}n(\lambda)}{\symup{d}\lambda}\right| = \frac{A_2}{\lambda^3\sqrt{A_0 + \frac{A_2}{\lambda^2}}}\,,
 \end{equation}
 wobei $b = \SI{3}{\centi\meter}$ die Basislänge des verwendeten Prismas ist.
+Die Auflösungsvermögen an den Wellenlängen $\lambda_\text{C}$ und $\lambda_\text{F}$
+ergeben sich dann zu
+\begin{align*}
+  A_\text{C} &= \SI{3690(30)}{}\,, \\
+  A_\text{F} &= \SI{6500(50)}{}\,. \\
+\end{align*}

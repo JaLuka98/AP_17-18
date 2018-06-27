@@ -17,9 +17,9 @@ def error(f, err_vars=None):
     return latex(sqrt(s), symbol_names=latex_names)
 
 
-Rmax = var('a1, b1, a2, b2')
+Rmax = var('l, A_0, A_2')
 
-f = (b2-b1)/(a1-a2)
+f = A_0 + A_2/l**2
 
 print(error(f))
 
