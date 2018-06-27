@@ -1,17 +1,17 @@
-\section{Fehlerrechnung}
+\section{Fehlerrechnung und Hinweise zur Auswertung}
 \label{sec:Fehlerrechnung}
 Der Mittelwert einer Stichprobe von $N$ Werten wird durch
 \begin{equation}
-  \overline{x} = \frac{1}{N} \sum\limits_{i = 1}^N x_i
+  \bar{x} = \frac{1}{N} \sum\limits_{i = 1}^N x_i
   \label{eqn:mean}
 \end{equation}
 
 berechnet.
-Die empirische Standardabweichung dieser Stichprobe ist durch
+Die empirische Standardabweichung des Mittelwerts dieser Stichprobe ist durch
 \begin{equation}
-  \sigma_x = \sqrt{\frac{1}{N(N-1)}
+  \sigma_{\bar{x}} = \sqrt{\frac{1}{N(N-1)}
     \sum\limits_{i = 1}^N
-    (x_i-\overline{x})^2}
+    (x_i-\bar{x})^2}
     \label{eqn:std}
 \end{equation}
 
@@ -28,22 +28,22 @@ Standardabweichungen $\sigma_i$ abhängt, so ist die Unsicherheit von f
 
 Diese Formel bezeichnet man als \enquote{Gauß'sches Fehlerfortpflanzungsgesetz}.
 
-Bei einer linearen Regression folgt eine Ausgleichsgerade
-\begin{equation}
-  y(x) = ax+b\,
-  \label{eqn:ausgleichsgerade}
-\end{equation}
-mit der Steigung $a$ und dem Ordinatenabschnitt $b$. Liegen Fehler in y-Richtung
-und nur in y-Richtung vor, dann sind die Parameter $a$ und $b$ selbst unsicher
-und ergeben sich zu
-\begin{align}
-  a &= \frac{\overline{xy}-\overline{x} \cdot \overline{y}}{\overline{x^2}-\overline{x}^2}\,,\\
-  b &= \frac{\overline{y}-\overline{x^2}-\overline{xy} \cdot \overline{x}}{\overline{x^2}-\overline{x}^2}\,.
-\end{align}
+%Bei einer linearen Regression folgt eine Ausgleichsgerade
+%\begin{equation}
+%  y(x) = ax+b\,
+%  \label{eqn:ausgleichsgerade}
+%\end{equation}
+%mit der Steigung $a$ und dem Ordinatenabschnitt $b$. Liegen Fehler in y-Richtung
+%und nur in y-Richtung vor, dann sind die Parameter $a$ und $b$ selbst unsicher
+%und ergeben sich zu
+%\begin{align}
+%  a &= \frac{\overline{xy}-\overline{x} \cdot \overline{y}}{\overline{x^2}-\overline{x}^2}\,,\\
+%  b &= \frac{\overline{y}-\overline{x^2}-\overline{xy} \cdot \overline{x}}{\overline{x^2}-\overline{x}^2}\,.
+%\end{align}
 
-%Wenn im Folgenden Mittelwerte, Standardabweichungen und Fehler von
-%Funktionen unsicherer Größen berechnet werden, so werden stets die obigen
-%Formeln verwendet.
+Wenn im Folgenden Mittelwerte, Standardabweichungen und Fehler von
+Funktionen unsicherer Größen berechnet werden, so werden stets die obigen
+Formeln verwendet.
 Jegliche Rechnungen werden mit IPython 5.3.0 in Python 3.6.1 durchgeführt. Dabei
 werden die Bibliotheken \enquote{numpy} \cite{numpy} und \enquote{scipy} \cite{scipy} verwendet.
 Letztere dient insbesondere zur Erstellung von Ausgleichsrechnungen.

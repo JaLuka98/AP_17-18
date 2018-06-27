@@ -1,2 +1,84 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung des Brechwinkels}
+\label{subsec:brechwinkel}
+Zuerst wird der brechende Winkel $\varphi$ des Prismas bestimmt.
+Die dazu aufgenommen Messwerte und die nach REFERENZ!!!!!!!!!!!!!!!!!!!!!!!!!
+bestimmten $\varphi$ sind in Tabelle \ref{tab:phi} zu sehen.
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Gemessene $\varphi$-Winkel und daraus erhaltene brechende Winkel $\varphi$.}
+    \label{tab:phi}
+		\begin{tabular}{ccc}
+		\toprule
+			{$\varphi_\text{l}/°$} & {$\varphi_\text{r}/°$} & {$\varphi/°$} \\
+			\midrule
+      72,5 & 192,5 & 60,00 \\
+      82,8 & 202,6 & 59,90 \\
+      80,2 & 200,2 & 60,00 \\
+      83,3 & 203,5 & 60,10 \\
+      81,4 & 201,4 & 60,00 \\
+      79,4 & 199,5 & 60,05 \\
+      78,5 & 198,7 & 60,10 \\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Die einzeln ermittelten brechenden Winkel lassen sich mitteln, um als Ergebnis
+\begin{equation*}
+  \varphi = \SI{60.021(26)}{\degree}
+\end{equation*}
+zu erhalten. Dieser Wert wird in späteren Rechnungen weiter verwendet.
+
+\subsection{Bestimmung der Brechungsindizes und Ermittlung der Dispersionskurve}
+\label{subsec:indizesunddispersion}
+Nun werden die Brechungswinkel $\eta$ für die Wellenlängen $\lambda$ der Spektrallinien bestimmt.
+Zuvor sind einige Anmerkungen angebracht: Es wurden zwei getrennte orangefarbene
+Spektrallinien gesehen, sodass für beide getrennt gemessen wurde. Auf die Auswirkungen
+dessen wird in der Diskussion eingegangen. Des Weiteren wurde das Prisma bei der konkreten
+Durchführung den Werten zufolge nicht korrekt gedreht, da sich für $\eta$ nach Gleichung
+REFERENZ negative Werte ergeben. Dies wird durch das Bilden des Betrags der Werte umgangen.
+Die Wellenlängen der Spektrallinien werden LITERATUR entnommen.
+Die Werte der gemessenen Winkel $\Omega_\text{l}$ und $\Omega_\text{r}$ für die ebenso
+dort notierten Spektrallinien sind gemeinsam mit den
+bestimmten Brechungswinkeln in Tabelle \ref{tab:eta} eingetragen.
+Die nach REFERENZ ermittelten Werte für die Brechungsindizes bei den entsprechenden
+Spektrallinien sind auch bereits in der Tabelle enthalten.
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Übersicht über die gemessenen $\Omega$-Winkel und daraus berechnete Brechwinkel $\eta$.}
+    \label{tab:eta}
+		\begin{tabular}{cccccc}
+		\toprule
+			{Farbe (und Weiteres)} & {$\lambda$/nm} & {$\Omega_\text{l}/°$} & {$\Omega_\text{r}/°$} & {$\eta/°$} & {$n$}\\
+			\midrule
+      Rot (Cadmium)     & 643,85 & 92,7 & 332,8 & 60,1 & 1,7325 \pm 0,0005 \\
+      Orange (1)        & 614,95 & 91,7 & 333,2 & 61,5 & 1,7446 \pm 0,0005 \\
+      Orange (2)        & 614,64 & 91,7 & 333,2 & 61,5 & 1,7446 \pm 0,0005 \\
+      Gelbgrün          & 597,07 & 91,4 & 333,5 & 62,1 & 1,7497 \pm 0,0005 \\
+      Grün              & 546,08 & 91,1 & 333,8 & 62,7 & 1,7547 \pm 0,0005 \\
+      Blaugrün          & 508,58 & 90,7 & 334,2 & 63,5 & 1,7614 \pm 0,0005 \\
+      Blau (Cadmium)    & 467,81 & 90,5 & 334,3 & 63,8 & 1,7639 \pm 0,0005 \\
+      Violett (stark)   & 435,83 & 89,9 & 335,0 & 65,1 & 1,7744 \pm 0,0005 \\
+      Violett (schwach) & 404,66 & 89,1 & 335,7 & 66,6 & 1,7863 \pm 0,0006 \\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Es ist zu beachten, dass
+der brechende Winkel $\varphi$ bereits fehlerbehaftet ist, sodass sich der Fehler
+des Brechungsindizes zu
+\begin{equation*}
+  \sigma_n = \sqrt{
+   \sigma_{\phi}^{2} \left(\frac{\cos{\left (\frac{\eta}{2} + \frac{\phi}{2} \right )}}{2 \sin{\left (\frac{\phi}{2} \right )}} - \frac{\sin{\left (\frac{\eta}{2}
+  + \frac{\phi}{2} \right )} \cos{\left (\frac{\phi}{2} \right )}}{2 \sin^{2}{\left (\frac{\phi}{2} \right )}}\right)^{2}}
+\end{equation*}
+ergibt.
+
+Im Folgenden soll untersucht werden, welche der beiden Dispersionskurven, die durch die
+Gleichungen REFERENZ und REFERENZ beschrieben werden,  die vorliegenden Brechungsindizes
+besser anpasst.
