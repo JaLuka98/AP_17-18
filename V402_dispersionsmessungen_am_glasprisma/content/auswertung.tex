@@ -80,5 +80,84 @@ des Brechungsindizes zu
 ergibt.
 
 Im Folgenden soll untersucht werden, welche der beiden Dispersionskurven, die durch die
-Gleichungen REFERENZ und REFERENZ beschrieben werden,  die vorliegenden Brechungsindizes
-besser anpasst.
+Gleichungen REFERENZ und REFERENZ beschrieben werden, die vorliegenden Brechungsindizes, bzw. vielmehr ihre Quadrate
+besser anpasst. Dazu werden die konkreten Ausgleichsrechnungen durchgeführt. Es ergeben sich die
+folgenden Werte für die Parameter:
+\begin{align*}
+  A_0 &= \SI{2.922(14)}{}\,,\\
+  A_2 &= \SI{4.4(4)e4}{\meter\squared}\,,\\
+  A_0' &= \SI{3.271(17)}{}\,,\\
+  A_2' &= \SI{6.3(5)e-7}{\per\meter\squared}\,,.\
+\end{align*}
+Mithilfe der Gleichungen REFERENZ und REFERENZ lassen sich die Abweichungsquadrate
+berechnen, um eine Aussage darüber treffen zu können, welche der beiden Dispersionskurven
+geeigneter ist. Sie ergeben sich zu
+\begin{align*}
+  s_n^2 &= \SI{0.000169}{}\,,\\
+  s_{n'}^2 &= \SI{0.048(8)}{}\,.
+\end{align*}
+Es sei darauf hingewiesen, dass sich der Fehler von $s_n^2$ in der Größenordnung
+von $10^{12}$ befindet, sodass er nicht explizit ausgeschrieben wurde.
+Da das Abweichungsquadrat für die erste Anpassungsfunktion deutlich geringer ist als für
+die zweite, wird geurteilt, dass dise Kurve die Quadrate der Brechungsindizes besser anpasst,
+sodass mit ihr auch im Folgenden weitergerechnet wird.
+Die Quadrate der Brechungsindizes sind zusammen mit dem Graph der konkreten Anpassungsfunktion
+in Abbildung \ref{fig:kurve} dargestellt.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{build/kurve.pdf}
+  \caption{Auftragung der Quadrate der Brechungsindizes gegen die Wellenlängen und Graph der Ausgleichsfunktion.}
+  \label{fig:kurve}
+\end{figure}
+
+\subsection{Bestimmung der Abbeschen Zahl}
+\label{subsec:abbe}
+Die Abbesche Zahl ist eine Materialkonstante, die ein Maß für die Farbzerstreuung darstellt.
+Sie ist durch
+\begin{equation}
+  \nu = \frac{n_\text{D}-1}{n_\text{F}-n_\text{C}}
+  \label{eqn:abbe}
+\end{equation}
+definiert. Die Größen $n_\text{C}$, $n_\text{D}$ und $n_\text{F}$ bezeichnen die Brechungsindizes
+für die Wellenlängen $\lambda_\text{C} = \SI{656}{\nano\meter}$, $\lambda_\text{D} = \SI{589}{\nano\meter}$
+und $\lambda_\text{F} = \SI{486}{\nano\meter}$.
+Mit den in Kapitel \ref{subsec:indizesunddispersion} berechneten Parametern und
+der Ausgleichsfunktion aus Gleichung REFERENZ können die $n_i$ bestimmt werden.
+Diese sind in Tabelle \ref{tab:abbe} eingetragen.
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Brechungsindizes an den Fraunhoferschen Linien mit Wellenlängen $\lambda_i$.}
+    \label{tab:phi}
+		\begin{tabular}{ccc}
+		\toprule
+			& {$\lambda/$nm} & {$n$} \\
+			\midrule
+      $\lambda_\text{C}$ & 656 & 1,7390 \pm 0,0019 \\
+      $\lambda_\text{D}$ & 589 & 1,7629 \pm 0,0013 \\
+      $\lambda_\text{F}$ & 486 & 1,7460 \pm 0,0015 \\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Mithilfe dieser Werte und Gleichung \eqref{eqn:abbe} kann nun die Abesche Zahl berechnet
+werden. Sie ergibt sich zu
+\begin{equation*}
+  \nu = 44 \pm 4\,.
+\end{equation*}
+
+FEHLERFORTPFLANZUNG
+
+\subsection{Bestimmung des Auflösungsvermögens}
+\label{subsec:auflösung}
+Wie in Kapitel XXXX dargelegt wurde, ist es durch Gleichung REFERENZ möglich,
+mit Kenntnis der Absorptionskurve das theoretische Auflösungsvermögen $\frac{\lambda}{\Delta \lambda}$ zu bestimmen.
+Da die Dispersionskurve hier experimentell bestimmt wurde, ist es also zumindest möglich.
+das Auflösungsvermögen abzuschätzen. Unter Anwendung der obigen Gleichung ergibt sich dann
+für das Auflösungsvermögen
+\begin{equation}
+  \frac{\lambda}{\Delta \lambda} = b \left|\frac{\symup{d}n(\lambda)}{\symup{d}\lambda}\right| = \frac{A_2}{\lambda^3\sqrt{A_0 + \frac{A_2}{\lambda^2}}}\,,
+\end{equation}
+wobei $b = \SI{3}{\centi\meter}$ die Basislänge des verwendeten Prismas ist.

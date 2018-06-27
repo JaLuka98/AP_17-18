@@ -49,8 +49,8 @@ lammdalinspace = np.linspace(350, 700, 500)
 # Nicht so korrekte Funktion fitten
 params2, covariance_matrix2 = optimize.curve_fit(incorrect, lammda, unp.nominal_values(n**2))
 A0strich, A2strich = correlated_values(params2, covariance_matrix2)
-print('A0strich = ', A0)
-print('A2strich = ', A2)
+print('A0strich = ', A0strich)
+print('A2strich = ', A2strich)
 lammdalinspace = np.linspace(350, 700, 500)
 
 # Plotting
