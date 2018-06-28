@@ -13,14 +13,14 @@ die in Abbildung \ref{fig:geraet} dargestellte Messapparatur verwendet.
 
 Aus einer Hg-Cd-Lampe fällt Licht auf einen Spalt, der in der Brennebene einer Linse
 liegt, die den Strahl so fokussiert, dass ein paralleler Strahlengang auf das Primsa fällt.
-Das Prisma besteht dabei aus (MATERIAL). Nachdem das Licht im Prisma gebrochen oder vom
+Das Prisma besteht dabei aus Schwerflintglas 18. Nachdem das Licht im Prisma gebrochen oder vom
 Prisma reflektiert wurde, kann es durch ein mit konstantem Abstand zum Prisma auf
 einem Kreis bewegbaren Fernrohr mit dem Auge beobachtet werden. Die Schärfe des Bildes
 kann am Fernrohr geregelt werden.
 
 Für die Messung des Winkels $\eta$ wird für jede sichtbare Spektrallinie ein möglichst
 paralleler Strahlengang im Prisma erzeugt, indem Prisma und Fernrohr so justiert werden,
-dass das reflektierte Strahlenbündel genau mit der Spektrallinie zusammenfällt.
+dass das reflektierte Strahlenbündel genau mit der zu untersichenden Spektrallinie zusammenfällt.
 Für jede Spektrallinie wird der Winkel notiert. Skizzen hierzu sind in den Abbildungen
 \ref{fig:eta1} und \ref{fig:symmetrisch} zu sehen.
 
@@ -41,7 +41,12 @@ Für jede Spektrallinie wird der Winkel notiert. Skizzen hierzu sind in den Abbi
 
 Danach wird die gleiche Messung in Spiegelsymmetrischer Stellung des Prismas erneut
 durchgeführt. Eine Skizze hierzu befindet sich in Abbildung \ref{fig:eta2}.
-Aus den beden bestimmten Winkeln kann schließlich der Winken $\eta$ berechnet werden.
+Aus den beiden bestimmten Winkeln kann schließlich der Winken $\eta$ gemäß
+\begin{equation}
+  \eta=180°-(\Omega_{\symup{r}}-\Omega_{\symup{l}})
+  \label{eqn:eta}
+\end{equation}
+berechnet werden.
 
 \begin{figure}[H]
   \centering
@@ -54,6 +59,11 @@ Aus den beden bestimmten Winkeln kann schließlich der Winken $\eta$ berechnet w
 Zur Bestimmung des Winkels $\phi$ einer Ecke des Prismas wird das Prisma mit dieser
 Ecke in Richtung der Lampe positioniert und es wird auf beiden Seiten der Winkel gemessen,
 unter dem Reflexion zu finden ist. Aus diesen beiden Winkeln kann der Winkel $\phi$
+gemäß
+\begin{equation}
+  \phi=\frac{1}{2}(\phi_{\symup{r}}-\phi_{\symup{l}})
+  \label{eqn:phi}
+\end{equation}
 berechnet werden. Eine Skizze hierzu befindet sich in Abbildung \ref{fig:phi}.
 Die Messung wird für sieben leicht verschiedene Ausrichtungen des Prismas bestimmt.
 

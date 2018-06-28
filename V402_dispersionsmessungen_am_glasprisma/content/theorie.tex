@@ -6,11 +6,11 @@ Durchdringt ein Lichtstrahl die Grenzfläche zweier Medien, in denen die Ausbrei
 des Lichtes unterschiedlich sind, so wird er gebrochen. Dies wird durch das Snellius'sche
 Brechungsgesetz beschrieben:
 \begin{equation}
-  n=\frac{v_1}{v_2}=\frac{\sin(\alpha)}{\sin{\beta}} \,.
+  n=\frac{v_1}{v_2}=\frac{\sin{\alpha}}{\sin{\beta}} \,.
   \label{eqn:snelluis}
 \end{equation}
 Dabei sind $v_{\symup{i}}$ die Lichtgeschwindigkeiten im jeweiligen Medium. $\alpha$
-und $\beta$ geben den Winkel an, den die Strahlen vor und nach der Brechnug mit der
+und $\beta$ geben den Winkel an, den die Strahlen vor und nach der Brechung mit der
 Normalen der Grenzfläche einschließen. Eine Skizze hierzu ist in Abbildung \ref{fig:brechung}
 zu sehen.
 
@@ -18,7 +18,7 @@ zu sehen.
   \centering
   \includegraphics[height=5cm]{data/brechung.png}
   \caption{Brechung von Lichtstrahlen an einer Grenzfläche \cite{Versuchsanleitung}.}
-  \label{fig:brechnung}
+  \label{fig:brechung}
 \end{figure}
 
 Das Snellius'sche Brechungsgesetz kann auch aus dem Huygens'schen Prinzip der Elementarwellen
@@ -52,7 +52,7 @@ die Differentialgleichung
 Dabei ist $m_{\symup{h}}$ die Teilchenmasse,$f_{\symup{h}}$ der Reibungskoeffizient
 bei der Bewegung der Teilchen, $a_{\symup{h}}$ die Beschleunigung (???) der Teilchen,
 $q_{\symup{h}}$ die Ladung der Teilchen, $\symbf{E_0}$ das elektrische Feld der Lichtwelle,
-$\omega$ deren Frequenz, $t$ die Zeit.
+$\omega$ deren Frequenz und $t$ die Zeit.
 
 \subsection{Näherungen der Dispersionskurve}
 \label{subsec:dispersion2}
@@ -84,26 +84,26 @@ gelten soll. Damit ergibt sich die der Zusammenhang
 zwischen Brechungsindex $n$ und Wellenlänge $\lambda$.
 
 Nun wird der Fall betrachtet, dass der Festkörper eine Absorptionsstelle
-$\lambda_{\symup{a}}$ beseitzt. Dann lassen sich grundsätzlich die beiden Fälle
+$\lambda_{\symup{a}}$ besitzt. Dann lassen sich grundsätzlich die beiden Fälle
 $\lambda \gg \lambda_{\symup{a}}$ und $\lambda \ll \lambda_{\symup{a}}$ unterscheiden.
 Für den ersten Fall lässt sich Gleichung \eqref{eqn:dispersion} nach Potenzen von
 $\lambda_{\symup{a}}/\lambda$ entwickeln. Dann ergibt sich
 \begin{equation}
   n^2(\lambda)=A_0+\frac{A_2}{\lambda^2}+\frac{A_4}{\lambda^4}+... \,.
-  \label{fall1}
+  \label{eqn:fall1}
 \end{equation}
 Dabei müssen die $A_{\symup{i}}$ größer als Null sein.
 
 Für den zweiten Fall lässt sich Gleichung \eqref{eqn:dispersion} zu
 \begin{equation}
   n^2(\lambda)=1-A_2'\lambda^2-A_4'\lambda^4-...
-  \label{fall2}
+  \label{eqn:fall2}
 \end{equation}
 entwickeln. Hier müssen die $A_{\symup{i}}'$ für $i≥2$ größer als Null sein.
 
 In Abbildung \ref{fig:faelle} sind die Dispersionskurven für beide Fälle skizziert.
-Es ist erkennbar, dass der Brechungsindex mit steigender Wellenlänge sinkt. Beide
-Formeln beschreiben also normale Dispersion.
+Es ist erkennbar, dass der für beide Fälle Brechungsindex mit steigender Wellenlänge
+sinkt. Beide Formeln beschreiben also normale Dispersion.
 
 \begin{figure}[H]
   \centering
@@ -115,17 +115,36 @@ Formeln beschreiben also normale Dispersion.
 \subsection{Grundlagen für die Messung und deren Auswertung}
 \label{subsec:messung}
 
-Im Versuch sind Winkel die Winkel $\eta$ und $\phi$ zu bestimmen, aus denen sich
+Im Versuch sind Winkel die Winkel $\eta$ und $\varphi$ zu bestimmen, aus denen sich
 der Brechungsindex gemäß
 \begin{equation}
-  n=\frac{\sin\left(\frac{\eta+\phi}{2}\right)}{\sin\left(\frac{\phi}{2}\right)}
-  \label{eqn:n_aus_winkeln}
+  n=\frac{\sin\left(\frac{\eta+\varphi}{2}\right)}{\sin\left(\frac{\varphi}{2}\right)}
+  \label{eqn:nauswinkeln}
 \end{equation}
 berechnen lässt.
+
+Zudemm soll eine Aussage darüber getroffen werden, ob die Messwerte durch Gleichung
+\eqref{eqn:fall1} oder durch \eqref{eqn:fall2} besser beschrieben werden. Ein Maß
+dafür sind die Abweichungsquadrate. Diese berechnen sich zu
+\begin{equation}
+  s_{\symup{n}}^2=\frac{1}{z-2}\sum_{i=1}^{z}\left(n^2\left(\lambda_{\symup{i}}\right)
+  -A_0-\frac{A_2}{\lambda_{\symup{i}}^2}\right)^2
+  \label{eqn:abweichung1}
+\end{equation}
+und 
+\begin{equation}
+  s_{\symup{n}}'^2=\frac{1}{z-2}\sum_{i=1}^{z}\left(n^2\left(\lambda_{\symup{i}}\right)
+  -A_0'-A_2'\lambda_{\symup{i}}^2\right)^2
+  \label{eqn:abweichung2}
+\end{equation}
+wenn die Gleichungen bis zur zweiten Ordnung entwickelt werden. Dabei bezeichnet z
+die Anzahl der aufgenommenen Messwertpaare. Diejenige Gleichung, die die kleinere
+Summe der Abweichungsquadrate besitzt, beschreibt den Verlauf der Messwerte am besten.
 
 Außerdem soll später die Abbe'sche Zahl
 \begin{equation}
   \nu=\frac{n_{\symup{D}}-1}{n_{\symup{F}}-n_{\symup{C}}}
+  \label{eqn:abbe}
 \end{equation}
 berechnet werden. Diese ist ein Maß für die Dispersion des Materials.
 Die $n_{\symup{i}}$ bedeuten dabei die Brechungsindices des
@@ -139,5 +158,6 @@ Zudem soll das Auflösungsvermögen untersucht werden. Dieses ist definiert durc
 Es kann gezeigt werden, dass gilt:
 \begin{equation}
   \frac{\lambda}{\Delta\lambda}=b\frac{\symup{d}\,n}{\symup{d}\,\lambda} \,.
+  \label{eqn:aufloesung}
 \end{equation}
 Dabei ist $n$ der Brechungsindex und $b$ die Seitenlänge des verwendeten Prismas.

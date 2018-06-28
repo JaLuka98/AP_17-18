@@ -3,7 +3,7 @@
 \subsection{Bestimmung des Brechwinkels}
 \label{subsec:brechwinkel}
 Zuerst wird der brechende Winkel $\varphi$ des Prismas bestimmt.
-Die dazu aufgenommen Messwerte und die nach REFERENZ!!!!!!!!!!!!!!!!!!!!!!!!!
+Die dazu aufgenommen Messwerte und die nach Gleichung \eqref{eqn:eta}
 bestimmten $\varphi$ sind in Tabelle \ref{tab:phi} zu sehen.
 
 \begin{table}[htp]
@@ -39,12 +39,12 @@ Zuvor sind einige Anmerkungen angebracht: Es wurden zwei getrennte orangefarbene
 Spektrallinien gesehen, sodass für beide getrennt gemessen wurde. Auf die Auswirkungen
 dessen wird in der Diskussion eingegangen. Des Weiteren wurde das Prisma bei der konkreten
 Durchführung den Werten zufolge nicht korrekt gedreht, da sich für $\eta$ nach Gleichung
-REFERENZ negative Werte ergeben. Dies wird durch das Bilden des Betrags der Werte umgangen.
+\eqref{eqn:eta} negative Werte ergeben. Dies wird durch das Bilden des Betrags der Werte umgangen.
 Die Wellenlängen der Spektrallinien werden LITERATUR entnommen.
 Die Werte der gemessenen Winkel $\Omega_\text{l}$ und $\Omega_\text{r}$ für die ebenso
 dort notierten Spektrallinien sind gemeinsam mit den
 bestimmten Brechungswinkeln in Tabelle \ref{tab:eta} eingetragen.
-Die nach REFERENZ ermittelten Werte für die Brechungsindizes bei den entsprechenden
+Die nach \eqref{eqn:nauswinkeln} ermittelten Werte für die Brechungsindizes bei den entsprechenden
 Spektrallinien sind auch bereits in der Tabelle enthalten.
 
 \begin{table}[htp]
@@ -74,22 +74,22 @@ der brechende Winkel $\varphi$ bereits fehlerbehaftet ist, sodass sich der Fehle
 des Brechungsindizes zu
 \begin{equation*}
   \sigma_n = \sqrt{
-   \sigma_{\phi}^{2} \left(\frac{\cos{\left (\frac{\eta}{2} + \frac{\phi}{2} \right )}}{2 \sin{\left (\frac{\phi}{2} \right )}} - \frac{\sin{\left (\frac{\eta}{2}
-  + \frac{\phi}{2} \right )} \cos{\left (\frac{\phi}{2} \right )}}{2 \sin^{2}{\left (\frac{\phi}{2} \right )}}\right)^{2}}
+   \sigma_{\varphi}^{2} \left(\frac{\cos{\left (\frac{\eta}{2} + \frac{\varphi}{2} \right )}}{2 \sin{\left (\frac{\varphi}{2} \right )}} - \frac{\sin{\left (\frac{\eta}{2}
+  + \frac{\varphi}{2} \right )} \cos{\left (\frac{\varphi}{2} \right )}}{2 \sin^{2}{\left (\frac{\varphi}{2} \right )}}\right)^{2}}
 \end{equation*}
 ergibt.
 
 Im Folgenden soll untersucht werden, welche der beiden Dispersionskurven, die durch die
-Gleichungen REFERENZ und REFERENZ beschrieben werden, die vorliegenden Brechungsindizes, bzw. vielmehr ihre Quadrate
-besser anpasst. Dazu werden die konkreten Ausgleichsrechnungen durchgeführt. Es ergeben sich die
-folgenden Werte für die Parameter:
+Gleichungen \eqref{eqn:fall1} und \eqref{eqn:fall2} beschrieben werden, die vorliegenden
+Brechungsindizes, bzw. vielmehr ihre Quadrate besser anpasst. Dazu werden die konkreten
+Ausgleichsrechnungen durchgeführt. Es ergeben sich die folgenden Werte für die Parameter:
 \begin{align*}
   A_0 &= \SI{2.922(14)}{}\,,\\
   A_2 &= \SI{4.4(4)e4}{\meter\squared}\,,\\
   A_0' &= \SI{3.271(17)}{}\,,\\
   A_2' &= \SI{6.3(5)e-7}{\per\meter\squared}\,,.\
 \end{align*}
-Mithilfe der Gleichungen REFERENZ und REFERENZ lassen sich die Abweichungsquadrate
+Mithilfe der Gleichungen \eqref{eqn:abweichung1} und \eqref{eqn:abweichung2} lassen sich die Abweichungsquadrate
 berechnen, um eine Aussage darüber treffen zu können, welche der beiden Dispersionskurven
 geeigneter ist. Sie ergeben sich zu
 \begin{align*}
@@ -163,7 +163,7 @@ Der Fehler ergibt sich durch Fortpflanzung der Unsicherheiten der Brechungsindiz
 
 \subsection{Bestimmung des Auflösungsvermögens}
 \label{subsec:auflösung}
-Wie in Kapitel XXXX dargelegt wurde, ist es durch Gleichung REFERENZ möglich,
+Wie in Kapitel \ref{subsec:messung} dargelegt wurde, ist es durch Gleichung \eqref{eqn:aufloesung} möglich,
 mit Kenntnis der Absorptionskurve das theoretische Auflösungsvermögen $\frac{\lambda}{\Delta \lambda}$ zu bestimmen.
 Da die Dispersionskurve hier experimentell bestimmt wurde, ist es also zumindest möglich.
 das Auflösungsvermögen abzuschätzen. Unter Anwendung der obigen Gleichung ergibt sich dann
