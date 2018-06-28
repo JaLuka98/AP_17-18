@@ -94,7 +94,7 @@ berechnen, um eine Aussage darüber treffen zu können, welche der beiden Disper
 geeigneter ist. Sie ergeben sich zu
 \begin{align*}
   s_n^2 &= \SI{0.000169}{}\,,\\
-  s_{n'}^2 &= \SI{0.048(8)}{}\,.
+  s_{n'}^2 &= \SI{0.19(3)}{}\,.
 \end{align*}
 Es sei darauf hingewiesen, dass sich der Fehler von $s_n^2$ in der Größenordnung
 von $10^{12}$ befindet, sodass er nicht explizit ausgeschrieben wurde.
@@ -115,18 +115,12 @@ Es werden später noch direkt Brechungsindizes durch Einsetzen der Wellenlänge
 in die Dispersionskurve mit den empirisch bestimmten Koeffizienten $A_0$ und $A_2$
 berechnet. Die Unsicherheit ergibt sich dann zu
 \begin{equation*}
-  \sigma_n = \sqrt{\sigma_{A_{0}}^{2} + \frac{\sigma_{A_{2}}^{2}}{l^{4}}}\,.
+  \sigma_n = \sqrt{\frac{\sigma_{A_{0}}^{2}}{4 A_{0} + \frac{4 A_{2}}{\lambda^{2}}} + \frac{\sigma_{A_{2}}^{2}}{4 \lambda^{4} \left(A_{0} + \frac{A_{2}}{\lambda^{2}}\right)}}\,.
 \end{equation*}
 
 \subsection{Bestimmung der Abbeschen Zahl}
 \label{subsec:abbe}
-Die Abbesche Zahl ist eine Materialkonstante, die ein Maß für die Farbzerstreuung darstellt.
-Sie ist durch
-\begin{equation}
-  \nu = \frac{n_\text{D}-1}{n_\text{F}-n_\text{C}}
-  \label{eqn:abbe}
-\end{equation}
-definiert. Die Größen $n_\text{C}$, $n_\text{D}$ und $n_\text{F}$ bezeichnen die Brechungsindizes
+Zur Berechnung der Abbeschen Zahl wird Gleichung \eqref{eqn:abbe}. Die Größen $n_\text{C}$, $n_\text{D}$ und $n_\text{F}$ bezeichnen die Brechungsindizes
 für die Wellenlängen $\lambda_\text{C} = \SI{656}{\nano\meter}$, $\lambda_\text{D} = \SI{589}{\nano\meter}$
 und $\lambda_\text{F} = \SI{486}{\nano\meter}$.
 Mit den in Kapitel \ref{subsec:indizesunddispersion} berechneten Parametern und
@@ -136,7 +130,7 @@ Diese sind in Tabelle \ref{tab:abbe} eingetragen.
 \begin{table}[htp]
 	\begin{center}
     \caption{Brechungsindizes an den Fraunhoferschen Linien mit Wellenlängen $\lambda_i$.}
-    \label{tab:phi}
+    \label{tab:abbe}
 		\begin{tabular}{ccc}
 		\toprule
 			& {$\lambda/$nm} & {$n$} \\
@@ -161,6 +155,9 @@ Der Fehler ergibt sich durch Fortpflanzung der Unsicherheiten der Brechungsindiz
   + \frac{\sigma_{n_D}^{2}}{\left(- n_C + n_F\right)^{2}} + \frac{\sigma_{n_F}^{2} \left(n_D - 1\right)^{2}}{\left(- n_C + n_F\right)^{4}}}
 \end{equation*}
 
+Nach \cite{flint} beträgt die Abbe-Zahl für das verwendete Material (Schwerflintglas 18)
+29{,}30. Die relative Abweichung beträgt 50{,}17\%.
+
 \subsection{Bestimmung des Auflösungsvermögens}
 \label{subsec:auflösung}
 Wie in Kapitel \ref{subsec:messung} dargelegt wurde, ist es durch Gleichung \eqref{eqn:aufloesung} möglich,
@@ -178,3 +175,26 @@ ergeben sich dann zu
   A_\text{C} &= \SI{3690(30)}{}\,, \\
   A_\text{F} &= \SI{6500(50)}{}\,. \\
 \end{align*}
+
+Die Unsicherheit des Auflösungsvermögens ist
+\begin{equation*}
+  \sigma_A = \sqrt{\frac{A_2^{2} \sigma_{A_0}^{2}}{4 \lambda^{6} \left(A_0 + \frac{A_2}{\lambda^{2}}\right)^{3}}
+  + \sigma_{A_2}^{2} \left(- \frac{A_2}{2 \lambda^{5} \left(A_0 + \frac{A_2}{\lambda^{2}}\right)^{\frac{3}{2}}}
+  + \frac{1}{\lambda^{3} \sqrt{A_0 + \frac{A_2}{\lambda^{2}}}}\right)^{2}}
+\end{equation*}
+
+\subsection{Bestimmung der nächstgelegenen Absorptionsstelle}
+\label{subsec:absorptionsstelle}
+Durch Koeffizientenvergleich und Verwendung der Gleichungen \eqref{eqn:dispersion} (in zweiter Ordnung)
+und \eqref{eqn:fall1} lässt sich die nächstgelegene Absorptionsstelle durch
+\begin{equation*}
+  \lambda_1 = \sqrt{\frac{A_2}{A_0-1}}
+\end{equation*}
+berechnen. Dies ergibt konkret durch Einsetzen der Ausgleichsparameter
+\begin{equation*}
+  \lambda_1 = \SI{151(7)}{\nano\meter}\,.
+\end{equation*}
+Die Unsicherheit beträgt dabei
+\begin{equation*}
+  \sigma_{\lambda_1} = \sqrt{\frac{A_{2} \sigma_{A_{0}}^{2}}{4 \left(A_{0} - 1\right)^{3}} + \frac{\sigma_{A_{2}}^{2}}{4 A_{2} \left(A_{0} - 1\right)}}\,.
+\end{equation*}

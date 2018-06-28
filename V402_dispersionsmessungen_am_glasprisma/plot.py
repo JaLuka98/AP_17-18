@@ -75,7 +75,7 @@ print(skorrektquadrat)
 
 sinkorrektquadrat = 0
 for i in range(0, np.size(unp.nominal_values(n**2))):
-    sinkorrektquadrat += (unp.nominal_values(n[i]**2) - A0strich - A2strich/lammda[i]**2)**2
+    sinkorrektquadrat += (unp.nominal_values(n[i]**2) - A0strich - A2strich*lammda[i]**2)**2
 sinkorrektquadrat *= 1/(np.size(unp.nominal_values(n**2))-2)
 print(sinkorrektquadrat)
 
@@ -97,3 +97,6 @@ AC =  b*1e9* A2/((lammdaC)**3*unp.sqrt(A0+A2/lammdaC**2))
 print('AC = ', AC)
 AF = b*1e9 * A2/((lammdaF)**3*unp.sqrt(A0+A2/lammdaF**2))
 print('AF = ', AF)
+
+#lambda1
+print("lambda1 = ", unp.sqrt(A2/(A0-1)))
