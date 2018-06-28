@@ -104,7 +104,7 @@ sodass mit ihr auch im Folgenden weitergerechnet wird.
 Die Quadrate der Brechungsindizes sind zusammen mit dem Graph der konkreten Anpassungsfunktion
 in Abbildung \ref{fig:kurve} dargestellt.
 
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \includegraphics[width=15cm]{build/kurve.pdf}
   \caption{Auftragung der Quadrate der Brechungsindizes gegen die Wellenlängen und Graph der Ausgleichsfunktion.}
@@ -118,6 +118,7 @@ berechnet. Die Unsicherheit ergibt sich dann zu
   \sigma_n = \sqrt{\frac{\sigma_{A_{0}}^{2}}{4 A_{0} + \frac{4 A_{2}}{\lambda^{2}}} + \frac{\sigma_{A_{2}}^{2}}{4 \lambda^{4} \left(A_{0} + \frac{A_{2}}{\lambda^{2}}\right)}}\,.
 \end{equation*}
 
+\newpage
 \subsection{Bestimmung der Abbeschen Zahl}
 \label{subsec:abbe}
 Zur Berechnung der Abbeschen Zahl wird Gleichung \eqref{eqn:abbe}. Die Größen $n_\text{C}$, $n_\text{D}$ und $n_\text{F}$ bezeichnen die Brechungsindizes
@@ -136,8 +137,8 @@ Diese sind in Tabelle \ref{tab:abbe} eingetragen.
 			& {$\lambda/$nm} & {$n$} \\
 			\midrule
       $\lambda_\text{C}$ & 656 & 1,7390 \pm 0,0019 \\
-      $\lambda_\text{D}$ & 589 & 1,7629 \pm 0,0013 \\
-      $\lambda_\text{F}$ & 486 & 1,7460 \pm 0,0015 \\
+      $\lambda_\text{D}$ & 589 & 1,7460 \pm 0,0015 \\
+      $\lambda_\text{F}$ & 486 & 1,7629 \pm 0,0013 \\
 		\bottomrule
 		\end{tabular}
 	\end{center}
@@ -146,17 +147,17 @@ Diese sind in Tabelle \ref{tab:abbe} eingetragen.
 Mithilfe dieser Werte und Gleichung \eqref{eqn:abbe} kann nun die Abesche Zahl berechnet
 werden. Sie ergibt sich zu
 \begin{equation*}
-  \nu = 44 \pm 4\,.
+  \nu = 31{,}2 \pm 2{,}6 \,.
 \end{equation*}
 
 Der Fehler ergibt sich durch Fortpflanzung der Unsicherheiten der Brechungsindizes zu
 \begin{equation*}
   \sigma_{\nu}= \sqrt{\frac{\sigma_{n_C}^{2} \left(n_D - 1\right)^{2}}{\left(- n_C + n_F\right)^{4}}
-  + \frac{\sigma_{n_D}^{2}}{\left(- n_C + n_F\right)^{2}} + \frac{\sigma_{n_F}^{2} \left(n_D - 1\right)^{2}}{\left(- n_C + n_F\right)^{4}}}
+  + \frac{\sigma_{n_D}^{2}}{\left(- n_C + n_F\right)^{2}} + \frac{\sigma_{n_F}^{2} \left(n_D - 1\right)^{2}}{\left(- n_C + n_F\right)^{4}}} \,.
 \end{equation*}
 
 Nach \cite{flint} beträgt die Abbe-Zahl für das verwendete Material (Schwerflintglas 18)
-29{,}30. Die relative Abweichung beträgt 50{,}17\%.
+29{,}30. Die relative Abweichung beträgt 6{,}48\%.
 
 \subsection{Bestimmung des Auflösungsvermögens}
 \label{subsec:auflösung}

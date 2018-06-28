@@ -80,9 +80,9 @@ sinkorrektquadrat *= 1/(np.size(unp.nominal_values(n**2))-2)
 print(sinkorrektquadrat)
 
 # Abbe Zahl
-lammdaD = 656
+lammdaC = 656
 lammdaF = 486
-lammdaC = 589
+lammdaD = 589
 nD = unp.sqrt(correct(lammdaD, A0, A2))
 print('nD = ', nD)
 nF = unp.sqrt(correct(lammdaF, A0, A2))
