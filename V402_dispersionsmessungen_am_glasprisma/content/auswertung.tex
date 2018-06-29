@@ -26,7 +26,7 @@ bestimmten $\varphi$ sind in Tabelle \ref{tab:phi} zu sehen.
 	\end{center}
 \end{table}
 
-Die einzeln ermittelten brechenden Winkel lassen sich mitteln, um als Ergebnis
+Die einzeln ermittelten brechenden Winkel lassen sich mitteln, um als Ergebnis %Fehlerformel?!
 \begin{equation*}
   \varphi = \SI{60.021(26)}{\degree}
 \end{equation*}
@@ -71,7 +71,7 @@ Spektrallinien sind auch bereits in der Tabelle enthalten.
 
 Es ist zu beachten, dass
 der brechende Winkel $\varphi$ bereits fehlerbehaftet ist, sodass sich der Fehler
-des Brechungsindizes zu
+des Brechungsindexes zu
 \begin{equation*}
   \sigma_n = \sqrt{
    \sigma_{\varphi}^{2} \left(\frac{\cos{\left (\frac{\eta}{2} + \frac{\varphi}{2} \right )}}{2 \sin{\left (\frac{\varphi}{2} \right )}} - \frac{\sin{\left (\frac{\eta}{2}
@@ -121,9 +121,10 @@ berechnet. Die Unsicherheit ergibt sich dann zu
 \newpage
 \subsection{Bestimmung der Abbeschen Zahl}
 \label{subsec:abbe}
-Zur Berechnung der Abbeschen Zahl wird Gleichung \eqref{eqn:abbe}. Die Größen $n_\text{C}$, $n_\text{D}$ und $n_\text{F}$ bezeichnen die Brechungsindizes
-für die Wellenlängen $\lambda_\text{C} = \SI{656}{\nano\meter}$, $\lambda_\text{D} = \SI{589}{\nano\meter}$
-und $\lambda_\text{F} = \SI{486}{\nano\meter}$.
+Zur Berechnung der Abbeschen Zahl wird Gleichung \eqref{eqn:abbe} verwendet.
+%Die Größen $n_\text{C}$, $n_\text{D}$ und $n_\text{F}$ bezeichnen die Brechungsindizes
+%für die Wellenlängen $\lambda_\text{C} = \SI{656}{\nano\meter}$, $\lambda_\text{D} = \SI{589}{\nano\meter}$
+%und $\lambda_\text{F} = \SI{486}{\nano\meter}$.
 Mit den in Kapitel \ref{subsec:indizesunddispersion} berechneten Parametern und
 der Ausgleichsfunktion aus Gleichung \eqref{eqn:fall1} können die $n_i$ bestimmt werden.
 Diese sind in Tabelle \ref{tab:abbe} eingetragen.
@@ -163,14 +164,14 @@ Nach \cite{flint} beträgt die Abbe-Zahl für das verwendete Material (Schwerfli
 \label{subsec:auflösung}
 Wie in Kapitel \ref{subsec:messung} dargelegt wurde, ist es durch Gleichung \eqref{eqn:aufloesung} möglich,
 mit Kenntnis der Absorptionskurve das theoretische Auflösungsvermögen $\frac{\lambda}{\Delta \lambda}$ zu bestimmen.
-Da die Dispersionskurve hier experimentell bestimmt wurde, ist es also zumindest möglich.
+Da die Dispersionskurve hier experimentell bestimmt wurde, ist es also zumindest möglich
 das Auflösungsvermögen abzuschätzen. Unter Anwendung der obigen Gleichung ergibt sich dann
 für das Auflösungsvermögen
 \begin{equation}
   \frac{\lambda}{\Delta \lambda} = b \left|\frac{\symup{d}n(\lambda)}{\symup{d}\lambda}\right| = \frac{A_2}{\lambda^3\sqrt{A_0 + \frac{A_2}{\lambda^2}}}\,,
 \end{equation}
 wobei $b = \SI{3}{\centi\meter}$ die Basislänge des verwendeten Prismas ist.
-Die Auflösungsvermögen an den Wellenlängen $\lambda_\text{C}$ und $\lambda_\text{F}$
+Die verschiedenen Auflösungsvermögen bei den Wellenlängen $\lambda_\text{C}$ und $\lambda_\text{F}$
 ergeben sich dann zu
 \begin{align*}
   A_\text{C} &= \SI{3690(30)}{}\,, \\
@@ -181,7 +182,7 @@ Die Unsicherheit des Auflösungsvermögens ist
 \begin{equation*}
   \sigma_A = \sqrt{\frac{A_2^{2} \sigma_{A_0}^{2}}{4 \lambda^{6} \left(A_0 + \frac{A_2}{\lambda^{2}}\right)^{3}}
   + \sigma_{A_2}^{2} \left(- \frac{A_2}{2 \lambda^{5} \left(A_0 + \frac{A_2}{\lambda^{2}}\right)^{\frac{3}{2}}}
-  + \frac{1}{\lambda^{3} \sqrt{A_0 + \frac{A_2}{\lambda^{2}}}}\right)^{2}}
+  + \frac{1}{\lambda^{3} \sqrt{A_0 + \frac{A_2}{\lambda^{2}}}}\right)^{2}} \,.
 \end{equation*}
 
 \subsection{Bestimmung der nächstgelegenen Absorptionsstelle}
