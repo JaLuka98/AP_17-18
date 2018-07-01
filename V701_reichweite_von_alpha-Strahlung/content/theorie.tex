@@ -1,2 +1,37 @@
 \section{Theorie}
 \label{sec:Theorie}
+Eine experimentelle Bestimmung der Energie von Alphastrahlung ist durch Messung
+ihrer Reichweite möglich. Alphateilchen verlieren in einem Medium ihre Energie
+hauptsächlich durch Ionisationsprozesse sowie durch Anregung oder Dissoziation
+von Molekülen. Elastische Stöße spielen nur eine untergeordnete Rolle. Der
+Energieverlust wird mit $-\symup{d}E_\alpha / \symup{d}x$ bezeichnet und lässt sich
+für hinreichend große Energien durch die Bethe-Bloch-Gleichung
+\begin{equation}
+  - \frac{\symup{d}E_\alpha}{\symup{d}x} = \frac{z^2 e^4}{4\pi \epsilon_0 m_\text{e}} \frac{n Z}{v^2} \ln{\left(\frac{2m_\text{e}v^2}{I}\right)}
+  \label{eqn:bethebloch}
+\end{equation}
+beschreiben. Die Ladung der Alphateilchen wird durch $z$, ihre Geschwindigkeit mit $v$
+bezeichnet. Die Ordnungszahl sei $Z$, $n$ ist die Teilchendichte und $I$ die Ionisierungsenergie
+des Targetgases. Die Bethe-Bloch-Gleichung verliert für sehr kleine Energien ihre Gültigkeit,
+weil dann Ladungsaustauschprozesse auftreten. \\
+Die Reichweite eines Alphateilchens bezeichnet seine Wegstrecke bis zur vollständigen Abbremsung
+und beträgt
+\begin{equation}
+  R = \int_0^{E_0} \frac{\symup{d}E_{\alpha}}{-\symup{d}E_{\alpha} / \symup{d}x}\,.
+\end{equation}
+Ein Alphateilchen verbringt bis zur vollständigen Abbremsung zwingend eine Zeit mit
+niedriger Energie, in diesem Bereich versagt die Bethe-Bloch-Gleichung wie oben beschrieben.
+Deswegen werden zur Bestimmung der mittleren Reichweite $R_m$ empirische Formeln
+verwendet. So gilt zum Beispiel näherungsweise für die Reichweite von Alphastrahlung mit einer
+Energie kleiner oder gleich $2{,}5$ Megaelektronenvolt in Luft
+\begin{equation}
+  R_m = 3,1 \cdot E_\alpha^{3/2}\,,
+\end{equation}
+wobei $R_m$ in Millimetern und $E_\alpha$ in Megaelektronenvolt anzugeben ist.\\
+Für die Reichweite von Alphateilchen in Gasen gilt, dass sie bei konstanter Temperatur
+und konstantem Volumen proportional zum Druck $p$ ist. Es gilt für einen festen Abstand $x_0$
+zwischen Detektor und Quelle der Alphastrahlung
+\begin{equation}
+  x = x_0 \frac{p}{p_0}\,,
+\end{equation}
+wobei $x$ die effektive Weglänge bezeichnet und $p_0 = 1013$\,mbar der Normaldruck ist.
