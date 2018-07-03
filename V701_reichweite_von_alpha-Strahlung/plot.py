@@ -10,8 +10,8 @@ from scipy import stats
 
 t=120 #s
 p_0=1.013 #bar
-d_1=2.2 #cm
-d_2=1.8 #cm
+d1=2.2 #cm
+d2=1.8 #cm
 
 d_1*=1e-2    #in meter
 d_2*=1e-2    #in meter
@@ -25,33 +25,84 @@ p*=1e-3 #p in bar
 x=d_1*p/p_0
 Z=N_ges/t
 
-hr = ['p/mbar','channel','$N_{ges}$', '$x$/cm']
-m = np.zeros((21, 4))
+hr = ['p/mbar','channel','$N_{ges}$', '$x$/cm','Z']
+m = np.zeros((21, 5))
 m[:,0] = p*1e3
 m[:,1] = channel
 m[:,2] = N_ges
 m[:,3] = x*1e2
-table=matrix2latex(m, headerRow=hr, format='%.2f')
-print(table)
+m[:,4] = Z
+t=matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
+plt.plot(x*1e2, Z, 'rx', mew=0.5, label='Messwerte')
+plt.xlabel(r'$x/$cm')
+plt.ylabel(r'$(Z/(1/s))$')
+plt.tight_layout()
+plt.legend()
+plt.grid()
+plt.savefig('build/druck1.pdf')
+plt.clf()
 
 
+
+
+
+#jetzt die Energie
+
+E=channel*4/966
+
+plt.plot(x[:18]*1e2, E[:18], 'rx', mew=0.5, label='Messwerte')
+plt.xlabel(r'$x/$cm')
+plt.ylabel(r'$(E/$MeV')
+plt.tight_layout()
+plt.legend()
+plt.grid()
+plt.savefig('build/energie1.pdf')
+plt.clf()
 
 
 #Zweite Messung
 print('Zweite Messung:')
+
 p, channel, N_ges  = np.genfromtxt('data/druck_2.txt', unpack=True)
 p*=1e-3
-x=d_1*p/p_0
-Z=N_ges/t
 
-hr = ['p/mbar','channel','$N_{ges}$', '$x$/cm']
-m = np.zeros((21, 4))
+x=d2*p/p_0
+Z=(N_ges)/120  #mit t wollte er es irgendwie nicht... warum auch immer...
+
+hr = ['p/mbar','channel','$N_{ges}$', '$x$/cm','Z']
+m = np.zeros((21, 5))
 m[:,0] = p*1e3
 m[:,1] = channel
 m[:,2] = N_ges
 m[:,3] = x*1e2
-table=matrix2latex(m, headerRow=hr, format='%.2f')
-print(table)
+m[:,4] = Z
+t=matrix2latex(m, headerRow=hr, format='%.2f')
+print(t)
+
+plt.plot(x*1e2, Z, 'rx', mew=0.5, label='Messwerte')
+plt.xlabel(r'$x/$cm')
+plt.ylabel(r'$(Z/(1/s))$')
+plt.tight_layout()
+plt.legend()
+plt.grid()
+plt.savefig('build/druck2.pdf')
+plt.clf()
+
+
+#jetzt die Energie
+
+E=channel*4/1007
+
+plt.plot(x*1e2, E, 'rx', mew=0.5, label='Messwerte')
+plt.xlabel(r'$x/$cm')
+plt.ylabel(r'$(E/$MeV')
+plt.tight_layout()
+plt.legend()
+plt.grid()
+plt.savefig('build/energie2.pdf')
+plt.clf()
 
 # Histamin
 N  = np.genfromtxt('data/statistik.txt', unpack=True)

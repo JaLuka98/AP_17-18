@@ -1,6 +1,119 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Die aufgenommenen Werte für die Zählraten und die Energie der \alpha-Strahlung, sowie
+daraus berechnete werte befinden sich in den Tabellen \ref{tab:druck1} und \ref{tab:druck2}.
+Gemessen wurde für zwei verschiedene Abstände $x_{0,\symup{i}}$ zwischen Strahler und
+Detektor. Diese betrugen $x_{0,1}=2{,}2\,$cm und $x_{0,2}=1{,}8\,$cm
+Aus den Messwerten werden gemäß Gleichung \eqref{eqn:eff_weg} die effektiven
+Weglängen der \alpha-Strahlung berechnet. Außerdem werden aus den gesamten Anzahlen
+der gezählten Ereignisse die Zählraten $Z=N_{\symup{ges}}/t$ berechnet.
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte und daraus berechnete Werte für die Reichweite der Alphastrahlung
+    in Abhängigkeit vom Druck mit einem Abstand von $x_{0,1}=2{,}2\,$cm.}
+    \label{tab:druck1}
+		\begin{tabular}{ccccc}
+		\toprule
+			{p/mbar} & {channel} & {$N_{ges}$} & {$x$/cm} & {Z}\\
+			\midrule
+			0 & 966 & 85483 & 0,00 & 712\\
+			50 & 952 & 84772 & 0,11 & 706\\
+			100 & 929 & 84944 & 0,22 & 708\\
+			150 & 938 & 88255 & 0,33 & 735\\
+			200 & 916 & 87268 & 0,43 & 727\\
+			250 & 853 & 82128 & 0,54 & 684\\
+			300 & 837 & 84315 & 0,65 & 703\\
+			350 & 826 & 82626 & 0,76 & 689\\
+			400 & 804 & 82835 & 0,87 & 690\\
+			450 & 777 & 82689 & 0,98 & 689\\
+			500 & 758 & 79876 & 1,09 & 666\\
+			550 & 721 & 78694 & 1,19 & 656\\
+			600 & 697 & 76527 & 1,30 & 638\\
+			650 & 670 & 73763 & 1,41 & 615\\
+			700 & 648 & 70818 & 1,52 & 590\\
+			750 & 606 & 65117 & 1,63 & 543\\
+			800 & 582 & 59842 & 1,74 & 499\\
+			850 & 536 & 49709 & 1,85 & 414\\
+			900 & 530 & 39311 & 1,95 & 328\\
+			950 & 527 & 29029 & 2,06 & 242\\
+			1000 & 524 & 22278 & 2,17 & 186\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Messwerte und daraus berechnete Werte für die Reichweite der Alphastrahlung
+    in Abhängigkeit vom Druck mit einem Abstand von $x_{0,2}=1{,}8\,$cm.}
+    \label{tab:druck2}
+		\begin{tabular}{ccccc}
+		\toprule
+			{p/mbar} & {channel} & {$N_{ges}$} & {$x$/cm} & {Z}\\
+			\midrule
+			0 & 1007 & 119924 & 0,00 & 999\\
+			50 & 1083 & 117983 & 0,09 & 983\\
+			100 & 1032 & 116688 & 0,18 & 972\\
+			150 & 1014 & 116310 & 0,27 & 969\\
+			200 & 991 & 115745 & 0,36 & 965\\
+			250 & 963 & 114693 & 0,44 & 956\\
+			300 & 942 & 113976 & 0,53 & 950\\
+			350 & 925 & 113554 & 0,62 & 946\\
+			400 & 882 & 113096 & 0,71 & 942\\
+			450 & 856 & 112362 & 0,80 & 936\\
+			500 & 852 & 109869 & 0,89 & 916\\
+			550 & 820 & 109569 & 0,98 & 913\\
+			600 & 802 & 108607 & 1,07 & 905\\
+			650 & 762 & 110633 & 1,15 & 922\\
+			700 & 742 & 107034 & 1,24 & 892\\
+			750 & 721 & 105293 & 1,33 & 877\\
+			800 & 690 & 104224 & 1,42 & 869\\
+			850 & 658 & 100940 & 1,51 & 841\\
+			900 & 624 & 99344 & 1,60 & 828\\
+			950 & 594 & 96054 & 1,69 & 800\\
+			1000 & 614 & 95223 & 1,78 & 794\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Nun wird für beide Messreihen die Zählrate in Abhängigkeit von der effektiven Länge
+aufgetragen. Es ergibt sich der in den Abbildungen \ref{fig:druck1} und \ref{fig:druck2}
+dargestellte Verlauf.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/druck1.pdf}
+  \caption{Auftragung der Zählraten gegen die effektive Wegläge und lineare Ausgleichsrechnung
+  zur Bestimmung der Reichweite für $x_{0,1}=2{,}2\,$cm.}
+  \label{fig:druck1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/druck2.pdf}
+  \caption{Auftragung der Zählraten gegen die effektive Wegläge und lineare Ausgleichsrechnung
+  zur Bestimmung der Reichweite für $x_{0,2}=1{,}8\,$cm.}
+  \label{fig:druck2}
+\end{figure}
+
+Dabei wird für die jeweils annähernd linear verlaufenden Teile eine lineare Ausgleichsrechnung
+der Form
+\begin{equation}
+  f(x)=mx+b
+\end{equation}
+durchgeführt. Die Parameter der Ausgleichsrechnung ergeben sich zu
+\begin{align*}
+    \,.
+\end{align*}
+Daraus lässt sich durch
+\begin{equation}
+
+\end{equation}
+
+die maximale Reichweite der \alpha-Strahlung bestimmen.
+
 \subsection{Untersuchung der Statistik des radioaktiven Zerfalls}
 \label{subsec:statistik}
 Zuletzt soll die Statistik des radioaktiven Zerfalls, der theoretisch einer Poisson-Verteilung folgen sollte,
