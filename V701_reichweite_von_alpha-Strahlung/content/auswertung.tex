@@ -1,2 +1,25 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+\subsection{Untersuchung der Statistik des radioaktiven Zerfalls}
+\label{subsec:statistik}
+Zuletzt soll die Statistik des radioaktiven Zerfalls, der theoretisch einer Poisson-Verteilung folgen sollte,
+untersucht werden. Die Messwerte sind dabei dem Anhang zu entnehmen, sie werden aufgrund ihrer
+hohen Anzahl hier nicht wiederholt. \\
+Der Mittelwert der Stichprobe ergibt sich zu
+\begin{equation*}
+  \overline{N} = \SI{399.9(14)}{\per\second}\,.
+\end{equation*}
+Die Varianz der Stichprobe beträgt $205,27$.\\
+
+Um den Zusammenhang zu veranschaulichen, wird ein Histogram der Daten
+mit 20 Bins angefertigt. Darüberhinaus werden gaußverteilte Zufallszahlen mit den obigen
+Werten für Mittelwert und Varianz erzeugt und ebenso in das Diagramm eingefügt.
+Dieses ist in \ref{fig:hist} zu sehen.
+
+\begin{figure}
+  \centering
+  \includegraphics{build/hist.pdf}
+  \caption{Histogramm der gemessenen Zählraten und gaußverteilter Zufallszahlen.}
+  \label{fig:hist}
+\end{figure}

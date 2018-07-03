@@ -7,12 +7,19 @@ Der Mittelwert einer Stichprobe von $N$ Werten wird durch
 \end{equation}
 
 berechnet.
-Die empirische Standardabweichung dieser Stichprobe ist durch
+Die empirische Standardabweichung des Mittelwerts dieser Stichprobe ist durch
 \begin{equation}
-  \sigma_x = \sqrt{\frac{1}{N(N-1)}
+  \sigma_{\overline{x}} = \sqrt{\frac{1}{N(N-1)}
     \sum\limits_{i = 1}^N
     (x_i-\overline{x})^2}
     \label{eqn:std}
+\end{equation}
+Die empirische Varianz ist gegeben durch
+\begin{equation}
+  s = \frac{1}{N-1}
+    \sum\limits_{i = 1}^N
+    (x_i-\overline{x})^2
+    \label{eqn:var}
 \end{equation}
 
 gegeben.
