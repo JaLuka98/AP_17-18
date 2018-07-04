@@ -1,10 +1,13 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Bestimmung der Reichweite von Alpha-Strahlung}
+\label{subsec:reichweite}
+
 Die aufgenommenen Werte für die Zählraten und die Energie der \alpha-Strahlung, sowie
 daraus berechnete werte befinden sich in den Tabellen \ref{tab:druck1} und \ref{tab:druck2}.
 Gemessen wurde für zwei verschiedene Abstände $x_{0,\symup{i}}$ zwischen Strahler und
-Detektor. Diese betrugen $x_{0,1}=2{,}2\,$cm und $x_{0,2}=1{,}8\,$cm
+Detektor. Diese betrugen $x_{0,1}=2{,}2\,$cm und $x_{0,2}=1{,}8\,$cm.
 Aus den Messwerten werden gemäß Gleichung \eqref{eqn:eff_weg} die effektiven
 Weglängen der \alpha-Strahlung berechnet. Außerdem werden aus den gesamten Anzahlen
 der gezählten Ereignisse die Zählraten $Z=N_{\symup{ges}}/t$ berechnet.
@@ -15,7 +18,7 @@ der gezählten Ereignisse die Zählraten $Z=N_{\symup{ges}}/t$ berechnet.
     \label{tab:druck1}
 		\begin{tabular}{ccccc}
 		\toprule
-			{p/mbar} & {channel} & {$N_{ges}$} & {$x$/cm} & {Z}\\
+			{$p/$mbar} & {channel} & {$N_{ges}$} & {$x$/cm} & {$Z/\frac{1}{\text{s}}$}\\
 			\midrule
 			0 & 966 & 85483 & 0,00 & 712\\
 			50 & 952 & 84772 & 0,11 & 706\\
@@ -50,7 +53,7 @@ der gezählten Ereignisse die Zählraten $Z=N_{\symup{ges}}/t$ berechnet.
     \label{tab:druck2}
 		\begin{tabular}{ccccc}
 		\toprule
-			{p/mbar} & {channel} & {$N_{ges}$} & {$x$/cm} & {Z}\\
+			{$p$/mbar} & {channel} & {$N_{ges}$} & {$x$/cm} & {$Z/\frac{1}{\text{s}}$}\\
 			\midrule
 			0 & 1007 & 119924 & 0,00 & 999\\
 			50 & 1083 & 117983 & 0,09 & 983\\
@@ -79,8 +82,8 @@ der gezählten Ereignisse die Zählraten $Z=N_{\symup{ges}}/t$ berechnet.
 \end{table}
 
 Nun wird für beide Messreihen die Zählrate in Abhängigkeit von der effektiven Länge
-aufgetragen. Es ergibt sich der in den Abbildungen \ref{fig:druck1} und \ref{fig:druck2}
-dargestellte Verlauf.
+aufgetragen. Es ergeben sich die in den Abbildungen \ref{fig:druck1} und \ref{fig:druck2}
+dargestellten Verläufe.
 
 \begin{figure}[H]
   \centering
@@ -98,21 +101,134 @@ dargestellte Verlauf.
   \label{fig:druck2}
 \end{figure}
 
-Dabei wird für die jeweils annähernd linear verlaufenden Teile eine lineare Ausgleichsrechnung
+Dabei wird für die jeweils annähernd linear verlaufenden Bereiche eine lineare Ausgleichsrechnung
 der Form
 \begin{equation}
-  f(x)=mx+b
+  f(x)=ax+b
 \end{equation}
 durchgeführt. Die Parameter der Ausgleichsrechnung ergeben sich zu
 \begin{align*}
-    \,.
+  a_1 &= \SI{-7.892(0027)e4}{\per\second\per\meter}\,, \\
+  b_1 &= \SI{1870(5)}{\per\second}\,,  \\
+  a_2 &= \SI{-1.85(017)e4}{\per\second\per\meter} \,,  \\
+  b_2 &= \SI{1124(25)}{\per\second} \,.
 \end{align*}
 Daraus lässt sich durch
 \begin{equation}
-
+  R_{\symup{m}}=\frac{\frac{1}{2}Z_{\symup{max,i}}-b_{\symup{i}}}{a_{\symup{i}}}
+\end{equation}
+die mittlere Reichweite der \alpha-Strahlung bestimmen. Diese ergibt sich zu
+\begin{align*}
+  R_{\symup{m,1}}&=\SI{19.186(0004)}{\milli\meter} \,, \\
+  R_{\symup{m,2}}&=\SI{33.8(18)}{\milli\meter} \,.
+\end{align*}
+Der Fehler der bestimmten mittleren Reichweiten folgt nach dem Gauß'schen Fehlerfortpflanzungsgesetz
+gesetz \eqref{eqn:gaussfehler} dem Zusammenhang
+\begin{equation}
+  Fehlerformel...
 \end{equation}
 
-die maximale Reichweite der \alpha-Strahlung bestimmen.
+Die zugehörigen Energien können mithilfe von Gleichung \eqref{eqn:empirisch} zu
+\begin{align*}
+  E_1&=\SI{3.3709(00005)}{\MeV} \,,\\
+  E_2&=\SI{4.91(018)}{\MeV}
+\end{align*}
+bestimmt werden. Der zugehörige Fehler ergibt sich aus der Gauß'schen Fehlerfortpflanzung
+\eqref{eqn:gaussfehler} zu
+\begin{equation}
+  Fehlerformel...
+\end{equation}
+
+\subsection{Bestimmung des Energieverlustes der Alpha-Strahlung}
+\label{subsec:energie}
+
+Zur Bestimmung des Energieverlustes der \alpha-Strahlung muss zunächst die Energie
+der Strahlung bestimmt werden. Laut Versuchsanleitung \cite{Versuchsanleitung}
+beträgt die Energie, die beim gemessenen Maximum bei einem Druck von $p=0\,$mbar
+gemessen wird 4\,MeV. Damit ergibt sich für die Energie der Strahlung für den jeweiligen
+Druck, bei dem gemessen wird zu
+\begin{equation}
+  E(p)=\frac{\text{channel}(p)\cdot4\,\text{MeV}}{\text{channel}(0)} \,.
+\end{equation}
+Die Berechneten Werte sind in Tabelle \ref{tab:energie} dargestellt.
+
+\begin{table}[htp]
+	\begin{center}
+    \caption{Berechnete Werte für die Energien
+    in Abhängigkeit vom Druck bei den beiden verschiedenen Abständen.}
+    \label{tab:energie}
+		\begin{tabular}{ccc}
+		\toprule
+			{$p$/mbar} & {$E_1$/MeV} & {$E_2$/MeV}\\
+			\midrule
+			0 & 4,00 & 4,00\\
+			50 & 3,94 & 4,30\\
+			100 & 3,85 & 4,10\\
+			150 & 3,88 & 4,03\\
+			200 & 3,79 & 3,94\\
+			250 & 3,53 & 3,83\\
+			300 & 3,47 & 3,74\\
+			350 & 3,42 & 3,67\\
+			400 & 3,33 & 3,50\\
+			450 & 3,22 & 3,40\\
+			500 & 3,14 & 3,38\\
+			550 & 2,99 & 3,26\\
+			600 & 2,89 & 3,19\\
+			650 & 2,77 & 3,03\\
+			700 & 2,68 & 2,95\\
+			750 & 2,51 & 2,86\\
+			800 & 2,41 & 2,74\\
+			850 & 2,22 & 2,61\\
+			900 & 2,19 & 2,48\\
+			950 & 2,18 & 2,36\\
+			1000 & 2,17 & 2,44\\
+		\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Nun wird die berechnete Energie für beide Messreihen gegen die effektive Weglänge aufgetragen
+und es wird eine lineare Ausgleichsrechnung durchgeführt. Dies ist in den Abbildungen
+\ref{fig:energie1} und \ref{fig:energie2} dargestellt. Dabei ist anzumerken, dass bei
+den letzten drei Messwerten bei der ersten Messreihe keine zuverlässigen Werte für den
+Channel mehr aufgenommen werden konnten, da die Diskriminatorschwelle das Maximum
+unterdrückte. Daher werden diese Messwerte in diesem Teil der Auswertung nicht berücksichtigt.\\
+Zudem ist auffällig, dass bei der zweiten Messreihe der erste und der letzte Wert stark von
+der Geraden abweichen. Daher werden diese Werte für die lineare Ausgleichsrechnung nicht berücksichtigt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/energie1.pdf}
+  \caption{Auftragung der Energien gegen die effektive Wegläge und lineare Ausgleichsrechnung
+  zur Bestimmung des Energieverlustes für $x_{0,1}=2{,}2\,$cm.}
+  \label{fig:energie1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/energie2.pdf}
+  \caption{Auftragung der Energien gegen die effektive Wegläge und lineare Ausgleichsrechnung
+  zur Bestimmung des Energieverlustes für $x_{0,2}=1{,}8\,$cm.}
+  \label{fig:energie2}
+\end{figure}
+
+Die Parameter der Ausgleichsrechnungen ergeben sich zu
+\begin{align*}
+  a_1 &= \SI{-95.9(28)}{\MeV\per\meter} \,,\\
+  b_2 &= \SI{4.109(0030)}{\MeV} \,,\\
+  a_2 &= \SI{-115.0(17)}{\MeV\per\meter} \,,\\
+  b_2 &= \SI{4.357(0018)}{\MeV} \,.\\
+\end{align*}
+Der Energieverlust der Strahlung entspricht dem Betrag der Steigung der Geraden und ergibt sich
+somit zu $E_1=\SI{0.959(028)}{\MeV\per\centi\meter}$ und
+$E_2=\SI{1.150(017)}{\MeV\per\centi\meter}$.
+
+Der Fehler für die berechneten Energieverluste ergibt sich dabei gemäß der Gauß'schen
+Fehlerforpflanzung \eqref{eqn:gaussfehler} zu
+\begin{equation}
+  Fehlerformel...
+\end{equation}
+
 
 \subsection{Untersuchung der Statistik des radioaktiven Zerfalls}
 \label{subsec:statistik}
