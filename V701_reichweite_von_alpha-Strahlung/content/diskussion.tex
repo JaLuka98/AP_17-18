@@ -1,13 +1,43 @@
 \section{Diskussion}
 \label{sec:Diskussion}
 
-Bei der ersten Druckmessung war die Diskriminatorschwelle so eingestellt, dass
+Die Messergebnisse sind insgesamt als ungenau zu bewerten. Die bestimmten Werte
+für die mittleren Reichweiten und die mittleren Energien der Alpha-Strahlung
+weichen mit
+\begin{align*}
+  R_{\symup{m,1}}&=\SI{19.186(0004)}{\milli\meter} \,, \\
+  R_{\symup{m,2}}&=\SI{33.8(18)}{\milli\meter} \,, \\
+  E_1&=\SI{3.3709(00005)}{\MeV} \,,\\
+  E_2&=\SI{4.91(018)}{\MeV}
+\end{align*}
+sehr stark voneinander ab. Theoretisch wären hier für beide Abstände, bei denen gemessen
+wird die gleichen Ergebnisse zu erwarten, da sie charakteristisch für die verwendete
+Alpha-Strahlung sind. Werden die Werte für die Energien mit den in Tabelle
+\ref{tab:energie} verglichen, so zeigt sich, dass der Wert für $E_2$ deutlich zu
+hoch ausfällt. Einen wahrscheinlichen Grund für diese Abweichungen stellen die in
+Kapitel \ref{subsec:reichweite} durchgeführten linearen Ausgleichsrechnungen dar,
+bei denen jeweils nur vier oder fünf Messwerte berücksichtigt wurden. Für die erste
+Messreihe liegen die Messwerte dabei sehr gut auf der Ausgleichsgeraden, bei der
+zweiten sind jedoch auch hier schon Abweichungen feststellbar. Da die Parameter
+der linearen Ausgleichsrechnung die Grundelage für die berechnten mittleren Reichweiten
+$R_{\symup{m,i}}$ und damit auch der mittleren Energien $E_{\symup{i}}$ sind, kann
+es so schnell zu starken Abweichungen kommen.
+
+Es ist anzumerken, dass für die linearen Ausgleichrechnungen bei der Bestimmung des
+Energieverlustes nicht so viele Werte berücksichtigt werden konnten, wie vorgesehen,
+da bei der ersten Messreihe des Drucks die Diskriminatorschwelle so eingestellt war, dass
 für Drücke oberhalb von 850\,mbar keine Messwerte für den Channel, in dem die
-meisten Counts auftreten, mehr aufgenmmen werden konnten.
+meisten Counts auftreten, mehr aufgenmmen werden konnten. Für die zweite Messreihe
+werden bei der Rechnung zwei Messwerte ausgenommen, die nicht auf der Geraden liegen.
 
+Es zeigt sich außerdem, dass die berechneten Energieverluste mit
+\begin{align*}
+  -\frac{\symup{d}\,E_1}{\symup{d}\,x}&=\SI{0.959(028)}{\MeV\per\centi\meter} \,\\
+  -\frac{\symup{d}\,E_2}{\symup{d}\,x}&=\SI{1.150(017)}{\MeV\per\centi\meter}
+\end{align*}
+nicht konsistent mit den oben aufgeführten Werten für die mittleren Reichweiten und
+die zugehörigen Energien sind. Die oben angeführten Messergebnisse führen auf einen
+Energieverlust von etwa $-\frac{\symup{d}\,E}{\symup{d}\,x}=1{,}5\,$cm.
 
-Werte für mittlere Reichweite sehr weit auseinander -> wegen der Fits mit nur 4
-oder 5 Werten...
-
-Ein wert für mittlere Energie zu hoch -> wird aus zu hoher mittlerer Reichweite 
-berechnet...
+Die Größenordnungen der Messergebnisse stimmen jedoch überein, sodass die theoretisch
+zu erwartenden Zusammenhänge zumindest qualitativ gezeigt werden konnten.

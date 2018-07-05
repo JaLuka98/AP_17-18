@@ -4,12 +4,12 @@
 \subsection{Bestimmung der Reichweite von Alpha-Strahlung}
 \label{subsec:reichweite}
 
-Die aufgenommenen Werte für die Zählraten und die Energie der \alpha-Strahlung, sowie
+Die aufgenommenen Werte für die Zählraten und die Energie der Alpha-Strahlung, sowie
 daraus berechnete werte befinden sich in den Tabellen \ref{tab:druck1} und \ref{tab:druck2}.
 Gemessen wurde für zwei verschiedene Abstände $x_{0,\symup{i}}$ zwischen Strahler und
 Detektor. Diese betrugen $x_{0,1}=2{,}2\,$cm und $x_{0,2}=1{,}8\,$cm.
 Aus den Messwerten werden gemäß Gleichung \eqref{eqn:eff_weg} die effektiven
-Weglängen der \alpha-Strahlung berechnet. Außerdem werden aus den gesamten Anzahlen
+Weglängen der Alpha-Strahlung berechnet. Außerdem werden aus den gesamten Anzahlen
 der gezählten Ereignisse die Zählraten $Z=N_{\symup{ges}}/t$ berechnet.
 \begin{table}[htp]
 	\begin{center}
@@ -117,15 +117,17 @@ Daraus lässt sich durch
 \begin{equation}
   R_{\symup{m}}=\frac{\frac{1}{2}Z_{\symup{max,i}}-b_{\symup{i}}}{a_{\symup{i}}}
 \end{equation}
-die mittlere Reichweite der \alpha-Strahlung bestimmen. Diese ergibt sich zu
+die mittlere Reichweite der Alpha-Strahlung bestimmen. Diese ergibt sich zu
 \begin{align*}
   R_{\symup{m,1}}&=\SI{19.186(0004)}{\milli\meter} \,, \\
   R_{\symup{m,2}}&=\SI{33.8(18)}{\milli\meter} \,.
 \end{align*}
 Der Fehler der bestimmten mittleren Reichweiten folgt nach dem Gauß'schen Fehlerfortpflanzungsgesetz
-gesetz \eqref{eqn:gaussfehler} dem Zusammenhang
+\eqref{eqn:gaussfehler} dem Zusammenhang
 \begin{equation}
-  Fehlerformel...
+  \sigma_{\symup{R_m}} = \sqrt{\sum\limits_{i = 1}^N\left(\frac{\partial R_{\symup{m}}}{\partial x_{\symup{i}}}
+  \sigma_{\symup{i}} \right)^{\!\! 2}} = \sqrt{\sigma_{\symup{a}}^{2} \left(\frac{b}{a^{2}} -
+  \frac{\frac{1}{2}Z_{\symup{max}}}{a^{2}}\right)^{2} + \frac{\sigma_{\symup{b}}^{2}}{a^{2}} } \,.
 \end{equation}
 
 Die zugehörigen Energien können mithilfe von Gleichung \eqref{eqn:empirisch} zu
@@ -136,13 +138,15 @@ Die zugehörigen Energien können mithilfe von Gleichung \eqref{eqn:empirisch} z
 bestimmt werden. Der zugehörige Fehler ergibt sich aus der Gauß'schen Fehlerfortpflanzung
 \eqref{eqn:gaussfehler} zu
 \begin{equation}
-  Fehlerformel...
+  \sigma_{E} = \sqrt{\sum\limits_{i = 1}^N\left( \frac{\partial E}{\partial x_{\symup{i}}}
+   \sigma_{\symup{i}} \right)^{\!\! 2}} =
+   \sqrt{\frac{\frac{2}{3}\left(\frac{10}{31}\right)^{2/3}\sigma_{\symup{a}}^{2}}{R_{\symup{m}}^{2/3}}}\,.
 \end{equation}
 
 \subsection{Bestimmung des Energieverlustes der Alpha-Strahlung}
 \label{subsec:energie}
 
-Zur Bestimmung des Energieverlustes der \alpha-Strahlung muss zunächst die Energie
+Zur Bestimmung des Energieverlustes der Alpha-Strahlung muss zunächst die Energie
 der Strahlung bestimmt werden. Laut Versuchsanleitung \cite{Versuchsanleitung}
 beträgt die Energie, die beim gemessenen Maximum bei einem Druck von $p=0\,$mbar
 gemessen wird 4\,MeV. Damit ergibt sich für die Energie der Strahlung für den jeweiligen
@@ -220,14 +224,14 @@ Die Parameter der Ausgleichsrechnungen ergeben sich zu
   b_2 &= \SI{4.357(0018)}{\MeV} \,.\\
 \end{align*}
 Der Energieverlust der Strahlung entspricht dem Betrag der Steigung der Geraden und ergibt sich
-somit zu $E_1=\SI{0.959(028)}{\MeV\per\centi\meter}$ und
-$E_2=\SI{1.150(017)}{\MeV\per\centi\meter}$.
+somit zu $-\frac{\symup{d}\,E_1}{\symup{d}\,x}=\SI{0.959(028)}{\MeV\per\centi\meter}$ und
+$-\frac{\symup{d}\,E_2}{\symup{d}\,x}=\SI{1.150(017)}{\MeV\per\centi\meter}$.
 
-Der Fehler für die berechneten Energieverluste ergibt sich dabei gemäß der Gauß'schen
-Fehlerforpflanzung \eqref{eqn:gaussfehler} zu
-\begin{equation}
-  Fehlerformel...
-\end{equation}
+%Der Fehler für die berechneten Energieverluste ergibt sich dabei gemäß der Gauß'schen
+%Fehlerforpflanzung \eqref{eqn:gaussfehler} zu
+%\begin{equation}
+%  Fehlerformel...
+%\end{equation}
 
 
 \subsection{Untersuchung der Statistik des radioaktiven Zerfalls}
