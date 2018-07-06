@@ -239,13 +239,28 @@ $-\frac{\symup{d}\,E_2}{\symup{d}\,x}=\SI{1.150(017)}{\MeV\per\centi\meter}$.
 Zuletzt soll die Statistik des radioaktiven Zerfalls, der theoretisch einer Poisson-Verteilung folgen sollte,
 untersucht werden. Die Messwerte sind dabei dem Anhang zu entnehmen, sie werden aufgrund ihrer
 hohen Anzahl hier nicht wiederholt. \\
-Der Mittelwert der Stichprobe ergibt sich zu
+Der Mittelwert der Stichprobe ergibt sich näherungsweise zu
 \begin{equation*}
   \overline{N} = \SI{399.9(14)}{\per\second}\,.
 \end{equation*}
-Die Varianz der Stichprobe beträgt $205,27$.\\
-
-Um den Zusammenhang zu veranschaulichen, wird ein Histogram der Daten
+Die Varianz der Stichprobe beträgt ungefähr $\SI{205.27}{\per\second\squared}$.
+Für eine Poisson-Verteilung gilt der Zusammenhang
+\begin{equation*}
+	\symup{E}(X) = \symup{Var}(X)\,.
+\end{equation*}
+Das bedeutet, dass der Erwartungswert gleich der Varianz der Zufallsvariablen $X$
+ist. Dies ist hier eindeutig nicht erfüllt, stattdessen beträgt die Varianz nur etwa halb so groß wie der Mittelwert.\\
+Für eine Gauß-Verteilung gilt die Gleichung
+\begin{equation*}
+	\symup{Var}(X) = \sigma_X^2\,,
+\end{equation*}
+die Varianz ist also das Quadrat der Standardabweichung. Die empirische Standardabweichung
+der Stichprobe beträgt hier circa $\SI{14.33}{\per\second}$. Dies wird durch Mutliplizieren
+des Fehlers des Mittelwertes, welcher sich durch Gleichung \eqref{eqn:std} ergibt, mit $\sqrt{N}$ berechnet.
+Das Quadrat der empirischen Standardabweichung ist ungefähr $\SI{205.35}{\per\second}$, was
+fast genau gleich der empirischen Varianz ist. Insofern entspricht die gemessene Verteilung
+eher einer Gauß- als einer Poisson-Verteilung.\\
+Um den Zusammenhang zu veranschaulichen, wird ein normiertes Histogram der Daten
 mit 20 Bins angefertigt. Darüberhinaus werden gaußverteilte Zufallszahlen mit den obigen
 Werten für Mittelwert und Varianz erzeugt und ebenso in das Diagramm eingefügt.
 Dieses ist in \ref{fig:hist} zu sehen.
